@@ -1,0 +1,809 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+
+part of 'shop_watcher_bloc.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+class _$ShopWatcherEventTearOff {
+  const _$ShopWatcherEventTearOff();
+
+  _WatchAllStarted watchAllStarted() {
+    return const _WatchAllStarted();
+  }
+
+  _ShopsReceived shopsReceived(
+      Either<ShopFailure, KtList<Shop>> failureOrShops) {
+    return _ShopsReceived(
+      failureOrShops,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ShopWatcherEvent = _$ShopWatcherEventTearOff();
+
+mixin _$ShopWatcherEvent {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required
+        Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result shopsReceived(_ShopsReceived value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result shopsReceived(_ShopsReceived value),
+    @required Result orElse(),
+  });
+}
+
+abstract class $ShopWatcherEventCopyWith<$Res> {
+  factory $ShopWatcherEventCopyWith(
+          ShopWatcherEvent value, $Res Function(ShopWatcherEvent) then) =
+      _$ShopWatcherEventCopyWithImpl<$Res>;
+}
+
+class _$ShopWatcherEventCopyWithImpl<$Res>
+    implements $ShopWatcherEventCopyWith<$Res> {
+  _$ShopWatcherEventCopyWithImpl(this._value, this._then);
+
+  final ShopWatcherEvent _value;
+  // ignore: unused_field
+  final $Res Function(ShopWatcherEvent) _then;
+}
+
+abstract class _$WatchAllStartedCopyWith<$Res> {
+  factory _$WatchAllStartedCopyWith(
+          _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
+      __$WatchAllStartedCopyWithImpl<$Res>;
+}
+
+class __$WatchAllStartedCopyWithImpl<$Res>
+    extends _$ShopWatcherEventCopyWithImpl<$Res>
+    implements _$WatchAllStartedCopyWith<$Res> {
+  __$WatchAllStartedCopyWithImpl(
+      _WatchAllStarted _value, $Res Function(_WatchAllStarted) _then)
+      : super(_value, (v) => _then(v as _WatchAllStarted));
+
+  @override
+  _WatchAllStarted get _value => super._value as _WatchAllStarted;
+}
+
+class _$_WatchAllStarted implements _WatchAllStarted {
+  const _$_WatchAllStarted();
+
+  @override
+  String toString() {
+    return 'ShopWatcherEvent.watchAllStarted()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _WatchAllStarted);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required
+        Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+  }) {
+    assert(watchAllStarted != null);
+    assert(shopsReceived != null);
+    return watchAllStarted();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchAllStarted != null) {
+      return watchAllStarted();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result shopsReceived(_ShopsReceived value),
+  }) {
+    assert(watchAllStarted != null);
+    assert(shopsReceived != null);
+    return watchAllStarted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result shopsReceived(_ShopsReceived value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (watchAllStarted != null) {
+      return watchAllStarted(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _WatchAllStarted implements ShopWatcherEvent {
+  const factory _WatchAllStarted() = _$_WatchAllStarted;
+}
+
+abstract class _$ShopsReceivedCopyWith<$Res> {
+  factory _$ShopsReceivedCopyWith(
+          _ShopsReceived value, $Res Function(_ShopsReceived) then) =
+      __$ShopsReceivedCopyWithImpl<$Res>;
+  $Res call({Either<ShopFailure, KtList<Shop>> failureOrShops});
+}
+
+class __$ShopsReceivedCopyWithImpl<$Res>
+    extends _$ShopWatcherEventCopyWithImpl<$Res>
+    implements _$ShopsReceivedCopyWith<$Res> {
+  __$ShopsReceivedCopyWithImpl(
+      _ShopsReceived _value, $Res Function(_ShopsReceived) _then)
+      : super(_value, (v) => _then(v as _ShopsReceived));
+
+  @override
+  _ShopsReceived get _value => super._value as _ShopsReceived;
+
+  @override
+  $Res call({
+    Object failureOrShops = freezed,
+  }) {
+    return _then(_ShopsReceived(
+      failureOrShops == freezed
+          ? _value.failureOrShops
+          : failureOrShops as Either<ShopFailure, KtList<Shop>>,
+    ));
+  }
+}
+
+class _$_ShopsReceived implements _ShopsReceived {
+  const _$_ShopsReceived(this.failureOrShops) : assert(failureOrShops != null);
+
+  @override
+  final Either<ShopFailure, KtList<Shop>> failureOrShops;
+
+  @override
+  String toString() {
+    return 'ShopWatcherEvent.shopsReceived(failureOrShops: $failureOrShops)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ShopsReceived &&
+            (identical(other.failureOrShops, failureOrShops) ||
+                const DeepCollectionEquality()
+                    .equals(other.failureOrShops, failureOrShops)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(failureOrShops);
+
+  @override
+  _$ShopsReceivedCopyWith<_ShopsReceived> get copyWith =>
+      __$ShopsReceivedCopyWithImpl<_ShopsReceived>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result watchAllStarted(),
+    @required
+        Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+  }) {
+    assert(watchAllStarted != null);
+    assert(shopsReceived != null);
+    return shopsReceived(failureOrShops);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result watchAllStarted(),
+    Result shopsReceived(Either<ShopFailure, KtList<Shop>> failureOrShops),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (shopsReceived != null) {
+      return shopsReceived(failureOrShops);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result watchAllStarted(_WatchAllStarted value),
+    @required Result shopsReceived(_ShopsReceived value),
+  }) {
+    assert(watchAllStarted != null);
+    assert(shopsReceived != null);
+    return shopsReceived(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result watchAllStarted(_WatchAllStarted value),
+    Result shopsReceived(_ShopsReceived value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (shopsReceived != null) {
+      return shopsReceived(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShopsReceived implements ShopWatcherEvent {
+  const factory _ShopsReceived(
+      Either<ShopFailure, KtList<Shop>> failureOrShops) = _$_ShopsReceived;
+
+  Either<ShopFailure, KtList<Shop>> get failureOrShops;
+  _$ShopsReceivedCopyWith<_ShopsReceived> get copyWith;
+}
+
+class _$ShopWatcherStateTearOff {
+  const _$ShopWatcherStateTearOff();
+
+  _Initial initial() {
+    return const _Initial();
+  }
+
+  _LoadInProgress loadInProgress() {
+    return const _LoadInProgress();
+  }
+
+  _LoadSuccess loadSuccess(KtList<Shop> shops) {
+    return _LoadSuccess(
+      shops,
+    );
+  }
+
+  _LoadFailure loadFailure(ShopFailure shopFailure) {
+    return _LoadFailure(
+      shopFailure,
+    );
+  }
+}
+
+// ignore: unused_element
+const $ShopWatcherState = _$ShopWatcherStateTearOff();
+
+mixin _$ShopWatcherState {
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result loadInProgress(),
+    @required Result loadSuccess(KtList<Shop> shops),
+    @required Result loadFailure(ShopFailure shopFailure),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result loadInProgress(),
+    Result loadSuccess(KtList<Shop> shops),
+    Result loadFailure(ShopFailure shopFailure),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result loadInProgress(_LoadInProgress value),
+    @required Result loadSuccess(_LoadSuccess value),
+    @required Result loadFailure(_LoadFailure value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result loadInProgress(_LoadInProgress value),
+    Result loadSuccess(_LoadSuccess value),
+    Result loadFailure(_LoadFailure value),
+    @required Result orElse(),
+  });
+}
+
+abstract class $ShopWatcherStateCopyWith<$Res> {
+  factory $ShopWatcherStateCopyWith(
+          ShopWatcherState value, $Res Function(ShopWatcherState) then) =
+      _$ShopWatcherStateCopyWithImpl<$Res>;
+}
+
+class _$ShopWatcherStateCopyWithImpl<$Res>
+    implements $ShopWatcherStateCopyWith<$Res> {
+  _$ShopWatcherStateCopyWithImpl(this._value, this._then);
+
+  final ShopWatcherState _value;
+  // ignore: unused_field
+  final $Res Function(ShopWatcherState) _then;
+}
+
+abstract class _$InitialCopyWith<$Res> {
+  factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
+      __$InitialCopyWithImpl<$Res>;
+}
+
+class __$InitialCopyWithImpl<$Res> extends _$ShopWatcherStateCopyWithImpl<$Res>
+    implements _$InitialCopyWith<$Res> {
+  __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
+      : super(_value, (v) => _then(v as _Initial));
+
+  @override
+  _Initial get _value => super._value as _Initial;
+}
+
+class _$_Initial implements _Initial {
+  const _$_Initial();
+
+  @override
+  String toString() {
+    return 'ShopWatcherState.initial()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Initial);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result loadInProgress(),
+    @required Result loadSuccess(KtList<Shop> shops),
+    @required Result loadFailure(ShopFailure shopFailure),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return initial();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result loadInProgress(),
+    Result loadSuccess(KtList<Shop> shops),
+    Result loadFailure(ShopFailure shopFailure),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (initial != null) {
+      return initial();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result loadInProgress(_LoadInProgress value),
+    @required Result loadSuccess(_LoadSuccess value),
+    @required Result loadFailure(_LoadFailure value),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return initial(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result loadInProgress(_LoadInProgress value),
+    Result loadSuccess(_LoadSuccess value),
+    Result loadFailure(_LoadFailure value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (initial != null) {
+      return initial(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initial implements ShopWatcherState {
+  const factory _Initial() = _$_Initial;
+}
+
+abstract class _$LoadInProgressCopyWith<$Res> {
+  factory _$LoadInProgressCopyWith(
+          _LoadInProgress value, $Res Function(_LoadInProgress) then) =
+      __$LoadInProgressCopyWithImpl<$Res>;
+}
+
+class __$LoadInProgressCopyWithImpl<$Res>
+    extends _$ShopWatcherStateCopyWithImpl<$Res>
+    implements _$LoadInProgressCopyWith<$Res> {
+  __$LoadInProgressCopyWithImpl(
+      _LoadInProgress _value, $Res Function(_LoadInProgress) _then)
+      : super(_value, (v) => _then(v as _LoadInProgress));
+
+  @override
+  _LoadInProgress get _value => super._value as _LoadInProgress;
+}
+
+class _$_LoadInProgress implements _LoadInProgress {
+  const _$_LoadInProgress();
+
+  @override
+  String toString() {
+    return 'ShopWatcherState.loadInProgress()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _LoadInProgress);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result loadInProgress(),
+    @required Result loadSuccess(KtList<Shop> shops),
+    @required Result loadFailure(ShopFailure shopFailure),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadInProgress();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result loadInProgress(),
+    Result loadSuccess(KtList<Shop> shops),
+    Result loadFailure(ShopFailure shopFailure),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadInProgress != null) {
+      return loadInProgress();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result loadInProgress(_LoadInProgress value),
+    @required Result loadSuccess(_LoadSuccess value),
+    @required Result loadFailure(_LoadFailure value),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadInProgress(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result loadInProgress(_LoadInProgress value),
+    Result loadSuccess(_LoadSuccess value),
+    Result loadFailure(_LoadFailure value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadInProgress != null) {
+      return loadInProgress(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadInProgress implements ShopWatcherState {
+  const factory _LoadInProgress() = _$_LoadInProgress;
+}
+
+abstract class _$LoadSuccessCopyWith<$Res> {
+  factory _$LoadSuccessCopyWith(
+          _LoadSuccess value, $Res Function(_LoadSuccess) then) =
+      __$LoadSuccessCopyWithImpl<$Res>;
+  $Res call({KtList<Shop> shops});
+}
+
+class __$LoadSuccessCopyWithImpl<$Res>
+    extends _$ShopWatcherStateCopyWithImpl<$Res>
+    implements _$LoadSuccessCopyWith<$Res> {
+  __$LoadSuccessCopyWithImpl(
+      _LoadSuccess _value, $Res Function(_LoadSuccess) _then)
+      : super(_value, (v) => _then(v as _LoadSuccess));
+
+  @override
+  _LoadSuccess get _value => super._value as _LoadSuccess;
+
+  @override
+  $Res call({
+    Object shops = freezed,
+  }) {
+    return _then(_LoadSuccess(
+      shops == freezed ? _value.shops : shops as KtList<Shop>,
+    ));
+  }
+}
+
+class _$_LoadSuccess implements _LoadSuccess {
+  const _$_LoadSuccess(this.shops) : assert(shops != null);
+
+  @override
+  final KtList<Shop> shops;
+
+  @override
+  String toString() {
+    return 'ShopWatcherState.loadSuccess(shops: $shops)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _LoadSuccess &&
+            (identical(other.shops, shops) ||
+                const DeepCollectionEquality().equals(other.shops, shops)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(shops);
+
+  @override
+  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
+      __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result loadInProgress(),
+    @required Result loadSuccess(KtList<Shop> shops),
+    @required Result loadFailure(ShopFailure shopFailure),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadSuccess(shops);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result loadInProgress(),
+    Result loadSuccess(KtList<Shop> shops),
+    Result loadFailure(ShopFailure shopFailure),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadSuccess != null) {
+      return loadSuccess(shops);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result loadInProgress(_LoadInProgress value),
+    @required Result loadSuccess(_LoadSuccess value),
+    @required Result loadFailure(_LoadFailure value),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result loadInProgress(_LoadInProgress value),
+    Result loadSuccess(_LoadSuccess value),
+    Result loadFailure(_LoadFailure value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadSuccess != null) {
+      return loadSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadSuccess implements ShopWatcherState {
+  const factory _LoadSuccess(KtList<Shop> shops) = _$_LoadSuccess;
+
+  KtList<Shop> get shops;
+  _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
+}
+
+abstract class _$LoadFailureCopyWith<$Res> {
+  factory _$LoadFailureCopyWith(
+          _LoadFailure value, $Res Function(_LoadFailure) then) =
+      __$LoadFailureCopyWithImpl<$Res>;
+  $Res call({ShopFailure shopFailure});
+
+  $ShopFailureCopyWith<$Res> get shopFailure;
+}
+
+class __$LoadFailureCopyWithImpl<$Res>
+    extends _$ShopWatcherStateCopyWithImpl<$Res>
+    implements _$LoadFailureCopyWith<$Res> {
+  __$LoadFailureCopyWithImpl(
+      _LoadFailure _value, $Res Function(_LoadFailure) _then)
+      : super(_value, (v) => _then(v as _LoadFailure));
+
+  @override
+  _LoadFailure get _value => super._value as _LoadFailure;
+
+  @override
+  $Res call({
+    Object shopFailure = freezed,
+  }) {
+    return _then(_LoadFailure(
+      shopFailure == freezed ? _value.shopFailure : shopFailure as ShopFailure,
+    ));
+  }
+
+  @override
+  $ShopFailureCopyWith<$Res> get shopFailure {
+    if (_value.shopFailure == null) {
+      return null;
+    }
+    return $ShopFailureCopyWith<$Res>(_value.shopFailure, (value) {
+      return _then(_value.copyWith(shopFailure: value));
+    });
+  }
+}
+
+class _$_LoadFailure implements _LoadFailure {
+  const _$_LoadFailure(this.shopFailure) : assert(shopFailure != null);
+
+  @override
+  final ShopFailure shopFailure;
+
+  @override
+  String toString() {
+    return 'ShopWatcherState.loadFailure(shopFailure: $shopFailure)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _LoadFailure &&
+            (identical(other.shopFailure, shopFailure) ||
+                const DeepCollectionEquality()
+                    .equals(other.shopFailure, shopFailure)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(shopFailure);
+
+  @override
+  _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
+      __$LoadFailureCopyWithImpl<_LoadFailure>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initial(),
+    @required Result loadInProgress(),
+    @required Result loadSuccess(KtList<Shop> shops),
+    @required Result loadFailure(ShopFailure shopFailure),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadFailure(shopFailure);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initial(),
+    Result loadInProgress(),
+    Result loadSuccess(KtList<Shop> shops),
+    Result loadFailure(ShopFailure shopFailure),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadFailure != null) {
+      return loadFailure(shopFailure);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initial(_Initial value),
+    @required Result loadInProgress(_LoadInProgress value),
+    @required Result loadSuccess(_LoadSuccess value),
+    @required Result loadFailure(_LoadFailure value),
+  }) {
+    assert(initial != null);
+    assert(loadInProgress != null);
+    assert(loadSuccess != null);
+    assert(loadFailure != null);
+    return loadFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initial(_Initial value),
+    Result loadInProgress(_LoadInProgress value),
+    Result loadSuccess(_LoadSuccess value),
+    Result loadFailure(_LoadFailure value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (loadFailure != null) {
+      return loadFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _LoadFailure implements ShopWatcherState {
+  const factory _LoadFailure(ShopFailure shopFailure) = _$_LoadFailure;
+
+  ShopFailure get shopFailure;
+  _$LoadFailureCopyWith<_LoadFailure> get copyWith;
+}
