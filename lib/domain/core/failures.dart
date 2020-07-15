@@ -9,7 +9,7 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     @required T failedValue,
     @required int max,
   }) = ExceedingLength<T>;
-  const factory ValueFailure.epmty({
+  const factory ValueFailure.empty({
     @required T failedValue,
   }) = Empty<T>;
   const factory ValueFailure.multiline({

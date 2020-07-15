@@ -1,5 +1,5 @@
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
-import 'package:firebase_ddd_tutorial/domain/user/value_objects.dart';
+import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {

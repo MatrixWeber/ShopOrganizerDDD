@@ -33,7 +33,7 @@ abstract class ShopDto implements _$ShopDto {
     @required String street,
     @required num numberOfWorkers,
     @required List<bool> openingDays,
-    @required List<WorkingHoursDto> shopWorkingHours,
+    // @required List<WorkingHoursDto> shopWorkingHours,
     //? placeholder --> last updated time on Server
     @required @ServerTimeStampConverter() FieldValue serverTimeStamp,
   }) = _ShopDto;
@@ -53,34 +53,35 @@ abstract class ShopDto implements _$ShopDto {
       houseNum: shop.address.houseNumber.getOrCrash(),
       numberOfWorkers: shop.numberOfWorkers.getOrCrash(),
       openingDays: shop.openingDays.getOrCrash().asList(),
-      shopWorkingHours: shop.workingHours
-          .getOrCrash()
-          .map((shopWorkingHours) =>
-              WorkingHoursDto.fromDomain(shopWorkingHours))
-          .asList(),
+      // shopWorkingHours: shop.workingHours
+      //     .getOrCrash()
+      //     .map((shopWorkingHours) =>
+      //         WorkingHoursDto.fromDomain(shopWorkingHours))
+      //     .asList(),
       serverTimeStamp: FieldValue.serverTimestamp(),
     );
   }
 
   Shop toDomian() {
     return Shop(
-        id: UniqueId.fromUniqueString(id),
-        name: ShopName(name),
-        address: Address(
-          city: City(city),
-          street: Street(street),
-          zip: Zip(zip),
-          houseNumber: HouseNumber(houseNum),
-        ),
-        category: ShopCategory(category),
-        email: EmailAddress(email),
-        imageUrl: ImageUrl(imageUrl),
-        keeper: ShopKeeper(keeper),
-        numberOfWorkers: NumberOfWorkers(numberOfWorkers),
-        openingDays: WeekList<bool>(KtList<bool>.from(openingDays)),
-        phoneNumber: PhoneNumber(phone),
-        workingHours: WeekList(
-            shopWorkingHours.map((dto) => dto.toDomian()).toImmutableList()));
+      id: UniqueId.fromUniqueString(id),
+      name: ShopName(name),
+      address: Address(
+        city: City(city),
+        street: Street(street),
+        zip: Zip(zip),
+        houseNumber: HouseNumber(houseNum),
+      ),
+      category: ShopCategory(category),
+      email: EmailAddress(email),
+      imageUrl: ImageUrl(imageUrl),
+      keeper: ShopKeeper(keeper),
+      numberOfWorkers: NumberOfWorkers(numberOfWorkers),
+      openingDays: WeekList<bool>(KtList<bool>.from(openingDays)),
+      phoneNumber: PhoneNumber(phone),
+      // workingHours: WeekList(
+      //     shopWorkingHours.map((dto) => dto.toDomian()).toImmutableList()),
+    );
   }
 
   factory ShopDto.fromFirestore(DocumentSnapshot doc) {

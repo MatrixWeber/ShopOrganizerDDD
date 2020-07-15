@@ -17,7 +17,7 @@ Either<ValueFailure<String>, String> validateStringNotEmpty(String input) {
   if (input.isNotEmpty) {
     return right(input);
   } else {
-    return left(ValueFailure.epmty(failedValue: input));
+    return left(ValueFailure.empty(failedValue: input));
   }
 }
 
@@ -71,7 +71,7 @@ Either<ValueFailure<Duration>, Duration> validateDurationNotNull(
   if (input != const Duration()) {
     return right(input);
   } else {
-    return left(ValueFailure.epmty(failedValue: input));
+    return left(ValueFailure.empty(failedValue: input));
   }
 }
 
@@ -87,6 +87,6 @@ Either<ValueFailure<num>, num> validateNumNotNull(num input) {
   if (input != 0) {
     return right(input);
   } else {
-    return left(ValueFailure.epmty(failedValue: input));
+    return left(ValueFailure.empty(failedValue: input));
   }
 }

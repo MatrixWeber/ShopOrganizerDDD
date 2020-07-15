@@ -7,7 +7,6 @@ import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/user/i_user_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/user/user.dart';
 import 'package:firebase_ddd_tutorial/domain/user/user_failure.dart';
-import 'package:firebase_ddd_tutorial/domain/user/value_objects.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:meta/meta.dart';

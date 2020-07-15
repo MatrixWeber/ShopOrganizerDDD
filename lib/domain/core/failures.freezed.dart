@@ -20,7 +20,7 @@ class _$ValueFailureTearOff {
     );
   }
 
-  Empty<T> epmty<T>({@required T failedValue}) {
+  Empty<T> empty<T>({@required T failedValue}) {
     return Empty<T>(
       failedValue: failedValue,
     );
@@ -77,7 +77,7 @@ mixin _$ValueFailure<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -88,7 +88,7 @@ mixin _$ValueFailure<T> {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -100,7 +100,7 @@ mixin _$ValueFailure<T> {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -111,7 +111,7 @@ mixin _$ValueFailure<T> {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -233,7 +233,7 @@ class _$ExceedingLength<T>
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -242,7 +242,7 @@ class _$ExceedingLength<T>
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -256,7 +256,7 @@ class _$ExceedingLength<T>
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -276,7 +276,7 @@ class _$ExceedingLength<T>
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -285,7 +285,7 @@ class _$ExceedingLength<T>
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -299,7 +299,7 @@ class _$ExceedingLength<T>
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -362,14 +362,14 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ValueFailure<$T>.epmty(failedValue: $failedValue)';
+    return 'ValueFailure<$T>.empty(failedValue: $failedValue)';
   }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.epmty'))
+      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.empty'))
       ..add(DiagnosticsProperty('failedValue', failedValue));
   }
 
@@ -394,7 +394,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -403,21 +403,21 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
     assert(shortPassword != null);
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
-    return epmty(failedValue);
+    return empty(failedValue);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -427,8 +427,8 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (epmty != null) {
-      return epmty(failedValue);
+    if (empty != null) {
+      return empty(failedValue);
     }
     return orElse();
   }
@@ -437,7 +437,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -446,21 +446,21 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
     assert(shortPassword != null);
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
-    return epmty(this);
+    return empty(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -470,8 +470,8 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (epmty != null) {
-      return epmty(this);
+    if (empty != null) {
+      return empty(this);
     }
     return orElse();
   }
@@ -556,7 +556,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -565,7 +565,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -579,7 +579,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -599,7 +599,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -608,7 +608,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -622,7 +622,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -729,7 +729,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -738,7 +738,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -752,7 +752,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -772,7 +772,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -781,7 +781,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -795,7 +795,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -896,7 +896,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -905,7 +905,7 @@ class _$InvalidEmail<T>
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -919,7 +919,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -939,7 +939,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -948,7 +948,7 @@ class _$InvalidEmail<T>
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -962,7 +962,7 @@ class _$InvalidEmail<T>
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -1061,7 +1061,7 @@ class _$ShortPassword<T>
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -1070,7 +1070,7 @@ class _$ShortPassword<T>
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1084,7 +1084,7 @@ class _$ShortPassword<T>
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -1104,7 +1104,7 @@ class _$ShortPassword<T>
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -1113,7 +1113,7 @@ class _$ShortPassword<T>
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1127,7 +1127,7 @@ class _$ShortPassword<T>
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -1239,7 +1239,7 @@ class _$DurationToLong<T>
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -1248,7 +1248,7 @@ class _$DurationToLong<T>
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1262,7 +1262,7 @@ class _$DurationToLong<T>
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -1282,7 +1282,7 @@ class _$DurationToLong<T>
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -1291,7 +1291,7 @@ class _$DurationToLong<T>
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1305,7 +1305,7 @@ class _$DurationToLong<T>
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),
@@ -1417,7 +1417,7 @@ class _$MaxTypeExceeded<T>
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result exceedingLength(T failedValue, int max),
-    @required Result epmty(T failedValue),
+    @required Result empty(T failedValue),
     @required Result multiline(T failedValue),
     @required Result listTooLong(T failedValue, int max),
     @required Result invalidEmail(T failedValue),
@@ -1426,7 +1426,7 @@ class _$MaxTypeExceeded<T>
     @required Result maxTypeExceeded(T failedValue, T max),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1440,7 +1440,7 @@ class _$MaxTypeExceeded<T>
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result exceedingLength(T failedValue, int max),
-    Result epmty(T failedValue),
+    Result empty(T failedValue),
     Result multiline(T failedValue),
     Result listTooLong(T failedValue, int max),
     Result invalidEmail(T failedValue),
@@ -1460,7 +1460,7 @@ class _$MaxTypeExceeded<T>
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result epmty(Empty<T> value),
+    @required Result empty(Empty<T> value),
     @required Result multiline(Multiline<T> value),
     @required Result listTooLong(ListTooLong<T> value),
     @required Result invalidEmail(InvalidEmail<T> value),
@@ -1469,7 +1469,7 @@ class _$MaxTypeExceeded<T>
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
   }) {
     assert(exceedingLength != null);
-    assert(epmty != null);
+    assert(empty != null);
     assert(multiline != null);
     assert(listTooLong != null);
     assert(invalidEmail != null);
@@ -1483,7 +1483,7 @@ class _$MaxTypeExceeded<T>
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result exceedingLength(ExceedingLength<T> value),
-    Result epmty(Empty<T> value),
+    Result empty(Empty<T> value),
     Result multiline(Multiline<T> value),
     Result listTooLong(ListTooLong<T> value),
     Result invalidEmail(InvalidEmail<T> value),

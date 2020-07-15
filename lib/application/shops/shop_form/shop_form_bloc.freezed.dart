@@ -90,13 +90,6 @@ class _$ShopFormEventTearOff {
     );
   }
 
-  WorkingHoursChanged workingHoursChanged(
-      KtList<ShopWorkingHoursPrimitive> workingHours) {
-    return WorkingHoursChanged(
-      workingHours,
-    );
-  }
-
   Saved saved() {
     return const Saved();
   }
@@ -121,9 +114,6 @@ mixin _$ShopFormEvent {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   });
   @optionalTypeArgs
@@ -141,7 +131,6 @@ mixin _$ShopFormEvent {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   });
@@ -160,7 +149,6 @@ mixin _$ShopFormEvent {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   });
   @optionalTypeArgs
@@ -178,7 +166,6 @@ mixin _$ShopFormEvent {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   });
@@ -273,9 +260,6 @@ class _$Initialized implements Initialized {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -291,7 +275,6 @@ class _$Initialized implements Initialized {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return initialized(initialShopOption);
   }
@@ -312,7 +295,6 @@ class _$Initialized implements Initialized {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -339,7 +321,6 @@ class _$Initialized implements Initialized {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -355,7 +336,6 @@ class _$Initialized implements Initialized {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return initialized(this);
   }
@@ -376,7 +356,6 @@ class _$Initialized implements Initialized {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -465,9 +444,6 @@ class _$NameChanged implements NameChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -483,7 +459,6 @@ class _$NameChanged implements NameChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return nameChanged(shopName);
   }
@@ -504,7 +479,6 @@ class _$NameChanged implements NameChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -531,7 +505,6 @@ class _$NameChanged implements NameChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -547,7 +520,6 @@ class _$NameChanged implements NameChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return nameChanged(this);
   }
@@ -568,7 +540,6 @@ class _$NameChanged implements NameChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -656,9 +627,6 @@ class _$EmailChanged implements EmailChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -674,7 +642,6 @@ class _$EmailChanged implements EmailChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return emailChanged(email);
   }
@@ -695,7 +662,6 @@ class _$EmailChanged implements EmailChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -722,7 +688,6 @@ class _$EmailChanged implements EmailChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -738,7 +703,6 @@ class _$EmailChanged implements EmailChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return emailChanged(this);
   }
@@ -759,7 +723,6 @@ class _$EmailChanged implements EmailChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -848,9 +811,6 @@ class _$KeeperChanged implements KeeperChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -866,7 +826,6 @@ class _$KeeperChanged implements KeeperChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return keeperChanged(keeper);
   }
@@ -887,7 +846,6 @@ class _$KeeperChanged implements KeeperChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -914,7 +872,6 @@ class _$KeeperChanged implements KeeperChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -930,7 +887,6 @@ class _$KeeperChanged implements KeeperChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return keeperChanged(this);
   }
@@ -951,7 +907,6 @@ class _$KeeperChanged implements KeeperChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -1040,9 +995,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -1058,7 +1010,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return phoneNumberChanged(phone);
   }
@@ -1079,7 +1030,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1106,7 +1056,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -1122,7 +1071,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return phoneNumberChanged(this);
   }
@@ -1143,7 +1091,6 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -1235,9 +1182,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -1253,7 +1197,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return numberOfWorkersChanged(numOfWorkers);
   }
@@ -1274,7 +1217,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1301,7 +1243,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -1317,7 +1258,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return numberOfWorkersChanged(this);
   }
@@ -1338,7 +1278,6 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -1429,9 +1368,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -1447,7 +1383,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return imageUrlChanged(imageUrl);
   }
@@ -1468,7 +1403,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1495,7 +1429,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -1511,7 +1444,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return imageUrlChanged(this);
   }
@@ -1532,7 +1464,6 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -1622,9 +1553,6 @@ class _$CategoryChanged implements CategoryChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -1640,7 +1568,6 @@ class _$CategoryChanged implements CategoryChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return categoryChanged(category);
   }
@@ -1661,7 +1588,6 @@ class _$CategoryChanged implements CategoryChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1688,7 +1614,6 @@ class _$CategoryChanged implements CategoryChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -1704,7 +1629,6 @@ class _$CategoryChanged implements CategoryChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return categoryChanged(this);
   }
@@ -1725,7 +1649,6 @@ class _$CategoryChanged implements CategoryChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -1814,9 +1737,6 @@ class _$StreetChanged implements StreetChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -1832,7 +1752,6 @@ class _$StreetChanged implements StreetChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return streetChanged(street);
   }
@@ -1853,7 +1772,6 @@ class _$StreetChanged implements StreetChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1880,7 +1798,6 @@ class _$StreetChanged implements StreetChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -1896,7 +1813,6 @@ class _$StreetChanged implements StreetChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return streetChanged(this);
   }
@@ -1917,7 +1833,6 @@ class _$StreetChanged implements StreetChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -2007,9 +1922,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -2025,7 +1937,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return houseNumberChanged(houseNum);
   }
@@ -2046,7 +1957,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -2073,7 +1983,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -2089,7 +1998,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return houseNumberChanged(this);
   }
@@ -2110,7 +2018,6 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -2197,9 +2104,6 @@ class _$ZipChanged implements ZipChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -2215,7 +2119,6 @@ class _$ZipChanged implements ZipChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return zipChanged(zip);
   }
@@ -2236,7 +2139,6 @@ class _$ZipChanged implements ZipChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -2263,7 +2165,6 @@ class _$ZipChanged implements ZipChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -2279,7 +2180,6 @@ class _$ZipChanged implements ZipChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return zipChanged(this);
   }
@@ -2300,7 +2200,6 @@ class _$ZipChanged implements ZipChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -2388,9 +2287,6 @@ class _$CityChanged implements CityChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -2406,7 +2302,6 @@ class _$CityChanged implements CityChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return cityChanged(city);
   }
@@ -2427,7 +2322,6 @@ class _$CityChanged implements CityChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -2454,7 +2348,6 @@ class _$CityChanged implements CityChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -2470,7 +2363,6 @@ class _$CityChanged implements CityChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return cityChanged(this);
   }
@@ -2491,7 +2383,6 @@ class _$CityChanged implements CityChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -2581,9 +2472,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -2599,7 +2487,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return openingDaysChanged(openingDays);
   }
@@ -2620,7 +2507,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -2647,7 +2533,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -2663,7 +2548,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return openingDaysChanged(this);
   }
@@ -2684,7 +2568,6 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -2702,202 +2585,6 @@ abstract class OpeningDaysChanged implements ShopFormEvent {
 
   KtList<bool> get openingDays;
   $OpeningDaysChangedCopyWith<OpeningDaysChanged> get copyWith;
-}
-
-abstract class $WorkingHoursChangedCopyWith<$Res> {
-  factory $WorkingHoursChangedCopyWith(
-          WorkingHoursChanged value, $Res Function(WorkingHoursChanged) then) =
-      _$WorkingHoursChangedCopyWithImpl<$Res>;
-  $Res call({KtList<ShopWorkingHoursPrimitive> workingHours});
-}
-
-class _$WorkingHoursChangedCopyWithImpl<$Res>
-    extends _$ShopFormEventCopyWithImpl<$Res>
-    implements $WorkingHoursChangedCopyWith<$Res> {
-  _$WorkingHoursChangedCopyWithImpl(
-      WorkingHoursChanged _value, $Res Function(WorkingHoursChanged) _then)
-      : super(_value, (v) => _then(v as WorkingHoursChanged));
-
-  @override
-  WorkingHoursChanged get _value => super._value as WorkingHoursChanged;
-
-  @override
-  $Res call({
-    Object workingHours = freezed,
-  }) {
-    return _then(WorkingHoursChanged(
-      workingHours == freezed
-          ? _value.workingHours
-          : workingHours as KtList<ShopWorkingHoursPrimitive>,
-    ));
-  }
-}
-
-class _$WorkingHoursChanged implements WorkingHoursChanged {
-  const _$WorkingHoursChanged(this.workingHours) : assert(workingHours != null);
-
-  @override
-  final KtList<ShopWorkingHoursPrimitive> workingHours;
-
-  @override
-  String toString() {
-    return 'ShopFormEvent.workingHoursChanged(workingHours: $workingHours)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is WorkingHoursChanged &&
-            (identical(other.workingHours, workingHours) ||
-                const DeepCollectionEquality()
-                    .equals(other.workingHours, workingHours)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(workingHours);
-
-  @override
-  $WorkingHoursChangedCopyWith<WorkingHoursChanged> get copyWith =>
-      _$WorkingHoursChangedCopyWithImpl<WorkingHoursChanged>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
-    @required Result saved(),
-  }) {
-    assert(initialized != null);
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(keeperChanged != null);
-    assert(phoneNumberChanged != null);
-    assert(numberOfWorkersChanged != null);
-    assert(imageUrlChanged != null);
-    assert(categoryChanged != null);
-    assert(streetChanged != null);
-    assert(houseNumberChanged != null);
-    assert(zipChanged != null);
-    assert(cityChanged != null);
-    assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
-    assert(saved != null);
-    return workingHoursChanged(workingHours);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
-    Result saved(),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (workingHoursChanged != null) {
-      return workingHoursChanged(workingHours);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
-    @required Result saved(Saved value),
-  }) {
-    assert(initialized != null);
-    assert(nameChanged != null);
-    assert(emailChanged != null);
-    assert(keeperChanged != null);
-    assert(phoneNumberChanged != null);
-    assert(numberOfWorkersChanged != null);
-    assert(imageUrlChanged != null);
-    assert(categoryChanged != null);
-    assert(streetChanged != null);
-    assert(houseNumberChanged != null);
-    assert(zipChanged != null);
-    assert(cityChanged != null);
-    assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
-    assert(saved != null);
-    return workingHoursChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
-  }) {
-    assert(orElse != null);
-    if (workingHoursChanged != null) {
-      return workingHoursChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class WorkingHoursChanged implements ShopFormEvent {
-  const factory WorkingHoursChanged(
-      KtList<ShopWorkingHoursPrimitive> workingHours) = _$WorkingHoursChanged;
-
-  KtList<ShopWorkingHoursPrimitive> get workingHours;
-  $WorkingHoursChangedCopyWith<WorkingHoursChanged> get copyWith;
 }
 
 abstract class $SavedCopyWith<$Res> {
@@ -2946,9 +2633,6 @@ class _$Saved implements Saved {
     @required Result zipChanged(String zip),
     @required Result cityChanged(String city),
     @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required
-        Result workingHoursChanged(
-            KtList<ShopWorkingHoursPrimitive> workingHours),
     @required Result saved(),
   }) {
     assert(initialized != null);
@@ -2964,7 +2648,6 @@ class _$Saved implements Saved {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return saved();
   }
@@ -2985,7 +2668,6 @@ class _$Saved implements Saved {
     Result zipChanged(String zip),
     Result cityChanged(String city),
     Result openingDaysChanged(KtList<bool> openingDays),
-    Result workingHoursChanged(KtList<ShopWorkingHoursPrimitive> workingHours),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -3012,7 +2694,6 @@ class _$Saved implements Saved {
     @required Result zipChanged(ZipChanged value),
     @required Result cityChanged(CityChanged value),
     @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result workingHoursChanged(WorkingHoursChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
@@ -3028,7 +2709,6 @@ class _$Saved implements Saved {
     assert(zipChanged != null);
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
-    assert(workingHoursChanged != null);
     assert(saved != null);
     return saved(this);
   }
@@ -3049,7 +2729,6 @@ class _$Saved implements Saved {
     Result zipChanged(ZipChanged value),
     Result cityChanged(CityChanged value),
     Result openingDaysChanged(OpeningDaysChanged value),
-    Result workingHoursChanged(WorkingHoursChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {

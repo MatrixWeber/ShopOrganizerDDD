@@ -11,7 +11,7 @@ abstract class ShopFormState with _$ShopFormState {
   }) = _ShopFormState;
 
   factory ShopFormState.initial() => ShopFormState(
-        shop: Shop.empty(),
+        shop: Shop.test(),
         showErrorMessage: false,
         isEditing: false,
         isSaving: false,

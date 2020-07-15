@@ -102,3 +102,33 @@ class EmailAddress extends ValueObject<String> {
 
   const EmailAddress._(this.value);
 }
+
+class Name extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  static const maxLength = 50;
+
+  factory Name(String input) {
+    assert(input != null);
+    return Name._(
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+    );
+  }
+
+  const Name._(this.value);
+}
+
+class FirstName extends ValueObject<String> {
+  @override
+  final Either<ValueFailure<String>, String> value;
+  static const maxLength = 50;
+
+  factory FirstName(String input) {
+    assert(input != null);
+    return FirstName._(
+      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+    );
+  }
+
+  const FirstName._(this.value);
+}

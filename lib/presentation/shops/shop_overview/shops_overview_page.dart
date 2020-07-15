@@ -68,7 +68,8 @@ class ShopsOverviewPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              // TODO navigate to shop form page
+              ExtendedNavigator.of(context)
+                  .pushReplacementNamed(Routes.shopsCreationPage);
             },
             child: Icon(Icons.add),
           ),

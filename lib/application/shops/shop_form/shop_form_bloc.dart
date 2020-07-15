@@ -70,6 +70,7 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
         );
 
         if (state.shop.failureOption.isNone()) {
+          print('shop save');
           failureOrSuccess = state.isEditing
               ? await _shopRepository.update(state.shop)
               : await _shopRepository.create(state.shop);
@@ -77,6 +78,7 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
         yield state.copyWith(
           isSaving: false,
           showErrorMessage: true,
+          isEditing: true,
           saveFailureOrSuccessOption: optionOf(failureOrSuccess),
         );
       },
@@ -140,15 +142,16 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
-      workingHoursChanged: (e) async* {
-        yield state.copyWith(
-          shop: state.shop.copyWith(
-              workingHours: WeekList<ShopWorkingHours>(e.workingHours.map(
-            (primitive) => primitive.toDomian(),
-          ))),
-          saveFailureOrSuccessOption: none(),
-        );
-      },
+      // workingHoursChanged: (e) async* {
+      //   yield state.copyWith(
+      //     shop: state.shop.copyWith(
+      //         workingHours: WeekList<ShopWorkingHours>(e.workingHours.map(
+      //       (primitive) => primitive.toDomian(),
+      //     ))
+      //     ,),
+      //     saveFailureOrSuccessOption: none(),
+      //   );
+      // },
     );
   }
 }

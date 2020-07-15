@@ -24,7 +24,7 @@ abstract class Shop implements _$Shop {
     @required ShopCategory category,
     @required Address address,
     @required WeekList<bool> openingDays,
-    @required WeekList<ShopWorkingHours> workingHours,
+    // @required WeekList<ShopWorkingHours> workingHours,
   }) = _Shop;
 
   factory Shop.empty() => Shop(
@@ -38,7 +38,7 @@ abstract class Shop implements _$Shop {
         category: ShopCategory(''),
         address: Address.empty(),
         openingDays: WeekList<bool>(emptyList()),
-        workingHours: WeekList<ShopWorkingHours>(emptyList()),
+        // workingHours: WeekList<ShopWorkingHours>(emptyList()),
       );
   factory Shop.test() => Shop(
         id: UniqueId(),
@@ -51,15 +51,17 @@ abstract class Shop implements _$Shop {
         category: ShopCategory('f'),
         address: Address.test(),
         openingDays: WeekList<bool>(emptyList()),
-        workingHours: WeekList<ShopWorkingHours>(KtList.from([
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-          ShopWorkingHours(workingHours: WorkingHours(8)),
-        ])),
+        // workingHours: WeekList<ShopWorkingHours>(
+        //   KtList.from([
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //     ShopWorkingHours(workingHours: WorkingHours(8)),
+        //   ]),
+        // ),
       );
 
   Option<ValueFailure<dynamic>> get failureOption {
@@ -76,20 +78,20 @@ abstract class Shop implements _$Shop {
         .andThen(address.houseNumber.failureOrUnit)
         .andThen(address.zip.failureOrUnit)
         .andThen(address.street.failureOrUnit)
-        .andThen(
-          workingHours
-              .getOrCrash()
-              // getting the failureOption from the ShopWorkingHours ENTITY
-              .map((shopWorkingHours) => shopWorkingHours.failureOption)
-              // try to get only the failed items
-              .filter((option) => option.isSome())
-              // here we are checking at the failure of the 0 element
-              // if there is none() that means that all items are valid
-              .getOrElse(0, (_) => none())
-              // if there are none() failures present we return right(unit)
-              // witch means that everythink is ok else left(failure f)
-              .fold(() => right(unit), (f) => left(f)),
-        )
+        // .andThen(
+        //   workingHours
+        //       .getOrCrash()
+        //       // getting the failureOption from the ShopWorkingHours ENTITY
+        //       .map((shopWorkingHours) => shopWorkingHours.failureOption)
+        //       // try to get only the failed items
+        //       .filter((option) => option.isSome())
+        //       // here we are checking at the failure of the 0 element
+        //       // if there is none() that means that all items are valid
+        //       .getOrElse(0, (_) => none())
+        //       // if there are none() failures present we return right(unit)
+        //       // witch means that everythink is ok else left(failure f)
+        //       .fold(() => right(unit), (f) => left(f)),
+        // )
         .fold((f) => some(f), (_) => none());
   }
 }

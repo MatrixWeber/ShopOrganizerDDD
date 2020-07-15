@@ -29,3 +29,7 @@ extension DocumentReferenceShop on DocumentReference {
 extension DocumentReferenceUser on DocumentReference {
   CollectionReference get userCollection => collection('user');
 }
+
+extension DocumentReferenceWorker on DocumentReference {
+  CollectionReference get workerCollection => collection('worker');
+}

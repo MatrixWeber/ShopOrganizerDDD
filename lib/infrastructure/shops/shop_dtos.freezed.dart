@@ -29,7 +29,6 @@ class _$ShopDtoTearOff {
       @required String street,
       @required num numberOfWorkers,
       @required List<bool> openingDays,
-      @required List<WorkingHoursDto> shopWorkingHours,
       @required @ServerTimeStampConverter() FieldValue serverTimeStamp}) {
     return _ShopDto(
       id: id,
@@ -45,7 +44,6 @@ class _$ShopDtoTearOff {
       street: street,
       numberOfWorkers: numberOfWorkers,
       openingDays: openingDays,
-      shopWorkingHours: shopWorkingHours,
       serverTimeStamp: serverTimeStamp,
     );
   }
@@ -69,7 +67,6 @@ mixin _$ShopDto {
   String get street;
   num get numberOfWorkers;
   List<bool> get openingDays;
-  List<WorkingHoursDto> get shopWorkingHours;
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -94,7 +91,6 @@ abstract class $ShopDtoCopyWith<$Res> {
       String street,
       num numberOfWorkers,
       List<bool> openingDays,
-      List<WorkingHoursDto> shopWorkingHours,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
@@ -120,7 +116,6 @@ class _$ShopDtoCopyWithImpl<$Res> implements $ShopDtoCopyWith<$Res> {
     Object street = freezed,
     Object numberOfWorkers = freezed,
     Object openingDays = freezed,
-    Object shopWorkingHours = freezed,
     Object serverTimeStamp = freezed,
   }) {
     return _then(_value.copyWith(
@@ -141,9 +136,6 @@ class _$ShopDtoCopyWithImpl<$Res> implements $ShopDtoCopyWith<$Res> {
       openingDays: openingDays == freezed
           ? _value.openingDays
           : openingDays as List<bool>,
-      shopWorkingHours: shopWorkingHours == freezed
-          ? _value.shopWorkingHours
-          : shopWorkingHours as List<WorkingHoursDto>,
       serverTimeStamp: serverTimeStamp == freezed
           ? _value.serverTimeStamp
           : serverTimeStamp as FieldValue,
@@ -169,7 +161,6 @@ abstract class _$ShopDtoCopyWith<$Res> implements $ShopDtoCopyWith<$Res> {
       String street,
       num numberOfWorkers,
       List<bool> openingDays,
-      List<WorkingHoursDto> shopWorkingHours,
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
@@ -196,7 +187,6 @@ class __$ShopDtoCopyWithImpl<$Res> extends _$ShopDtoCopyWithImpl<$Res>
     Object street = freezed,
     Object numberOfWorkers = freezed,
     Object openingDays = freezed,
-    Object shopWorkingHours = freezed,
     Object serverTimeStamp = freezed,
   }) {
     return _then(_ShopDto(
@@ -217,9 +207,6 @@ class __$ShopDtoCopyWithImpl<$Res> extends _$ShopDtoCopyWithImpl<$Res>
       openingDays: openingDays == freezed
           ? _value.openingDays
           : openingDays as List<bool>,
-      shopWorkingHours: shopWorkingHours == freezed
-          ? _value.shopWorkingHours
-          : shopWorkingHours as List<WorkingHoursDto>,
       serverTimeStamp: serverTimeStamp == freezed
           ? _value.serverTimeStamp
           : serverTimeStamp as FieldValue,
@@ -243,7 +230,6 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
       @required this.street,
       @required this.numberOfWorkers,
       @required this.openingDays,
-      @required this.shopWorkingHours,
       @required @ServerTimeStampConverter() this.serverTimeStamp})
       : assert(name != null),
         assert(keeper != null),
@@ -257,7 +243,6 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
         assert(street != null),
         assert(numberOfWorkers != null),
         assert(openingDays != null),
-        assert(shopWorkingHours != null),
         assert(serverTimeStamp != null),
         super._();
 
@@ -292,14 +277,12 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
   @override
   final List<bool> openingDays;
   @override
-  final List<WorkingHoursDto> shopWorkingHours;
-  @override
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShopDto(id: $id, name: $name, keeper: $keeper, email: $email, phone: $phone, imageUrl: $imageUrl, category: $category, city: $city, zip: $zip, houseNum: $houseNum, street: $street, numberOfWorkers: $numberOfWorkers, openingDays: $openingDays, shopWorkingHours: $shopWorkingHours, serverTimeStamp: $serverTimeStamp)';
+    return 'ShopDto(id: $id, name: $name, keeper: $keeper, email: $email, phone: $phone, imageUrl: $imageUrl, category: $category, city: $city, zip: $zip, houseNum: $houseNum, street: $street, numberOfWorkers: $numberOfWorkers, openingDays: $openingDays, serverTimeStamp: $serverTimeStamp)';
   }
 
   @override
@@ -320,7 +303,6 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('street', street))
       ..add(DiagnosticsProperty('numberOfWorkers', numberOfWorkers))
       ..add(DiagnosticsProperty('openingDays', openingDays))
-      ..add(DiagnosticsProperty('shopWorkingHours', shopWorkingHours))
       ..add(DiagnosticsProperty('serverTimeStamp', serverTimeStamp));
   }
 
@@ -359,9 +341,6 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
             (identical(other.openingDays, openingDays) ||
                 const DeepCollectionEquality()
                     .equals(other.openingDays, openingDays)) &&
-            (identical(other.shopWorkingHours, shopWorkingHours) ||
-                const DeepCollectionEquality()
-                    .equals(other.shopWorkingHours, shopWorkingHours)) &&
             (identical(other.serverTimeStamp, serverTimeStamp) ||
                 const DeepCollectionEquality()
                     .equals(other.serverTimeStamp, serverTimeStamp)));
@@ -383,7 +362,6 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(street) ^
       const DeepCollectionEquality().hash(numberOfWorkers) ^
       const DeepCollectionEquality().hash(openingDays) ^
-      const DeepCollectionEquality().hash(shopWorkingHours) ^
       const DeepCollectionEquality().hash(serverTimeStamp);
 
   @override
@@ -412,7 +390,6 @@ abstract class _ShopDto extends ShopDto {
           @required String street,
           @required num numberOfWorkers,
           @required List<bool> openingDays,
-          @required List<WorkingHoursDto> shopWorkingHours,
           @required @ServerTimeStampConverter() FieldValue serverTimeStamp}) =
       _$_ShopDto;
 
@@ -445,8 +422,6 @@ abstract class _ShopDto extends ShopDto {
   num get numberOfWorkers;
   @override
   List<bool> get openingDays;
-  @override
-  List<WorkingHoursDto> get shopWorkingHours;
   @override
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;

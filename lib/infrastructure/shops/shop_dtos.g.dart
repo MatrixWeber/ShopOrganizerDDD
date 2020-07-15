@@ -20,11 +20,6 @@ _$_ShopDto _$_$_ShopDtoFromJson(Map<String, dynamic> json) {
     street: json['street'] as String,
     numberOfWorkers: json['numberOfWorkers'] as num,
     openingDays: (json['openingDays'] as List)?.map((e) => e as bool)?.toList(),
-    shopWorkingHours: (json['shopWorkingHours'] as List)
-        ?.map((e) => e == null
-            ? null
-            : WorkingHoursDto.fromJson(e as Map<String, dynamic>))
-        ?.toList(),
     serverTimeStamp:
         const ServerTimeStampConverter().fromJson(json['serverTimeStamp']),
   );
@@ -44,7 +39,6 @@ Map<String, dynamic> _$_$_ShopDtoToJson(_$_ShopDto instance) =>
       'street': instance.street,
       'numberOfWorkers': instance.numberOfWorkers,
       'openingDays': instance.openingDays,
-      'shopWorkingHours': instance.shopWorkingHours,
       'serverTimeStamp':
           const ServerTimeStampConverter().toJson(instance.serverTimeStamp),
     };

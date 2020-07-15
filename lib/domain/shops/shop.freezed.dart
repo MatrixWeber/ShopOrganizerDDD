@@ -22,8 +22,7 @@ class _$ShopTearOff {
       @required ImageUrl imageUrl,
       @required ShopCategory category,
       @required Address address,
-      @required WeekList<bool> openingDays,
-      @required WeekList<ShopWorkingHours> workingHours}) {
+      @required WeekList<bool> openingDays}) {
     return _Shop(
       id: id,
       name: name,
@@ -35,7 +34,6 @@ class _$ShopTearOff {
       category: category,
       address: address,
       openingDays: openingDays,
-      workingHours: workingHours,
     );
   }
 }
@@ -54,7 +52,6 @@ mixin _$Shop {
   ShopCategory get category;
   Address get address;
   WeekList<bool> get openingDays;
-  WeekList<ShopWorkingHours> get workingHours;
 
   $ShopCopyWith<Shop> get copyWith;
 }
@@ -72,8 +69,7 @@ abstract class $ShopCopyWith<$Res> {
       ImageUrl imageUrl,
       ShopCategory category,
       Address address,
-      WeekList<bool> openingDays,
-      WeekList<ShopWorkingHours> workingHours});
+      WeekList<bool> openingDays});
 
   $AddressCopyWith<$Res> get address;
 }
@@ -97,7 +93,6 @@ class _$ShopCopyWithImpl<$Res> implements $ShopCopyWith<$Res> {
     Object category = freezed,
     Object address = freezed,
     Object openingDays = freezed,
-    Object workingHours = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as UniqueId,
@@ -117,9 +112,6 @@ class _$ShopCopyWithImpl<$Res> implements $ShopCopyWith<$Res> {
       openingDays: openingDays == freezed
           ? _value.openingDays
           : openingDays as WeekList<bool>,
-      workingHours: workingHours == freezed
-          ? _value.workingHours
-          : workingHours as WeekList<ShopWorkingHours>,
     ));
   }
 
@@ -148,8 +140,7 @@ abstract class _$ShopCopyWith<$Res> implements $ShopCopyWith<$Res> {
       ImageUrl imageUrl,
       ShopCategory category,
       Address address,
-      WeekList<bool> openingDays,
-      WeekList<ShopWorkingHours> workingHours});
+      WeekList<bool> openingDays});
 
   @override
   $AddressCopyWith<$Res> get address;
@@ -175,7 +166,6 @@ class __$ShopCopyWithImpl<$Res> extends _$ShopCopyWithImpl<$Res>
     Object category = freezed,
     Object address = freezed,
     Object openingDays = freezed,
-    Object workingHours = freezed,
   }) {
     return _then(_Shop(
       id: id == freezed ? _value.id : id as UniqueId,
@@ -195,9 +185,6 @@ class __$ShopCopyWithImpl<$Res> extends _$ShopCopyWithImpl<$Res>
       openingDays: openingDays == freezed
           ? _value.openingDays
           : openingDays as WeekList<bool>,
-      workingHours: workingHours == freezed
-          ? _value.workingHours
-          : workingHours as WeekList<ShopWorkingHours>,
     ));
   }
 }
@@ -213,8 +200,7 @@ class _$_Shop extends _Shop {
       @required this.imageUrl,
       @required this.category,
       @required this.address,
-      @required this.openingDays,
-      @required this.workingHours})
+      @required this.openingDays})
       : assert(id != null),
         assert(name != null),
         assert(keeper != null),
@@ -225,7 +211,6 @@ class _$_Shop extends _Shop {
         assert(category != null),
         assert(address != null),
         assert(openingDays != null),
-        assert(workingHours != null),
         super._();
 
   @override
@@ -248,12 +233,10 @@ class _$_Shop extends _Shop {
   final Address address;
   @override
   final WeekList<bool> openingDays;
-  @override
-  final WeekList<ShopWorkingHours> workingHours;
 
   @override
   String toString() {
-    return 'Shop(id: $id, name: $name, keeper: $keeper, email: $email, phoneNumber: $phoneNumber, numberOfWorkers: $numberOfWorkers, imageUrl: $imageUrl, category: $category, address: $address, openingDays: $openingDays, workingHours: $workingHours)';
+    return 'Shop(id: $id, name: $name, keeper: $keeper, email: $email, phoneNumber: $phoneNumber, numberOfWorkers: $numberOfWorkers, imageUrl: $imageUrl, category: $category, address: $address, openingDays: $openingDays)';
   }
 
   @override
@@ -285,10 +268,7 @@ class _$_Shop extends _Shop {
                     .equals(other.address, address)) &&
             (identical(other.openingDays, openingDays) ||
                 const DeepCollectionEquality()
-                    .equals(other.openingDays, openingDays)) &&
-            (identical(other.workingHours, workingHours) ||
-                const DeepCollectionEquality()
-                    .equals(other.workingHours, workingHours)));
+                    .equals(other.openingDays, openingDays)));
   }
 
   @override
@@ -303,8 +283,7 @@ class _$_Shop extends _Shop {
       const DeepCollectionEquality().hash(imageUrl) ^
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(address) ^
-      const DeepCollectionEquality().hash(openingDays) ^
-      const DeepCollectionEquality().hash(workingHours);
+      const DeepCollectionEquality().hash(openingDays);
 
   @override
   _$ShopCopyWith<_Shop> get copyWith =>
@@ -323,8 +302,7 @@ abstract class _Shop extends Shop {
       @required ImageUrl imageUrl,
       @required ShopCategory category,
       @required Address address,
-      @required WeekList<bool> openingDays,
-      @required WeekList<ShopWorkingHours> workingHours}) = _$_Shop;
+      @required WeekList<bool> openingDays}) = _$_Shop;
 
   @override
   UniqueId get id;
@@ -346,8 +324,6 @@ abstract class _Shop extends Shop {
   Address get address;
   @override
   WeekList<bool> get openingDays;
-  @override
-  WeekList<ShopWorkingHours> get workingHours;
   @override
   _$ShopCopyWith<_Shop> get copyWith;
 }

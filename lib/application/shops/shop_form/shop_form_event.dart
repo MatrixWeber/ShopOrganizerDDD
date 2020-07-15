@@ -22,7 +22,7 @@ abstract class ShopFormEvent with _$ShopFormEvent {
   const factory ShopFormEvent.cityChanged(String city) = CityChanged;
   const factory ShopFormEvent.openingDaysChanged(KtList<bool> openingDays) =
       OpeningDaysChanged;
-  const factory ShopFormEvent.workingHoursChanged(
-      KtList<ShopWorkingHoursPrimitive> workingHours) = WorkingHoursChanged;
+  // const factory ShopFormEvent.workingHoursChanged(
+  //     KtList<ShopWorkingHoursPrimitive> workingHours) = WorkingHoursChanged;
   const factory ShopFormEvent.saved() = Saved;
 }
