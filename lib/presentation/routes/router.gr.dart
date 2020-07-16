@@ -12,7 +12,7 @@ import 'package:firebase_ddd_tutorial/presentation/sign_in/sign_in_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/notes_overview_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/shops_overview_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_creation_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_worker_page.dart';
+import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_worker_creation_page.dart';
 
 class Routes {
   static const String splashPage = '/';
@@ -20,14 +20,14 @@ class Routes {
   static const String notesOverviewPage = '/notes-overview-page';
   static const String shopsOverviewPage = '/shops-overview-page';
   static const String shopsCreationPage = '/shops-creation-page';
-  static const String shopWorkerPage = '/shop-worker-page';
+  static const String shopWorkerCreationPage = '/shop-worker-creation-page';
   static const all = <String>{
     splashPage,
     signInPage,
     notesOverviewPage,
     shopsOverviewPage,
     shopsCreationPage,
-    shopWorkerPage,
+    shopWorkerCreationPage,
   };
 }
 
@@ -40,7 +40,7 @@ class Router extends RouterBase {
     RouteDef(Routes.notesOverviewPage, page: NotesOverviewPage),
     RouteDef(Routes.shopsOverviewPage, page: ShopsOverviewPage),
     RouteDef(Routes.shopsCreationPage, page: ShopsCreationPage),
-    RouteDef(Routes.shopWorkerPage, page: ShopWorkerPage),
+    RouteDef(Routes.shopWorkerCreationPage, page: ShopWorkerCreationPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -75,9 +75,9 @@ class Router extends RouterBase {
         settings: data,
       );
     },
-    ShopWorkerPage: (RouteData data) {
+    ShopWorkerCreationPage: (RouteData data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => ShopWorkerPage(),
+        builder: (context) => ShopWorkerCreationPage(),
         settings: data,
       );
     },
@@ -102,6 +102,6 @@ extension RouterNavigationHelperMethods on ExtendedNavigatorState {
   Future<dynamic> pushShopsCreationPage() =>
       pushNamed<dynamic>(Routes.shopsCreationPage);
 
-  Future<dynamic> pushShopWorkerPage() =>
-      pushNamed<dynamic>(Routes.shopWorkerPage);
+  Future<dynamic> pushShopWorkerCreationPage() =>
+      pushNamed<dynamic>(Routes.shopWorkerCreationPage);
 }

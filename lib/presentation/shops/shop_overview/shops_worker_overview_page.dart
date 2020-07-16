@@ -1,26 +1,26 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/notes/note_actor/note_actor_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/notes/note_watcher/note_watcher_bloc.dart';
-import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/widgets/notes_overview_body_widget.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
+import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/shop_worker_overview_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../injection.dart';
 
-class NotesOverviewPage extends StatelessWidget {
+class ShopWorkersWorkerOverviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<NoteWatcherBloc>(
-          create: (context) => getIt<NoteWatcherBloc>()
-            ..add(const NoteWatcherEvent.watchAllStarted()),
+        BlocProvider<WorkerWatcherBloc>(
+          create: (context) => getIt<WorkerWatcherBloc>()
+            ..add(const WorkerWatcherEvent.watchAllStarted()),
         ),
-        BlocProvider<NoteActorBloc>(
-          create: (context) => getIt<NoteActorBloc>(),
+        BlocProvider<WorkerActorBloc>(
+          create: (context) => getIt<WorkerActorBloc>(),
         )
       ],
       child: MultiBlocListener(
@@ -31,12 +31,12 @@ class NotesOverviewPage extends StatelessWidget {
                     .pushReplacementNamed(Routes.signInPage),
                 orElse: () {});
           }),
-          BlocListener<NoteActorBloc, NoteActorState>(
+          BlocListener<WorkerActorBloc, WorkerActorState>(
             listener: (context, state) {
               state.maybeMap(
                   deleteFailure: (state) {
                     FlushbarHelper.createError(
-                      message: state.noteFailure.map(
+                      message: state.workerFailure.map(
                           unexpected: (_) =>
                               'Unexpected error occured while deleting, please contact support',
                           unableToUpdate: (_) => 'Impossible error',
@@ -51,7 +51,7 @@ class NotesOverviewPage extends StatelessWidget {
         ],
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('Notes'),
+            title: const Text('ShopWorkersWorker'),
             leading: IconButton(
               key: const Key('icon-button-sign-out'),
               icon: Icon(Icons.exit_to_app),
@@ -68,13 +68,12 @@ class NotesOverviewPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              // TODO navigate to note form page
               ExtendedNavigator.of(context)
-                  .pushReplacementNamed(Routes.shopsOverviewPage);
+                  .pushReplacementNamed(Routes.shopWorkerCreationPage);
             },
             child: Icon(Icons.add),
           ),
-          body: NotesOverviewBody(),
+          body: ShopWorkerOverviewForm(),
         ),
       ),
     );

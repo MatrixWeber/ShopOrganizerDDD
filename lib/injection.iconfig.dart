@@ -31,7 +31,9 @@ import 'package:firebase_ddd_tutorial/application/task/task_actor/task_actor_blo
 import 'package:firebase_ddd_tutorial/application/task/task_form/task_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/user/user_actor/user_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/user/user_form/user_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -67,8 +69,12 @@ void $initGetIt(GetIt g, {String environment}) {
   g.registerFactory<TaskFormBloc>(() => TaskFormBloc(g<ITaskRepository>()));
   g.registerFactory<UserActorBloc>(() => UserActorBloc(g<IUserRepository>()));
   g.registerFactory<UserFormBloc>(() => UserFormBloc(g<IUserRepository>()));
+  g.registerFactory<WorkerActorBloc>(
+      () => WorkerActorBloc(g<IWorkerRepository>()));
   g.registerFactory<WorkerFormBloc>(
       () => WorkerFormBloc(g<IWorkerRepository>()));
+  g.registerFactory<WorkerWatcherBloc>(
+      () => WorkerWatcherBloc(g<IWorkerRepository>()));
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
 }
 

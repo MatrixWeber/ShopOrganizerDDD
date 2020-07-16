@@ -1,12 +1,12 @@
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_worker_form.dart';
+import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_worker_creation_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../injection.dart';
 
-class ShopWorkerPage extends StatelessWidget {
+class ShopWorkerCreationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +34,7 @@ class ShopWorkerPage extends StatelessWidget {
       ),
       body: BlocProvider(
         create: (context) => getIt<WorkerFormBloc>(),
-        child: ShopWorkerForm(),
+        child: ShopWorkerCreationForm(),
       ),
     );
   }

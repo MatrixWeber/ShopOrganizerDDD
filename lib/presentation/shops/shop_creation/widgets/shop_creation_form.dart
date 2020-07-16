@@ -29,7 +29,7 @@ class ShopCreationForm extends StatelessWidget {
                 ).show(context);
               }, (_) {
                 ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.shopWorkerPage);
+                    .pushReplacementNamed(Routes.shopWorkerCreationPage);
               }));
     }, builder: (context, state) {
       return Form(

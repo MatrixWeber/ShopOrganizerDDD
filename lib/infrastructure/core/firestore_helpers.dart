@@ -12,6 +12,11 @@ extension FirestoreX on Firestore {
         .collection('users')
         .document(user.id.getOrCrash());
   }
+
+  // Future<DocumentReference> shopDocument() async {
+  //   final userOption = await getIt<IShopRepository>().;
+  //   return userDocument().whenComplete(() => collection('shops').document());
+  // }
 }
 
 extension DocumentReferenceNote on DocumentReference {

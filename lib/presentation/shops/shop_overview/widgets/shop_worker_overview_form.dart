@@ -1,11 +1,11 @@
-import 'package:firebase_ddd_tutorial/application/shops/shop_watcher/shop_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class ShopOverviewForm extends StatelessWidget {
+class ShopWorkerOverviewForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<ShopWatcherBloc, ShopWatcherState>(
+    return BlocBuilder<WorkerWatcherBloc, WorkerWatcherState>(
       builder: (context, state) {
         return state.map(
           initial: (_) => Container(),
@@ -15,8 +15,8 @@ class ShopOverviewForm extends StatelessWidget {
           loadSuccess: (state) {
             return ListView.builder(
               itemBuilder: (context, index) {
-                final shop = state.shops[index];
-                if (shop.failureOption.isSome()) {
+                final worker = state.worker[index];
+                if (worker.failureOption.isSome()) {
                   return Container(
                     color: Colors.red,
                     width: 100,
@@ -30,7 +30,7 @@ class ShopOverviewForm extends StatelessWidget {
                   );
                 }
               },
-              itemCount: state.shops.size,
+              itemCount: state.worker.size,
             );
           },
           loadFailure: (state) {
