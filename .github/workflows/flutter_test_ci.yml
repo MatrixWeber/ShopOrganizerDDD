@@ -25,4 +25,4 @@ jobs:
           channel: 'stable'
       - run: flutter packages get
       - run: flutter test
-      - run: flutter build ios -v
+      - run: flutter build apk
