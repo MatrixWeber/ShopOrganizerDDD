@@ -276,7 +276,7 @@ class ShopCreationForm extends StatelessWidget {
                           ),
                       (_) => null),
               decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.home),
+                prefixIcon: Icon(Icons.group_work),
                 labelText: 'Number of worker',
               ),
               autocorrect: false,

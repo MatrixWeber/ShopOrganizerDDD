@@ -11,7 +11,7 @@ abstract class UserFormState with _$UserFormState {
   }) = _UserFormState;
 
   factory UserFormState.initial() => UserFormState(
-        user: User.empty(),
+        user: User.test(),
         showErrorMessage: false,
         isEditing: false,
         isSaving: false,

@@ -6,10 +6,13 @@
 
 import 'package:firebase_ddd_tutorial/infrastructure/core/firebase_injectable_module.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
+import 'package:firebase_ddd_tutorial/infrastructure/image_picker/image_picker_implementation.dart';
+import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/notes/note_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/notes/i_note_repository.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/shops/shop_repository.dart';
@@ -18,8 +21,11 @@ import 'package:firebase_ddd_tutorial/infrastructure/task/task_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/tasks/i_task_repository.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/user/user_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/user/i_user_repository.dart';
+import 'package:firebase_ddd_tutorial/infrastructure/worker/worker_image_store_repository.dart';
+import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/worker/worker_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_repository.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_form/note_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_watcher/note_watcher_bloc.dart';
@@ -33,6 +39,7 @@ import 'package:firebase_ddd_tutorial/application/user/user_actor/user_actor_blo
 import 'package:firebase_ddd_tutorial/application/user/user_form/user_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:get_it/get_it.dart';
@@ -41,11 +48,14 @@ void $initGetIt(GetIt g, {String environment}) {
   final firebaseInjectableModule = _$FirebaseInjectableModule();
   g.registerLazySingleton<FirebaseAuth>(
       () => firebaseInjectableModule.firebaseAuth);
+  g.registerLazySingleton<FirebaseStorage>(
+      () => firebaseInjectableModule.firebaseStorage);
   g.registerLazySingleton<Firestore>(() => firebaseInjectableModule.firestore);
   g.registerLazySingleton<GoogleSignIn>(
       () => firebaseInjectableModule.googleSignIn);
   g.registerLazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(g<FirebaseAuth>(), g<GoogleSignIn>()));
+  g.registerLazySingleton<IImagePicker>(() => ImagePickerImplementation());
   g.registerLazySingleton<INoteRepository>(
       () => NoteRepository(g<Firestore>()));
   g.registerLazySingleton<IShopRepository>(
@@ -54,8 +64,11 @@ void $initGetIt(GetIt g, {String environment}) {
       () => TaskRepository(g<Firestore>()));
   g.registerLazySingleton<IUserRepository>(
       () => UserRepository(g<Firestore>()));
+  g.registerLazySingleton<IWorkerImageStoreRepository>(
+      () => WorkerImageStoreRepository(g<FirebaseStorage>()));
   g.registerLazySingleton<IWorkerRepository>(
       () => WorkerRepository(g<Firestore>()));
+  g.registerFactory<ImagePickerBloc>(() => ImagePickerBloc(g<IImagePicker>()));
   g.registerFactory<NoteActorBloc>(() => NoteActorBloc(g<INoteRepository>()));
   g.registerFactory<NoteFormBloc>(() => NoteFormBloc(g<INoteRepository>()));
   g.registerFactory<NoteWatcherBloc>(
@@ -73,6 +86,8 @@ void $initGetIt(GetIt g, {String environment}) {
       () => WorkerActorBloc(g<IWorkerRepository>()));
   g.registerFactory<WorkerFormBloc>(
       () => WorkerFormBloc(g<IWorkerRepository>()));
+  g.registerFactory<WorkerImageHandlerBloc>(
+      () => WorkerImageHandlerBloc(g<IWorkerImageStoreRepository>()));
   g.registerFactory<WorkerWatcherBloc>(
       () => WorkerWatcherBloc(g<IWorkerRepository>()));
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));

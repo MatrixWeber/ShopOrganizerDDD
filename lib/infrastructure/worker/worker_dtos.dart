@@ -1,8 +1,6 @@
 // Data transfer objects
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_ddd_tutorial/domain/address/address.dart';
-import 'package:firebase_ddd_tutorial/domain/address/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';
 import 'package:flutter/foundation.dart';

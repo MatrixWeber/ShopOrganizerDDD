@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
+import 'package:firebase_ddd_tutorial/presentation/core/image_widget.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -46,13 +50,13 @@ class ShopWorkerCreationForm extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.all(_PADDING),
             ),
-            // GestureDetector(
-            //   onTap: () => _showChoiseDialog(context),
-            //   child: _decideImageView(),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.all(_PADDING),
-            // ),
+            GestureDetector(
+              onTap: () => _showChoiseDialog(context),
+              child: decideImageView(null),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(_PADDING),
+            ),
             TextFormField(
               key: const Key('name-field'),
               onChanged: (value) => context
@@ -135,5 +139,54 @@ class ShopWorkerCreationForm extends StatelessWidget {
         ),
       );
     });
+  }
+
+  // void _showWaitSnackBar() {
+  //   _scaffoldState.currentState.showSnackBar(SnackBar(
+  //     duration: new Duration(seconds: 4),
+  //     content: Row(
+  //       children: <Widget>[
+  //         new CircularProgressIndicator(),
+  //         new Text("  Signing-In...")
+  //       ],
+  //     ),
+  //   ));
+  // }
+
+  Future<void> _showChoiseDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Choose the Foto source',
+                style: textStyle(fontSize: 24.0, color: Colors.black),
+                textAlign: TextAlign.center),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () => context.bloc<ImagePickerBloc>().add(
+                        const ImagePickerEvent.selectImageFromGalleryStarted()),
+                    child: Text(
+                      'Galery',
+                      style: textStyle(fontSize: 21.0, color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                  ),
+                  GestureDetector(
+                    onTap: () => context.bloc<ImagePickerBloc>().add(
+                        const ImagePickerEvent.getImageFromCameraStarted()),
+                    child: Text('Camera',
+                        style: textStyle(fontSize: 21.0, color: Colors.black),
+                        textAlign: TextAlign.center),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
   }
 }

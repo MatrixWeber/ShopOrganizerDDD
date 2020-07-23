@@ -3,7 +3,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_ddd_tutorial/domain/address/address.dart';
 import 'package:firebase_ddd_tutorial/domain/address/value_objects.dart';
-import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/value_objects.dart';
