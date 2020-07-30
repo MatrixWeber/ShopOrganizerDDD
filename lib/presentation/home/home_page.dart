@@ -11,8 +11,7 @@ class HomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            ExtendedNavigator.of(context)
-                .pushReplacementNamed(Routes.signInPage);
+            ExtendedNavigator.of(context).pushSignInPage();
           },
         ),
       ),

@@ -4,9 +4,7 @@ import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
-import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 
 part 'image_picker_event.dart';

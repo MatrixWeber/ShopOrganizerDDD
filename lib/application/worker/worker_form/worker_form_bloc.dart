@@ -66,12 +66,19 @@ class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
           failureOrSuccess = state.isEditing
               ? await _workerRepository.update(state.worker)
               : await _workerRepository.create(state.worker);
+          yield state.copyWith(
+            isSaving: false,
+            showErrorMessage: true,
+            saveFailureOrSuccessOption: optionOf(failureOrSuccess),
+          );
+        } else {
+          yield state.copyWith(
+            isSaving: false,
+            showErrorMessage: true,
+            saveFailureOrSuccessOption:
+                optionOf(left(const WorkerFailure.unableToUpdate())),
+          );
         }
-        yield state.copyWith(
-          isSaving: false,
-          showErrorMessage: true,
-          saveFailureOrSuccessOption: optionOf(failureOrSuccess),
-        );
       },
       phoneNumberChanged: (e) async* {
         yield state.copyWith(

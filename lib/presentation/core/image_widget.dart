@@ -1,18 +1,18 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:path_provider/path_provider.dart';
+// import 'package:flutter/services.dart' show rootBundle;
+// import 'package:path_provider/path_provider.dart';
 
-Future<File> getImageFileFromAssets(String path) async {
-  final byteData = await rootBundle.load('assets/$path');
+// Future<File> getImageFileFromAssets(String path) async {
+//   final byteData = await rootBundle.load('assets/$path');
 
-  final file = File('${(await getTemporaryDirectory()).path}/$path');
-  await file.writeAsBytes(byteData.buffer
-      .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
+//   final file = File('${(await getTemporaryDirectory()).path}/$path');
+//   await file.writeAsBytes(byteData.buffer
+//       .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
 
-  return file;
-}
+//   return file;
+// }
 
 Widget _ifImageNotSet() {
   const _myAvatar = 'my_great_logo.png';

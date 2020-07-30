@@ -3,6 +3,7 @@ import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_watcher/note_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/widgets/notes_overview_body_widget.dart';
+import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/widgets/uncompleted_switch.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -27,8 +28,8 @@ class NotesOverviewPage extends StatelessWidget {
         listeners: [
           BlocListener<AuthBloc, AuthState>(listener: (context, state) {
             state.maybeMap(
-                unauthenticated: (_) => ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.signInPage),
+                unauthenticated: (_) =>
+                    ExtendedNavigator.of(context).pushSignInPage(),
                 orElse: () {});
           }),
           BlocListener<NoteActorBloc, NoteActorState>(
@@ -54,7 +55,7 @@ class NotesOverviewPage extends StatelessWidget {
             title: const Text('Notes'),
             leading: IconButton(
               key: const Key('icon-button-sign-out'),
-              icon: Icon(Icons.exit_to_app),
+              icon: const Icon(Icons.exit_to_app),
               onPressed: () {
                 context.bloc<AuthBloc>().add(
                       const AuthEvent.signedOut(),
@@ -62,17 +63,15 @@ class NotesOverviewPage extends StatelessWidget {
               },
             ),
             actions: <Widget>[
-              IconButton(
-                  icon: Icon(Icons.indeterminate_check_box), onPressed: () {})
+              const UncompletedSwitch(),
             ],
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               // TODO navigate to note form page
-              ExtendedNavigator.of(context)
-                  .pushReplacementNamed(Routes.shopsOverviewPage);
+              ExtendedNavigator.of(context).pushShopsOverviewPage();
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
           body: NotesOverviewBody(),
         ),

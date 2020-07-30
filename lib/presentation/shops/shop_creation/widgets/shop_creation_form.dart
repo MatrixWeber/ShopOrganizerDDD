@@ -28,8 +28,7 @@ class ShopCreationForm extends StatelessWidget {
                   duration: const Duration(seconds: 5),
                 ).show(context);
               }, (_) {
-                ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.shopWorkerCreationPage);
+                ExtendedNavigator.of(context).pushShopWorkerCreationPage();
               }));
     }, builder: (context, state) {
       return Form(
@@ -61,7 +60,8 @@ class ShopCreationForm extends StatelessWidget {
               validator: (_) =>
                   context.bloc<ShopFormBloc>().state.shop.name.value.fold(
                       (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Name',
+                            empty: (_) => 'Name cannot be empty',
+                            exceedingLength: (_) => 'Invalid Name',
                             orElse: () => null,
                           ),
                       (_) => null),
@@ -83,7 +83,8 @@ class ShopCreationForm extends StatelessWidget {
               validator: (_) =>
                   context.bloc<ShopFormBloc>().state.shop.keeper.value.fold(
                       (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Keeper Name',
+                            empty: (_) => 'Keeper Name cannot be empty',
+                            exceedingLength: (_) => 'Invalid Keeper Name',
                             orElse: () => null,
                           ),
                       (_) => null),
@@ -132,7 +133,8 @@ class ShopCreationForm extends StatelessWidget {
                   .value
                   .fold(
                       (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Phone Number',
+                            empty: (_) => 'Phone Number cannot be empty',
+                            exceedingLength: (_) => 'Invalid Phone Number',
                             orElse: () => null,
                           ),
                       (_) => null),
@@ -160,6 +162,7 @@ class ShopCreationForm extends StatelessWidget {
                   .value
                   .fold(
                       (f) => f.maybeMap(
+                            empty: (_) => 'City cannot be empty',
                             exceedingLength: (_) => 'Invalid city',
                             orElse: () => null,
                           ),
@@ -188,6 +191,7 @@ class ShopCreationForm extends StatelessWidget {
                   .value
                   .fold(
                       (f) => f.maybeMap(
+                            empty: (_) => 'Street cannot be empty',
                             exceedingLength: (_) => 'Invalid street',
                             orElse: () => null,
                           ),
@@ -216,6 +220,7 @@ class ShopCreationForm extends StatelessWidget {
                   .value
                   .fold(
                       (f) => f.maybeMap(
+                            empty: (_) => 'Zip cannot be empty',
                             exceedingLength: (_) => 'Invalid zip',
                             orElse: () => null,
                           ),

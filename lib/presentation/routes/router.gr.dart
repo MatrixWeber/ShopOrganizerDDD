@@ -4,15 +4,17 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: public_member_api_docs
+
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_ddd_tutorial/presentation/splash/splash_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/sign_in/sign_in_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/notes_overview_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/shops_overview_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_creation_page.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_worker_creation_page.dart';
+import 'package:flutter/material.dart';
+
+import '../notes/notes_overview/notes_overview_page.dart';
+import '../shops/shop_creation/shop_creation_page.dart';
+import '../shops/shop_creation/shop_worker_creation_page.dart';
+import '../shops/shop_overview/shops_overview_page.dart';
+import '../sign_in/sign_in_page.dart';
+import '../splash/splash_page.dart';
 
 class Routes {
   static const String splashPage = '/';
@@ -45,37 +47,37 @@ class Router extends RouterBase {
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
   final _pagesMap = <Type, AutoRouteFactory>{
-    SplashPage: (RouteData data) {
+    SplashPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SplashPage(),
         settings: data,
       );
     },
-    SignInPage: (RouteData data) {
+    SignInPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => SignInPage(),
         settings: data,
       );
     },
-    NotesOverviewPage: (RouteData data) {
+    NotesOverviewPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => NotesOverviewPage(),
         settings: data,
       );
     },
-    ShopsOverviewPage: (RouteData data) {
+    ShopsOverviewPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => ShopsOverviewPage(),
         settings: data,
       );
     },
-    ShopsCreationPage: (RouteData data) {
+    ShopsCreationPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => ShopsCreationPage(),
         settings: data,
       );
     },
-    ShopWorkerCreationPage: (RouteData data) {
+    ShopWorkerCreationPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => ShopWorkerCreationPage(),
         settings: data,
@@ -84,24 +86,24 @@ class Router extends RouterBase {
   };
 }
 
-// *************************************************************************
-// Navigation helper methods extension
-// **************************************************************************
+/// ************************************************************************
+/// Navigation helper methods extension
+/// *************************************************************************
 
-extension RouterNavigationHelperMethods on ExtendedNavigatorState {
-  Future<dynamic> pushSplashPage() => pushNamed<dynamic>(Routes.splashPage);
+extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
+  Future<dynamic> pushSplashPage() => push<dynamic>(Routes.splashPage);
 
-  Future<dynamic> pushSignInPage() => pushNamed<dynamic>(Routes.signInPage);
+  Future<dynamic> pushSignInPage() => push<dynamic>(Routes.signInPage);
 
   Future<dynamic> pushNotesOverviewPage() =>
-      pushNamed<dynamic>(Routes.notesOverviewPage);
+      push<dynamic>(Routes.notesOverviewPage);
 
   Future<dynamic> pushShopsOverviewPage() =>
-      pushNamed<dynamic>(Routes.shopsOverviewPage);
+      push<dynamic>(Routes.shopsOverviewPage);
 
   Future<dynamic> pushShopsCreationPage() =>
-      pushNamed<dynamic>(Routes.shopsCreationPage);
+      push<dynamic>(Routes.shopsCreationPage);
 
   Future<dynamic> pushShopWorkerCreationPage() =>
-      pushNamed<dynamic>(Routes.shopWorkerCreationPage);
+      push<dynamic>(Routes.shopWorkerCreationPage);
 }

@@ -14,7 +14,7 @@ class ShopsCreationPage extends StatelessWidget {
         title: const Text('Shops'),
         leading: IconButton(
           key: const Key('icon-button-sign-out'),
-          icon: Icon(Icons.exit_to_app),
+          icon: const Icon(Icons.exit_to_app),
           onPressed: () {
             context.bloc<AuthBloc>().add(
                   const AuthEvent.signedOut(),
@@ -23,14 +23,14 @@ class ShopsCreationPage extends StatelessWidget {
         ),
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.indeterminate_check_box), onPressed: () {})
+              icon: const Icon(Icons.indeterminate_check_box), onPressed: () {})
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // TODO navigate to shop form page
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
       body: BlocProvider(
         create: (context) => getIt<ShopFormBloc>(),

@@ -11,7 +11,7 @@ abstract class WorkerFormState with _$WorkerFormState {
   }) = _WorkerFormState;
 
   factory WorkerFormState.initial() => WorkerFormState(
-        worker: Worker.test(),
+        worker: Worker.empty(),
         showErrorMessage: false,
         isEditing: false,
         isSaving: false,

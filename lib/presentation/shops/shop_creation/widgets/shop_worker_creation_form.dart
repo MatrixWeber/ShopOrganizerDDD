@@ -17,128 +17,113 @@ class ShopWorkerCreationForm extends StatelessWidget {
   static const _TF_SIZE = 20.0;
   @override
   Widget build(BuildContext context) {
-    return BlocConsumer<WorkerFormBloc, WorkerFormState>(
-        listener: (context, state) {
-      state.saveFailureOrSuccessOption.fold(
-          () {},
-          (either) => either.fold((failure) {
-                FlushbarHelper.createError(
-                  message: failure.map(
-                      unexpected: (_) =>
-                          'Unexpected error occured while deleting, please contact support',
-                      unableToUpdate: (_) => 'Impossible error',
-                      insufficientPermissions: (_) =>
-                          'Insufficient permissions ❌'),
-                  duration: const Duration(seconds: 5),
-                ).show(context);
-              }, (_) {
-                ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.notesOverviewPage);
-              }));
-    }, builder: (context, state) {
-      return Form(
-        autovalidate: state.showErrorMessage,
-        child: ListView(
-          padding: const EdgeInsets.all(_PADDING),
-          children: <Widget>[
-            Text('Workers properties',
-                style: textStyle(
-                  fontSize: 24.0,
-                  color: Colors.black,
-                ),
-                textAlign: TextAlign.center),
-            const Padding(
-              padding: EdgeInsets.all(_PADDING),
-            ),
-            GestureDetector(
-              onTap: () => _showChoiseDialog(context),
-              child: decideImageView(null),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(_PADDING),
-            ),
-            TextFormField(
-              key: const Key('name-field'),
-              onChanged: (value) => context
-                  .bloc<WorkerFormBloc>()
-                  .add(WorkerFormEvent.nameChanged(value)),
-              validator: (_) =>
-                  context.bloc<WorkerFormBloc>().state.worker.name.value.fold(
-                      (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Name',
-                            orElse: () => null,
-                          ),
-                      (_) => null),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.nature),
-                labelText: 'Name',
+    return Form(
+      autovalidate: context.bloc<WorkerFormBloc>().state.showErrorMessage,
+      child: ListView(
+        padding: const EdgeInsets.all(_PADDING),
+        children: <Widget>[
+          Text('Workers properties',
+              style: textStyle(
+                fontSize: 24.0,
+                color: Colors.black,
               ),
-              autocorrect: false,
-              keyboardType: TextInputType.text,
+              textAlign: TextAlign.center),
+          const Padding(
+            padding: EdgeInsets.all(_PADDING),
+          ),
+          GestureDetector(
+            onTap: () {
+              final imagePickerBloc = context.bloc<ImagePickerBloc>();
+              _showChoiseDialog(context, imagePickerBloc);
+            },
+            child: decideImageView(null),
+          ),
+          const Padding(
+            padding: EdgeInsets.all(_PADDING),
+          ),
+          TextFormField(
+            key: const Key('name-field'),
+            onChanged: (value) => context
+                .bloc<WorkerFormBloc>()
+                .add(WorkerFormEvent.nameChanged(value)),
+            validator: (_) =>
+                context.bloc<WorkerFormBloc>().state.worker.name.value.fold(
+                    (f) => f.maybeMap(
+                          empty: (_) => 'Name cannot be empty',
+                          exceedingLength: (_) => 'Invalid Name Length',
+                          orElse: () => null,
+                        ),
+                    (_) => null),
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.nature),
+              labelText: 'Name',
             ),
-            const Padding(
-              padding: EdgeInsets.all(_PADDING),
+            autocorrect: false,
+            keyboardType: TextInputType.text,
+          ),
+          const Padding(
+            padding: EdgeInsets.all(_PADDING),
+          ),
+          TextFormField(
+            key: const Key('email-field'),
+            onChanged: (value) => context
+                .bloc<WorkerFormBloc>()
+                .add(WorkerFormEvent.emailChanged(value)),
+            validator: (_) =>
+                context.bloc<WorkerFormBloc>().state.worker.email.value.fold(
+                    (f) => f.maybeMap(
+                          invalidEmail: (_) => 'Invalid Email',
+                          orElse: () => null,
+                        ),
+                    (_) => null),
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.email),
+              labelText: 'Email',
             ),
-            TextFormField(
-              key: const Key('email-field'),
-              onChanged: (value) => context
-                  .bloc<WorkerFormBloc>()
-                  .add(WorkerFormEvent.emailChanged(value)),
-              validator: (_) =>
-                  context.bloc<WorkerFormBloc>().state.worker.email.value.fold(
-                      (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Email',
-                            orElse: () => null,
-                          ),
-                      (_) => null),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.email),
-                labelText: 'Email',
-              ),
-              autocorrect: false,
-              keyboardType: TextInputType.emailAddress,
+            autocorrect: false,
+            keyboardType: TextInputType.emailAddress,
+          ),
+          const Padding(
+            padding: EdgeInsets.all(_PADDING),
+          ),
+          TextFormField(
+            key: const Key('phone-field'),
+            onChanged: (value) => context
+                .bloc<WorkerFormBloc>()
+                .add(WorkerFormEvent.phoneNumberChanged(value)),
+            validator: (_) => context
+                .bloc<WorkerFormBloc>()
+                .state
+                .worker
+                .phoneNumber
+                .value
+                .fold(
+                    (f) => f.maybeMap(
+                          empty: (_) => 'Phone cannot be empty',
+                          exceedingLength: (_) => 'Invalid Phone Length',
+                          orElse: () => null,
+                        ),
+                    (_) => null),
+            decoration: const InputDecoration(
+              prefixIcon: Icon(Icons.phone_iphone),
+              labelText: 'Phone',
             ),
-            const Padding(
-              padding: EdgeInsets.all(_PADDING),
-            ),
-            TextFormField(
-              key: const Key('phone-field'),
-              onChanged: (value) => context
-                  .bloc<WorkerFormBloc>()
-                  .add(WorkerFormEvent.phoneNumberChanged(value)),
-              validator: (_) => context
-                  .bloc<WorkerFormBloc>()
-                  .state
-                  .worker
-                  .phoneNumber
-                  .value
-                  .fold(
-                      (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Phone Number',
-                            orElse: () => null,
-                          ),
-                      (_) => null),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.phone_iphone),
-                labelText: 'Phone',
-              ),
-              autocorrect: false,
-              keyboardType: TextInputType.phone,
-            ),
-            const Padding(
-              padding: EdgeInsets.all(_PADDING),
-            ),
-            RaisedButton(
-              onPressed: () => context
-                  .bloc<WorkerFormBloc>()
-                  .add(const WorkerFormEvent.saved()),
-              child: const Text('Add some Tasks',
-                  style: TextStyle(fontSize: _TF_SIZE)),
-            ),
-          ],
-        ),
-      );
-    });
+            autocorrect: false,
+            keyboardType: TextInputType.phone,
+          ),
+          const Padding(
+            padding: EdgeInsets.all(_PADDING),
+          ),
+          RaisedButton(
+            onPressed: () => context
+                .bloc<WorkerFormBloc>()
+                .add(const WorkerFormEvent.saved()),
+            child: const Text('Add some Tasks',
+                style: TextStyle(fontSize: _TF_SIZE)),
+          ),
+        ],
+      ),
+    );
   }
 
   // void _showWaitSnackBar() {
@@ -153,7 +138,8 @@ class ShopWorkerCreationForm extends StatelessWidget {
   //   ));
   // }
 
-  Future<void> _showChoiseDialog(BuildContext context) {
+  Future<void> _showChoiseDialog(
+      BuildContext context, ImagePickerBloc imagePickerBloc) {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -165,7 +151,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
               child: ListBody(
                 children: <Widget>[
                   GestureDetector(
-                    onTap: () => context.bloc<ImagePickerBloc>().add(
+                    onTap: () => imagePickerBloc.add(
                         const ImagePickerEvent.selectImageFromGalleryStarted()),
                     child: Text(
                       'Galery',
@@ -177,7 +163,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
                     padding: EdgeInsets.all(8.0),
                   ),
                   GestureDetector(
-                    onTap: () => context.bloc<ImagePickerBloc>().add(
+                    onTap: () => imagePickerBloc.add(
                         const ImagePickerEvent.getImageFromCameraStarted()),
                     child: Text('Camera',
                         style: textStyle(fontSize: 21.0, color: Colors.black),

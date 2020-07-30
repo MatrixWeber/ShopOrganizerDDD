@@ -27,8 +27,8 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
         listeners: [
           BlocListener<AuthBloc, AuthState>(listener: (context, state) {
             state.maybeMap(
-                unauthenticated: (_) => ExtendedNavigator.of(context)
-                    .pushReplacementNamed(Routes.signInPage),
+                unauthenticated: (_) =>
+                    ExtendedNavigator.of(context).pushSignInPage(),
                 orElse: () {});
           }),
           BlocListener<WorkerActorBloc, WorkerActorState>(
@@ -54,7 +54,7 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
             title: const Text('ShopWorkersWorker'),
             leading: IconButton(
               key: const Key('icon-button-sign-out'),
-              icon: Icon(Icons.exit_to_app),
+              icon: const Icon(Icons.exit_to_app),
               onPressed: () {
                 context.bloc<AuthBloc>().add(
                       const AuthEvent.signedOut(),
@@ -63,15 +63,15 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
             ),
             actions: <Widget>[
               IconButton(
-                  icon: Icon(Icons.indeterminate_check_box), onPressed: () {})
+                  icon: const Icon(Icons.indeterminate_check_box),
+                  onPressed: () {})
             ],
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              ExtendedNavigator.of(context)
-                  .pushReplacementNamed(Routes.shopWorkerCreationPage);
+              ExtendedNavigator.of(context).pushShopWorkerCreationPage();
             },
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
           body: ShopWorkerOverviewForm(),
         ),
