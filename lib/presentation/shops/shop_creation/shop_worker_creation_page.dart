@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_worker_creation_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -18,6 +20,9 @@ class ShopWorkerCreationPage extends StatelessWidget {
           BlocProvider<WorkerFormBloc>(
             create: (context) => getIt<WorkerFormBloc>(),
           ),
+          BlocProvider<WorkerImageHandlerBloc>(
+            create: (context) => getIt<WorkerImageHandlerBloc>(),
+          ),
           BlocProvider<ImagePickerBloc>(
             create: (context) => getIt<ImagePickerBloc>(),
           )
@@ -30,12 +35,15 @@ class ShopWorkerCreationPage extends StatelessWidget {
                       ExtendedNavigator.of(context).pushSignInPage(),
                   orElse: () {});
             }),
-            BlocListener<ImagePickerBloc, ImagePickerState>(
+            BlocListener<WorkerImageHandlerBloc, WorkerImageHandlerState>(
                 listener: (context, state) {
               state.maybeMap(
-                  loadSuccess: (image) {
-                    Navigator.of(context).pop();
-                  },
+                  uploadedSuccessful: (state) =>
+                      context.bloc<WorkerFormBloc>().add(
+                            WorkerFormEvent.imageUrlChanged(
+                              state.imageUrl.getOrCrash(),
+                            ),
+                          ),
                   orElse: () {});
             }),
             BlocListener<WorkerFormBloc, WorkerFormState>(

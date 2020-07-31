@@ -3,7 +3,6 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
-import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -53,11 +52,12 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
         if (value.error == null) {
           value.ref.getDownloadURL().then((downloadUrl) {
             _photoUrl = downloadUrl.toString();
+            return right(ImageUrl(_photoUrl));
           });
         }
       });
       streamSubscription.cancel();
-      return right(ImageUrl(_photoUrl));
+      return left(null);
     } on PlatformException catch (e) {
       return left(_handlePlatformExceptions(e));
     }

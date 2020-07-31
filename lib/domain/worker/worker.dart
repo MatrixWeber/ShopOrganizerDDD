@@ -28,11 +28,11 @@ abstract class Worker implements _$Worker {
       );
   factory Worker.test() => Worker(
         id: UniqueId(),
-        name: Name('a'),
+        name: Name(''),
         firstName: FirstName('b'),
-        email: EmailAddress('cab@bla.de'),
-        phoneNumber: PhoneNumber('d'),
-        imageUrl: ImageUrl('e'),
+        email: EmailAddress(''),
+        phoneNumber: PhoneNumber(''),
+        imageUrl: ImageUrl(''),
       );
 
   Option<ValueFailure<dynamic>> get failureOption {
