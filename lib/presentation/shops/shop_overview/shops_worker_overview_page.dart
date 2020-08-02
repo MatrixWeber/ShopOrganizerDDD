@@ -69,7 +69,7 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              ExtendedNavigator.of(context).pushShopWorkerCreationPage();
+              // ExtendedNavigator.of(context).pushShopWorkerCreationPage();
             },
             child: const Icon(Icons.add),
           ),

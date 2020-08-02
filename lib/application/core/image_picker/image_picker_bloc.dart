@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -24,6 +25,9 @@ class ImagePickerBloc extends Bloc<ImagePickerEvent, ImagePickerState> {
     ImagePickerEvent event,
   ) async* {
     yield* event.map(
+      initialized: (e) async* {
+        yield const ImagePickerState.initial();
+      },
       selectImageFromGalleryStarted: (e) async* {
         yield const ImagePickerState.loadInProgress();
         final image = await _imagePicker.getImageFromGalery();

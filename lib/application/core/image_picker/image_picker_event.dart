@@ -6,4 +6,5 @@ abstract class ImagePickerEvent with _$ImagePickerEvent {
       _SelectImageFromGalleryStarted;
   const factory ImagePickerEvent.getImageFromCameraStarted() =
       _GetImageFromCameraStarted;
+  const factory ImagePickerEvent.initialized() = _Initialized;
 }

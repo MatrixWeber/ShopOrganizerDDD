@@ -18,6 +18,12 @@ class _$WorkerFormEventTearOff {
     );
   }
 
+  Reset reset(String parentShopId) {
+    return Reset(
+      parentShopId,
+    );
+  }
+
   NameChanged nameChanged(String name) {
     return NameChanged(
       name,
@@ -48,6 +54,12 @@ class _$WorkerFormEventTearOff {
     );
   }
 
+  ParentIdChanged parentIdChanged(UniqueId parentId) {
+    return ParentIdChanged(
+      parentId,
+    );
+  }
+
   Saved saved() {
     return const Saved();
   }
@@ -60,42 +72,50 @@ mixin _$WorkerFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   });
@@ -179,19 +199,23 @@ class _$Initialized implements Initialized {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return initialized(initialWorkerOption);
   }
@@ -200,11 +224,13 @@ class _$Initialized implements Initialized {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -219,19 +245,23 @@ class _$Initialized implements Initialized {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return initialized(this);
   }
@@ -240,11 +270,13 @@ class _$Initialized implements Initialized {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -261,6 +293,158 @@ abstract class Initialized implements WorkerFormEvent {
 
   Option<Worker> get initialWorkerOption;
   $InitializedCopyWith<Initialized> get copyWith;
+}
+
+abstract class $ResetCopyWith<$Res> {
+  factory $ResetCopyWith(Reset value, $Res Function(Reset) then) =
+      _$ResetCopyWithImpl<$Res>;
+  $Res call({String parentShopId});
+}
+
+class _$ResetCopyWithImpl<$Res> extends _$WorkerFormEventCopyWithImpl<$Res>
+    implements $ResetCopyWith<$Res> {
+  _$ResetCopyWithImpl(Reset _value, $Res Function(Reset) _then)
+      : super(_value, (v) => _then(v as Reset));
+
+  @override
+  Reset get _value => super._value as Reset;
+
+  @override
+  $Res call({
+    Object parentShopId = freezed,
+  }) {
+    return _then(Reset(
+      parentShopId == freezed ? _value.parentShopId : parentShopId as String,
+    ));
+  }
+}
+
+class _$Reset implements Reset {
+  const _$Reset(this.parentShopId) : assert(parentShopId != null);
+
+  @override
+  final String parentShopId;
+
+  @override
+  String toString() {
+    return 'WorkerFormEvent.reset(parentShopId: $parentShopId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is Reset &&
+            (identical(other.parentShopId, parentShopId) ||
+                const DeepCollectionEquality()
+                    .equals(other.parentShopId, parentShopId)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(parentShopId);
+
+  @override
+  $ResetCopyWith<Reset> get copyWith =>
+      _$ResetCopyWithImpl<Reset>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
+    @required Result nameChanged(String name),
+    @required Result firstNameChanged(String firstName),
+    @required Result emailChanged(String email),
+    @required Result phoneNumberChanged(String phone),
+    @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
+    @required Result saved(),
+  }) {
+    assert(initialized != null);
+    assert(reset != null);
+    assert(nameChanged != null);
+    assert(firstNameChanged != null);
+    assert(emailChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
+    assert(saved != null);
+    return reset(parentShopId);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
+    Result nameChanged(String name),
+    Result firstNameChanged(String firstName),
+    Result emailChanged(String email),
+    Result phoneNumberChanged(String phone),
+    Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
+    Result saved(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (reset != null) {
+      return reset(parentShopId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
+    @required Result nameChanged(NameChanged value),
+    @required Result firstNameChanged(FirstNameChanged value),
+    @required Result emailChanged(EmailChanged value),
+    @required Result phoneNumberChanged(PhoneNumberChanged value),
+    @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
+    @required Result saved(Saved value),
+  }) {
+    assert(initialized != null);
+    assert(reset != null);
+    assert(nameChanged != null);
+    assert(firstNameChanged != null);
+    assert(emailChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
+    assert(saved != null);
+    return reset(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(Initialized value),
+    Result reset(Reset value),
+    Result nameChanged(NameChanged value),
+    Result firstNameChanged(FirstNameChanged value),
+    Result emailChanged(EmailChanged value),
+    Result phoneNumberChanged(PhoneNumberChanged value),
+    Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
+    Result saved(Saved value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (reset != null) {
+      return reset(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Reset implements WorkerFormEvent {
+  const factory Reset(String parentShopId) = _$Reset;
+
+  String get parentShopId;
+  $ResetCopyWith<Reset> get copyWith;
 }
 
 abstract class $NameChangedCopyWith<$Res> {
@@ -321,19 +505,23 @@ class _$NameChanged implements NameChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return nameChanged(name);
   }
@@ -342,11 +530,13 @@ class _$NameChanged implements NameChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -361,19 +551,23 @@ class _$NameChanged implements NameChanged {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return nameChanged(this);
   }
@@ -382,11 +576,13 @@ class _$NameChanged implements NameChanged {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -464,19 +660,23 @@ class _$FirstNameChanged implements FirstNameChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return firstNameChanged(firstName);
   }
@@ -485,11 +685,13 @@ class _$FirstNameChanged implements FirstNameChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -504,19 +706,23 @@ class _$FirstNameChanged implements FirstNameChanged {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return firstNameChanged(this);
   }
@@ -525,11 +731,13 @@ class _$FirstNameChanged implements FirstNameChanged {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -606,19 +814,23 @@ class _$EmailChanged implements EmailChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return emailChanged(email);
   }
@@ -627,11 +839,13 @@ class _$EmailChanged implements EmailChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -646,19 +860,23 @@ class _$EmailChanged implements EmailChanged {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return emailChanged(this);
   }
@@ -667,11 +885,13 @@ class _$EmailChanged implements EmailChanged {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -748,19 +968,23 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return phoneNumberChanged(phone);
   }
@@ -769,11 +993,13 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -788,19 +1014,23 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return phoneNumberChanged(this);
   }
@@ -809,11 +1039,13 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -891,19 +1123,23 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return imageUrlChanged(imageUrl);
   }
@@ -912,11 +1148,13 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -931,19 +1169,23 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return imageUrlChanged(this);
   }
@@ -952,11 +1194,13 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {
@@ -973,6 +1217,161 @@ abstract class ImageUrlChanged implements WorkerFormEvent {
 
   String get imageUrl;
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
+}
+
+abstract class $ParentIdChangedCopyWith<$Res> {
+  factory $ParentIdChangedCopyWith(
+          ParentIdChanged value, $Res Function(ParentIdChanged) then) =
+      _$ParentIdChangedCopyWithImpl<$Res>;
+  $Res call({UniqueId parentId});
+}
+
+class _$ParentIdChangedCopyWithImpl<$Res>
+    extends _$WorkerFormEventCopyWithImpl<$Res>
+    implements $ParentIdChangedCopyWith<$Res> {
+  _$ParentIdChangedCopyWithImpl(
+      ParentIdChanged _value, $Res Function(ParentIdChanged) _then)
+      : super(_value, (v) => _then(v as ParentIdChanged));
+
+  @override
+  ParentIdChanged get _value => super._value as ParentIdChanged;
+
+  @override
+  $Res call({
+    Object parentId = freezed,
+  }) {
+    return _then(ParentIdChanged(
+      parentId == freezed ? _value.parentId : parentId as UniqueId,
+    ));
+  }
+}
+
+class _$ParentIdChanged implements ParentIdChanged {
+  const _$ParentIdChanged(this.parentId) : assert(parentId != null);
+
+  @override
+  final UniqueId parentId;
+
+  @override
+  String toString() {
+    return 'WorkerFormEvent.parentIdChanged(parentId: $parentId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is ParentIdChanged &&
+            (identical(other.parentId, parentId) ||
+                const DeepCollectionEquality()
+                    .equals(other.parentId, parentId)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(parentId);
+
+  @override
+  $ParentIdChangedCopyWith<ParentIdChanged> get copyWith =>
+      _$ParentIdChangedCopyWithImpl<ParentIdChanged>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
+    @required Result nameChanged(String name),
+    @required Result firstNameChanged(String firstName),
+    @required Result emailChanged(String email),
+    @required Result phoneNumberChanged(String phone),
+    @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
+    @required Result saved(),
+  }) {
+    assert(initialized != null);
+    assert(reset != null);
+    assert(nameChanged != null);
+    assert(firstNameChanged != null);
+    assert(emailChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
+    assert(saved != null);
+    return parentIdChanged(parentId);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
+    Result nameChanged(String name),
+    Result firstNameChanged(String firstName),
+    Result emailChanged(String email),
+    Result phoneNumberChanged(String phone),
+    Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
+    Result saved(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (parentIdChanged != null) {
+      return parentIdChanged(parentId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
+    @required Result nameChanged(NameChanged value),
+    @required Result firstNameChanged(FirstNameChanged value),
+    @required Result emailChanged(EmailChanged value),
+    @required Result phoneNumberChanged(PhoneNumberChanged value),
+    @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
+    @required Result saved(Saved value),
+  }) {
+    assert(initialized != null);
+    assert(reset != null);
+    assert(nameChanged != null);
+    assert(firstNameChanged != null);
+    assert(emailChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
+    assert(saved != null);
+    return parentIdChanged(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result initialized(Initialized value),
+    Result reset(Reset value),
+    Result nameChanged(NameChanged value),
+    Result firstNameChanged(FirstNameChanged value),
+    Result emailChanged(EmailChanged value),
+    Result phoneNumberChanged(PhoneNumberChanged value),
+    Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
+    Result saved(Saved value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (parentIdChanged != null) {
+      return parentIdChanged(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ParentIdChanged implements WorkerFormEvent {
+  const factory ParentIdChanged(UniqueId parentId) = _$ParentIdChanged;
+
+  UniqueId get parentId;
+  $ParentIdChangedCopyWith<ParentIdChanged> get copyWith;
 }
 
 abstract class $SavedCopyWith<$Res> {
@@ -1009,19 +1408,23 @@ class _$Saved implements Saved {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initialized(Option<Worker> initialWorkerOption),
+    @required Result reset(String parentShopId),
     @required Result nameChanged(String name),
     @required Result firstNameChanged(String firstName),
     @required Result emailChanged(String email),
     @required Result phoneNumberChanged(String phone),
     @required Result imageUrlChanged(String imageUrl),
+    @required Result parentIdChanged(UniqueId parentId),
     @required Result saved(),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return saved();
   }
@@ -1030,11 +1433,13 @@ class _$Saved implements Saved {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initialized(Option<Worker> initialWorkerOption),
+    Result reset(String parentShopId),
     Result nameChanged(String name),
     Result firstNameChanged(String firstName),
     Result emailChanged(String email),
     Result phoneNumberChanged(String phone),
     Result imageUrlChanged(String imageUrl),
+    Result parentIdChanged(UniqueId parentId),
     Result saved(),
     @required Result orElse(),
   }) {
@@ -1049,19 +1454,23 @@ class _$Saved implements Saved {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result initialized(Initialized value),
+    @required Result reset(Reset value),
     @required Result nameChanged(NameChanged value),
     @required Result firstNameChanged(FirstNameChanged value),
     @required Result emailChanged(EmailChanged value),
     @required Result phoneNumberChanged(PhoneNumberChanged value),
     @required Result imageUrlChanged(ImageUrlChanged value),
+    @required Result parentIdChanged(ParentIdChanged value),
     @required Result saved(Saved value),
   }) {
     assert(initialized != null);
+    assert(reset != null);
     assert(nameChanged != null);
     assert(firstNameChanged != null);
     assert(emailChanged != null);
     assert(phoneNumberChanged != null);
     assert(imageUrlChanged != null);
+    assert(parentIdChanged != null);
     assert(saved != null);
     return saved(this);
   }
@@ -1070,11 +1479,13 @@ class _$Saved implements Saved {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result initialized(Initialized value),
+    Result reset(Reset value),
     Result nameChanged(NameChanged value),
     Result firstNameChanged(FirstNameChanged value),
     Result emailChanged(EmailChanged value),
     Result phoneNumberChanged(PhoneNumberChanged value),
     Result imageUrlChanged(ImageUrlChanged value),
+    Result parentIdChanged(ParentIdChanged value),
     Result saved(Saved value),
     @required Result orElse(),
   }) {

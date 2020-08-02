@@ -34,7 +34,18 @@ class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
             (initialWorker) => state.copyWith(
                   worker: initialWorker,
                   isEditing: true,
+                  isSaving: false,
+                  showErrorMessage: false,
+                  saveFailureOrSuccessOption: none(),
                 ));
+      },
+      parentIdChanged: (e) async* {
+        yield state.copyWith(
+          worker: state.worker.copyWith(
+            parentId: e.parentId,
+          ),
+          saveFailureOrSuccessOption: none(),
+        );
       },
       nameChanged: (e) async* {
         yield state.copyWith(
@@ -66,19 +77,12 @@ class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
           failureOrSuccess = state.isEditing
               ? await _workerRepository.update(state.worker)
               : await _workerRepository.create(state.worker);
-          yield state.copyWith(
-            isSaving: false,
-            showErrorMessage: true,
-            saveFailureOrSuccessOption: optionOf(failureOrSuccess),
-          );
-        } else {
-          yield state.copyWith(
-            isSaving: false,
-            showErrorMessage: true,
-            saveFailureOrSuccessOption:
-                optionOf(left(const WorkerFailure.unableToUpdate())),
-          );
         }
+        yield state.copyWith(
+          isSaving: false,
+          showErrorMessage: true,
+          saveFailureOrSuccessOption: optionOf(failureOrSuccess),
+        );
       },
       phoneNumberChanged: (e) async* {
         yield state.copyWith(
@@ -91,6 +95,18 @@ class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
           worker: state.worker.copyWith(imageUrl: ImageUrl(e.imageUrl)),
           saveFailureOrSuccessOption: none(),
         );
+      },
+      reset: (e) async* {
+        yield state.copyWith(
+          worker: initialState.worker,
+          isEditing: true,
+          isSaving: false,
+          showErrorMessage: false,
+          // saveFailureOrSuccessOption: none(),
+        );
+        yield state.copyWith(
+            worker: state.worker
+                .copyWith(parentId: UniqueId.fromUniqueString(e.parentShopId)));
       },
     );
   }

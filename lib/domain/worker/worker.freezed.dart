@@ -14,6 +14,7 @@ class _$WorkerTearOff {
 
   _Worker call(
       {@required UniqueId id,
+      @required UniqueId parentId,
       @required Name name,
       @required FirstName firstName,
       @required EmailAddress email,
@@ -21,6 +22,7 @@ class _$WorkerTearOff {
       @required ImageUrl imageUrl}) {
     return _Worker(
       id: id,
+      parentId: parentId,
       name: name,
       firstName: firstName,
       email: email,
@@ -35,6 +37,7 @@ const $Worker = _$WorkerTearOff();
 
 mixin _$Worker {
   UniqueId get id;
+  UniqueId get parentId;
   Name get name;
   FirstName get firstName;
   EmailAddress get email;
@@ -49,6 +52,7 @@ abstract class $WorkerCopyWith<$Res> {
       _$WorkerCopyWithImpl<$Res>;
   $Res call(
       {UniqueId id,
+      UniqueId parentId,
       Name name,
       FirstName firstName,
       EmailAddress email,
@@ -66,6 +70,7 @@ class _$WorkerCopyWithImpl<$Res> implements $WorkerCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
+    Object parentId = freezed,
     Object name = freezed,
     Object firstName = freezed,
     Object email = freezed,
@@ -74,6 +79,7 @@ class _$WorkerCopyWithImpl<$Res> implements $WorkerCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as UniqueId,
+      parentId: parentId == freezed ? _value.parentId : parentId as UniqueId,
       name: name == freezed ? _value.name : name as Name,
       firstName:
           firstName == freezed ? _value.firstName : firstName as FirstName,
@@ -92,6 +98,7 @@ abstract class _$WorkerCopyWith<$Res> implements $WorkerCopyWith<$Res> {
   @override
   $Res call(
       {UniqueId id,
+      UniqueId parentId,
       Name name,
       FirstName firstName,
       EmailAddress email,
@@ -110,6 +117,7 @@ class __$WorkerCopyWithImpl<$Res> extends _$WorkerCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object parentId = freezed,
     Object name = freezed,
     Object firstName = freezed,
     Object email = freezed,
@@ -118,6 +126,7 @@ class __$WorkerCopyWithImpl<$Res> extends _$WorkerCopyWithImpl<$Res>
   }) {
     return _then(_Worker(
       id: id == freezed ? _value.id : id as UniqueId,
+      parentId: parentId == freezed ? _value.parentId : parentId as UniqueId,
       name: name == freezed ? _value.name : name as Name,
       firstName:
           firstName == freezed ? _value.firstName : firstName as FirstName,
@@ -133,12 +142,14 @@ class __$WorkerCopyWithImpl<$Res> extends _$WorkerCopyWithImpl<$Res>
 class _$_Worker extends _Worker {
   const _$_Worker(
       {@required this.id,
+      @required this.parentId,
       @required this.name,
       @required this.firstName,
       @required this.email,
       @required this.phoneNumber,
       @required this.imageUrl})
       : assert(id != null),
+        assert(parentId != null),
         assert(name != null),
         assert(firstName != null),
         assert(email != null),
@@ -148,6 +159,8 @@ class _$_Worker extends _Worker {
 
   @override
   final UniqueId id;
+  @override
+  final UniqueId parentId;
   @override
   final Name name;
   @override
@@ -161,7 +174,7 @@ class _$_Worker extends _Worker {
 
   @override
   String toString() {
-    return 'Worker(id: $id, name: $name, firstName: $firstName, email: $email, phoneNumber: $phoneNumber, imageUrl: $imageUrl)';
+    return 'Worker(id: $id, parentId: $parentId, name: $name, firstName: $firstName, email: $email, phoneNumber: $phoneNumber, imageUrl: $imageUrl)';
   }
 
   @override
@@ -170,6 +183,9 @@ class _$_Worker extends _Worker {
         (other is _Worker &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.parentId, parentId) ||
+                const DeepCollectionEquality()
+                    .equals(other.parentId, parentId)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.firstName, firstName) ||
@@ -189,6 +205,7 @@ class _$_Worker extends _Worker {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(parentId) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(firstName) ^
       const DeepCollectionEquality().hash(email) ^
@@ -204,6 +221,7 @@ abstract class _Worker extends Worker {
   const _Worker._() : super._();
   const factory _Worker(
       {@required UniqueId id,
+      @required UniqueId parentId,
       @required Name name,
       @required FirstName firstName,
       @required EmailAddress email,
@@ -212,6 +230,8 @@ abstract class _Worker extends Worker {
 
   @override
   UniqueId get id;
+  @override
+  UniqueId get parentId;
   @override
   Name get name;
   @override

@@ -1,4 +1,7 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
@@ -6,13 +9,19 @@ import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/wo
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_worker_creation_form.dart';
-import 'package:flushbar/flushbar_helper.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../injection.dart';
 
 class ShopWorkerCreationPage extends StatelessWidget {
+  final UniqueId parentShopId;
+  final num numOfWorkers;
+
+  const ShopWorkerCreationPage({
+    Key key,
+    this.parentShopId,
+    this.numOfWorkers,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -44,25 +53,8 @@ class ShopWorkerCreationPage extends StatelessWidget {
                               state.imageUrl.getOrCrash(),
                             ),
                           ),
+                  deletedSuccessful: (_) => Navigator.of(context).pop(),
                   orElse: () {});
-            }),
-            BlocListener<WorkerFormBloc, WorkerFormState>(
-                listener: (context, state) {
-              state.saveFailureOrSuccessOption.fold(
-                  () {},
-                  (either) => either.fold((failure) {
-                        FlushbarHelper.createError(
-                          message: failure.map(
-                              unexpected: (_) =>
-                                  'Unexpected error occured while deleting, please contact support',
-                              unableToUpdate: (_) => 'Impossible error',
-                              insufficientPermissions: (_) =>
-                                  'Insufficient permissions ❌'),
-                          duration: const Duration(seconds: 5),
-                        ).show(context);
-                      }, (_) {
-                        ExtendedNavigator.of(context).pushNotesOverviewPage();
-                      }));
             }),
           ],
           child: Scaffold(
@@ -84,12 +76,13 @@ class ShopWorkerCreationPage extends StatelessWidget {
               ],
             ),
             floatingActionButton: FloatingActionButton(
-              onPressed: () {
-                // TODO navigate to shop form page
-              },
+              onPressed: () {},
               child: const Icon(Icons.add),
             ),
-            body: ShopWorkerCreationForm(),
+            body: ShopWorkerCreationForm(
+              parentShopId: parentShopId,
+              numOfWorkers: numOfWorkers,
+            ),
           ),
         ));
   }

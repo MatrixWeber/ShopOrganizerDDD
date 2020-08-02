@@ -11,6 +11,7 @@ abstract class Worker implements _$Worker {
 
   const factory Worker({
     @required UniqueId id,
+    @required UniqueId parentId,
     @required Name name,
     @required FirstName firstName,
     @required EmailAddress email,
@@ -20,6 +21,7 @@ abstract class Worker implements _$Worker {
 
   factory Worker.empty() => Worker(
         id: UniqueId(),
+        parentId: UniqueId(),
         name: Name(''),
         firstName: FirstName(''),
         email: EmailAddress(''),
@@ -28,6 +30,7 @@ abstract class Worker implements _$Worker {
       );
   factory Worker.test() => Worker(
         id: UniqueId(),
+        parentId: UniqueId(),
         name: Name(''),
         firstName: FirstName('b'),
         email: EmailAddress(''),

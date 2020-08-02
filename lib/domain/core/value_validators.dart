@@ -90,3 +90,12 @@ Either<ValueFailure<num>, num> validateNumNotNull(num input) {
     return left(ValueFailure.empty(failedValue: input));
   }
 }
+
+Either<ValueFailure<String>, String> validateIsNotANumber(String input) {
+  final tryParseInt = int.tryParse(input);
+  if (input[0].contains('+') && tryParseInt != null) {
+    return right(input);
+  } else {
+    return left(ValueFailure.isNotAPhoneNumber(failedValue: input));
+  }
+}

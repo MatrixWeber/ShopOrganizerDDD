@@ -15,6 +15,7 @@ abstract class WorkerDto implements _$WorkerDto {
 
   const factory WorkerDto({
     @JsonKey(ignore: true) String id,
+    @required String parentId,
     @required String name,
     @required String firstName,
     @required String email,
@@ -27,6 +28,7 @@ abstract class WorkerDto implements _$WorkerDto {
   factory WorkerDto.fromDomain(Worker worker) {
     return WorkerDto(
       id: worker.id.getOrCrash(),
+      parentId: worker.parentId.getOrCrash(),
       name: worker.name.getOrCrash(),
       firstName: worker.firstName.getOrCrash(),
       email: worker.email.getOrCrash(),
@@ -39,6 +41,7 @@ abstract class WorkerDto implements _$WorkerDto {
   Worker toDomian() {
     return Worker(
       id: UniqueId.fromUniqueString(id),
+      parentId: UniqueId.fromUniqueString(parentId),
       name: Name(name),
       email: EmailAddress(email),
       imageUrl: ImageUrl(imageUrl),

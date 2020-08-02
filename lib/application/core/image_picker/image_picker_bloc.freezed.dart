@@ -19,6 +19,10 @@ class _$ImagePickerEventTearOff {
   _GetImageFromCameraStarted getImageFromCameraStarted() {
     return const _GetImageFromCameraStarted();
   }
+
+  _Initialized initialized() {
+    return const _Initialized();
+  }
 }
 
 // ignore: unused_element
@@ -29,11 +33,13 @@ mixin _$ImagePickerEvent {
   Result when<Result extends Object>({
     @required Result selectImageFromGalleryStarted(),
     @required Result getImageFromCameraStarted(),
+    @required Result initialized(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result selectImageFromGalleryStarted(),
     Result getImageFromCameraStarted(),
+    Result initialized(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -43,11 +49,13 @@ mixin _$ImagePickerEvent {
             _SelectImageFromGalleryStarted value),
     @required
         Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required Result initialized(_Initialized value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
     Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    Result initialized(_Initialized value),
     @required Result orElse(),
   });
 }
@@ -109,9 +117,11 @@ class _$_SelectImageFromGalleryStarted
   Result when<Result extends Object>({
     @required Result selectImageFromGalleryStarted(),
     @required Result getImageFromCameraStarted(),
+    @required Result initialized(),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
     return selectImageFromGalleryStarted();
   }
 
@@ -120,6 +130,7 @@ class _$_SelectImageFromGalleryStarted
   Result maybeWhen<Result extends Object>({
     Result selectImageFromGalleryStarted(),
     Result getImageFromCameraStarted(),
+    Result initialized(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -137,9 +148,11 @@ class _$_SelectImageFromGalleryStarted
             _SelectImageFromGalleryStarted value),
     @required
         Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required Result initialized(_Initialized value),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
     return selectImageFromGalleryStarted(this);
   }
 
@@ -148,6 +161,7 @@ class _$_SelectImageFromGalleryStarted
   Result maybeMap<Result extends Object>({
     Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
     Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    Result initialized(_Initialized value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -202,9 +216,11 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
   Result when<Result extends Object>({
     @required Result selectImageFromGalleryStarted(),
     @required Result getImageFromCameraStarted(),
+    @required Result initialized(),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
     return getImageFromCameraStarted();
   }
 
@@ -213,6 +229,7 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
   Result maybeWhen<Result extends Object>({
     Result selectImageFromGalleryStarted(),
     Result getImageFromCameraStarted(),
+    Result initialized(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -230,9 +247,11 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
             _SelectImageFromGalleryStarted value),
     @required
         Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required Result initialized(_Initialized value),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
     return getImageFromCameraStarted(this);
   }
 
@@ -241,6 +260,7 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
   Result maybeMap<Result extends Object>({
     Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
     Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    Result initialized(_Initialized value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -253,6 +273,103 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
 
 abstract class _GetImageFromCameraStarted implements ImagePickerEvent {
   const factory _GetImageFromCameraStarted() = _$_GetImageFromCameraStarted;
+}
+
+abstract class _$InitializedCopyWith<$Res> {
+  factory _$InitializedCopyWith(
+          _Initialized value, $Res Function(_Initialized) then) =
+      __$InitializedCopyWithImpl<$Res>;
+}
+
+class __$InitializedCopyWithImpl<$Res>
+    extends _$ImagePickerEventCopyWithImpl<$Res>
+    implements _$InitializedCopyWith<$Res> {
+  __$InitializedCopyWithImpl(
+      _Initialized _value, $Res Function(_Initialized) _then)
+      : super(_value, (v) => _then(v as _Initialized));
+
+  @override
+  _Initialized get _value => super._value as _Initialized;
+}
+
+class _$_Initialized implements _Initialized {
+  const _$_Initialized();
+
+  @override
+  String toString() {
+    return 'ImagePickerEvent.initialized()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _Initialized);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result selectImageFromGalleryStarted(),
+    @required Result getImageFromCameraStarted(),
+    @required Result initialized(),
+  }) {
+    assert(selectImageFromGalleryStarted != null);
+    assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
+    return initialized();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result selectImageFromGalleryStarted(),
+    Result getImageFromCameraStarted(),
+    Result initialized(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (initialized != null) {
+      return initialized();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required
+        Result selectImageFromGalleryStarted(
+            _SelectImageFromGalleryStarted value),
+    @required
+        Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required Result initialized(_Initialized value),
+  }) {
+    assert(selectImageFromGalleryStarted != null);
+    assert(getImageFromCameraStarted != null);
+    assert(initialized != null);
+    return initialized(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
+    Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    Result initialized(_Initialized value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (initialized != null) {
+      return initialized(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Initialized implements ImagePickerEvent {
+  const factory _Initialized() = _$_Initialized;
 }
 
 class _$ImagePickerStateTearOff {

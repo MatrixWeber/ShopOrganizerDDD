@@ -53,7 +53,7 @@ class WorkerRepository implements IWorkerRepository {
       final workerDto = WorkerDto.fromDomain(worker);
 
       await workerDoc.shopCollection
-          .document()
+          .document(workerDto.parentId)
           .workerCollection
           .document(workerDto.id)
           .setData(workerDto.toJson());

@@ -17,11 +17,10 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   WorkerImageStoreRepository(this._firebaseStorage);
 
   @override
-  Future<Either<WorkerFailure, Unit>> deleteImage(ImageUrl imageUrl) async {
+  Future<Either<WorkerFailure, Unit>> deleteImage(String imageUrl) async {
     try {
-      final imageUrlStr = imageUrl.getOrCrash();
       final storegeReference =
-          await _firebaseStorage.getReferenceFromUrl(imageUrlStr);
+          await _firebaseStorage.getReferenceFromUrl(imageUrl);
       await storegeReference.delete();
       return right(unit);
     } on PlatformException catch (e) {
@@ -30,36 +29,54 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   }
 
   @override
-  Future<Either<WorkerFailure, ImageUrl>> uploadImage(File image) async {
+  Stream<Either<None, ImageUrl>> uploadImage(File image) async* {
     try {
       final storageReference = await _firebaseStorage.userDocument.call();
 
-      final uploadTask = storageReference.putFile(image);
+      final uploadTask = storageReference
+          // .child(storageReference.shopsCollection)
+          // .child(parentShopId)
+          // .child(storageReference.workerCollection)
+          .putFile(image);
 
-      final StreamSubscription<StorageTaskEvent> streamSubscription =
-          uploadTask.events.listen((event) {
-        // You can use this to notify yourself or your user in any kind of way.
-        // For example: you could use the uploadTask.events stream in a StreamBuilder instead
-        // to show your user what the current status is. In that case, you would not need to cancel any
-        // subscription as StreamBuilder handles this automatically.
+      // final StreamSubscription<StorageTaskEvent> streamSubscription =
+      // yield* uploadTask.events.map((event) {
+      //   if (event.type == StorageTaskEventType.progress) {
+      //     return left(const None());
+      //   } else {
+      //     return left(const None());
+      //   }
+      // });
+      // .listen((event) {
+      // You can use this to notify yourself or your user in any kind of way.
+      // For example: you could use the uploadTask.events stream in a StreamBuilder instead
+      // to show your user what the current status is. In that case, you would not need to cancel any
+      // subscription as StreamBuilder handles this automatically.
 
-        // Here, every StorageTaskEvent concerning the upload is printed to the logs.
-        print('EVENT ${event.type}');
-      });
-      String _photoUrl = '';
+      // Here, every StorageTaskEvent concerning the upload is printed to the logs.
+      //   print('EVENT ${event.type}');
+      // });
 // Cancel your subscription when done.
-      await uploadTask.onComplete.then((value) {
-        if (value.error == null) {
-          value.ref.getDownloadURL().then((downloadUrl) {
-            _photoUrl = downloadUrl.toString();
-            return right(ImageUrl(_photoUrl));
-          });
-        }
-      });
-      streamSubscription.cancel();
-      return left(null);
+      final uploadSnapshot = await uploadTask.onComplete;
+      final uploadError = uploadSnapshot.error;
+      final downLoadUrl = await uploadSnapshot.ref.getDownloadURL();
+      if (uploadError == null) {
+        yield right<None, ImageUrl>(ImageUrl(downLoadUrl.toString()));
+      }
+      // yield* uploadTask.onComplete.then((value) {
+      //   if (value.error == null) {
+      //     value.ref.getDownloadURL().then((downloadUrl) {
+      //       return right<WorkerFailure, ImageUrl>(
+      //           ImageUrl(downloadUrl.toString()));
+      //     });
+      //   } else {
+      //     return Future.error(value.error);
+      //   }
+      //   return Future.error('');
+      // });
+      // streamSubscription.cancel();
     } on PlatformException catch (e) {
-      return left(_handlePlatformExceptions(e));
+      // yield left(_handlePlatformExceptions(e));
     }
   }
 

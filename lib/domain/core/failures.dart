@@ -33,4 +33,7 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
     @required T failedValue,
     @required T max,
   }) = MaxTypeExceeded<T>;
+  const factory ValueFailure.isNotAPhoneNumber({
+    @required T failedValue,
+  }) = IsNotAPhoneNumber<T>;
 }

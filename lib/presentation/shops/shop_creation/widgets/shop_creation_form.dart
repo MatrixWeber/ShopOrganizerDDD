@@ -6,6 +6,8 @@ import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../shop_worker_creation_page.dart';
+
 class ShopCreationForm extends StatelessWidget {
   static const _RADIUS = 120.0;
   static const _PADDING = 6.0;
@@ -28,7 +30,9 @@ class ShopCreationForm extends StatelessWidget {
                   duration: const Duration(seconds: 5),
                 ).show(context);
               }, (_) {
-                ExtendedNavigator.of(context).pushShopWorkerCreationPage();
+                ExtendedNavigator.of(context).pushShopWorkerCreationPage(
+                    parentShopId: state.shop.id,
+                    numOfWorkers: state.shop.numberOfWorkers.getOrCrash());
               }));
     }, builder: (context, state) {
       return Form(

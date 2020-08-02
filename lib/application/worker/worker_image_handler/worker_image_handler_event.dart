@@ -6,8 +6,8 @@ abstract class WorkerImageHandlerEvent with _$WorkerImageHandlerEvent {
       _UploadImageStarted;
   // const factory WorkerImageHandlerEvent.downloadImageStarted(
   //     ImageUrl imageUml) = _DownloadImageStarted;
-  // const factory WorkerImageHandlerEvent.imageReceived(File image) =
-  //     _ImageReceived;
-  const factory WorkerImageHandlerEvent.imageDeleted(ImageUrl imageUrl) =
+  const factory WorkerImageHandlerEvent.imageReceived(
+      Either<None, ImageUrl> failureOrImageUrl) = _ImageReceived;
+  const factory WorkerImageHandlerEvent.imageDeleted(String imageUrl) =
       _ImageDeleted;
 }

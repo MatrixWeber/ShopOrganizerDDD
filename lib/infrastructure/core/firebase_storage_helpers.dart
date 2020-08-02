@@ -8,6 +8,14 @@ extension FirebaseStorageX on FirebaseStorage {
   Future<StorageReference> userDocument() async {
     final userOption = await getIt<IAuthFacade>().getSignedInUser();
     final user = userOption.getOrElse(() => throw NotAuthenticatedError());
-    return FirebaseStorage().ref().child(user.id.getOrCrash());
+    return FirebaseStorage().ref().child('user').child(user.id.getOrCrash());
   }
+}
+
+extension StorageReferenceShops on StorageReference {
+  String get shopsCollection => 'shops';
+}
+
+extension StorageReferenceWorker on StorageReference {
+  String get workerCollection => 'worker';
 }

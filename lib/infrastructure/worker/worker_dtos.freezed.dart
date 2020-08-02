@@ -17,6 +17,7 @@ class _$WorkerDtoTearOff {
 
   _WorkerDto call(
       {@JsonKey(ignore: true) String id,
+      @required String parentId,
       @required String name,
       @required String firstName,
       @required String email,
@@ -25,6 +26,7 @@ class _$WorkerDtoTearOff {
       @required @ServerTimeStampConverter() FieldValue serverTimeStamp}) {
     return _WorkerDto(
       id: id,
+      parentId: parentId,
       name: name,
       firstName: firstName,
       email: email,
@@ -41,6 +43,7 @@ const $WorkerDto = _$WorkerDtoTearOff();
 mixin _$WorkerDto {
   @JsonKey(ignore: true)
   String get id;
+  String get parentId;
   String get name;
   String get firstName;
   String get email;
@@ -58,6 +61,7 @@ abstract class $WorkerDtoCopyWith<$Res> {
       _$WorkerDtoCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(ignore: true) String id,
+      String parentId,
       String name,
       String firstName,
       String email,
@@ -76,6 +80,7 @@ class _$WorkerDtoCopyWithImpl<$Res> implements $WorkerDtoCopyWith<$Res> {
   @override
   $Res call({
     Object id = freezed,
+    Object parentId = freezed,
     Object name = freezed,
     Object firstName = freezed,
     Object email = freezed,
@@ -85,6 +90,7 @@ class _$WorkerDtoCopyWithImpl<$Res> implements $WorkerDtoCopyWith<$Res> {
   }) {
     return _then(_value.copyWith(
       id: id == freezed ? _value.id : id as String,
+      parentId: parentId == freezed ? _value.parentId : parentId as String,
       name: name == freezed ? _value.name : name as String,
       firstName: firstName == freezed ? _value.firstName : firstName as String,
       email: email == freezed ? _value.email : email as String,
@@ -104,6 +110,7 @@ abstract class _$WorkerDtoCopyWith<$Res> implements $WorkerDtoCopyWith<$Res> {
   @override
   $Res call(
       {@JsonKey(ignore: true) String id,
+      String parentId,
       String name,
       String firstName,
       String email,
@@ -123,6 +130,7 @@ class __$WorkerDtoCopyWithImpl<$Res> extends _$WorkerDtoCopyWithImpl<$Res>
   @override
   $Res call({
     Object id = freezed,
+    Object parentId = freezed,
     Object name = freezed,
     Object firstName = freezed,
     Object email = freezed,
@@ -132,6 +140,7 @@ class __$WorkerDtoCopyWithImpl<$Res> extends _$WorkerDtoCopyWithImpl<$Res>
   }) {
     return _then(_WorkerDto(
       id: id == freezed ? _value.id : id as String,
+      parentId: parentId == freezed ? _value.parentId : parentId as String,
       name: name == freezed ? _value.name : name as String,
       firstName: firstName == freezed ? _value.firstName : firstName as String,
       email: email == freezed ? _value.email : email as String,
@@ -148,13 +157,15 @@ class __$WorkerDtoCopyWithImpl<$Res> extends _$WorkerDtoCopyWithImpl<$Res>
 class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
   const _$_WorkerDto(
       {@JsonKey(ignore: true) this.id,
+      @required this.parentId,
       @required this.name,
       @required this.firstName,
       @required this.email,
       @required this.phone,
       @required this.imageUrl,
       @required @ServerTimeStampConverter() this.serverTimeStamp})
-      : assert(name != null),
+      : assert(parentId != null),
+        assert(name != null),
         assert(firstName != null),
         assert(email != null),
         assert(phone != null),
@@ -168,6 +179,8 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
   @override
   @JsonKey(ignore: true)
   final String id;
+  @override
+  final String parentId;
   @override
   final String name;
   @override
@@ -184,7 +197,7 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'WorkerDto(id: $id, name: $name, firstName: $firstName, email: $email, phone: $phone, imageUrl: $imageUrl, serverTimeStamp: $serverTimeStamp)';
+    return 'WorkerDto(id: $id, parentId: $parentId, name: $name, firstName: $firstName, email: $email, phone: $phone, imageUrl: $imageUrl, serverTimeStamp: $serverTimeStamp)';
   }
 
   @override
@@ -193,6 +206,7 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
     properties
       ..add(DiagnosticsProperty('type', 'WorkerDto'))
       ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('parentId', parentId))
       ..add(DiagnosticsProperty('name', name))
       ..add(DiagnosticsProperty('firstName', firstName))
       ..add(DiagnosticsProperty('email', email))
@@ -207,6 +221,9 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
         (other is _WorkerDto &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.parentId, parentId) ||
+                const DeepCollectionEquality()
+                    .equals(other.parentId, parentId)) &&
             (identical(other.name, name) ||
                 const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.firstName, firstName) ||
@@ -228,6 +245,7 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(parentId) ^
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(firstName) ^
       const DeepCollectionEquality().hash(email) ^
@@ -249,6 +267,7 @@ abstract class _WorkerDto extends WorkerDto {
   const _WorkerDto._() : super._();
   const factory _WorkerDto(
           {@JsonKey(ignore: true) String id,
+          @required String parentId,
           @required String name,
           @required String firstName,
           @required String email,
@@ -263,6 +282,8 @@ abstract class _WorkerDto extends WorkerDto {
   @override
   @JsonKey(ignore: true)
   String get id;
+  @override
+  String get parentId;
   @override
   String get name;
   @override

@@ -18,7 +18,14 @@ class _$WorkerImageHandlerEventTearOff {
     );
   }
 
-  _ImageDeleted imageDeleted(ImageUrl imageUrl) {
+  _ImageReceived imageReceived(
+      Either<None<dynamic>, ImageUrl> failureOrImageUrl) {
+    return _ImageReceived(
+      failureOrImageUrl,
+    );
+  }
+
+  _ImageDeleted imageDeleted(String imageUrl) {
     return _ImageDeleted(
       imageUrl,
     );
@@ -32,22 +39,27 @@ mixin _$WorkerImageHandlerEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required Result imageDeleted(ImageUrl imageUrl),
+    @required
+        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageDeleted(String imageUrl),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageDeleted(ImageUrl imageUrl),
+    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageDeleted(String imageUrl),
     @required Result orElse(),
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result uploadImageStarted(_UploadImageStarted value),
+    @required Result imageReceived(_ImageReceived value),
     @required Result imageDeleted(_ImageDeleted value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result uploadImageStarted(_UploadImageStarted value),
+    Result imageReceived(_ImageReceived value),
     Result imageDeleted(_ImageDeleted value),
     @required Result orElse(),
   });
@@ -126,9 +138,12 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required Result imageDeleted(ImageUrl imageUrl),
+    @required
+        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
+    assert(imageReceived != null);
     assert(imageDeleted != null);
     return uploadImageStarted(image);
   }
@@ -137,7 +152,8 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageDeleted(ImageUrl imageUrl),
+    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageDeleted(String imageUrl),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -151,9 +167,11 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result uploadImageStarted(_UploadImageStarted value),
+    @required Result imageReceived(_ImageReceived value),
     @required Result imageDeleted(_ImageDeleted value),
   }) {
     assert(uploadImageStarted != null);
+    assert(imageReceived != null);
     assert(imageDeleted != null);
     return uploadImageStarted(this);
   }
@@ -162,6 +180,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result uploadImageStarted(_UploadImageStarted value),
+    Result imageReceived(_ImageReceived value),
     Result imageDeleted(_ImageDeleted value),
     @required Result orElse(),
   }) {
@@ -180,11 +199,136 @@ abstract class _UploadImageStarted implements WorkerImageHandlerEvent {
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith;
 }
 
+abstract class _$ImageReceivedCopyWith<$Res> {
+  factory _$ImageReceivedCopyWith(
+          _ImageReceived value, $Res Function(_ImageReceived) then) =
+      __$ImageReceivedCopyWithImpl<$Res>;
+  $Res call({Either<None<dynamic>, ImageUrl> failureOrImageUrl});
+}
+
+class __$ImageReceivedCopyWithImpl<$Res>
+    extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
+    implements _$ImageReceivedCopyWith<$Res> {
+  __$ImageReceivedCopyWithImpl(
+      _ImageReceived _value, $Res Function(_ImageReceived) _then)
+      : super(_value, (v) => _then(v as _ImageReceived));
+
+  @override
+  _ImageReceived get _value => super._value as _ImageReceived;
+
+  @override
+  $Res call({
+    Object failureOrImageUrl = freezed,
+  }) {
+    return _then(_ImageReceived(
+      failureOrImageUrl == freezed
+          ? _value.failureOrImageUrl
+          : failureOrImageUrl as Either<None<dynamic>, ImageUrl>,
+    ));
+  }
+}
+
+class _$_ImageReceived implements _ImageReceived {
+  const _$_ImageReceived(this.failureOrImageUrl)
+      : assert(failureOrImageUrl != null);
+
+  @override
+  final Either<None<dynamic>, ImageUrl> failureOrImageUrl;
+
+  @override
+  String toString() {
+    return 'WorkerImageHandlerEvent.imageReceived(failureOrImageUrl: $failureOrImageUrl)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ImageReceived &&
+            (identical(other.failureOrImageUrl, failureOrImageUrl) ||
+                const DeepCollectionEquality()
+                    .equals(other.failureOrImageUrl, failureOrImageUrl)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(failureOrImageUrl);
+
+  @override
+  _$ImageReceivedCopyWith<_ImageReceived> get copyWith =>
+      __$ImageReceivedCopyWithImpl<_ImageReceived>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result uploadImageStarted(File image),
+    @required
+        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageDeleted(String imageUrl),
+  }) {
+    assert(uploadImageStarted != null);
+    assert(imageReceived != null);
+    assert(imageDeleted != null);
+    return imageReceived(failureOrImageUrl);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result uploadImageStarted(File image),
+    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageDeleted(String imageUrl),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (imageReceived != null) {
+      return imageReceived(failureOrImageUrl);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result uploadImageStarted(_UploadImageStarted value),
+    @required Result imageReceived(_ImageReceived value),
+    @required Result imageDeleted(_ImageDeleted value),
+  }) {
+    assert(uploadImageStarted != null);
+    assert(imageReceived != null);
+    assert(imageDeleted != null);
+    return imageReceived(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result uploadImageStarted(_UploadImageStarted value),
+    Result imageReceived(_ImageReceived value),
+    Result imageDeleted(_ImageDeleted value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (imageReceived != null) {
+      return imageReceived(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ImageReceived implements WorkerImageHandlerEvent {
+  const factory _ImageReceived(
+      Either<None<dynamic>, ImageUrl> failureOrImageUrl) = _$_ImageReceived;
+
+  Either<None<dynamic>, ImageUrl> get failureOrImageUrl;
+  _$ImageReceivedCopyWith<_ImageReceived> get copyWith;
+}
+
 abstract class _$ImageDeletedCopyWith<$Res> {
   factory _$ImageDeletedCopyWith(
           _ImageDeleted value, $Res Function(_ImageDeleted) then) =
       __$ImageDeletedCopyWithImpl<$Res>;
-  $Res call({ImageUrl imageUrl});
+  $Res call({String imageUrl});
 }
 
 class __$ImageDeletedCopyWithImpl<$Res>
@@ -202,7 +346,7 @@ class __$ImageDeletedCopyWithImpl<$Res>
     Object imageUrl = freezed,
   }) {
     return _then(_ImageDeleted(
-      imageUrl == freezed ? _value.imageUrl : imageUrl as ImageUrl,
+      imageUrl == freezed ? _value.imageUrl : imageUrl as String,
     ));
   }
 }
@@ -211,7 +355,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   const _$_ImageDeleted(this.imageUrl) : assert(imageUrl != null);
 
   @override
-  final ImageUrl imageUrl;
+  final String imageUrl;
 
   @override
   String toString() {
@@ -239,9 +383,12 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required Result imageDeleted(ImageUrl imageUrl),
+    @required
+        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
+    assert(imageReceived != null);
     assert(imageDeleted != null);
     return imageDeleted(imageUrl);
   }
@@ -250,7 +397,8 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageDeleted(ImageUrl imageUrl),
+    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageDeleted(String imageUrl),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -264,9 +412,11 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result map<Result extends Object>({
     @required Result uploadImageStarted(_UploadImageStarted value),
+    @required Result imageReceived(_ImageReceived value),
     @required Result imageDeleted(_ImageDeleted value),
   }) {
     assert(uploadImageStarted != null);
+    assert(imageReceived != null);
     assert(imageDeleted != null);
     return imageDeleted(this);
   }
@@ -275,6 +425,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
     Result uploadImageStarted(_UploadImageStarted value),
+    Result imageReceived(_ImageReceived value),
     Result imageDeleted(_ImageDeleted value),
     @required Result orElse(),
   }) {
@@ -287,9 +438,9 @@ class _$_ImageDeleted implements _ImageDeleted {
 }
 
 abstract class _ImageDeleted implements WorkerImageHandlerEvent {
-  const factory _ImageDeleted(ImageUrl imageUrl) = _$_ImageDeleted;
+  const factory _ImageDeleted(String imageUrl) = _$_ImageDeleted;
 
-  ImageUrl get imageUrl;
+  String get imageUrl;
   _$ImageDeletedCopyWith<_ImageDeleted> get copyWith;
 }
 

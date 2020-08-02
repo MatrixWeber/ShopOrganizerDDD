@@ -8,6 +8,7 @@ part of 'worker_dtos.dart';
 
 _$_WorkerDto _$_$_WorkerDtoFromJson(Map<String, dynamic> json) {
   return _$_WorkerDto(
+    parentId: json['parentId'] as String,
     name: json['name'] as String,
     firstName: json['firstName'] as String,
     email: json['email'] as String,
@@ -20,6 +21,7 @@ _$_WorkerDto _$_$_WorkerDtoFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_WorkerDtoToJson(_$_WorkerDto instance) =>
     <String, dynamic>{
+      'parentId': instance.parentId,
       'name': instance.name,
       'firstName': instance.firstName,
       'email': instance.email,

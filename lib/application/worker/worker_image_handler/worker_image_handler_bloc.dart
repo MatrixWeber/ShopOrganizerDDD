@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
+import 'package:dartz/dartz.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
@@ -16,6 +17,7 @@ part 'worker_image_handler_bloc.freezed.dart';
 class WorkerImageHandlerBloc
     extends Bloc<WorkerImageHandlerEvent, WorkerImageHandlerState> {
   final IWorkerImageStoreRepository _workerRepository;
+  StreamSubscription<Either<None, ImageUrl>> _workerStreamSubscription;
 
   WorkerImageHandlerBloc(this._workerRepository);
   @override
@@ -26,21 +28,31 @@ class WorkerImageHandlerBloc
   Stream<WorkerImageHandlerState> mapEventToState(
     WorkerImageHandlerEvent event,
   ) async* {
-    yield* event.map(uploadImageStarted: (e) async* {
-      yield const WorkerImageHandlerState.loadInProgress();
-      final failureOrSuccess = await _workerRepository.uploadImage(e.image);
-      failureOrSuccess.fold((f) => WorkerImageHandlerState.loadFailure(f),
-          (imageUrl) => WorkerImageHandlerState.uploadedSuccessful(imageUrl));
-      // await _workerStreamSubscription?.cancel();
-      // _workerStreamSubscription = _workerRepository.watchAll().listen(
-      //     (failureOrWorkers) =>
-      //         add(WorkerImageHandlerEvent.workerReceived(failureOrWorkers)));
-    }, imageDeleted: (e) async* {
-      yield const WorkerImageHandlerState.loadInProgress();
-      final failureOrSuccess = await _workerRepository.deleteImage(e.imageUrl);
-      failureOrSuccess.fold((f) => WorkerImageHandlerState.loadFailure(f),
-          (_) => const WorkerImageHandlerState.deletedSuccessful());
-    });
+    yield* event.map(
+      uploadImageStarted: (e) async* {
+        yield const WorkerImageHandlerState.loadInProgress();
+        await _workerStreamSubscription?.cancel();
+        _workerStreamSubscription =
+            _workerRepository.uploadImage(e.image).listen((failureOrImageUrl) {
+          if (failureOrImageUrl.isRight()) {
+            add(WorkerImageHandlerEvent.imageReceived(failureOrImageUrl));
+          }
+        });
+      },
+      imageDeleted: (e) async* {
+        yield const WorkerImageHandlerState.loadInProgress();
+        final failureOrSuccess =
+            await _workerRepository.deleteImage(e.imageUrl);
+        failureOrSuccess.fold((f) => WorkerImageHandlerState.loadFailure(f),
+            (_) => const WorkerImageHandlerState.deletedSuccessful());
+      },
+      imageReceived: (e) async* {
+        yield e.failureOrImageUrl.fold(
+            (_) => const WorkerImageHandlerState.loadFailure(
+                WorkerFailure.insufficientPermissions()),
+            (imageUrl) => WorkerImageHandlerState.uploadedSuccessful(imageUrl));
+      },
+    );
   }
 
   // @override

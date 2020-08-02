@@ -1,6 +1,10 @@
 import 'package:firebase_ddd_tutorial/application/shops/shop_watcher/shop_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/critical_failure_display_widget.dart';
+import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/shop_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'error_shop_card_widget.dart';
 
 class ShopOverviewForm extends StatelessWidget {
   @override
@@ -17,28 +21,16 @@ class ShopOverviewForm extends StatelessWidget {
               itemBuilder: (context, index) {
                 final shop = state.shops[index];
                 if (shop.failureOption.isSome()) {
-                  return Container(
-                    color: Colors.red,
-                    width: 100,
-                    height: 100,
-                  );
+                  return ErrorShopCard(shop: shop);
                 } else {
-                  return Container(
-                    color: Colors.green,
-                    width: 100,
-                    height: 100,
-                  );
+                  return ShopCard(shop: shop);
                 }
               },
               itemCount: state.shops.size,
             );
           },
           loadFailure: (state) {
-            return Container(
-              color: Colors.yellow,
-              width: 200,
-              height: 200,
-            );
+            return CriticalFailureDisplay(failure: state.shopFailure);
           },
         );
       },

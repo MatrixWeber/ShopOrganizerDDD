@@ -68,7 +68,9 @@ class PhoneNumber extends ValueObject<String> {
   factory PhoneNumber(String input) {
     assert(input != null);
     return PhoneNumber._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsNotANumber),
     );
   }
 

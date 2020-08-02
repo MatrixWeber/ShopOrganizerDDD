@@ -9,6 +9,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../domain/core/value_objects.dart';
 import '../notes/notes_overview/notes_overview_page.dart';
 import '../shops/shop_creation/shop_creation_page.dart';
 import '../shops/shop_creation/shop_worker_creation_page.dart';
@@ -78,8 +79,15 @@ class Router extends RouterBase {
       );
     },
     ShopWorkerCreationPage: (data) {
+      var args = data.getArgs<ShopWorkerCreationPageArguments>(
+        orElse: () => ShopWorkerCreationPageArguments(),
+      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => ShopWorkerCreationPage(),
+        builder: (context) => ShopWorkerCreationPage(
+          key: args.key,
+          parentShopId: args.parentShopId,
+          numOfWorkers: args.numOfWorkers,
+        ),
         settings: data,
       );
     },
@@ -104,6 +112,27 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushShopsCreationPage() =>
       push<dynamic>(Routes.shopsCreationPage);
 
-  Future<dynamic> pushShopWorkerCreationPage() =>
-      push<dynamic>(Routes.shopWorkerCreationPage);
+  Future<dynamic> pushShopWorkerCreationPage({
+    Key key,
+    UniqueId parentShopId,
+    num numOfWorkers,
+  }) =>
+      push<dynamic>(
+        Routes.shopWorkerCreationPage,
+        arguments: ShopWorkerCreationPageArguments(
+            key: key, parentShopId: parentShopId, numOfWorkers: numOfWorkers),
+      );
+}
+
+/// ************************************************************************
+/// Arguments holder classes
+/// *************************************************************************
+
+/// ShopWorkerCreationPage arguments holder class
+class ShopWorkerCreationPageArguments {
+  final Key key;
+  final UniqueId parentShopId;
+  final num numOfWorkers;
+  ShopWorkerCreationPageArguments(
+      {this.key, this.parentShopId, this.numOfWorkers});
 }
