@@ -13,6 +13,7 @@ class ShopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: Colors.blue[500],
       child: InkWell(
         onTap: () {
           // TODO Implement navigation

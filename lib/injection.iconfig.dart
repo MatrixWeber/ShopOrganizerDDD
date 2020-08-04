@@ -41,6 +41,7 @@ import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_act
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_widget/worker_widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:get_it/get_it.dart';
 
@@ -90,6 +91,7 @@ void $initGetIt(GetIt g, {String environment}) {
       () => WorkerImageHandlerBloc(g<IWorkerImageStoreRepository>()));
   g.registerFactory<WorkerWatcherBloc>(
       () => WorkerWatcherBloc(g<IWorkerRepository>()));
+  g.registerFactory<WorkerWidgetBloc>(() => WorkerWidgetBloc());
   g.registerFactory<AuthBloc>(() => AuthBloc(g<IAuthFacade>()));
 }
 

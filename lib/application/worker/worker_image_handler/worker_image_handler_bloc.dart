@@ -30,7 +30,7 @@ class WorkerImageHandlerBloc
   ) async* {
     yield* event.map(
       uploadImageStarted: (e) async* {
-        yield const WorkerImageHandlerState.loadInProgress();
+        yield const WorkerImageHandlerState.loadInProgress(0);
         await _workerStreamSubscription?.cancel();
         _workerStreamSubscription =
             _workerRepository.uploadImage(e.image).listen((failureOrImageUrl) {
@@ -40,13 +40,15 @@ class WorkerImageHandlerBloc
         });
       },
       imageDeleted: (e) async* {
-        yield const WorkerImageHandlerState.loadInProgress();
+        yield const WorkerImageHandlerState.loadInProgress(0);
         final failureOrSuccess =
             await _workerRepository.deleteImage(e.imageUrl);
         failureOrSuccess.fold((f) => WorkerImageHandlerState.loadFailure(f),
             (_) => const WorkerImageHandlerState.deletedSuccessful());
+        yield const WorkerImageHandlerState.loadInProgress(100);
       },
       imageReceived: (e) async* {
+        yield const WorkerImageHandlerState.loadInProgress(100);
         yield e.failureOrImageUrl.fold(
             (_) => const WorkerImageHandlerState.loadFailure(
                 WorkerFailure.insufficientPermissions()),
@@ -55,9 +57,9 @@ class WorkerImageHandlerBloc
     );
   }
 
-  // @override
-  // Future<void> close() async {
-  //   await _workerStreamSubscription?.cancel();
-  //   return super.close();
-  // }
+  @override
+  Future<void> close() async {
+    await _workerStreamSubscription?.cancel();
+    return super.close();
+  }
 }

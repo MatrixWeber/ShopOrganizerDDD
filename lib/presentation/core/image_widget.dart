@@ -1,22 +1,28 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart' show rootBundle;
-// import 'package:path_provider/path_provider.dart';
+import 'package:flutter/services.dart' show rootBundle;
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:path_provider/path_provider.dart';
 
-// Future<File> getImageFileFromAssets(String path) async {
-//   final byteData = await rootBundle.load('assets/$path');
+import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
 
-//   final file = File('${(await getTemporaryDirectory()).path}/$path');
-//   await file.writeAsBytes(byteData.buffer
-//       .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
+const _myAvatar = 'my_great_logo.png';
 
-//   return file;
-// }
+Future<File> getImageFileFromAssets(String path) async {
+  final byteData = await rootBundle.load('assets/$path');
 
-Widget _ifImageNotSet() {
-  const _myAvatar = 'my_great_logo.png';
+  final file = File('${(await getTemporaryDirectory()).path}/$path');
+  await file.writeAsBytes(byteData.buffer
+      .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
 
+  return file;
+}
+
+Widget _ifImageNotSet([num percent]) {
   return Stack(
     children: <Widget>[
       const Center(
@@ -35,7 +41,8 @@ Widget _ifImageNotSet() {
   );
 }
 
-Widget _ifImageWasSet(File image) {
+Widget _ifImageWasSet(File image, [num percent]) {
+  final color = percent == 0 ? Colors.red : Colors.green;
   return Container(
     height: 240.0,
     width: 240.0,
@@ -45,12 +52,92 @@ Widget _ifImageWasSet(File image) {
         image: ExactAssetImage(image.path),
         fit: BoxFit.cover,
       ),
-      border: Border.all(color: Colors.red, width: 5.0),
+      border: Border.all(color: color, width: 5.0),
       borderRadius: const BorderRadius.all(Radius.circular(120.0)),
     ),
   );
 }
 
-Widget decideImageView(File image) {
-  return image == null ? _ifImageNotSet() : _ifImageWasSet(image);
+Widget decideImageView(File image, [num percent]) {
+  return image == null
+      ? _ifImageNotSet(percent)
+      : _ifImageWasSet(image, percent);
+}
+
+class ImageWidget extends StatelessWidget {
+  final num percent;
+  final File image;
+  const ImageWidget({
+    Key key,
+    this.percent,
+    this.image,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        final imagePickerBloc = context.bloc<ImagePickerBloc>();
+        imagePickerBloc.add(const ImagePickerEvent.initialized());
+        final workerImageHandlerBloc = context.bloc<WorkerImageHandlerBloc>();
+        _showChoiseDialog(context, imagePickerBloc, workerImageHandlerBloc);
+      },
+      child: decideImageView(image, percent),
+    );
+  }
+
+  Future<void> _showChoiseDialog(
+      BuildContext context,
+      ImagePickerBloc imagePickerBloc,
+      WorkerImageHandlerBloc workerImageHandlerBloc) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Choose the Foto source',
+                style: textStyle(fontSize: 24.0, color: Colors.black),
+                textAlign: TextAlign.center),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () => imagePickerBloc.add(
+                        const ImagePickerEvent.selectImageFromGalleryStarted()),
+                    child: Text(
+                      'Galery',
+                      style: textStyle(fontSize: 21.0, color: Colors.black),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                  ),
+                  GestureDetector(
+                    onTap: () => imagePickerBloc.add(
+                        const ImagePickerEvent.getImageFromCameraStarted()),
+                    child: Text('Camera',
+                        style: textStyle(fontSize: 21.0, color: Colors.black),
+                        textAlign: TextAlign.center),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                  ),
+                  GestureDetector(
+                    onTap: () => workerImageHandlerBloc.add(
+                        WorkerImageHandlerEvent.imageDeleted(context
+                            .bloc<WorkerFormBloc>()
+                            .state
+                            .worker
+                            .imageUrl
+                            .getOrCrash())),
+                    child: Text('Delete',
+                        style: textStyle(fontSize: 21.0, color: Colors.black),
+                        textAlign: TextAlign.center),
+                  ),
+                ],
+              ),
+            ),
+          );
+        });
+  }
 }

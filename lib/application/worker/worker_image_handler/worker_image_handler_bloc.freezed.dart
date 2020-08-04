@@ -451,8 +451,10 @@ class _$WorkerImageHandlerStateTearOff {
     return const _Initial();
   }
 
-  _LoadInProgress loadInProgress() {
-    return const _LoadInProgress();
+  _LoadInProgress loadInProgress(num percent) {
+    return _LoadInProgress(
+      percent,
+    );
   }
 
   _UploadedSuccessful uploadedSuccessful(ImageUrl imageUrl) {
@@ -485,7 +487,7 @@ mixin _$WorkerImageHandlerState {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -494,7 +496,7 @@ mixin _$WorkerImageHandlerState {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -572,7 +574,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -591,7 +593,7 @@ class _$_Initial implements _Initial {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -651,6 +653,7 @@ abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
       __$LoadInProgressCopyWithImpl<$Res>;
+  $Res call({num percent});
 }
 
 class __$LoadInProgressCopyWithImpl<$Res>
@@ -662,29 +665,49 @@ class __$LoadInProgressCopyWithImpl<$Res>
 
   @override
   _LoadInProgress get _value => super._value as _LoadInProgress;
+
+  @override
+  $Res call({
+    Object percent = freezed,
+  }) {
+    return _then(_LoadInProgress(
+      percent == freezed ? _value.percent : percent as num,
+    ));
+  }
 }
 
 class _$_LoadInProgress implements _LoadInProgress {
-  const _$_LoadInProgress();
+  const _$_LoadInProgress(this.percent) : assert(percent != null);
+
+  @override
+  final num percent;
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.loadInProgress()';
+    return 'WorkerImageHandlerState.loadInProgress(percent: $percent)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoadInProgress);
+    return identical(this, other) ||
+        (other is _LoadInProgress &&
+            (identical(other.percent, percent) ||
+                const DeepCollectionEquality().equals(other.percent, percent)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(percent);
+
+  @override
+  _$LoadInProgressCopyWith<_LoadInProgress> get copyWith =>
+      __$LoadInProgressCopyWithImpl<_LoadInProgress>(this, _$identity);
 
   @override
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -696,14 +719,14 @@ class _$_LoadInProgress implements _LoadInProgress {
     assert(deletedSuccessful != null);
     assert(loadSuccess != null);
     assert(loadFailure != null);
-    return loadInProgress();
+    return loadInProgress(percent);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -712,7 +735,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   }) {
     assert(orElse != null);
     if (loadInProgress != null) {
-      return loadInProgress();
+      return loadInProgress(percent);
     }
     return orElse();
   }
@@ -756,7 +779,10 @@ class _$_LoadInProgress implements _LoadInProgress {
 }
 
 abstract class _LoadInProgress implements WorkerImageHandlerState {
-  const factory _LoadInProgress() = _$_LoadInProgress;
+  const factory _LoadInProgress(num percent) = _$_LoadInProgress;
+
+  num get percent;
+  _$LoadInProgressCopyWith<_LoadInProgress> get copyWith;
 }
 
 abstract class _$UploadedSuccessfulCopyWith<$Res> {
@@ -818,7 +844,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -837,7 +863,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -933,7 +959,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -952,7 +978,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -1066,7 +1092,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -1085,7 +1111,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),
@@ -1217,7 +1243,7 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result initial(),
-    @required Result loadInProgress(),
+    @required Result loadInProgress(num percent),
     @required Result uploadedSuccessful(ImageUrl imageUrl),
     @required Result deletedSuccessful(),
     @required Result loadSuccess(File image),
@@ -1236,7 +1262,7 @@ class _$_LoadFailure implements _LoadFailure {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result initial(),
-    Result loadInProgress(),
+    Result loadInProgress(num percent),
     Result uploadedSuccessful(ImageUrl imageUrl),
     Result deletedSuccessful(),
     Result loadSuccess(File image),

@@ -2,15 +2,15 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
-import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
-import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_worker_creation_form.dart';
-
+import '../../../application/auth/auth_bloc.dart';
+import '../../../application/core/image_picker/image_picker_bloc.dart';
+import '../../../application/worker/worker_form/worker_form_bloc.dart';
+import '../../../application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import '../../../application/worker/worker_widget/worker_widget_bloc.dart';
+import '../../../domain/core/value_objects.dart';
 import '../../../injection.dart';
+import '../../routes/router.gr.dart';
+import 'widgets/shop_worker_creation_form.dart';
 
 class ShopWorkerCreationPage extends StatelessWidget {
   final UniqueId parentShopId;
@@ -34,6 +34,9 @@ class ShopWorkerCreationPage extends StatelessWidget {
           ),
           BlocProvider<ImagePickerBloc>(
             create: (context) => getIt<ImagePickerBloc>(),
+          ),
+          BlocProvider<WorkerWidgetBloc>(
+            create: (context) => getIt<WorkerWidgetBloc>(),
           )
         ],
         child: MultiBlocListener(
@@ -47,14 +50,18 @@ class ShopWorkerCreationPage extends StatelessWidget {
             BlocListener<WorkerImageHandlerBloc, WorkerImageHandlerState>(
                 listener: (context, state) {
               state.maybeMap(
-                  uploadedSuccessful: (state) =>
-                      context.bloc<WorkerFormBloc>().add(
-                            WorkerFormEvent.imageUrlChanged(
-                              state.imageUrl.getOrCrash(),
-                            ),
+                uploadedSuccessful: (state) =>
+                    context.bloc<WorkerFormBloc>().add(
+                          WorkerFormEvent.imageUrlChanged(
+                            state.imageUrl.getOrCrash(),
                           ),
-                  deletedSuccessful: (_) => Navigator.of(context).pop(),
-                  orElse: () {});
+                        ),
+                deletedSuccessful: (_) => Navigator.of(context).pop(),
+                loadInProgress: (state) => context
+                    .bloc<WorkerWidgetBloc>()
+                    .add(WorkerWidgetEvent.inProgress(state.percent)),
+                orElse: () {},
+              );
             }),
           ],
           child: Scaffold(

@@ -34,9 +34,9 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       final storageReference = await _firebaseStorage.userDocument.call();
 
       final uploadTask = storageReference
-          // .child(storageReference.shopsCollection)
+          .child(storageReference.shopsCollection)
           // .child(parentShopId)
-          // .child(storageReference.workerCollection)
+          .child(storageReference.workerCollection)
           .putFile(image);
 
       // final StreamSubscription<StorageTaskEvent> streamSubscription =
