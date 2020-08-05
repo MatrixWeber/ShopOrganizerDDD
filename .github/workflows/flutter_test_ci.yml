@@ -24,5 +24,9 @@ jobs:
           flutter-version: '1.17.5'
           channel: 'stable'
       - run: flutter packages get
-      - run: flutter test
       - run: flutter build apk
+       
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: flutter test
