@@ -23,6 +23,12 @@ jobs:
           channel: 'stable'
       - run: flutter packages get
       - run: flutter build apk
+        # Step to save the APK as Artifacts
+      - name: Upload APK on Build Artifacts
+        uses: actions/upload-artifact@v1
+        with:
+          name: app
+          path: app/build/outputs/apk/debug/app-debug.apk 
        
   test:
     runs-on: ubuntu-latest
