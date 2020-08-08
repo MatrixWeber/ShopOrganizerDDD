@@ -38,7 +38,7 @@ void main() {
     // arrange
     final shop = Shop.test();
     when(_shopRepository.update(any)).thenAnswer((_) async {
-      return Future.value(Right(unit));
+      return Future.value(const Right(unit));
     });
     // act
     bloc.add(Initialized(some(shop)));

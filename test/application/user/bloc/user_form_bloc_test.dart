@@ -38,7 +38,7 @@ void main() {
     // arrange
     final user = User.test();
     when(_userRepository.update(any)).thenAnswer((_) async {
-      return Future.value(Right(unit));
+      return Future.value(const Right(unit));
     });
     // act
     bloc.add(Initialized(some(user)));

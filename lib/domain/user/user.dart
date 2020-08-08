@@ -34,7 +34,7 @@ abstract class User implements _$User {
         name: Name('a'),
         firstName: FirstName('b'),
         email: EmailAddress('cab@bla.de'),
-        phoneNumber: PhoneNumber('d'),
+        phoneNumber: PhoneNumber('867'),
         imageUrl: ImageUrl('e'),
         address: Address.test(),
       );
