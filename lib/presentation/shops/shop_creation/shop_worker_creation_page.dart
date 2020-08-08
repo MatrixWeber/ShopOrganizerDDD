@@ -82,10 +82,10 @@ class ShopWorkerCreationPage extends StatelessWidget {
                     onPressed: () {})
               ],
             ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: () {},
-              child: const Icon(Icons.add),
-            ),
+            // floatingActionButton: FloatingActionButton(
+            //   onPressed: () {},
+            //   child: const Icon(Icons.add),
+            // ),
             body: ShopWorkerCreationForm(
               parentShopId: parentShopId,
               numOfWorkers: numOfWorkers,

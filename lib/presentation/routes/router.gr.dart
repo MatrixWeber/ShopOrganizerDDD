@@ -79,7 +79,7 @@ class Router extends RouterBase {
       );
     },
     ShopWorkerCreationPage: (data) {
-      var args = data.getArgs<ShopWorkerCreationPageArguments>(
+      final args = data.getArgs<ShopWorkerCreationPageArguments>(
         orElse: () => ShopWorkerCreationPageArguments(),
       );
       return MaterialPageRoute<dynamic>(

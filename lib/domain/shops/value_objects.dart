@@ -12,7 +12,9 @@ class ShopName extends ValueObject<String> {
   factory ShopName(String input) {
     assert(input != null);
     return ShopName._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
 
@@ -27,7 +29,9 @@ class ShopKeeper extends ValueObject<String> {
   factory ShopKeeper(String input) {
     assert(input != null);
     return ShopKeeper._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
 

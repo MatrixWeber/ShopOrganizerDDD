@@ -11,7 +11,9 @@ class Street extends ValueObject<String> {
   factory Street(String input) {
     assert(input != null);
     return Street._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
   const Street._(this.value);
@@ -25,7 +27,9 @@ class City extends ValueObject<String> {
   factory City(String input) {
     assert(input != null);
     return City._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
   const City._(this.value);

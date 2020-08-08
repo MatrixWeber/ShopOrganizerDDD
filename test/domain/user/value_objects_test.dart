@@ -8,7 +8,7 @@ void main() {
       test('should return Name when Name is valid', () {
         // arrange
         const userNameStr =
-            '01234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final userName = Name(userNameStr);
         // assert
         expect(userName.getOrCrash(), userNameStr);
@@ -18,7 +18,7 @@ void main() {
           () {
         // arrange
         const userNameStr =
-            '0123456789012345678901234567890123456789012345678901';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijkk';
         final userName = Name(userNameStr);
 
         final call = userName.getOrCrash;
@@ -31,7 +31,7 @@ void main() {
       test('should return userFirstName when users userFirstName is valid', () {
         // arrange
         const userFirstNameStr =
-            '01234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final userFirstNameValid = FirstName(userFirstNameStr);
         // assert
         expect(userFirstNameValid.getOrCrash(), userFirstNameStr);
@@ -41,7 +41,7 @@ void main() {
           () {
         // arrange
         const userFirstNameStr =
-            '101234567890123456789012345678901234567890123456789';
+            'kabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final userFirstNameValid = FirstName(userFirstNameStr);
         final call = userFirstNameValid.getOrCrash;
         //assert

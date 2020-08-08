@@ -26,12 +26,12 @@ class ShopsCreationPage extends StatelessWidget {
               icon: const Icon(Icons.indeterminate_check_box), onPressed: () {})
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // TODO navigate to shop form page
-        },
-        child: const Icon(Icons.add),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     // TODO navigate to shop form page
+      //   },
+      //   child: const Icon(Icons.add),
+      // ),
       body: BlocProvider(
         create: (context) => getIt<ShopFormBloc>(),
         child: ShopCreationForm(),

@@ -72,6 +72,12 @@ class _$ValueFailureTearOff {
       failedValue: failedValue,
     );
   }
+
+  IsNotALetter<T> isNotALetter<T>({@required T failedValue}) {
+    return IsNotALetter<T>(
+      failedValue: failedValue,
+    );
+  }
 }
 
 // ignore: unused_element
@@ -91,6 +97,7 @@ mixin _$ValueFailure<T> {
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -103,6 +110,7 @@ mixin _$ValueFailure<T> {
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -116,6 +124,7 @@ mixin _$ValueFailure<T> {
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -128,6 +137,7 @@ mixin _$ValueFailure<T> {
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   });
 
@@ -251,6 +261,7 @@ class _$ExceedingLength<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -261,6 +272,7 @@ class _$ExceedingLength<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return exceedingLength(failedValue, max);
   }
 
@@ -276,6 +288,7 @@ class _$ExceedingLength<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -297,6 +310,7 @@ class _$ExceedingLength<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -307,6 +321,7 @@ class _$ExceedingLength<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return exceedingLength(this);
   }
 
@@ -322,6 +337,7 @@ class _$ExceedingLength<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -418,6 +434,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -428,6 +445,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return empty(failedValue);
   }
 
@@ -443,6 +461,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -464,6 +483,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -474,6 +494,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return empty(this);
   }
 
@@ -489,6 +510,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -586,6 +608,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -596,6 +619,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return multiline(failedValue);
   }
 
@@ -611,6 +635,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -632,6 +657,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -642,6 +668,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return multiline(this);
   }
 
@@ -657,6 +684,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -765,6 +793,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -775,6 +804,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return listTooLong(failedValue, max);
   }
 
@@ -790,6 +820,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -811,6 +842,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -821,6 +853,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return listTooLong(this);
   }
 
@@ -836,6 +869,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -938,6 +972,7 @@ class _$InvalidEmail<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -948,6 +983,7 @@ class _$InvalidEmail<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return invalidEmail(failedValue);
   }
 
@@ -963,6 +999,7 @@ class _$InvalidEmail<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -984,6 +1021,7 @@ class _$InvalidEmail<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -994,6 +1032,7 @@ class _$InvalidEmail<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return invalidEmail(this);
   }
 
@@ -1009,6 +1048,7 @@ class _$InvalidEmail<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1109,6 +1149,7 @@ class _$ShortPassword<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1119,6 +1160,7 @@ class _$ShortPassword<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return shortPassword(failedValue);
   }
 
@@ -1134,6 +1176,7 @@ class _$ShortPassword<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1155,6 +1198,7 @@ class _$ShortPassword<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1165,6 +1209,7 @@ class _$ShortPassword<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return shortPassword(this);
   }
 
@@ -1180,6 +1225,7 @@ class _$ShortPassword<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1293,6 +1339,7 @@ class _$DurationToLong<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1303,6 +1350,7 @@ class _$DurationToLong<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return durationToLong(failedValue, maxDuration);
   }
 
@@ -1318,6 +1366,7 @@ class _$DurationToLong<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1339,6 +1388,7 @@ class _$DurationToLong<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1349,6 +1399,7 @@ class _$DurationToLong<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return durationToLong(this);
   }
 
@@ -1364,6 +1415,7 @@ class _$DurationToLong<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1477,6 +1529,7 @@ class _$MaxTypeExceeded<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1487,6 +1540,7 @@ class _$MaxTypeExceeded<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return maxTypeExceeded(failedValue, max);
   }
 
@@ -1502,6 +1556,7 @@ class _$MaxTypeExceeded<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1523,6 +1578,7 @@ class _$MaxTypeExceeded<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1533,6 +1589,7 @@ class _$MaxTypeExceeded<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return maxTypeExceeded(this);
   }
 
@@ -1548,6 +1605,7 @@ class _$MaxTypeExceeded<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1651,6 +1709,7 @@ class _$IsNotAPhoneNumber<T>
     @required Result durationToLong(T failedValue, Duration maxDuration),
     @required Result maxTypeExceeded(T failedValue, T max),
     @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1661,6 +1720,7 @@ class _$IsNotAPhoneNumber<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return isNotAPhoneNumber(failedValue);
   }
 
@@ -1676,6 +1736,7 @@ class _$IsNotAPhoneNumber<T>
     Result durationToLong(T failedValue, Duration maxDuration),
     Result maxTypeExceeded(T failedValue, T max),
     Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1697,6 +1758,7 @@ class _$IsNotAPhoneNumber<T>
     @required Result durationToLong(DurationToLong<T> value),
     @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
     @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1707,6 +1769,7 @@ class _$IsNotAPhoneNumber<T>
     assert(durationToLong != null);
     assert(maxTypeExceeded != null);
     assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
     return isNotAPhoneNumber(this);
   }
 
@@ -1722,6 +1785,7 @@ class _$IsNotAPhoneNumber<T>
     Result durationToLong(DurationToLong<T> value),
     Result maxTypeExceeded(MaxTypeExceeded<T> value),
     Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1740,4 +1804,181 @@ abstract class IsNotAPhoneNumber<T> implements ValueFailure<T> {
   T get failedValue;
   @override
   $IsNotAPhoneNumberCopyWith<T, IsNotAPhoneNumber<T>> get copyWith;
+}
+
+abstract class $IsNotALetterCopyWith<T, $Res>
+    implements $ValueFailureCopyWith<T, $Res> {
+  factory $IsNotALetterCopyWith(
+          IsNotALetter<T> value, $Res Function(IsNotALetter<T>) then) =
+      _$IsNotALetterCopyWithImpl<T, $Res>;
+  @override
+  $Res call({T failedValue});
+}
+
+class _$IsNotALetterCopyWithImpl<T, $Res>
+    extends _$ValueFailureCopyWithImpl<T, $Res>
+    implements $IsNotALetterCopyWith<T, $Res> {
+  _$IsNotALetterCopyWithImpl(
+      IsNotALetter<T> _value, $Res Function(IsNotALetter<T>) _then)
+      : super(_value, (v) => _then(v as IsNotALetter<T>));
+
+  @override
+  IsNotALetter<T> get _value => super._value as IsNotALetter<T>;
+
+  @override
+  $Res call({
+    Object failedValue = freezed,
+  }) {
+    return _then(IsNotALetter<T>(
+      failedValue:
+          failedValue == freezed ? _value.failedValue : failedValue as T,
+    ));
+  }
+}
+
+class _$IsNotALetter<T>
+    with DiagnosticableTreeMixin
+    implements IsNotALetter<T> {
+  const _$IsNotALetter({@required this.failedValue})
+      : assert(failedValue != null);
+
+  @override
+  final T failedValue;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ValueFailure<$T>.isNotALetter(failedValue: $failedValue)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ValueFailure<$T>.isNotALetter'))
+      ..add(DiagnosticsProperty('failedValue', failedValue));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is IsNotALetter<T> &&
+            (identical(other.failedValue, failedValue) ||
+                const DeepCollectionEquality()
+                    .equals(other.failedValue, failedValue)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
+
+  @override
+  $IsNotALetterCopyWith<T, IsNotALetter<T>> get copyWith =>
+      _$IsNotALetterCopyWithImpl<T, IsNotALetter<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result exceedingLength(T failedValue, int max),
+    @required Result empty(T failedValue),
+    @required Result multiline(T failedValue),
+    @required Result listTooLong(T failedValue, int max),
+    @required Result invalidEmail(T failedValue),
+    @required Result shortPassword(T failedValue),
+    @required Result durationToLong(T failedValue, Duration maxDuration),
+    @required Result maxTypeExceeded(T failedValue, T max),
+    @required Result isNotAPhoneNumber(T failedValue),
+    @required Result isNotALetter(T failedValue),
+  }) {
+    assert(exceedingLength != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(listTooLong != null);
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(durationToLong != null);
+    assert(maxTypeExceeded != null);
+    assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
+    return isNotALetter(failedValue);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result exceedingLength(T failedValue, int max),
+    Result empty(T failedValue),
+    Result multiline(T failedValue),
+    Result listTooLong(T failedValue, int max),
+    Result invalidEmail(T failedValue),
+    Result shortPassword(T failedValue),
+    Result durationToLong(T failedValue, Duration maxDuration),
+    Result maxTypeExceeded(T failedValue, T max),
+    Result isNotAPhoneNumber(T failedValue),
+    Result isNotALetter(T failedValue),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (isNotALetter != null) {
+      return isNotALetter(failedValue);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result exceedingLength(ExceedingLength<T> value),
+    @required Result empty(Empty<T> value),
+    @required Result multiline(Multiline<T> value),
+    @required Result listTooLong(ListTooLong<T> value),
+    @required Result invalidEmail(InvalidEmail<T> value),
+    @required Result shortPassword(ShortPassword<T> value),
+    @required Result durationToLong(DurationToLong<T> value),
+    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required Result isNotALetter(IsNotALetter<T> value),
+  }) {
+    assert(exceedingLength != null);
+    assert(empty != null);
+    assert(multiline != null);
+    assert(listTooLong != null);
+    assert(invalidEmail != null);
+    assert(shortPassword != null);
+    assert(durationToLong != null);
+    assert(maxTypeExceeded != null);
+    assert(isNotAPhoneNumber != null);
+    assert(isNotALetter != null);
+    return isNotALetter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result exceedingLength(ExceedingLength<T> value),
+    Result empty(Empty<T> value),
+    Result multiline(Multiline<T> value),
+    Result listTooLong(ListTooLong<T> value),
+    Result invalidEmail(InvalidEmail<T> value),
+    Result shortPassword(ShortPassword<T> value),
+    Result durationToLong(DurationToLong<T> value),
+    Result maxTypeExceeded(MaxTypeExceeded<T> value),
+    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    Result isNotALetter(IsNotALetter<T> value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (isNotALetter != null) {
+      return isNotALetter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class IsNotALetter<T> implements ValueFailure<T> {
+  const factory IsNotALetter({@required T failedValue}) = _$IsNotALetter<T>;
+
+  @override
+  T get failedValue;
+  @override
+  $IsNotALetterCopyWith<T, IsNotALetter<T>> get copyWith;
 }

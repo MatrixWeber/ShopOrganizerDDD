@@ -8,7 +8,7 @@ void main() {
       test('should return Street when Street name is valid', () {
         // arrange
         const streetNameStr =
-            '0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final streetName = Street(streetNameStr);
         // assert
         expect(streetName.getOrCrash(), streetNameStr);
@@ -18,7 +18,7 @@ void main() {
           () {
         // arrange
         const streetNameStr =
-            '01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567891';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijk';
         final streetName = Street(streetNameStr);
 
         final call = streetName.getOrCrash;
@@ -69,7 +69,7 @@ void main() {
       test('should return City when address City is valid', () {
         // arrange
         const cityIsExactMax =
-            '0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final city = City(cityIsExactMax);
         // assert
         expect(city.getOrCrash(), cityIsExactMax);
@@ -79,7 +79,7 @@ void main() {
           () {
         // arrange
         const cityIsExactMax =
-            '01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijk';
         final city = City(cityIsExactMax);
 
         final call = city.getOrCrash;

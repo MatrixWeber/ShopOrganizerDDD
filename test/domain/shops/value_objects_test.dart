@@ -10,7 +10,7 @@ void main() {
       test('should return ShopName when ShopName name is valid', () {
         // arrange
         const shopNameNameStr =
-            '01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopNameName = ShopName(shopNameNameStr);
         // assert
         expect(shopNameName.getOrCrash(), shopNameNameStr);
@@ -20,7 +20,7 @@ void main() {
           () {
         // arrange
         const shopNameNameStr =
-            '101234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            'kabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopNameName = ShopName(shopNameNameStr);
 
         final call = shopNameName.getOrCrash;
@@ -33,7 +33,7 @@ void main() {
       test('should return ShopKeeper when shops ShopKeeper is valid', () {
         // arrange
         const shopKeeperStr =
-            '01234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopsShopKeeperValid = ShopKeeper(shopKeeperStr);
         // assert
         expect(shopsShopKeeperValid.getOrCrash(), shopKeeperStr);
@@ -43,7 +43,7 @@ void main() {
           () {
         // arrange
         const shopKeeperStr =
-            '101234567890123456789012345678901234567890123456789';
+            'kabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopsShopKeeperValid = ShopKeeper(shopKeeperStr);
         final call = shopsShopKeeperValid.getOrCrash;
         //assert
@@ -54,7 +54,7 @@ void main() {
       test('should return ImageUrl when shops ImageUrl is valid', () {
         // arrange
         const imageUrlIsExactMax =
-            '0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final imageUrl = ImageUrl(imageUrlIsExactMax);
         // assert
         expect(imageUrl.getOrCrash(), imageUrlIsExactMax);
@@ -63,7 +63,7 @@ void main() {
           () {
         // arrange
         const imageUrlIsExactMax =
-            '10123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789';
+            '1abcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final imageUrl = ImageUrl(imageUrlIsExactMax);
 
         final call = imageUrl.getOrCrash;
@@ -75,7 +75,7 @@ void main() {
       test('should return ShopCategory when shops ShopCategory is valid', () {
         // arrange
         const shopCategoryIsExactMax =
-            '01234567890123456789012345678901234567890123456789';
+            'abcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopCategory = ShopCategory(shopCategoryIsExactMax);
         // assert
         expect(shopCategory.getOrCrash(), shopCategoryIsExactMax);
@@ -85,7 +85,7 @@ void main() {
           () {
         // arrange
         const shopCategoryIsExactMax =
-            '101234567890123456789012345678901234567890123456789';
+            'kabcdefghijabcdefghijabcdefghijabcdefghijabcdefghij';
         final shopCategory = ShopCategory(shopCategoryIsExactMax);
         final call = shopCategory.getOrCrash;
         //assert
@@ -95,7 +95,7 @@ void main() {
     group('shopsPhoneNumberValidation', () {
       test('should return PhoneNumber when shops PhoneNumber is valid', () {
         // arrange
-        const phoneNumberIsExactMax = '012345678901234567890123456789';
+        const phoneNumberIsExactMax = '+123456789+123456789+123456789';
         final phoneNumber = PhoneNumber(phoneNumberIsExactMax);
         // assert
         expect(phoneNumber.getOrCrash(), phoneNumberIsExactMax);
@@ -104,7 +104,7 @@ void main() {
           'should throw UnexpectedValueError() when shops PhoneNumber is invalid',
           () {
         // arrange
-        const phoneNumberIsExactMax = '1012345678901234567890123456789';
+        const phoneNumberIsExactMax = '1+123456789+123456789+123456789';
         final phoneNumber = PhoneNumber(phoneNumberIsExactMax);
         final call = phoneNumber.getOrCrash;
         //assert

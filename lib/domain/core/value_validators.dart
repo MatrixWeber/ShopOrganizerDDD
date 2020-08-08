@@ -38,6 +38,15 @@ Either<ValueFailure<KtList<T>>, KtList<T>> validateMaxListLength<T>(
   }
 }
 
+Either<ValueFailure<String>, String> validateIsALetter(String input) {
+  const emailRegex = '^[a-zA-Z]';
+  if (RegExp(emailRegex).hasMatch(input)) {
+    return right(input);
+  } else {
+    return left(ValueFailure.isNotALetter(failedValue: input));
+  }
+}
+
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+$""";
@@ -93,7 +102,7 @@ Either<ValueFailure<num>, num> validateNumNotNull(num input) {
 
 Either<ValueFailure<String>, String> validateIsNotANumber(String input) {
   final tryParseInt = int.tryParse(input);
-  if (input[0].contains('+') || tryParseInt != null) {
+  if (input[0].contains('+') || input[0].contains('0') || tryParseInt != null) {
     return right(input);
   } else {
     return left(ValueFailure.isNotAPhoneNumber(failedValue: input));

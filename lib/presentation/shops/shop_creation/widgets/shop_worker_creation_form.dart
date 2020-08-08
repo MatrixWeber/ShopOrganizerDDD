@@ -104,6 +104,8 @@ class ShopWorkerCreationForm extends StatelessWidget {
                         (f) => f.maybeMap(
                               empty: (_) => 'Name cannot be empty',
                               exceedingLength: (_) => 'Invalid Name Length',
+                              isNotALetter: (_) =>
+                                  'Name should contain of letters',
                               orElse: () => null,
                             ),
                         (_) => null),

@@ -36,4 +36,7 @@ abstract class ValueFailure<T> with _$ValueFailure<T> {
   const factory ValueFailure.isNotAPhoneNumber({
     @required T failedValue,
   }) = IsNotAPhoneNumber<T>;
+  const factory ValueFailure.isNotALetter({
+    @required T failedValue,
+  }) = IsNotALetter<T>;
 }

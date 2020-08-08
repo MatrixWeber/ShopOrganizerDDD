@@ -113,7 +113,9 @@ class Name extends ValueObject<String> {
   factory Name(String input) {
     assert(input != null);
     return Name._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
 
@@ -128,7 +130,9 @@ class FirstName extends ValueObject<String> {
   factory FirstName(String input) {
     assert(input != null);
     return FirstName._(
-      validateMaxStringLength(input, maxLength).flatMap(validateStringNotEmpty),
+      validateMaxStringLength(input, maxLength)
+          .flatMap(validateStringNotEmpty)
+          .flatMap(validateIsALetter),
     );
   }
 
