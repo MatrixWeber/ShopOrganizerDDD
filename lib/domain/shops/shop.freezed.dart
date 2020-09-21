@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'shop.dart';
 
@@ -9,9 +9,11 @@ part of 'shop.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ShopTearOff {
   const _$ShopTearOff();
 
+// ignore: unused_element
   _Shop call(
       {@required UniqueId id,
       @required ShopName name,
@@ -38,9 +40,11 @@ class _$ShopTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Shop = _$ShopTearOff();
 
+/// @nodoc
 mixin _$Shop {
   UniqueId get id;
   ShopName get name;
@@ -56,6 +60,7 @@ mixin _$Shop {
   $ShopCopyWith<Shop> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShopCopyWith<$Res> {
   factory $ShopCopyWith(Shop value, $Res Function(Shop) then) =
       _$ShopCopyWithImpl<$Res>;
@@ -74,6 +79,7 @@ abstract class $ShopCopyWith<$Res> {
   $AddressCopyWith<$Res> get address;
 }
 
+/// @nodoc
 class _$ShopCopyWithImpl<$Res> implements $ShopCopyWith<$Res> {
   _$ShopCopyWithImpl(this._value, this._then);
 
@@ -126,6 +132,7 @@ class _$ShopCopyWithImpl<$Res> implements $ShopCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ShopCopyWith<$Res> implements $ShopCopyWith<$Res> {
   factory _$ShopCopyWith(_Shop value, $Res Function(_Shop) then) =
       __$ShopCopyWithImpl<$Res>;
@@ -146,6 +153,7 @@ abstract class _$ShopCopyWith<$Res> implements $ShopCopyWith<$Res> {
   $AddressCopyWith<$Res> get address;
 }
 
+/// @nodoc
 class __$ShopCopyWithImpl<$Res> extends _$ShopCopyWithImpl<$Res>
     implements _$ShopCopyWith<$Res> {
   __$ShopCopyWithImpl(_Shop _value, $Res Function(_Shop) _then)
@@ -189,6 +197,7 @@ class __$ShopCopyWithImpl<$Res> extends _$ShopCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Shop extends _Shop {
   const _$_Shop(
       {@required this.id,

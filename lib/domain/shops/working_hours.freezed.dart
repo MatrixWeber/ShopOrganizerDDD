@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'working_hours.dart';
 
@@ -9,9 +9,11 @@ part of 'working_hours.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ShopWorkingHoursTearOff {
   const _$ShopWorkingHoursTearOff();
 
+// ignore: unused_element
   _ShopWorkingHours call({@required WorkingHours workingHours}) {
     return _ShopWorkingHours(
       workingHours: workingHours,
@@ -19,15 +21,18 @@ class _$ShopWorkingHoursTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ShopWorkingHours = _$ShopWorkingHoursTearOff();
 
+/// @nodoc
 mixin _$ShopWorkingHours {
   WorkingHours get workingHours;
 
   $ShopWorkingHoursCopyWith<ShopWorkingHours> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShopWorkingHoursCopyWith<$Res> {
   factory $ShopWorkingHoursCopyWith(
           ShopWorkingHours value, $Res Function(ShopWorkingHours) then) =
@@ -35,6 +40,7 @@ abstract class $ShopWorkingHoursCopyWith<$Res> {
   $Res call({WorkingHours workingHours});
 }
 
+/// @nodoc
 class _$ShopWorkingHoursCopyWithImpl<$Res>
     implements $ShopWorkingHoursCopyWith<$Res> {
   _$ShopWorkingHoursCopyWithImpl(this._value, this._then);
@@ -55,6 +61,7 @@ class _$ShopWorkingHoursCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ShopWorkingHoursCopyWith<$Res>
     implements $ShopWorkingHoursCopyWith<$Res> {
   factory _$ShopWorkingHoursCopyWith(
@@ -64,6 +71,7 @@ abstract class _$ShopWorkingHoursCopyWith<$Res>
   $Res call({WorkingHours workingHours});
 }
 
+/// @nodoc
 class __$ShopWorkingHoursCopyWithImpl<$Res>
     extends _$ShopWorkingHoursCopyWithImpl<$Res>
     implements _$ShopWorkingHoursCopyWith<$Res> {
@@ -86,6 +94,7 @@ class __$ShopWorkingHoursCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ShopWorkingHours extends _ShopWorkingHours {
   const _$_ShopWorkingHours({@required this.workingHours})
       : assert(workingHours != null),

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'user_dtos.dart';
 
@@ -12,9 +12,11 @@ UserDto _$UserDtoFromJson(Map<String, dynamic> json) {
   return _UserDto.fromJson(json);
 }
 
+/// @nodoc
 class _$UserDtoTearOff {
   const _$UserDtoTearOff();
 
+// ignore: unused_element
   _UserDto call(
       {@JsonKey(ignore: true) String id,
       @required String name,
@@ -41,11 +43,18 @@ class _$UserDtoTearOff {
       serverTimeStamp: serverTimeStamp,
     );
   }
+
+// ignore: unused_element
+  UserDto fromJson(Map<String, Object> json) {
+    return UserDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UserDto = _$UserDtoTearOff();
 
+/// @nodoc
 mixin _$UserDto {
   @JsonKey(ignore: true)
   String get id;
@@ -57,7 +66,7 @@ mixin _$UserDto {
   String get city;
   String get zip;
   String get houseNum;
-  String get street;
+  String get street; //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -65,6 +74,7 @@ mixin _$UserDto {
   $UserDtoCopyWith<UserDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $UserDtoCopyWith<$Res> {
   factory $UserDtoCopyWith(UserDto value, $Res Function(UserDto) then) =
       _$UserDtoCopyWithImpl<$Res>;
@@ -82,6 +92,7 @@ abstract class $UserDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
   _$UserDtoCopyWithImpl(this._value, this._then);
 
@@ -121,6 +132,7 @@ class _$UserDtoCopyWithImpl<$Res> implements $UserDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
   factory _$UserDtoCopyWith(_UserDto value, $Res Function(_UserDto) then) =
       __$UserDtoCopyWithImpl<$Res>;
@@ -139,6 +151,7 @@ abstract class _$UserDtoCopyWith<$Res> implements $UserDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
     implements _$UserDtoCopyWith<$Res> {
   __$UserDtoCopyWithImpl(_UserDto _value, $Res Function(_UserDto) _then)
@@ -180,6 +193,8 @@ class __$UserDtoCopyWithImpl<$Res> extends _$UserDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_UserDto extends _UserDto with DiagnosticableTreeMixin {
   const _$_UserDto(
       {@JsonKey(ignore: true) this.id,
@@ -229,7 +244,7 @@ class _$_UserDto extends _UserDto with DiagnosticableTreeMixin {
   final String houseNum;
   @override
   final String street;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
@@ -352,7 +367,7 @@ abstract class _UserDto extends UserDto {
   String get houseNum;
   @override
   String get street;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override

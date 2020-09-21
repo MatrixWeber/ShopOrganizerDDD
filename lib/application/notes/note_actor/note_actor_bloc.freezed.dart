@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'note_actor_bloc.dart';
 
@@ -9,9 +9,11 @@ part of 'note_actor_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$NoteActorEventTearOff {
   const _$NoteActorEventTearOff();
 
+// ignore: unused_element
   _Deleted deleted(Note note) {
     return _Deleted(
       note,
@@ -19,15 +21,37 @@ class _$NoteActorEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteActorEvent = _$NoteActorEventTearOff();
 
+/// @nodoc
 mixin _$NoteActorEvent {
   Note get note;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result deleted(Note note),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result deleted(Note note),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result deleted(_Deleted value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result deleted(_Deleted value),
+    @required Result orElse(),
+  });
 
   $NoteActorEventCopyWith<NoteActorEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $NoteActorEventCopyWith<$Res> {
   factory $NoteActorEventCopyWith(
           NoteActorEvent value, $Res Function(NoteActorEvent) then) =
@@ -37,6 +61,7 @@ abstract class $NoteActorEventCopyWith<$Res> {
   $NoteCopyWith<$Res> get note;
 }
 
+/// @nodoc
 class _$NoteActorEventCopyWithImpl<$Res>
     implements $NoteActorEventCopyWith<$Res> {
   _$NoteActorEventCopyWithImpl(this._value, this._then);
@@ -65,6 +90,7 @@ class _$NoteActorEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeletedCopyWith<$Res>
     implements $NoteActorEventCopyWith<$Res> {
   factory _$DeletedCopyWith(_Deleted value, $Res Function(_Deleted) then) =
@@ -76,6 +102,7 @@ abstract class _$DeletedCopyWith<$Res>
   $NoteCopyWith<$Res> get note;
 }
 
+/// @nodoc
 class __$DeletedCopyWithImpl<$Res> extends _$NoteActorEventCopyWithImpl<$Res>
     implements _$DeletedCopyWith<$Res> {
   __$DeletedCopyWithImpl(_Deleted _value, $Res Function(_Deleted) _then)
@@ -94,6 +121,7 @@ class __$DeletedCopyWithImpl<$Res> extends _$NoteActorEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Deleted implements _Deleted {
   const _$_Deleted(this.note) : assert(note != null);
 
@@ -120,6 +148,50 @@ class _$_Deleted implements _Deleted {
   @override
   _$DeletedCopyWith<_Deleted> get copyWith =>
       __$DeletedCopyWithImpl<_Deleted>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result deleted(Note note),
+  }) {
+    assert(deleted != null);
+    return deleted(note);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result deleted(Note note),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleted != null) {
+      return deleted(note);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result deleted(_Deleted value),
+  }) {
+    assert(deleted != null);
+    return deleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result deleted(_Deleted value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleted != null) {
+      return deleted(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class _Deleted implements NoteActorEvent {
@@ -131,21 +203,26 @@ abstract class _Deleted implements NoteActorEvent {
   _$DeletedCopyWith<_Deleted> get copyWith;
 }
 
+/// @nodoc
 class _$NoteActorStateTearOff {
   const _$NoteActorStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _ActionInProgress actionInProgress() {
     return const _ActionInProgress();
   }
 
+// ignore: unused_element
   _DeleteSuccess deleteSuccess() {
     return const _DeleteSuccess();
   }
 
+// ignore: unused_element
   _DeleteFailure deleteFailure(NoteFailure noteFailure) {
     return _DeleteFailure(
       noteFailure,
@@ -153,9 +230,11 @@ class _$NoteActorStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteActorState = _$NoteActorStateTearOff();
 
+/// @nodoc
 mixin _$NoteActorState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -189,12 +268,14 @@ mixin _$NoteActorState {
   });
 }
 
+/// @nodoc
 abstract class $NoteActorStateCopyWith<$Res> {
   factory $NoteActorStateCopyWith(
           NoteActorState value, $Res Function(NoteActorState) then) =
       _$NoteActorStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$NoteActorStateCopyWithImpl<$Res>
     implements $NoteActorStateCopyWith<$Res> {
   _$NoteActorStateCopyWithImpl(this._value, this._then);
@@ -204,11 +285,13 @@ class _$NoteActorStateCopyWithImpl<$Res>
   final $Res Function(NoteActorState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$NoteActorStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -218,6 +301,7 @@ class __$InitialCopyWithImpl<$Res> extends _$NoteActorStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -301,12 +385,14 @@ abstract class _Initial implements NoteActorState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$ActionInProgressCopyWith<$Res> {
   factory _$ActionInProgressCopyWith(
           _ActionInProgress value, $Res Function(_ActionInProgress) then) =
       __$ActionInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$ActionInProgressCopyWithImpl<$Res>
     extends _$NoteActorStateCopyWithImpl<$Res>
     implements _$ActionInProgressCopyWith<$Res> {
@@ -318,6 +404,7 @@ class __$ActionInProgressCopyWithImpl<$Res>
   _ActionInProgress get _value => super._value as _ActionInProgress;
 }
 
+/// @nodoc
 class _$_ActionInProgress implements _ActionInProgress {
   const _$_ActionInProgress();
 
@@ -401,12 +488,14 @@ abstract class _ActionInProgress implements NoteActorState {
   const factory _ActionInProgress() = _$_ActionInProgress;
 }
 
+/// @nodoc
 abstract class _$DeleteSuccessCopyWith<$Res> {
   factory _$DeleteSuccessCopyWith(
           _DeleteSuccess value, $Res Function(_DeleteSuccess) then) =
       __$DeleteSuccessCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$DeleteSuccessCopyWithImpl<$Res>
     extends _$NoteActorStateCopyWithImpl<$Res>
     implements _$DeleteSuccessCopyWith<$Res> {
@@ -418,6 +507,7 @@ class __$DeleteSuccessCopyWithImpl<$Res>
   _DeleteSuccess get _value => super._value as _DeleteSuccess;
 }
 
+/// @nodoc
 class _$_DeleteSuccess implements _DeleteSuccess {
   const _$_DeleteSuccess();
 
@@ -501,6 +591,7 @@ abstract class _DeleteSuccess implements NoteActorState {
   const factory _DeleteSuccess() = _$_DeleteSuccess;
 }
 
+/// @nodoc
 abstract class _$DeleteFailureCopyWith<$Res> {
   factory _$DeleteFailureCopyWith(
           _DeleteFailure value, $Res Function(_DeleteFailure) then) =
@@ -510,6 +601,7 @@ abstract class _$DeleteFailureCopyWith<$Res> {
   $NoteFailureCopyWith<$Res> get noteFailure;
 }
 
+/// @nodoc
 class __$DeleteFailureCopyWithImpl<$Res>
     extends _$NoteActorStateCopyWithImpl<$Res>
     implements _$DeleteFailureCopyWith<$Res> {
@@ -540,6 +632,7 @@ class __$DeleteFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_DeleteFailure implements _DeleteFailure {
   const _$_DeleteFailure(this.noteFailure) : assert(noteFailure != null);
 

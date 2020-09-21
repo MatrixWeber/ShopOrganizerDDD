@@ -22,10 +22,7 @@ part 'shop_form_bloc.freezed.dart';
 class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
   final IShopRepository _shopRepository;
 
-  ShopFormBloc(this._shopRepository);
-  @override
-  ShopFormState get initialState => ShopFormState.initial();
-
+  ShopFormBloc(this._shopRepository) : super(ShopFormState.initial());
   @override
   Stream<ShopFormState> mapEventToState(
     ShopFormEvent event,

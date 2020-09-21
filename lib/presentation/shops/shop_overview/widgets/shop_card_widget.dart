@@ -1,7 +1,6 @@
 import 'package:firebase_ddd_tutorial/application/shops/shop_actor/shop_actor_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:kt_dart/collection.dart';
 
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 

@@ -27,7 +27,7 @@ void main() {
 
   test('initial state should be Initial', () {
     // assert
-    expect(bloc.initialState, equals(const UserActorState.initial()));
+    expect(bloc.state, equals(const UserActorState.initial()));
   });
 
   test(

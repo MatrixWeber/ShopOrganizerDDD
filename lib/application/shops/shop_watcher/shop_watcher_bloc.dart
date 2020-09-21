@@ -18,10 +18,9 @@ part 'shop_watcher_bloc.freezed.dart';
 class ShopWatcherBloc extends Bloc<ShopWatcherEvent, ShopWatcherState> {
   final IShopRepository _shopRepository;
 
-  ShopWatcherBloc(this._shopRepository);
+  ShopWatcherBloc(this._shopRepository)
+      : super(const ShopWatcherState.initial());
   StreamSubscription<Either<ShopFailure, KtList<Shop>>> _shopStreamSubscription;
-  @override
-  ShopWatcherState get initialState => const ShopWatcherState.initial();
 
   @override
   Stream<ShopWatcherState> mapEventToState(

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'task_dtos.dart';
 
@@ -12,9 +12,11 @@ TaskDto _$TaskDtoFromJson(Map<String, dynamic> json) {
   return _TaskDto.fromJson(json);
 }
 
+/// @nodoc
 class _$TaskDtoTearOff {
   const _$TaskDtoTearOff();
 
+// ignore: unused_element
   _TaskDto call(
       {@JsonKey(ignore: true) String id,
       @required String name,
@@ -29,17 +31,24 @@ class _$TaskDtoTearOff {
       serverTimeStamp: serverTimeStamp,
     );
   }
+
+// ignore: unused_element
+  TaskDto fromJson(Map<String, Object> json) {
+    return TaskDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskDto = _$TaskDtoTearOff();
 
+/// @nodoc
 mixin _$TaskDto {
   @JsonKey(ignore: true)
   String get id;
   String get name;
   Duration get duration;
-  num get price;
+  num get price; //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -47,6 +56,7 @@ mixin _$TaskDto {
   $TaskDtoCopyWith<TaskDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskDtoCopyWith<$Res> {
   factory $TaskDtoCopyWith(TaskDto value, $Res Function(TaskDto) then) =
       _$TaskDtoCopyWithImpl<$Res>;
@@ -58,6 +68,7 @@ abstract class $TaskDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class _$TaskDtoCopyWithImpl<$Res> implements $TaskDtoCopyWith<$Res> {
   _$TaskDtoCopyWithImpl(this._value, this._then);
 
@@ -85,6 +96,7 @@ class _$TaskDtoCopyWithImpl<$Res> implements $TaskDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TaskDtoCopyWith<$Res> implements $TaskDtoCopyWith<$Res> {
   factory _$TaskDtoCopyWith(_TaskDto value, $Res Function(_TaskDto) then) =
       __$TaskDtoCopyWithImpl<$Res>;
@@ -97,6 +109,7 @@ abstract class _$TaskDtoCopyWith<$Res> implements $TaskDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class __$TaskDtoCopyWithImpl<$Res> extends _$TaskDtoCopyWithImpl<$Res>
     implements _$TaskDtoCopyWith<$Res> {
   __$TaskDtoCopyWithImpl(_TaskDto _value, $Res Function(_TaskDto) _then)
@@ -126,6 +139,8 @@ class __$TaskDtoCopyWithImpl<$Res> extends _$TaskDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TaskDto extends _TaskDto with DiagnosticableTreeMixin {
   const _$_TaskDto(
       {@JsonKey(ignore: true) this.id,
@@ -151,7 +166,7 @@ class _$_TaskDto extends _TaskDto with DiagnosticableTreeMixin {
   final Duration duration;
   @override
   final num price;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
@@ -230,7 +245,7 @@ abstract class _TaskDto extends TaskDto {
   Duration get duration;
   @override
   num get price;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override

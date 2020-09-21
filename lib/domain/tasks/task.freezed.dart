@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'task.dart';
 
@@ -9,9 +9,11 @@ part of 'task.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$TaskDescriptionTearOff {
   const _$TaskDescriptionTearOff();
 
+// ignore: unused_element
   _TaskDescription call(
       {@required UniqueId id,
       @required TaskName name,
@@ -26,9 +28,11 @@ class _$TaskDescriptionTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskDescription = _$TaskDescriptionTearOff();
 
+/// @nodoc
 mixin _$TaskDescription {
   UniqueId get id;
   TaskName get name;
@@ -38,6 +42,7 @@ mixin _$TaskDescription {
   $TaskDescriptionCopyWith<TaskDescription> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskDescriptionCopyWith<$Res> {
   factory $TaskDescriptionCopyWith(
           TaskDescription value, $Res Function(TaskDescription) then) =
@@ -45,6 +50,7 @@ abstract class $TaskDescriptionCopyWith<$Res> {
   $Res call({UniqueId id, TaskName name, TaskDuration duration, Price price});
 }
 
+/// @nodoc
 class _$TaskDescriptionCopyWithImpl<$Res>
     implements $TaskDescriptionCopyWith<$Res> {
   _$TaskDescriptionCopyWithImpl(this._value, this._then);
@@ -70,6 +76,7 @@ class _$TaskDescriptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TaskDescriptionCopyWith<$Res>
     implements $TaskDescriptionCopyWith<$Res> {
   factory _$TaskDescriptionCopyWith(
@@ -79,6 +86,7 @@ abstract class _$TaskDescriptionCopyWith<$Res>
   $Res call({UniqueId id, TaskName name, TaskDuration duration, Price price});
 }
 
+/// @nodoc
 class __$TaskDescriptionCopyWithImpl<$Res>
     extends _$TaskDescriptionCopyWithImpl<$Res>
     implements _$TaskDescriptionCopyWith<$Res> {
@@ -106,6 +114,7 @@ class __$TaskDescriptionCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_TaskDescription extends _TaskDescription {
   const _$_TaskDescription(
       {@required this.id,

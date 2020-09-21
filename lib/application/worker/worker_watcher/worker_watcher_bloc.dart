@@ -17,11 +17,10 @@ part 'worker_watcher_bloc.freezed.dart';
 class WorkerWatcherBloc extends Bloc<WorkerWatcherEvent, WorkerWatcherState> {
   final IWorkerRepository _workerRepository;
 
-  WorkerWatcherBloc(this._workerRepository);
+  WorkerWatcherBloc(this._workerRepository)
+      : super(const WorkerWatcherState.initial());
   StreamSubscription<Either<WorkerFailure, KtList<Worker>>>
       _workerStreamSubscription;
-  @override
-  WorkerWatcherState get initialState => const WorkerWatcherState.initial();
 
   @override
   Stream<WorkerWatcherState> mapEventToState(

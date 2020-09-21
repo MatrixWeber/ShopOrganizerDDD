@@ -8,8 +8,7 @@ part 'worker_widget_bloc.freezed.dart';
 
 @injectable
 class WorkerWidgetBloc extends Bloc<WorkerWidgetEvent, WorkerWidgetState> {
-  @override
-  WorkerWidgetState get initialState => const WorkerWidgetState.initial();
+  WorkerWidgetBloc() : super(const WorkerWidgetState.initial());
 
   @override
   Stream<WorkerWidgetState> mapEventToState(

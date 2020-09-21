@@ -13,9 +13,8 @@ part 'worker_actor_bloc.freezed.dart';
 class WorkerActorBloc extends Bloc<WorkerActorEvent, WorkerActorState> {
   final IWorkerRepository _workerRepository;
 
-  WorkerActorBloc(this._workerRepository);
-  @override
-  WorkerActorState get initialState => const WorkerActorState.initial();
+  WorkerActorBloc(this._workerRepository)
+      : super(const WorkerActorState.initial());
 
   @override
   Stream<WorkerActorState> mapEventToState(

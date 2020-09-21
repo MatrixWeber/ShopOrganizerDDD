@@ -19,9 +19,7 @@ part 'task_form_bloc.freezed.dart';
 class TaskFormBloc extends Bloc<TaskFormEvent, TaskFormState> {
   final ITaskRepository _taskRepository;
 
-  TaskFormBloc(this._taskRepository);
-  @override
-  TaskFormState get initialState => TaskFormState.initial();
+  TaskFormBloc(this._taskRepository) : super(TaskFormState.initial());
 
   @override
   Stream<TaskFormState> mapEventToState(

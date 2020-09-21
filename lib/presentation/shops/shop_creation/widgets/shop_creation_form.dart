@@ -6,12 +6,10 @@ import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../shop_worker_creation_page.dart';
-
 class ShopCreationForm extends StatelessWidget {
-  static const _RADIUS = 120.0;
+  // static const _RADIUS = 120.0;
   static const _PADDING = 6.0;
-  static const _TF_EDGE = 12.0;
+  // static const _TF_EDGE = 12.0;
   static const _TF_SIZE = 20.0;
   @override
   Widget build(BuildContext context) {

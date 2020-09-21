@@ -27,7 +27,7 @@ void main() {
 
   test('initial state should be Initial', () {
     // assert
-    expect(bloc.initialState, equals(const ShopActorState.initial()));
+    expect(bloc.state, equals(const ShopActorState.initial()));
   });
 
   test(
@@ -36,7 +36,7 @@ void main() {
     //? arrange
     final shop = Shop.empty();
     when(_shopRepository.delete(shop)).thenAnswer((_) async {
-      return Right(unit);
+      return const Right(unit);
     });
 
     final expected = [

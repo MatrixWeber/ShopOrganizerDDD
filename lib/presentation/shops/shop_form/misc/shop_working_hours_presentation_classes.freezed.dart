@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'shop_working_hours_presentation_classes.dart';
 
@@ -9,9 +9,11 @@ part of 'shop_working_hours_presentation_classes.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ShopWorkingHoursPrimitiveTearOff {
   const _$ShopWorkingHoursPrimitiveTearOff();
 
+// ignore: unused_element
   _ShopWorkingHoursPrimitive call({@required num workingHours}) {
     return _ShopWorkingHoursPrimitive(
       workingHours: workingHours,
@@ -19,15 +21,18 @@ class _$ShopWorkingHoursPrimitiveTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ShopWorkingHoursPrimitive = _$ShopWorkingHoursPrimitiveTearOff();
 
+/// @nodoc
 mixin _$ShopWorkingHoursPrimitive {
   num get workingHours;
 
   $ShopWorkingHoursPrimitiveCopyWith<ShopWorkingHoursPrimitive> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShopWorkingHoursPrimitiveCopyWith<$Res> {
   factory $ShopWorkingHoursPrimitiveCopyWith(ShopWorkingHoursPrimitive value,
           $Res Function(ShopWorkingHoursPrimitive) then) =
@@ -35,6 +40,7 @@ abstract class $ShopWorkingHoursPrimitiveCopyWith<$Res> {
   $Res call({num workingHours});
 }
 
+/// @nodoc
 class _$ShopWorkingHoursPrimitiveCopyWithImpl<$Res>
     implements $ShopWorkingHoursPrimitiveCopyWith<$Res> {
   _$ShopWorkingHoursPrimitiveCopyWithImpl(this._value, this._then);
@@ -54,6 +60,7 @@ class _$ShopWorkingHoursPrimitiveCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$ShopWorkingHoursPrimitiveCopyWith<$Res>
     implements $ShopWorkingHoursPrimitiveCopyWith<$Res> {
   factory _$ShopWorkingHoursPrimitiveCopyWith(_ShopWorkingHoursPrimitive value,
@@ -63,6 +70,7 @@ abstract class _$ShopWorkingHoursPrimitiveCopyWith<$Res>
   $Res call({num workingHours});
 }
 
+/// @nodoc
 class __$ShopWorkingHoursPrimitiveCopyWithImpl<$Res>
     extends _$ShopWorkingHoursPrimitiveCopyWithImpl<$Res>
     implements _$ShopWorkingHoursPrimitiveCopyWith<$Res> {
@@ -85,6 +93,7 @@ class __$ShopWorkingHoursPrimitiveCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ShopWorkingHoursPrimitive extends _ShopWorkingHoursPrimitive {
   const _$_ShopWorkingHoursPrimitive({@required this.workingHours})
       : assert(workingHours != null),

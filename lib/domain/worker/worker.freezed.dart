@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker.dart';
 
@@ -9,9 +9,11 @@ part of 'worker.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$WorkerTearOff {
   const _$WorkerTearOff();
 
+// ignore: unused_element
   _Worker call(
       {@required UniqueId id,
       @required UniqueId parentId,
@@ -32,9 +34,11 @@ class _$WorkerTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Worker = _$WorkerTearOff();
 
+/// @nodoc
 mixin _$Worker {
   UniqueId get id;
   UniqueId get parentId;
@@ -47,6 +51,7 @@ mixin _$Worker {
   $WorkerCopyWith<Worker> get copyWith;
 }
 
+/// @nodoc
 abstract class $WorkerCopyWith<$Res> {
   factory $WorkerCopyWith(Worker value, $Res Function(Worker) then) =
       _$WorkerCopyWithImpl<$Res>;
@@ -60,6 +65,7 @@ abstract class $WorkerCopyWith<$Res> {
       ImageUrl imageUrl});
 }
 
+/// @nodoc
 class _$WorkerCopyWithImpl<$Res> implements $WorkerCopyWith<$Res> {
   _$WorkerCopyWithImpl(this._value, this._then);
 
@@ -92,6 +98,7 @@ class _$WorkerCopyWithImpl<$Res> implements $WorkerCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$WorkerCopyWith<$Res> implements $WorkerCopyWith<$Res> {
   factory _$WorkerCopyWith(_Worker value, $Res Function(_Worker) then) =
       __$WorkerCopyWithImpl<$Res>;
@@ -106,6 +113,7 @@ abstract class _$WorkerCopyWith<$Res> implements $WorkerCopyWith<$Res> {
       ImageUrl imageUrl});
 }
 
+/// @nodoc
 class __$WorkerCopyWithImpl<$Res> extends _$WorkerCopyWithImpl<$Res>
     implements _$WorkerCopyWith<$Res> {
   __$WorkerCopyWithImpl(_Worker _value, $Res Function(_Worker) _then)
@@ -139,6 +147,7 @@ class __$WorkerCopyWithImpl<$Res> extends _$WorkerCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Worker extends _Worker {
   const _$_Worker(
       {@required this.id,

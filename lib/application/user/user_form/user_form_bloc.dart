@@ -20,9 +20,7 @@ part 'user_form_bloc.freezed.dart';
 class UserFormBloc extends Bloc<UserFormEvent, UserFormState> {
   final IUserRepository _userRepository;
 
-  UserFormBloc(this._userRepository);
-  @override
-  UserFormState get initialState => UserFormState.initial();
+  UserFormBloc(this._userRepository) : super(UserFormState.initial());
 
   @override
   Stream<UserFormState> mapEventToState(

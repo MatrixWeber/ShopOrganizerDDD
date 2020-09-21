@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker_image_handler_bloc.dart';
 
@@ -9,22 +9,25 @@ part of 'worker_image_handler_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$WorkerImageHandlerEventTearOff {
   const _$WorkerImageHandlerEventTearOff();
 
+// ignore: unused_element
   _UploadImageStarted uploadImageStarted(File image) {
     return _UploadImageStarted(
       image,
     );
   }
 
-  _ImageReceived imageReceived(
-      Either<None<dynamic>, ImageUrl> failureOrImageUrl) {
+// ignore: unused_element
+  _ImageReceived imageReceived(Either<None, ImageUrl> failureOrImageUrl) {
     return _ImageReceived(
       failureOrImageUrl,
     );
   }
 
+// ignore: unused_element
   _ImageDeleted imageDeleted(String imageUrl) {
     return _ImageDeleted(
       imageUrl,
@@ -32,21 +35,22 @@ class _$WorkerImageHandlerEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerImageHandlerEvent = _$WorkerImageHandlerEventTearOff();
 
+/// @nodoc
 mixin _$WorkerImageHandlerEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required
-        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required Result imageDeleted(String imageUrl),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     Result imageDeleted(String imageUrl),
     @required Result orElse(),
   });
@@ -65,12 +69,14 @@ mixin _$WorkerImageHandlerEvent {
   });
 }
 
+/// @nodoc
 abstract class $WorkerImageHandlerEventCopyWith<$Res> {
   factory $WorkerImageHandlerEventCopyWith(WorkerImageHandlerEvent value,
           $Res Function(WorkerImageHandlerEvent) then) =
       _$WorkerImageHandlerEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerImageHandlerEventCopyWithImpl<$Res>
     implements $WorkerImageHandlerEventCopyWith<$Res> {
   _$WorkerImageHandlerEventCopyWithImpl(this._value, this._then);
@@ -80,6 +86,7 @@ class _$WorkerImageHandlerEventCopyWithImpl<$Res>
   final $Res Function(WorkerImageHandlerEvent) _then;
 }
 
+/// @nodoc
 abstract class _$UploadImageStartedCopyWith<$Res> {
   factory _$UploadImageStartedCopyWith(
           _UploadImageStarted value, $Res Function(_UploadImageStarted) then) =
@@ -87,6 +94,7 @@ abstract class _$UploadImageStartedCopyWith<$Res> {
   $Res call({File image});
 }
 
+/// @nodoc
 class __$UploadImageStartedCopyWithImpl<$Res>
     extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
     implements _$UploadImageStartedCopyWith<$Res> {
@@ -107,6 +115,7 @@ class __$UploadImageStartedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_UploadImageStarted implements _UploadImageStarted {
   const _$_UploadImageStarted(this.image) : assert(image != null);
 
@@ -138,8 +147,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required
-        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required Result imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
@@ -152,7 +160,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     Result imageDeleted(String imageUrl),
     @required Result orElse(),
   }) {
@@ -199,13 +207,15 @@ abstract class _UploadImageStarted implements WorkerImageHandlerEvent {
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith;
 }
 
+/// @nodoc
 abstract class _$ImageReceivedCopyWith<$Res> {
   factory _$ImageReceivedCopyWith(
           _ImageReceived value, $Res Function(_ImageReceived) then) =
       __$ImageReceivedCopyWithImpl<$Res>;
-  $Res call({Either<None<dynamic>, ImageUrl> failureOrImageUrl});
+  $Res call({Either<None, ImageUrl> failureOrImageUrl});
 }
 
+/// @nodoc
 class __$ImageReceivedCopyWithImpl<$Res>
     extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
     implements _$ImageReceivedCopyWith<$Res> {
@@ -223,17 +233,18 @@ class __$ImageReceivedCopyWithImpl<$Res>
     return _then(_ImageReceived(
       failureOrImageUrl == freezed
           ? _value.failureOrImageUrl
-          : failureOrImageUrl as Either<None<dynamic>, ImageUrl>,
+          : failureOrImageUrl as Either<None, ImageUrl>,
     ));
   }
 }
 
+/// @nodoc
 class _$_ImageReceived implements _ImageReceived {
   const _$_ImageReceived(this.failureOrImageUrl)
       : assert(failureOrImageUrl != null);
 
   @override
-  final Either<None<dynamic>, ImageUrl> failureOrImageUrl;
+  final Either<None, ImageUrl> failureOrImageUrl;
 
   @override
   String toString() {
@@ -262,8 +273,7 @@ class _$_ImageReceived implements _ImageReceived {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required
-        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required Result imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
@@ -276,7 +286,7 @@ class _$_ImageReceived implements _ImageReceived {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     Result imageDeleted(String imageUrl),
     @required Result orElse(),
   }) {
@@ -317,13 +327,14 @@ class _$_ImageReceived implements _ImageReceived {
 }
 
 abstract class _ImageReceived implements WorkerImageHandlerEvent {
-  const factory _ImageReceived(
-      Either<None<dynamic>, ImageUrl> failureOrImageUrl) = _$_ImageReceived;
+  const factory _ImageReceived(Either<None, ImageUrl> failureOrImageUrl) =
+      _$_ImageReceived;
 
-  Either<None<dynamic>, ImageUrl> get failureOrImageUrl;
+  Either<None, ImageUrl> get failureOrImageUrl;
   _$ImageReceivedCopyWith<_ImageReceived> get copyWith;
 }
 
+/// @nodoc
 abstract class _$ImageDeletedCopyWith<$Res> {
   factory _$ImageDeletedCopyWith(
           _ImageDeleted value, $Res Function(_ImageDeleted) then) =
@@ -331,6 +342,7 @@ abstract class _$ImageDeletedCopyWith<$Res> {
   $Res call({String imageUrl});
 }
 
+/// @nodoc
 class __$ImageDeletedCopyWithImpl<$Res>
     extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
     implements _$ImageDeletedCopyWith<$Res> {
@@ -351,6 +363,7 @@ class __$ImageDeletedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ImageDeleted implements _ImageDeleted {
   const _$_ImageDeleted(this.imageUrl) : assert(imageUrl != null);
 
@@ -383,8 +396,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result uploadImageStarted(File image),
-    @required
-        Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required Result imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
@@ -397,7 +409,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result uploadImageStarted(File image),
-    Result imageReceived(Either<None<dynamic>, ImageUrl> failureOrImageUrl),
+    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     Result imageDeleted(String imageUrl),
     @required Result orElse(),
   }) {
@@ -444,35 +456,42 @@ abstract class _ImageDeleted implements WorkerImageHandlerEvent {
   _$ImageDeletedCopyWith<_ImageDeleted> get copyWith;
 }
 
+/// @nodoc
 class _$WorkerImageHandlerStateTearOff {
   const _$WorkerImageHandlerStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _LoadInProgress loadInProgress(num percent) {
     return _LoadInProgress(
       percent,
     );
   }
 
+// ignore: unused_element
   _UploadedSuccessful uploadedSuccessful(ImageUrl imageUrl) {
     return _UploadedSuccessful(
       imageUrl,
     );
   }
 
+// ignore: unused_element
   _DeletedSuccessful deletedSuccessful() {
     return const _DeletedSuccessful();
   }
 
+// ignore: unused_element
   _LoadSuccess loadSuccess(File image) {
     return _LoadSuccess(
       image,
     );
   }
 
+// ignore: unused_element
   _LoadFailure loadFailure(WorkerFailure workerFailure) {
     return _LoadFailure(
       workerFailure,
@@ -480,9 +499,11 @@ class _$WorkerImageHandlerStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerImageHandlerState = _$WorkerImageHandlerStateTearOff();
 
+/// @nodoc
 mixin _$WorkerImageHandlerState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -524,12 +545,14 @@ mixin _$WorkerImageHandlerState {
   });
 }
 
+/// @nodoc
 abstract class $WorkerImageHandlerStateCopyWith<$Res> {
   factory $WorkerImageHandlerStateCopyWith(WorkerImageHandlerState value,
           $Res Function(WorkerImageHandlerState) then) =
       _$WorkerImageHandlerStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements $WorkerImageHandlerStateCopyWith<$Res> {
   _$WorkerImageHandlerStateCopyWithImpl(this._value, this._then);
@@ -539,11 +562,13 @@ class _$WorkerImageHandlerStateCopyWithImpl<$Res>
   final $Res Function(WorkerImageHandlerState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
@@ -554,6 +579,7 @@ class __$InitialCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -649,6 +675,7 @@ abstract class _Initial implements WorkerImageHandlerState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
@@ -656,6 +683,7 @@ abstract class _$LoadInProgressCopyWith<$Res> {
   $Res call({num percent});
 }
 
+/// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
@@ -676,6 +704,7 @@ class __$LoadInProgressCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadInProgress implements _LoadInProgress {
   const _$_LoadInProgress(this.percent) : assert(percent != null);
 
@@ -785,6 +814,7 @@ abstract class _LoadInProgress implements WorkerImageHandlerState {
   _$LoadInProgressCopyWith<_LoadInProgress> get copyWith;
 }
 
+/// @nodoc
 abstract class _$UploadedSuccessfulCopyWith<$Res> {
   factory _$UploadedSuccessfulCopyWith(
           _UploadedSuccessful value, $Res Function(_UploadedSuccessful) then) =
@@ -792,6 +822,7 @@ abstract class _$UploadedSuccessfulCopyWith<$Res> {
   $Res call({ImageUrl imageUrl});
 }
 
+/// @nodoc
 class __$UploadedSuccessfulCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$UploadedSuccessfulCopyWith<$Res> {
@@ -812,6 +843,7 @@ class __$UploadedSuccessfulCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_UploadedSuccessful implements _UploadedSuccessful {
   const _$_UploadedSuccessful(this.imageUrl) : assert(imageUrl != null);
 
@@ -922,12 +954,14 @@ abstract class _UploadedSuccessful implements WorkerImageHandlerState {
   _$UploadedSuccessfulCopyWith<_UploadedSuccessful> get copyWith;
 }
 
+/// @nodoc
 abstract class _$DeletedSuccessfulCopyWith<$Res> {
   factory _$DeletedSuccessfulCopyWith(
           _DeletedSuccessful value, $Res Function(_DeletedSuccessful) then) =
       __$DeletedSuccessfulCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$DeletedSuccessfulCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$DeletedSuccessfulCopyWith<$Res> {
@@ -939,6 +973,7 @@ class __$DeletedSuccessfulCopyWithImpl<$Res>
   _DeletedSuccessful get _value => super._value as _DeletedSuccessful;
 }
 
+/// @nodoc
 class _$_DeletedSuccessful implements _DeletedSuccessful {
   const _$_DeletedSuccessful();
 
@@ -1034,6 +1069,7 @@ abstract class _DeletedSuccessful implements WorkerImageHandlerState {
   const factory _DeletedSuccessful() = _$_DeletedSuccessful;
 }
 
+/// @nodoc
 abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
@@ -1041,6 +1077,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   $Res call({File image});
 }
 
+/// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
@@ -1061,6 +1098,7 @@ class __$LoadSuccessCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadSuccess implements _LoadSuccess {
   const _$_LoadSuccess(this.image) : assert(image != null);
 
@@ -1170,6 +1208,7 @@ abstract class _LoadSuccess implements WorkerImageHandlerState {
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
@@ -1179,6 +1218,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
   $WorkerFailureCopyWith<$Res> get workerFailure;
 }
 
+/// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
     extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
@@ -1211,6 +1251,7 @@ class __$LoadFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadFailure implements _LoadFailure {
   const _$_LoadFailure(this.workerFailure) : assert(workerFailure != null);
 

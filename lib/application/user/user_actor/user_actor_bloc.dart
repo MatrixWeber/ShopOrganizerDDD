@@ -13,9 +13,7 @@ part 'user_actor_bloc.freezed.dart';
 class UserActorBloc extends Bloc<UserActorEvent, UserActorState> {
   final IUserRepository _userRepository;
 
-  UserActorBloc(this._userRepository);
-  @override
-  UserActorState get initialState => const UserActorState.initial();
+  UserActorBloc(this._userRepository) : super(const UserActorState.initial());
 
   @override
   Stream<UserActorState> mapEventToState(

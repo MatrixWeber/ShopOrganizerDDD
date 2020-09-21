@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker_watcher_bloc.dart';
 
@@ -9,13 +9,16 @@ part of 'worker_watcher_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$WorkerWatcherEventTearOff {
   const _$WorkerWatcherEventTearOff();
 
+// ignore: unused_element
   _WatchAllStarted watchAllStarted() {
     return const _WatchAllStarted();
   }
 
+// ignore: unused_element
   _WorkersReceived workerReceived(
       Either<WorkerFailure, KtList<Worker>> failureOrWorkers) {
     return _WorkersReceived(
@@ -24,9 +27,11 @@ class _$WorkerWatcherEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerWatcherEvent = _$WorkerWatcherEventTearOff();
 
+/// @nodoc
 mixin _$WorkerWatcherEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -55,12 +60,14 @@ mixin _$WorkerWatcherEvent {
   });
 }
 
+/// @nodoc
 abstract class $WorkerWatcherEventCopyWith<$Res> {
   factory $WorkerWatcherEventCopyWith(
           WorkerWatcherEvent value, $Res Function(WorkerWatcherEvent) then) =
       _$WorkerWatcherEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerWatcherEventCopyWithImpl<$Res>
     implements $WorkerWatcherEventCopyWith<$Res> {
   _$WorkerWatcherEventCopyWithImpl(this._value, this._then);
@@ -70,12 +77,14 @@ class _$WorkerWatcherEventCopyWithImpl<$Res>
   final $Res Function(WorkerWatcherEvent) _then;
 }
 
+/// @nodoc
 abstract class _$WatchAllStartedCopyWith<$Res> {
   factory _$WatchAllStartedCopyWith(
           _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
       __$WatchAllStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$WatchAllStartedCopyWithImpl<$Res>
     extends _$WorkerWatcherEventCopyWithImpl<$Res>
     implements _$WatchAllStartedCopyWith<$Res> {
@@ -87,6 +96,7 @@ class __$WatchAllStartedCopyWithImpl<$Res>
   _WatchAllStarted get _value => super._value as _WatchAllStarted;
 }
 
+/// @nodoc
 class _$_WatchAllStarted implements _WatchAllStarted {
   const _$_WatchAllStarted();
 
@@ -161,6 +171,7 @@ abstract class _WatchAllStarted implements WorkerWatcherEvent {
   const factory _WatchAllStarted() = _$_WatchAllStarted;
 }
 
+/// @nodoc
 abstract class _$WorkersReceivedCopyWith<$Res> {
   factory _$WorkersReceivedCopyWith(
           _WorkersReceived value, $Res Function(_WorkersReceived) then) =
@@ -168,6 +179,7 @@ abstract class _$WorkersReceivedCopyWith<$Res> {
   $Res call({Either<WorkerFailure, KtList<Worker>> failureOrWorkers});
 }
 
+/// @nodoc
 class __$WorkersReceivedCopyWithImpl<$Res>
     extends _$WorkerWatcherEventCopyWithImpl<$Res>
     implements _$WorkersReceivedCopyWith<$Res> {
@@ -190,6 +202,7 @@ class __$WorkersReceivedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_WorkersReceived implements _WorkersReceived {
   const _$_WorkersReceived(this.failureOrWorkers)
       : assert(failureOrWorkers != null);
@@ -283,23 +296,28 @@ abstract class _WorkersReceived implements WorkerWatcherEvent {
   _$WorkersReceivedCopyWith<_WorkersReceived> get copyWith;
 }
 
+/// @nodoc
 class _$WorkerWatcherStateTearOff {
   const _$WorkerWatcherStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _LoadInProgress loadInProgress() {
     return const _LoadInProgress();
   }
 
+// ignore: unused_element
   _LoadSuccess loadSuccess(KtList<Worker> worker) {
     return _LoadSuccess(
       worker,
     );
   }
 
+// ignore: unused_element
   _LoadFailure loadFailure(WorkerFailure workerFailure) {
     return _LoadFailure(
       workerFailure,
@@ -307,9 +325,11 @@ class _$WorkerWatcherStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerWatcherState = _$WorkerWatcherStateTearOff();
 
+/// @nodoc
 mixin _$WorkerWatcherState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -343,12 +363,14 @@ mixin _$WorkerWatcherState {
   });
 }
 
+/// @nodoc
 abstract class $WorkerWatcherStateCopyWith<$Res> {
   factory $WorkerWatcherStateCopyWith(
           WorkerWatcherState value, $Res Function(WorkerWatcherState) then) =
       _$WorkerWatcherStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerWatcherStateCopyWithImpl<$Res>
     implements $WorkerWatcherStateCopyWith<$Res> {
   _$WorkerWatcherStateCopyWithImpl(this._value, this._then);
@@ -358,11 +380,13 @@ class _$WorkerWatcherStateCopyWithImpl<$Res>
   final $Res Function(WorkerWatcherState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res>
     extends _$WorkerWatcherStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
@@ -373,6 +397,7 @@ class __$InitialCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -456,12 +481,14 @@ abstract class _Initial implements WorkerWatcherState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
       __$LoadInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
     extends _$WorkerWatcherStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
@@ -473,6 +500,7 @@ class __$LoadInProgressCopyWithImpl<$Res>
   _LoadInProgress get _value => super._value as _LoadInProgress;
 }
 
+/// @nodoc
 class _$_LoadInProgress implements _LoadInProgress {
   const _$_LoadInProgress();
 
@@ -556,6 +584,7 @@ abstract class _LoadInProgress implements WorkerWatcherState {
   const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
+/// @nodoc
 abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
@@ -563,6 +592,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   $Res call({KtList<Worker> worker});
 }
 
+/// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
     extends _$WorkerWatcherStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
@@ -583,6 +613,7 @@ class __$LoadSuccessCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadSuccess implements _LoadSuccess {
   const _$_LoadSuccess(this.worker) : assert(worker != null);
 
@@ -680,6 +711,7 @@ abstract class _LoadSuccess implements WorkerWatcherState {
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
@@ -689,6 +721,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
   $WorkerFailureCopyWith<$Res> get workerFailure;
 }
 
+/// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
     extends _$WorkerWatcherStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
@@ -721,6 +754,7 @@ class __$LoadFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadFailure implements _LoadFailure {
   const _$_LoadFailure(this.workerFailure) : assert(workerFailure != null);
 

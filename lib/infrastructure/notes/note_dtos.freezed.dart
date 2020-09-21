@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'note_dtos.dart';
 
@@ -12,9 +12,11 @@ NoteDto _$NoteDtoFromJson(Map<String, dynamic> json) {
   return _NoteDto.fromJson(json);
 }
 
+/// @nodoc
 class _$NoteDtoTearOff {
   const _$NoteDtoTearOff();
 
+// ignore: unused_element
   _NoteDto call(
       {@JsonKey(ignore: true) String id,
       @required String body,
@@ -29,17 +31,24 @@ class _$NoteDtoTearOff {
       serverTimeStamp: serverTimeStamp,
     );
   }
+
+// ignore: unused_element
+  NoteDto fromJson(Map<String, Object> json) {
+    return NoteDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $NoteDto = _$NoteDtoTearOff();
 
+/// @nodoc
 mixin _$NoteDto {
   @JsonKey(ignore: true)
   String get id;
   String get body;
   int get color;
-  List<TodoItemDto> get todos;
+  List<TodoItemDto> get todos; //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -47,6 +56,7 @@ mixin _$NoteDto {
   $NoteDtoCopyWith<NoteDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $NoteDtoCopyWith<$Res> {
   factory $NoteDtoCopyWith(NoteDto value, $Res Function(NoteDto) then) =
       _$NoteDtoCopyWithImpl<$Res>;
@@ -58,6 +68,7 @@ abstract class $NoteDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class _$NoteDtoCopyWithImpl<$Res> implements $NoteDtoCopyWith<$Res> {
   _$NoteDtoCopyWithImpl(this._value, this._then);
 
@@ -85,6 +96,7 @@ class _$NoteDtoCopyWithImpl<$Res> implements $NoteDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$NoteDtoCopyWith<$Res> implements $NoteDtoCopyWith<$Res> {
   factory _$NoteDtoCopyWith(_NoteDto value, $Res Function(_NoteDto) then) =
       __$NoteDtoCopyWithImpl<$Res>;
@@ -97,6 +109,7 @@ abstract class _$NoteDtoCopyWith<$Res> implements $NoteDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class __$NoteDtoCopyWithImpl<$Res> extends _$NoteDtoCopyWithImpl<$Res>
     implements _$NoteDtoCopyWith<$Res> {
   __$NoteDtoCopyWithImpl(_NoteDto _value, $Res Function(_NoteDto) _then)
@@ -126,6 +139,8 @@ class __$NoteDtoCopyWithImpl<$Res> extends _$NoteDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_NoteDto extends _NoteDto with DiagnosticableTreeMixin {
   const _$_NoteDto(
       {@JsonKey(ignore: true) this.id,
@@ -151,7 +166,7 @@ class _$_NoteDto extends _NoteDto with DiagnosticableTreeMixin {
   final int color;
   @override
   final List<TodoItemDto> todos;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
@@ -229,7 +244,7 @@ abstract class _NoteDto extends NoteDto {
   int get color;
   @override
   List<TodoItemDto> get todos;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
@@ -240,9 +255,11 @@ TodoItemDto _$TodoItemDtoFromJson(Map<String, dynamic> json) {
   return _TodoItemDto.fromJson(json);
 }
 
+/// @nodoc
 class _$TodoItemDtoTearOff {
   const _$TodoItemDtoTearOff();
 
+// ignore: unused_element
   _TodoItemDto call(
       {@required String id, @required String name, @required bool done}) {
     return _TodoItemDto(
@@ -251,11 +268,18 @@ class _$TodoItemDtoTearOff {
       done: done,
     );
   }
+
+// ignore: unused_element
+  TodoItemDto fromJson(Map<String, Object> json) {
+    return TodoItemDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TodoItemDto = _$TodoItemDtoTearOff();
 
+/// @nodoc
 mixin _$TodoItemDto {
   String get id;
   String get name;
@@ -265,6 +289,7 @@ mixin _$TodoItemDto {
   $TodoItemDtoCopyWith<TodoItemDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $TodoItemDtoCopyWith<$Res> {
   factory $TodoItemDtoCopyWith(
           TodoItemDto value, $Res Function(TodoItemDto) then) =
@@ -272,6 +297,7 @@ abstract class $TodoItemDtoCopyWith<$Res> {
   $Res call({String id, String name, bool done});
 }
 
+/// @nodoc
 class _$TodoItemDtoCopyWithImpl<$Res> implements $TodoItemDtoCopyWith<$Res> {
   _$TodoItemDtoCopyWithImpl(this._value, this._then);
 
@@ -293,6 +319,7 @@ class _$TodoItemDtoCopyWithImpl<$Res> implements $TodoItemDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$TodoItemDtoCopyWith<$Res>
     implements $TodoItemDtoCopyWith<$Res> {
   factory _$TodoItemDtoCopyWith(
@@ -302,6 +329,7 @@ abstract class _$TodoItemDtoCopyWith<$Res>
   $Res call({String id, String name, bool done});
 }
 
+/// @nodoc
 class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
     implements _$TodoItemDtoCopyWith<$Res> {
   __$TodoItemDtoCopyWithImpl(
@@ -326,6 +354,8 @@ class __$TodoItemDtoCopyWithImpl<$Res> extends _$TodoItemDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_TodoItemDto extends _TodoItemDto with DiagnosticableTreeMixin {
   const _$_TodoItemDto(
       {@required this.id, @required this.name, @required this.done})

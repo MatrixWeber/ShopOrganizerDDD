@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:bloc/bloc.dart';
-import 'package:dartz/dartz.dart';
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -16,10 +15,7 @@ part 'image_picker_bloc.freezed.dart';
 class ImagePickerBloc extends Bloc<ImagePickerEvent, ImagePickerState> {
   final IImagePicker _imagePicker;
 
-  ImagePickerBloc(this._imagePicker);
-  @override
-  ImagePickerState get initialState => const ImagePickerState.initial();
-
+  ImagePickerBloc(this._imagePicker) : super(const ImagePickerState.initial());
   @override
   Stream<ImagePickerState> mapEventToState(
     ImagePickerEvent event,

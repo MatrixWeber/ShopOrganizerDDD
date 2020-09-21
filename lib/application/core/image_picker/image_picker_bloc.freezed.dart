@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'image_picker_bloc.dart';
 
@@ -9,25 +9,31 @@ part of 'image_picker_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ImagePickerEventTearOff {
   const _$ImagePickerEventTearOff();
 
+// ignore: unused_element
   _SelectImageFromGalleryStarted selectImageFromGalleryStarted() {
     return const _SelectImageFromGalleryStarted();
   }
 
+// ignore: unused_element
   _GetImageFromCameraStarted getImageFromCameraStarted() {
     return const _GetImageFromCameraStarted();
   }
 
+// ignore: unused_element
   _Initialized initialized() {
     return const _Initialized();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImagePickerEvent = _$ImagePickerEventTearOff();
 
+/// @nodoc
 mixin _$ImagePickerEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -60,12 +66,14 @@ mixin _$ImagePickerEvent {
   });
 }
 
+/// @nodoc
 abstract class $ImagePickerEventCopyWith<$Res> {
   factory $ImagePickerEventCopyWith(
           ImagePickerEvent value, $Res Function(ImagePickerEvent) then) =
       _$ImagePickerEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ImagePickerEventCopyWithImpl<$Res>
     implements $ImagePickerEventCopyWith<$Res> {
   _$ImagePickerEventCopyWithImpl(this._value, this._then);
@@ -75,6 +83,7 @@ class _$ImagePickerEventCopyWithImpl<$Res>
   final $Res Function(ImagePickerEvent) _then;
 }
 
+/// @nodoc
 abstract class _$SelectImageFromGalleryStartedCopyWith<$Res> {
   factory _$SelectImageFromGalleryStartedCopyWith(
           _SelectImageFromGalleryStarted value,
@@ -82,6 +91,7 @@ abstract class _$SelectImageFromGalleryStartedCopyWith<$Res> {
       __$SelectImageFromGalleryStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$SelectImageFromGalleryStartedCopyWithImpl<$Res>
     extends _$ImagePickerEventCopyWithImpl<$Res>
     implements _$SelectImageFromGalleryStartedCopyWith<$Res> {
@@ -95,6 +105,7 @@ class __$SelectImageFromGalleryStartedCopyWithImpl<$Res>
       super._value as _SelectImageFromGalleryStarted;
 }
 
+/// @nodoc
 class _$_SelectImageFromGalleryStarted
     implements _SelectImageFromGalleryStarted {
   const _$_SelectImageFromGalleryStarted();
@@ -177,12 +188,14 @@ abstract class _SelectImageFromGalleryStarted implements ImagePickerEvent {
       _$_SelectImageFromGalleryStarted;
 }
 
+/// @nodoc
 abstract class _$GetImageFromCameraStartedCopyWith<$Res> {
   factory _$GetImageFromCameraStartedCopyWith(_GetImageFromCameraStarted value,
           $Res Function(_GetImageFromCameraStarted) then) =
       __$GetImageFromCameraStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$GetImageFromCameraStartedCopyWithImpl<$Res>
     extends _$ImagePickerEventCopyWithImpl<$Res>
     implements _$GetImageFromCameraStartedCopyWith<$Res> {
@@ -195,6 +208,7 @@ class __$GetImageFromCameraStartedCopyWithImpl<$Res>
       super._value as _GetImageFromCameraStarted;
 }
 
+/// @nodoc
 class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
   const _$_GetImageFromCameraStarted();
 
@@ -275,12 +289,14 @@ abstract class _GetImageFromCameraStarted implements ImagePickerEvent {
   const factory _GetImageFromCameraStarted() = _$_GetImageFromCameraStarted;
 }
 
+/// @nodoc
 abstract class _$InitializedCopyWith<$Res> {
   factory _$InitializedCopyWith(
           _Initialized value, $Res Function(_Initialized) then) =
       __$InitializedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitializedCopyWithImpl<$Res>
     extends _$ImagePickerEventCopyWithImpl<$Res>
     implements _$InitializedCopyWith<$Res> {
@@ -292,6 +308,7 @@ class __$InitializedCopyWithImpl<$Res>
   _Initialized get _value => super._value as _Initialized;
 }
 
+/// @nodoc
 class _$_Initialized implements _Initialized {
   const _$_Initialized();
 
@@ -372,23 +389,28 @@ abstract class _Initialized implements ImagePickerEvent {
   const factory _Initialized() = _$_Initialized;
 }
 
+/// @nodoc
 class _$ImagePickerStateTearOff {
   const _$ImagePickerStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _LoadInProgress loadInProgress() {
     return const _LoadInProgress();
   }
 
+// ignore: unused_element
   _LoadSuccess loadSuccess(File image) {
     return _LoadSuccess(
       image,
     );
   }
 
+// ignore: unused_element
   _LoadFailure loadFailure(ValueFailure<dynamic> valueFailure) {
     return _LoadFailure(
       valueFailure,
@@ -396,9 +418,11 @@ class _$ImagePickerStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ImagePickerState = _$ImagePickerStateTearOff();
 
+/// @nodoc
 mixin _$ImagePickerState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -432,12 +456,14 @@ mixin _$ImagePickerState {
   });
 }
 
+/// @nodoc
 abstract class $ImagePickerStateCopyWith<$Res> {
   factory $ImagePickerStateCopyWith(
           ImagePickerState value, $Res Function(ImagePickerState) then) =
       _$ImagePickerStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ImagePickerStateCopyWithImpl<$Res>
     implements $ImagePickerStateCopyWith<$Res> {
   _$ImagePickerStateCopyWithImpl(this._value, this._then);
@@ -447,11 +473,13 @@ class _$ImagePickerStateCopyWithImpl<$Res>
   final $Res Function(ImagePickerState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$ImagePickerStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -461,6 +489,7 @@ class __$InitialCopyWithImpl<$Res> extends _$ImagePickerStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -544,12 +573,14 @@ abstract class _Initial implements ImagePickerState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
       __$LoadInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
     extends _$ImagePickerStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
@@ -561,6 +592,7 @@ class __$LoadInProgressCopyWithImpl<$Res>
   _LoadInProgress get _value => super._value as _LoadInProgress;
 }
 
+/// @nodoc
 class _$_LoadInProgress implements _LoadInProgress {
   const _$_LoadInProgress();
 
@@ -644,6 +676,7 @@ abstract class _LoadInProgress implements ImagePickerState {
   const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
+/// @nodoc
 abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
@@ -651,6 +684,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   $Res call({File image});
 }
 
+/// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
     extends _$ImagePickerStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
@@ -671,6 +705,7 @@ class __$LoadSuccessCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadSuccess implements _LoadSuccess {
   const _$_LoadSuccess(this.image) : assert(image != null);
 
@@ -768,6 +803,7 @@ abstract class _LoadSuccess implements ImagePickerState {
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
@@ -777,6 +813,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
   $ValueFailureCopyWith<dynamic, $Res> get valueFailure;
 }
 
+/// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
     extends _$ImagePickerStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
@@ -809,6 +846,7 @@ class __$LoadFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadFailure implements _LoadFailure {
   const _$_LoadFailure(this.valueFailure) : assert(valueFailure != null);
 

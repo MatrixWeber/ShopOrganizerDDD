@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker_form_bloc.dart';
 
@@ -9,65 +9,77 @@ part of 'worker_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$WorkerFormEventTearOff {
   const _$WorkerFormEventTearOff();
 
+// ignore: unused_element
   Initialized initialized(Option<Worker> initialWorkerOption) {
     return Initialized(
       initialWorkerOption,
     );
   }
 
+// ignore: unused_element
   Reset reset(String parentShopId) {
     return Reset(
       parentShopId,
     );
   }
 
+// ignore: unused_element
   NameChanged nameChanged(String name) {
     return NameChanged(
       name,
     );
   }
 
+// ignore: unused_element
   FirstNameChanged firstNameChanged(String firstName) {
     return FirstNameChanged(
       firstName,
     );
   }
 
+// ignore: unused_element
   EmailChanged emailChanged(String email) {
     return EmailChanged(
       email,
     );
   }
 
+// ignore: unused_element
   PhoneNumberChanged phoneNumberChanged(String phone) {
     return PhoneNumberChanged(
       phone,
     );
   }
 
+// ignore: unused_element
   ImageUrlChanged imageUrlChanged(String imageUrl) {
     return ImageUrlChanged(
       imageUrl,
     );
   }
 
+// ignore: unused_element
   ParentIdChanged parentIdChanged(UniqueId parentId) {
     return ParentIdChanged(
       parentId,
     );
   }
 
+// ignore: unused_element
   Saved saved() {
     return const Saved();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerFormEvent = _$WorkerFormEventTearOff();
 
+/// @nodoc
 mixin _$WorkerFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -121,12 +133,14 @@ mixin _$WorkerFormEvent {
   });
 }
 
+/// @nodoc
 abstract class $WorkerFormEventCopyWith<$Res> {
   factory $WorkerFormEventCopyWith(
           WorkerFormEvent value, $Res Function(WorkerFormEvent) then) =
       _$WorkerFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerFormEventCopyWithImpl<$Res>
     implements $WorkerFormEventCopyWith<$Res> {
   _$WorkerFormEventCopyWithImpl(this._value, this._then);
@@ -136,6 +150,7 @@ class _$WorkerFormEventCopyWithImpl<$Res>
   final $Res Function(WorkerFormEvent) _then;
 }
 
+/// @nodoc
 abstract class $InitializedCopyWith<$Res> {
   factory $InitializedCopyWith(
           Initialized value, $Res Function(Initialized) then) =
@@ -143,6 +158,7 @@ abstract class $InitializedCopyWith<$Res> {
   $Res call({Option<Worker> initialWorkerOption});
 }
 
+/// @nodoc
 class _$InitializedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $InitializedCopyWith<$Res> {
@@ -165,6 +181,7 @@ class _$InitializedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$Initialized implements Initialized {
   const _$Initialized(this.initialWorkerOption)
       : assert(initialWorkerOption != null);
@@ -295,12 +312,14 @@ abstract class Initialized implements WorkerFormEvent {
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
+/// @nodoc
 abstract class $ResetCopyWith<$Res> {
   factory $ResetCopyWith(Reset value, $Res Function(Reset) then) =
       _$ResetCopyWithImpl<$Res>;
   $Res call({String parentShopId});
 }
 
+/// @nodoc
 class _$ResetCopyWithImpl<$Res> extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $ResetCopyWith<$Res> {
   _$ResetCopyWithImpl(Reset _value, $Res Function(Reset) _then)
@@ -319,6 +338,7 @@ class _$ResetCopyWithImpl<$Res> extends _$WorkerFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$Reset implements Reset {
   const _$Reset(this.parentShopId) : assert(parentShopId != null);
 
@@ -447,6 +467,7 @@ abstract class Reset implements WorkerFormEvent {
   $ResetCopyWith<Reset> get copyWith;
 }
 
+/// @nodoc
 abstract class $NameChangedCopyWith<$Res> {
   factory $NameChangedCopyWith(
           NameChanged value, $Res Function(NameChanged) then) =
@@ -454,6 +475,7 @@ abstract class $NameChangedCopyWith<$Res> {
   $Res call({String name});
 }
 
+/// @nodoc
 class _$NameChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $NameChangedCopyWith<$Res> {
@@ -474,6 +496,7 @@ class _$NameChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$NameChanged implements NameChanged {
   const _$NameChanged(this.name) : assert(name != null);
 
@@ -601,6 +624,7 @@ abstract class NameChanged implements WorkerFormEvent {
   $NameChangedCopyWith<NameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $FirstNameChangedCopyWith<$Res> {
   factory $FirstNameChangedCopyWith(
           FirstNameChanged value, $Res Function(FirstNameChanged) then) =
@@ -608,6 +632,7 @@ abstract class $FirstNameChangedCopyWith<$Res> {
   $Res call({String firstName});
 }
 
+/// @nodoc
 class _$FirstNameChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $FirstNameChangedCopyWith<$Res> {
@@ -628,6 +653,7 @@ class _$FirstNameChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$FirstNameChanged implements FirstNameChanged {
   const _$FirstNameChanged(this.firstName) : assert(firstName != null);
 
@@ -756,6 +782,7 @@ abstract class FirstNameChanged implements WorkerFormEvent {
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $EmailChangedCopyWith<$Res> {
   factory $EmailChangedCopyWith(
           EmailChanged value, $Res Function(EmailChanged) then) =
@@ -763,6 +790,7 @@ abstract class $EmailChangedCopyWith<$Res> {
   $Res call({String email});
 }
 
+/// @nodoc
 class _$EmailChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $EmailChangedCopyWith<$Res> {
@@ -783,6 +811,7 @@ class _$EmailChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$EmailChanged implements EmailChanged {
   const _$EmailChanged(this.email) : assert(email != null);
 
@@ -910,6 +939,7 @@ abstract class EmailChanged implements WorkerFormEvent {
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $PhoneNumberChangedCopyWith<$Res> {
   factory $PhoneNumberChangedCopyWith(
           PhoneNumberChanged value, $Res Function(PhoneNumberChanged) then) =
@@ -917,6 +947,7 @@ abstract class $PhoneNumberChangedCopyWith<$Res> {
   $Res call({String phone});
 }
 
+/// @nodoc
 class _$PhoneNumberChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $PhoneNumberChangedCopyWith<$Res> {
@@ -937,6 +968,7 @@ class _$PhoneNumberChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$PhoneNumberChanged implements PhoneNumberChanged {
   const _$PhoneNumberChanged(this.phone) : assert(phone != null);
 
@@ -1064,6 +1096,7 @@ abstract class PhoneNumberChanged implements WorkerFormEvent {
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImageUrlChangedCopyWith<$Res> {
   factory $ImageUrlChangedCopyWith(
           ImageUrlChanged value, $Res Function(ImageUrlChanged) then) =
@@ -1071,6 +1104,7 @@ abstract class $ImageUrlChangedCopyWith<$Res> {
   $Res call({String imageUrl});
 }
 
+/// @nodoc
 class _$ImageUrlChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $ImageUrlChangedCopyWith<$Res> {
@@ -1091,6 +1125,7 @@ class _$ImageUrlChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ImageUrlChanged implements ImageUrlChanged {
   const _$ImageUrlChanged(this.imageUrl) : assert(imageUrl != null);
 
@@ -1219,6 +1254,7 @@ abstract class ImageUrlChanged implements WorkerFormEvent {
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $ParentIdChangedCopyWith<$Res> {
   factory $ParentIdChangedCopyWith(
           ParentIdChanged value, $Res Function(ParentIdChanged) then) =
@@ -1226,6 +1262,7 @@ abstract class $ParentIdChangedCopyWith<$Res> {
   $Res call({UniqueId parentId});
 }
 
+/// @nodoc
 class _$ParentIdChangedCopyWithImpl<$Res>
     extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $ParentIdChangedCopyWith<$Res> {
@@ -1246,6 +1283,7 @@ class _$ParentIdChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ParentIdChanged implements ParentIdChanged {
   const _$ParentIdChanged(this.parentId) : assert(parentId != null);
 
@@ -1374,11 +1412,13 @@ abstract class ParentIdChanged implements WorkerFormEvent {
   $ParentIdChangedCopyWith<ParentIdChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $SavedCopyWith<$Res> {
   factory $SavedCopyWith(Saved value, $Res Function(Saved) then) =
       _$SavedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SavedCopyWithImpl<$Res> extends _$WorkerFormEventCopyWithImpl<$Res>
     implements $SavedCopyWith<$Res> {
   _$SavedCopyWithImpl(Saved _value, $Res Function(Saved) _then)
@@ -1388,6 +1428,7 @@ class _$SavedCopyWithImpl<$Res> extends _$WorkerFormEventCopyWithImpl<$Res>
   Saved get _value => super._value as Saved;
 }
 
+/// @nodoc
 class _$Saved implements Saved {
   const _$Saved();
 
@@ -1501,9 +1542,11 @@ abstract class Saved implements WorkerFormEvent {
   const factory Saved() = _$Saved;
 }
 
+/// @nodoc
 class _$WorkerFormStateTearOff {
   const _$WorkerFormStateTearOff();
 
+// ignore: unused_element
   _WorkerFormState call(
       {@required
           Worker worker,
@@ -1525,9 +1568,11 @@ class _$WorkerFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerFormState = _$WorkerFormStateTearOff();
 
+/// @nodoc
 mixin _$WorkerFormState {
   Worker get worker;
   bool get showErrorMessage;
@@ -1538,6 +1583,7 @@ mixin _$WorkerFormState {
   $WorkerFormStateCopyWith<WorkerFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $WorkerFormStateCopyWith<$Res> {
   factory $WorkerFormStateCopyWith(
           WorkerFormState value, $Res Function(WorkerFormState) then) =
@@ -1552,6 +1598,7 @@ abstract class $WorkerFormStateCopyWith<$Res> {
   $WorkerCopyWith<$Res> get worker;
 }
 
+/// @nodoc
 class _$WorkerFormStateCopyWithImpl<$Res>
     implements $WorkerFormStateCopyWith<$Res> {
   _$WorkerFormStateCopyWithImpl(this._value, this._then);
@@ -1592,6 +1639,7 @@ class _$WorkerFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$WorkerFormStateCopyWith<$Res>
     implements $WorkerFormStateCopyWith<$Res> {
   factory _$WorkerFormStateCopyWith(
@@ -1609,6 +1657,7 @@ abstract class _$WorkerFormStateCopyWith<$Res>
   $WorkerCopyWith<$Res> get worker;
 }
 
+/// @nodoc
 class __$WorkerFormStateCopyWithImpl<$Res>
     extends _$WorkerFormStateCopyWithImpl<$Res>
     implements _$WorkerFormStateCopyWith<$Res> {
@@ -1641,6 +1690,7 @@ class __$WorkerFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_WorkerFormState implements _WorkerFormState {
   _$_WorkerFormState(
       {@required this.worker,

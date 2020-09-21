@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker_dtos.dart';
 
@@ -12,9 +12,11 @@ WorkerDto _$WorkerDtoFromJson(Map<String, dynamic> json) {
   return _WorkerDto.fromJson(json);
 }
 
+/// @nodoc
 class _$WorkerDtoTearOff {
   const _$WorkerDtoTearOff();
 
+// ignore: unused_element
   _WorkerDto call(
       {@JsonKey(ignore: true) String id,
       @required String parentId,
@@ -35,11 +37,18 @@ class _$WorkerDtoTearOff {
       serverTimeStamp: serverTimeStamp,
     );
   }
+
+// ignore: unused_element
+  WorkerDto fromJson(Map<String, Object> json) {
+    return WorkerDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerDto = _$WorkerDtoTearOff();
 
+/// @nodoc
 mixin _$WorkerDto {
   @JsonKey(ignore: true)
   String get id;
@@ -48,7 +57,7 @@ mixin _$WorkerDto {
   String get firstName;
   String get email;
   String get phone;
-  String get imageUrl;
+  String get imageUrl; //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -56,6 +65,7 @@ mixin _$WorkerDto {
   $WorkerDtoCopyWith<WorkerDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $WorkerDtoCopyWith<$Res> {
   factory $WorkerDtoCopyWith(WorkerDto value, $Res Function(WorkerDto) then) =
       _$WorkerDtoCopyWithImpl<$Res>;
@@ -70,6 +80,7 @@ abstract class $WorkerDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class _$WorkerDtoCopyWithImpl<$Res> implements $WorkerDtoCopyWith<$Res> {
   _$WorkerDtoCopyWithImpl(this._value, this._then);
 
@@ -103,6 +114,7 @@ class _$WorkerDtoCopyWithImpl<$Res> implements $WorkerDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$WorkerDtoCopyWith<$Res> implements $WorkerDtoCopyWith<$Res> {
   factory _$WorkerDtoCopyWith(
           _WorkerDto value, $Res Function(_WorkerDto) then) =
@@ -119,6 +131,7 @@ abstract class _$WorkerDtoCopyWith<$Res> implements $WorkerDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class __$WorkerDtoCopyWithImpl<$Res> extends _$WorkerDtoCopyWithImpl<$Res>
     implements _$WorkerDtoCopyWith<$Res> {
   __$WorkerDtoCopyWithImpl(_WorkerDto _value, $Res Function(_WorkerDto) _then)
@@ -154,6 +167,8 @@ class __$WorkerDtoCopyWithImpl<$Res> extends _$WorkerDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
   const _$_WorkerDto(
       {@JsonKey(ignore: true) this.id,
@@ -191,7 +206,7 @@ class _$_WorkerDto extends _WorkerDto with DiagnosticableTreeMixin {
   final String phone;
   @override
   final String imageUrl;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
@@ -294,7 +309,7 @@ abstract class _WorkerDto extends WorkerDto {
   String get phone;
   @override
   String get imageUrl;
-  @override
+  @override //? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override

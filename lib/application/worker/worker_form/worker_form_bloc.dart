@@ -19,9 +19,7 @@ part 'worker_form_bloc.freezed.dart';
 class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
   final IWorkerRepository _workerRepository;
 
-  WorkerFormBloc(this._workerRepository);
-  @override
-  WorkerFormState get initialState => WorkerFormState.initial();
+  WorkerFormBloc(this._workerRepository) : super(WorkerFormState.initial());
 
   @override
   Stream<WorkerFormState> mapEventToState(
@@ -98,7 +96,7 @@ class WorkerFormBloc extends Bloc<WorkerFormEvent, WorkerFormState> {
       },
       reset: (e) async* {
         yield state.copyWith(
-          worker: initialState.worker,
+          worker: Worker.test(),
           isEditing: true,
           isSaving: false,
           showErrorMessage: false,

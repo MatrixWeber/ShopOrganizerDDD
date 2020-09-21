@@ -1,7 +1,4 @@
 import 'package:auto_route/auto_route_annotations.dart';
-import 'package:dartz/dartz.dart';
-import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
-import 'package:firebase_ddd_tutorial/presentation/home/home_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/notes_overview_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_creation_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_worker_creation_page.dart';

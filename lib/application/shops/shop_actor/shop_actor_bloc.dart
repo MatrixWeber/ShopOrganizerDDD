@@ -13,9 +13,7 @@ part 'shop_actor_bloc.freezed.dart';
 class ShopActorBloc extends Bloc<ShopActorEvent, ShopActorState> {
   final IShopRepository _shopRepository;
 
-  ShopActorBloc(this._shopRepository);
-  @override
-  ShopActorState get initialState => const ShopActorState.initial();
+  ShopActorBloc(this._shopRepository) : super(const ShopActorState.initial());
 
   @override
   Stream<ShopActorState> mapEventToState(

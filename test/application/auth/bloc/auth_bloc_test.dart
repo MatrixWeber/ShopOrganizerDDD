@@ -44,7 +44,7 @@ void main() {
 
   test('initial state should be Initial', () {
     // assert
-    expect(bloc.initialState, equals(const Initial()));
+    expect(bloc.state, equals(const Initial()));
   });
 
   test('should call the signOut()', () async {

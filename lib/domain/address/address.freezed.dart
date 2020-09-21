@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'address.dart';
 
@@ -9,9 +9,11 @@ part of 'address.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$AddressTearOff {
   const _$AddressTearOff();
 
+// ignore: unused_element
   _Address call(
       {@required Street street,
       @required HouseNumber houseNumber,
@@ -26,9 +28,11 @@ class _$AddressTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $Address = _$AddressTearOff();
 
+/// @nodoc
 mixin _$Address {
   Street get street;
   HouseNumber get houseNumber;
@@ -38,12 +42,14 @@ mixin _$Address {
   $AddressCopyWith<Address> get copyWith;
 }
 
+/// @nodoc
 abstract class $AddressCopyWith<$Res> {
   factory $AddressCopyWith(Address value, $Res Function(Address) then) =
       _$AddressCopyWithImpl<$Res>;
   $Res call({Street street, HouseNumber houseNumber, Zip zip, City city});
 }
 
+/// @nodoc
 class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   _$AddressCopyWithImpl(this._value, this._then);
 
@@ -69,6 +75,7 @@ class _$AddressCopyWithImpl<$Res> implements $AddressCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   factory _$AddressCopyWith(_Address value, $Res Function(_Address) then) =
       __$AddressCopyWithImpl<$Res>;
@@ -76,6 +83,7 @@ abstract class _$AddressCopyWith<$Res> implements $AddressCopyWith<$Res> {
   $Res call({Street street, HouseNumber houseNumber, Zip zip, City city});
 }
 
+/// @nodoc
 class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
     implements _$AddressCopyWith<$Res> {
   __$AddressCopyWithImpl(_Address _value, $Res Function(_Address) _then)
@@ -102,6 +110,7 @@ class __$AddressCopyWithImpl<$Res> extends _$AddressCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Address extends _Address {
   const _$_Address(
       {@required this.street,

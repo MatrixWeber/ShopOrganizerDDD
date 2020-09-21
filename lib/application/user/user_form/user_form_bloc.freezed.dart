@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'user_form_bloc.dart';
 
@@ -9,77 +9,91 @@ part of 'user_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$UserFormEventTearOff {
   const _$UserFormEventTearOff();
 
+// ignore: unused_element
   Initialized initialized(Option<User> initialUserOption) {
     return Initialized(
       initialUserOption,
     );
   }
 
+// ignore: unused_element
   NameChanged nameChanged(String name) {
     return NameChanged(
       name,
     );
   }
 
+// ignore: unused_element
   FirstNameChanged firstNameChanged(String firstName) {
     return FirstNameChanged(
       firstName,
     );
   }
 
+// ignore: unused_element
   EmailChanged emailChanged(String email) {
     return EmailChanged(
       email,
     );
   }
 
+// ignore: unused_element
   PhoneNumberChanged phoneNumberChanged(String phone) {
     return PhoneNumberChanged(
       phone,
     );
   }
 
+// ignore: unused_element
   ImageUrlChanged imageUrlChanged(String imageUrl) {
     return ImageUrlChanged(
       imageUrl,
     );
   }
 
+// ignore: unused_element
   StreetChanged streetChanged(String street) {
     return StreetChanged(
       street,
     );
   }
 
+// ignore: unused_element
   HouseNumberChanged houseNumberChanged(String houseNum) {
     return HouseNumberChanged(
       houseNum,
     );
   }
 
+// ignore: unused_element
   ZipChanged zipChanged(String zip) {
     return ZipChanged(
       zip,
     );
   }
 
+// ignore: unused_element
   CityChanged cityChanged(String city) {
     return CityChanged(
       city,
     );
   }
 
+// ignore: unused_element
   Saved saved() {
     return const Saved();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UserFormEvent = _$UserFormEventTearOff();
 
+/// @nodoc
 mixin _$UserFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -141,12 +155,14 @@ mixin _$UserFormEvent {
   });
 }
 
+/// @nodoc
 abstract class $UserFormEventCopyWith<$Res> {
   factory $UserFormEventCopyWith(
           UserFormEvent value, $Res Function(UserFormEvent) then) =
       _$UserFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserFormEventCopyWithImpl<$Res>
     implements $UserFormEventCopyWith<$Res> {
   _$UserFormEventCopyWithImpl(this._value, this._then);
@@ -156,6 +172,7 @@ class _$UserFormEventCopyWithImpl<$Res>
   final $Res Function(UserFormEvent) _then;
 }
 
+/// @nodoc
 abstract class $InitializedCopyWith<$Res> {
   factory $InitializedCopyWith(
           Initialized value, $Res Function(Initialized) then) =
@@ -163,6 +180,7 @@ abstract class $InitializedCopyWith<$Res> {
   $Res call({Option<User> initialUserOption});
 }
 
+/// @nodoc
 class _$InitializedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $InitializedCopyWith<$Res> {
   _$InitializedCopyWithImpl(
@@ -184,6 +202,7 @@ class _$InitializedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$Initialized implements Initialized {
   const _$Initialized(this.initialUserOption)
       : assert(initialUserOption != null);
@@ -326,6 +345,7 @@ abstract class Initialized implements UserFormEvent {
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
+/// @nodoc
 abstract class $NameChangedCopyWith<$Res> {
   factory $NameChangedCopyWith(
           NameChanged value, $Res Function(NameChanged) then) =
@@ -333,6 +353,7 @@ abstract class $NameChangedCopyWith<$Res> {
   $Res call({String name});
 }
 
+/// @nodoc
 class _$NameChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $NameChangedCopyWith<$Res> {
   _$NameChangedCopyWithImpl(
@@ -352,6 +373,7 @@ class _$NameChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$NameChanged implements NameChanged {
   const _$NameChanged(this.name) : assert(name != null);
 
@@ -491,6 +513,7 @@ abstract class NameChanged implements UserFormEvent {
   $NameChangedCopyWith<NameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $FirstNameChangedCopyWith<$Res> {
   factory $FirstNameChangedCopyWith(
           FirstNameChanged value, $Res Function(FirstNameChanged) then) =
@@ -498,6 +521,7 @@ abstract class $FirstNameChangedCopyWith<$Res> {
   $Res call({String firstName});
 }
 
+/// @nodoc
 class _$FirstNameChangedCopyWithImpl<$Res>
     extends _$UserFormEventCopyWithImpl<$Res>
     implements $FirstNameChangedCopyWith<$Res> {
@@ -518,6 +542,7 @@ class _$FirstNameChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$FirstNameChanged implements FirstNameChanged {
   const _$FirstNameChanged(this.firstName) : assert(firstName != null);
 
@@ -658,6 +683,7 @@ abstract class FirstNameChanged implements UserFormEvent {
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $EmailChangedCopyWith<$Res> {
   factory $EmailChangedCopyWith(
           EmailChanged value, $Res Function(EmailChanged) then) =
@@ -665,6 +691,7 @@ abstract class $EmailChangedCopyWith<$Res> {
   $Res call({String email});
 }
 
+/// @nodoc
 class _$EmailChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $EmailChangedCopyWith<$Res> {
   _$EmailChangedCopyWithImpl(
@@ -684,6 +711,7 @@ class _$EmailChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$EmailChanged implements EmailChanged {
   const _$EmailChanged(this.email) : assert(email != null);
 
@@ -823,6 +851,7 @@ abstract class EmailChanged implements UserFormEvent {
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $PhoneNumberChangedCopyWith<$Res> {
   factory $PhoneNumberChangedCopyWith(
           PhoneNumberChanged value, $Res Function(PhoneNumberChanged) then) =
@@ -830,6 +859,7 @@ abstract class $PhoneNumberChangedCopyWith<$Res> {
   $Res call({String phone});
 }
 
+/// @nodoc
 class _$PhoneNumberChangedCopyWithImpl<$Res>
     extends _$UserFormEventCopyWithImpl<$Res>
     implements $PhoneNumberChangedCopyWith<$Res> {
@@ -850,6 +880,7 @@ class _$PhoneNumberChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$PhoneNumberChanged implements PhoneNumberChanged {
   const _$PhoneNumberChanged(this.phone) : assert(phone != null);
 
@@ -989,6 +1020,7 @@ abstract class PhoneNumberChanged implements UserFormEvent {
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $ImageUrlChangedCopyWith<$Res> {
   factory $ImageUrlChangedCopyWith(
           ImageUrlChanged value, $Res Function(ImageUrlChanged) then) =
@@ -996,6 +1028,7 @@ abstract class $ImageUrlChangedCopyWith<$Res> {
   $Res call({String imageUrl});
 }
 
+/// @nodoc
 class _$ImageUrlChangedCopyWithImpl<$Res>
     extends _$UserFormEventCopyWithImpl<$Res>
     implements $ImageUrlChangedCopyWith<$Res> {
@@ -1016,6 +1049,7 @@ class _$ImageUrlChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ImageUrlChanged implements ImageUrlChanged {
   const _$ImageUrlChanged(this.imageUrl) : assert(imageUrl != null);
 
@@ -1156,6 +1190,7 @@ abstract class ImageUrlChanged implements UserFormEvent {
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $StreetChangedCopyWith<$Res> {
   factory $StreetChangedCopyWith(
           StreetChanged value, $Res Function(StreetChanged) then) =
@@ -1163,6 +1198,7 @@ abstract class $StreetChangedCopyWith<$Res> {
   $Res call({String street});
 }
 
+/// @nodoc
 class _$StreetChangedCopyWithImpl<$Res>
     extends _$UserFormEventCopyWithImpl<$Res>
     implements $StreetChangedCopyWith<$Res> {
@@ -1183,6 +1219,7 @@ class _$StreetChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$StreetChanged implements StreetChanged {
   const _$StreetChanged(this.street) : assert(street != null);
 
@@ -1322,6 +1359,7 @@ abstract class StreetChanged implements UserFormEvent {
   $StreetChangedCopyWith<StreetChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $HouseNumberChangedCopyWith<$Res> {
   factory $HouseNumberChangedCopyWith(
           HouseNumberChanged value, $Res Function(HouseNumberChanged) then) =
@@ -1329,6 +1367,7 @@ abstract class $HouseNumberChangedCopyWith<$Res> {
   $Res call({String houseNum});
 }
 
+/// @nodoc
 class _$HouseNumberChangedCopyWithImpl<$Res>
     extends _$UserFormEventCopyWithImpl<$Res>
     implements $HouseNumberChangedCopyWith<$Res> {
@@ -1349,6 +1388,7 @@ class _$HouseNumberChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$HouseNumberChanged implements HouseNumberChanged {
   const _$HouseNumberChanged(this.houseNum) : assert(houseNum != null);
 
@@ -1489,6 +1529,7 @@ abstract class HouseNumberChanged implements UserFormEvent {
   $HouseNumberChangedCopyWith<HouseNumberChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $ZipChangedCopyWith<$Res> {
   factory $ZipChangedCopyWith(
           ZipChanged value, $Res Function(ZipChanged) then) =
@@ -1496,6 +1537,7 @@ abstract class $ZipChangedCopyWith<$Res> {
   $Res call({String zip});
 }
 
+/// @nodoc
 class _$ZipChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $ZipChangedCopyWith<$Res> {
   _$ZipChangedCopyWithImpl(ZipChanged _value, $Res Function(ZipChanged) _then)
@@ -1514,6 +1556,7 @@ class _$ZipChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$ZipChanged implements ZipChanged {
   const _$ZipChanged(this.zip) : assert(zip != null);
 
@@ -1653,6 +1696,7 @@ abstract class ZipChanged implements UserFormEvent {
   $ZipChangedCopyWith<ZipChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $CityChangedCopyWith<$Res> {
   factory $CityChangedCopyWith(
           CityChanged value, $Res Function(CityChanged) then) =
@@ -1660,6 +1704,7 @@ abstract class $CityChangedCopyWith<$Res> {
   $Res call({String city});
 }
 
+/// @nodoc
 class _$CityChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $CityChangedCopyWith<$Res> {
   _$CityChangedCopyWithImpl(
@@ -1679,6 +1724,7 @@ class _$CityChangedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$CityChanged implements CityChanged {
   const _$CityChanged(this.city) : assert(city != null);
 
@@ -1818,11 +1864,13 @@ abstract class CityChanged implements UserFormEvent {
   $CityChangedCopyWith<CityChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $SavedCopyWith<$Res> {
   factory $SavedCopyWith(Saved value, $Res Function(Saved) then) =
       _$SavedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SavedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
     implements $SavedCopyWith<$Res> {
   _$SavedCopyWithImpl(Saved _value, $Res Function(Saved) _then)
@@ -1832,6 +1880,7 @@ class _$SavedCopyWithImpl<$Res> extends _$UserFormEventCopyWithImpl<$Res>
   Saved get _value => super._value as Saved;
 }
 
+/// @nodoc
 class _$Saved implements Saved {
   const _$Saved();
 
@@ -1957,9 +2006,11 @@ abstract class Saved implements UserFormEvent {
   const factory Saved() = _$Saved;
 }
 
+/// @nodoc
 class _$UserFormStateTearOff {
   const _$UserFormStateTearOff();
 
+// ignore: unused_element
   _UserFormState call(
       {@required User user,
       @required bool showErrorMessage,
@@ -1976,9 +2027,11 @@ class _$UserFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UserFormState = _$UserFormStateTearOff();
 
+/// @nodoc
 mixin _$UserFormState {
   User get user;
   bool get showErrorMessage;
@@ -1989,6 +2042,7 @@ mixin _$UserFormState {
   $UserFormStateCopyWith<UserFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $UserFormStateCopyWith<$Res> {
   factory $UserFormStateCopyWith(
           UserFormState value, $Res Function(UserFormState) then) =
@@ -2003,6 +2057,7 @@ abstract class $UserFormStateCopyWith<$Res> {
   $UserCopyWith<$Res> get user;
 }
 
+/// @nodoc
 class _$UserFormStateCopyWithImpl<$Res>
     implements $UserFormStateCopyWith<$Res> {
   _$UserFormStateCopyWithImpl(this._value, this._then);
@@ -2043,6 +2098,7 @@ class _$UserFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$UserFormStateCopyWith<$Res>
     implements $UserFormStateCopyWith<$Res> {
   factory _$UserFormStateCopyWith(
@@ -2060,6 +2116,7 @@ abstract class _$UserFormStateCopyWith<$Res>
   $UserCopyWith<$Res> get user;
 }
 
+/// @nodoc
 class __$UserFormStateCopyWithImpl<$Res>
     extends _$UserFormStateCopyWithImpl<$Res>
     implements _$UserFormStateCopyWith<$Res> {
@@ -2092,6 +2149,7 @@ class __$UserFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_UserFormState implements _UserFormState {
   _$_UserFormState(
       {@required this.user,

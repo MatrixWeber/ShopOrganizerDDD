@@ -19,10 +19,8 @@ class WorkerImageHandlerBloc
   final IWorkerImageStoreRepository _workerRepository;
   StreamSubscription<Either<None, ImageUrl>> _workerStreamSubscription;
 
-  WorkerImageHandlerBloc(this._workerRepository);
-  @override
-  WorkerImageHandlerState get initialState =>
-      const WorkerImageHandlerState.initial();
+  WorkerImageHandlerBloc(this._workerRepository)
+      : super(const WorkerImageHandlerState.initial());
 
   @override
   Stream<WorkerImageHandlerState> mapEventToState(

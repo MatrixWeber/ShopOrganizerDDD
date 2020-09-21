@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'shop_watcher_bloc.dart';
 
@@ -9,13 +9,16 @@ part of 'shop_watcher_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$ShopWatcherEventTearOff {
   const _$ShopWatcherEventTearOff();
 
+// ignore: unused_element
   _WatchAllStarted watchAllStarted() {
     return const _WatchAllStarted();
   }
 
+// ignore: unused_element
   _ShopsReceived shopsReceived(
       Either<ShopFailure, KtList<Shop>> failureOrShops) {
     return _ShopsReceived(
@@ -24,9 +27,11 @@ class _$ShopWatcherEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ShopWatcherEvent = _$ShopWatcherEventTearOff();
 
+/// @nodoc
 mixin _$ShopWatcherEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -53,12 +58,14 @@ mixin _$ShopWatcherEvent {
   });
 }
 
+/// @nodoc
 abstract class $ShopWatcherEventCopyWith<$Res> {
   factory $ShopWatcherEventCopyWith(
           ShopWatcherEvent value, $Res Function(ShopWatcherEvent) then) =
       _$ShopWatcherEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ShopWatcherEventCopyWithImpl<$Res>
     implements $ShopWatcherEventCopyWith<$Res> {
   _$ShopWatcherEventCopyWithImpl(this._value, this._then);
@@ -68,12 +75,14 @@ class _$ShopWatcherEventCopyWithImpl<$Res>
   final $Res Function(ShopWatcherEvent) _then;
 }
 
+/// @nodoc
 abstract class _$WatchAllStartedCopyWith<$Res> {
   factory _$WatchAllStartedCopyWith(
           _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
       __$WatchAllStartedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$WatchAllStartedCopyWithImpl<$Res>
     extends _$ShopWatcherEventCopyWithImpl<$Res>
     implements _$WatchAllStartedCopyWith<$Res> {
@@ -85,6 +94,7 @@ class __$WatchAllStartedCopyWithImpl<$Res>
   _WatchAllStarted get _value => super._value as _WatchAllStarted;
 }
 
+/// @nodoc
 class _$_WatchAllStarted implements _WatchAllStarted {
   const _$_WatchAllStarted();
 
@@ -157,6 +167,7 @@ abstract class _WatchAllStarted implements ShopWatcherEvent {
   const factory _WatchAllStarted() = _$_WatchAllStarted;
 }
 
+/// @nodoc
 abstract class _$ShopsReceivedCopyWith<$Res> {
   factory _$ShopsReceivedCopyWith(
           _ShopsReceived value, $Res Function(_ShopsReceived) then) =
@@ -164,6 +175,7 @@ abstract class _$ShopsReceivedCopyWith<$Res> {
   $Res call({Either<ShopFailure, KtList<Shop>> failureOrShops});
 }
 
+/// @nodoc
 class __$ShopsReceivedCopyWithImpl<$Res>
     extends _$ShopWatcherEventCopyWithImpl<$Res>
     implements _$ShopsReceivedCopyWith<$Res> {
@@ -186,6 +198,7 @@ class __$ShopsReceivedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_ShopsReceived implements _ShopsReceived {
   const _$_ShopsReceived(this.failureOrShops) : assert(failureOrShops != null);
 
@@ -275,23 +288,28 @@ abstract class _ShopsReceived implements ShopWatcherEvent {
   _$ShopsReceivedCopyWith<_ShopsReceived> get copyWith;
 }
 
+/// @nodoc
 class _$ShopWatcherStateTearOff {
   const _$ShopWatcherStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _LoadInProgress loadInProgress() {
     return const _LoadInProgress();
   }
 
+// ignore: unused_element
   _LoadSuccess loadSuccess(KtList<Shop> shops) {
     return _LoadSuccess(
       shops,
     );
   }
 
+// ignore: unused_element
   _LoadFailure loadFailure(ShopFailure shopFailure) {
     return _LoadFailure(
       shopFailure,
@@ -299,9 +317,11 @@ class _$ShopWatcherStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ShopWatcherState = _$ShopWatcherStateTearOff();
 
+/// @nodoc
 mixin _$ShopWatcherState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -335,12 +355,14 @@ mixin _$ShopWatcherState {
   });
 }
 
+/// @nodoc
 abstract class $ShopWatcherStateCopyWith<$Res> {
   factory $ShopWatcherStateCopyWith(
           ShopWatcherState value, $Res Function(ShopWatcherState) then) =
       _$ShopWatcherStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$ShopWatcherStateCopyWithImpl<$Res>
     implements $ShopWatcherStateCopyWith<$Res> {
   _$ShopWatcherStateCopyWithImpl(this._value, this._then);
@@ -350,11 +372,13 @@ class _$ShopWatcherStateCopyWithImpl<$Res>
   final $Res Function(ShopWatcherState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$ShopWatcherStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -364,6 +388,7 @@ class __$InitialCopyWithImpl<$Res> extends _$ShopWatcherStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -447,12 +472,14 @@ abstract class _Initial implements ShopWatcherState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$LoadInProgressCopyWith<$Res> {
   factory _$LoadInProgressCopyWith(
           _LoadInProgress value, $Res Function(_LoadInProgress) then) =
       __$LoadInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
     extends _$ShopWatcherStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
@@ -464,6 +491,7 @@ class __$LoadInProgressCopyWithImpl<$Res>
   _LoadInProgress get _value => super._value as _LoadInProgress;
 }
 
+/// @nodoc
 class _$_LoadInProgress implements _LoadInProgress {
   const _$_LoadInProgress();
 
@@ -547,6 +575,7 @@ abstract class _LoadInProgress implements ShopWatcherState {
   const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
+/// @nodoc
 abstract class _$LoadSuccessCopyWith<$Res> {
   factory _$LoadSuccessCopyWith(
           _LoadSuccess value, $Res Function(_LoadSuccess) then) =
@@ -554,6 +583,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
   $Res call({KtList<Shop> shops});
 }
 
+/// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
     extends _$ShopWatcherStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
@@ -574,6 +604,7 @@ class __$LoadSuccessCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadSuccess implements _LoadSuccess {
   const _$_LoadSuccess(this.shops) : assert(shops != null);
 
@@ -671,6 +702,7 @@ abstract class _LoadSuccess implements ShopWatcherState {
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
+/// @nodoc
 abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
@@ -680,6 +712,7 @@ abstract class _$LoadFailureCopyWith<$Res> {
   $ShopFailureCopyWith<$Res> get shopFailure;
 }
 
+/// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
     extends _$ShopWatcherStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
@@ -710,6 +743,7 @@ class __$LoadFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_LoadFailure implements _LoadFailure {
   const _$_LoadFailure(this.shopFailure) : assert(shopFailure != null);
 

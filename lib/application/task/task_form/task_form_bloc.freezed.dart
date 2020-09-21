@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'task_form_bloc.dart';
 
@@ -9,41 +9,49 @@ part of 'task_form_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$TaskFormEventTearOff {
   const _$TaskFormEventTearOff();
 
+// ignore: unused_element
   Initialized initialized(Option<TaskDescription> initialTaskOption) {
     return Initialized(
       initialTaskOption,
     );
   }
 
+// ignore: unused_element
   TaskNameChanged taskNameChanged(String taskName) {
     return TaskNameChanged(
       taskName,
     );
   }
 
+// ignore: unused_element
   DurationChanged durationChanged(Duration duration) {
     return DurationChanged(
       duration,
     );
   }
 
+// ignore: unused_element
   PriceChanged priceChanged(double price) {
     return PriceChanged(
       price,
     );
   }
 
+// ignore: unused_element
   Saved saved() {
     return const Saved();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskFormEvent = _$TaskFormEventTearOff();
 
+/// @nodoc
 mixin _$TaskFormEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -81,12 +89,14 @@ mixin _$TaskFormEvent {
   });
 }
 
+/// @nodoc
 abstract class $TaskFormEventCopyWith<$Res> {
   factory $TaskFormEventCopyWith(
           TaskFormEvent value, $Res Function(TaskFormEvent) then) =
       _$TaskFormEventCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$TaskFormEventCopyWithImpl<$Res>
     implements $TaskFormEventCopyWith<$Res> {
   _$TaskFormEventCopyWithImpl(this._value, this._then);
@@ -96,6 +106,7 @@ class _$TaskFormEventCopyWithImpl<$Res>
   final $Res Function(TaskFormEvent) _then;
 }
 
+/// @nodoc
 abstract class $InitializedCopyWith<$Res> {
   factory $InitializedCopyWith(
           Initialized value, $Res Function(Initialized) then) =
@@ -103,6 +114,7 @@ abstract class $InitializedCopyWith<$Res> {
   $Res call({Option<TaskDescription> initialTaskOption});
 }
 
+/// @nodoc
 class _$InitializedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
     implements $InitializedCopyWith<$Res> {
   _$InitializedCopyWithImpl(
@@ -124,6 +136,7 @@ class _$InitializedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$Initialized implements Initialized {
   const _$Initialized(this.initialTaskOption)
       : assert(initialTaskOption != null);
@@ -231,6 +244,7 @@ abstract class Initialized implements TaskFormEvent {
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskNameChangedCopyWith<$Res> {
   factory $TaskNameChangedCopyWith(
           TaskNameChanged value, $Res Function(TaskNameChanged) then) =
@@ -238,6 +252,7 @@ abstract class $TaskNameChangedCopyWith<$Res> {
   $Res call({String taskName});
 }
 
+/// @nodoc
 class _$TaskNameChangedCopyWithImpl<$Res>
     extends _$TaskFormEventCopyWithImpl<$Res>
     implements $TaskNameChangedCopyWith<$Res> {
@@ -258,6 +273,7 @@ class _$TaskNameChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$TaskNameChanged implements TaskNameChanged {
   const _$TaskNameChanged(this.taskName) : assert(taskName != null);
 
@@ -362,6 +378,7 @@ abstract class TaskNameChanged implements TaskFormEvent {
   $TaskNameChangedCopyWith<TaskNameChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $DurationChangedCopyWith<$Res> {
   factory $DurationChangedCopyWith(
           DurationChanged value, $Res Function(DurationChanged) then) =
@@ -369,6 +386,7 @@ abstract class $DurationChangedCopyWith<$Res> {
   $Res call({Duration duration});
 }
 
+/// @nodoc
 class _$DurationChangedCopyWithImpl<$Res>
     extends _$TaskFormEventCopyWithImpl<$Res>
     implements $DurationChangedCopyWith<$Res> {
@@ -389,6 +407,7 @@ class _$DurationChangedCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$DurationChanged implements DurationChanged {
   const _$DurationChanged(this.duration) : assert(duration != null);
 
@@ -493,6 +512,7 @@ abstract class DurationChanged implements TaskFormEvent {
   $DurationChangedCopyWith<DurationChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $PriceChangedCopyWith<$Res> {
   factory $PriceChangedCopyWith(
           PriceChanged value, $Res Function(PriceChanged) then) =
@@ -500,6 +520,7 @@ abstract class $PriceChangedCopyWith<$Res> {
   $Res call({double price});
 }
 
+/// @nodoc
 class _$PriceChangedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
     implements $PriceChangedCopyWith<$Res> {
   _$PriceChangedCopyWithImpl(
@@ -519,6 +540,7 @@ class _$PriceChangedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$PriceChanged implements PriceChanged {
   const _$PriceChanged(this.price) : assert(price != null);
 
@@ -622,11 +644,13 @@ abstract class PriceChanged implements TaskFormEvent {
   $PriceChangedCopyWith<PriceChanged> get copyWith;
 }
 
+/// @nodoc
 abstract class $SavedCopyWith<$Res> {
   factory $SavedCopyWith(Saved value, $Res Function(Saved) then) =
       _$SavedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$SavedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
     implements $SavedCopyWith<$Res> {
   _$SavedCopyWithImpl(Saved _value, $Res Function(Saved) _then)
@@ -636,6 +660,7 @@ class _$SavedCopyWithImpl<$Res> extends _$TaskFormEventCopyWithImpl<$Res>
   Saved get _value => super._value as Saved;
 }
 
+/// @nodoc
 class _$Saved implements Saved {
   const _$Saved();
 
@@ -725,9 +750,11 @@ abstract class Saved implements TaskFormEvent {
   const factory Saved() = _$Saved;
 }
 
+/// @nodoc
 class _$TaskFormStateTearOff {
   const _$TaskFormStateTearOff();
 
+// ignore: unused_element
   _TaskFormState call(
       {@required TaskDescription task,
       @required bool showErrorMessage,
@@ -744,9 +771,11 @@ class _$TaskFormStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $TaskFormState = _$TaskFormStateTearOff();
 
+/// @nodoc
 mixin _$TaskFormState {
   TaskDescription get task;
   bool get showErrorMessage;
@@ -757,6 +786,7 @@ mixin _$TaskFormState {
   $TaskFormStateCopyWith<TaskFormState> get copyWith;
 }
 
+/// @nodoc
 abstract class $TaskFormStateCopyWith<$Res> {
   factory $TaskFormStateCopyWith(
           TaskFormState value, $Res Function(TaskFormState) then) =
@@ -771,6 +801,7 @@ abstract class $TaskFormStateCopyWith<$Res> {
   $TaskDescriptionCopyWith<$Res> get task;
 }
 
+/// @nodoc
 class _$TaskFormStateCopyWithImpl<$Res>
     implements $TaskFormStateCopyWith<$Res> {
   _$TaskFormStateCopyWithImpl(this._value, this._then);
@@ -811,6 +842,7 @@ class _$TaskFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$TaskFormStateCopyWith<$Res>
     implements $TaskFormStateCopyWith<$Res> {
   factory _$TaskFormStateCopyWith(
@@ -828,6 +860,7 @@ abstract class _$TaskFormStateCopyWith<$Res>
   $TaskDescriptionCopyWith<$Res> get task;
 }
 
+/// @nodoc
 class __$TaskFormStateCopyWithImpl<$Res>
     extends _$TaskFormStateCopyWithImpl<$Res>
     implements _$TaskFormStateCopyWith<$Res> {
@@ -860,6 +893,7 @@ class __$TaskFormStateCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_TaskFormState implements _TaskFormState {
   _$_TaskFormState(
       {@required this.task,

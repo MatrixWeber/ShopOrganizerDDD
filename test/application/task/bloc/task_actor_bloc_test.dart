@@ -27,7 +27,7 @@ void main() {
 
   test('initial state should be Initial', () {
     // assert
-    expect(bloc.initialState, equals(const TaskActorState.initial()));
+    expect(bloc.state, equals(const TaskActorState.initial()));
   });
 
   test(

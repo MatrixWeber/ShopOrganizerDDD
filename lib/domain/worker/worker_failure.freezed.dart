@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'worker_failure.dart';
 
@@ -9,25 +9,31 @@ part of 'worker_failure.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$WorkerFailureTearOff {
   const _$WorkerFailureTearOff();
 
+// ignore: unused_element
   _Unexpected unexpected() {
     return const _Unexpected();
   }
 
+// ignore: unused_element
   _UnableToUpdate unableToUpdate() {
     return const _UnableToUpdate();
   }
 
+// ignore: unused_element
   _InsufficientPermissions insufficientPermissions() {
     return const _InsufficientPermissions();
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkerFailure = _$WorkerFailureTearOff();
 
+/// @nodoc
 mixin _$WorkerFailure {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -57,12 +63,14 @@ mixin _$WorkerFailure {
   });
 }
 
+/// @nodoc
 abstract class $WorkerFailureCopyWith<$Res> {
   factory $WorkerFailureCopyWith(
           WorkerFailure value, $Res Function(WorkerFailure) then) =
       _$WorkerFailureCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$WorkerFailureCopyWithImpl<$Res>
     implements $WorkerFailureCopyWith<$Res> {
   _$WorkerFailureCopyWithImpl(this._value, this._then);
@@ -72,12 +80,14 @@ class _$WorkerFailureCopyWithImpl<$Res>
   final $Res Function(WorkerFailure) _then;
 }
 
+/// @nodoc
 abstract class _$UnexpectedCopyWith<$Res> {
   factory _$UnexpectedCopyWith(
           _Unexpected value, $Res Function(_Unexpected) then) =
       __$UnexpectedCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$UnexpectedCopyWithImpl<$Res> extends _$WorkerFailureCopyWithImpl<$Res>
     implements _$UnexpectedCopyWith<$Res> {
   __$UnexpectedCopyWithImpl(
@@ -88,6 +98,7 @@ class __$UnexpectedCopyWithImpl<$Res> extends _$WorkerFailureCopyWithImpl<$Res>
   _Unexpected get _value => super._value as _Unexpected;
 }
 
+/// @nodoc
 class _$_Unexpected implements _Unexpected {
   const _$_Unexpected();
 
@@ -165,12 +176,14 @@ abstract class _Unexpected implements WorkerFailure {
   const factory _Unexpected() = _$_Unexpected;
 }
 
+/// @nodoc
 abstract class _$UnableToUpdateCopyWith<$Res> {
   factory _$UnableToUpdateCopyWith(
           _UnableToUpdate value, $Res Function(_UnableToUpdate) then) =
       __$UnableToUpdateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$UnableToUpdateCopyWithImpl<$Res>
     extends _$WorkerFailureCopyWithImpl<$Res>
     implements _$UnableToUpdateCopyWith<$Res> {
@@ -182,6 +195,7 @@ class __$UnableToUpdateCopyWithImpl<$Res>
   _UnableToUpdate get _value => super._value as _UnableToUpdate;
 }
 
+/// @nodoc
 class _$_UnableToUpdate implements _UnableToUpdate {
   const _$_UnableToUpdate();
 
@@ -259,12 +273,14 @@ abstract class _UnableToUpdate implements WorkerFailure {
   const factory _UnableToUpdate() = _$_UnableToUpdate;
 }
 
+/// @nodoc
 abstract class _$InsufficientPermissionsCopyWith<$Res> {
   factory _$InsufficientPermissionsCopyWith(_InsufficientPermissions value,
           $Res Function(_InsufficientPermissions) then) =
       __$InsufficientPermissionsCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InsufficientPermissionsCopyWithImpl<$Res>
     extends _$WorkerFailureCopyWithImpl<$Res>
     implements _$InsufficientPermissionsCopyWith<$Res> {
@@ -277,6 +293,7 @@ class __$InsufficientPermissionsCopyWithImpl<$Res>
       super._value as _InsufficientPermissions;
 }
 
+/// @nodoc
 class _$_InsufficientPermissions implements _InsufficientPermissions {
   const _$_InsufficientPermissions();
 

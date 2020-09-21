@@ -145,7 +145,7 @@ void main() {
         final result = await authFacade.signInWithGoogle();
         // assert
         verify(mockGoogleSignIn.signIn());
-        expect(result, equals(Right(unit)));
+        expect(result, equals(const Right(unit)));
       });
       test(
           'should return left(const AuthFailure.cancelledByUser()) when user is null',

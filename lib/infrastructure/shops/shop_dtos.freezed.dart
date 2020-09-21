@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'shop_dtos.dart';
 
@@ -12,9 +12,11 @@ ShopDto _$ShopDtoFromJson(Map<String, dynamic> json) {
   return _ShopDto.fromJson(json);
 }
 
+/// @nodoc
 class _$ShopDtoTearOff {
   const _$ShopDtoTearOff();
 
+// ignore: unused_element
   _ShopDto call(
       {@JsonKey(ignore: true) String id,
       @required String name,
@@ -47,11 +49,18 @@ class _$ShopDtoTearOff {
       serverTimeStamp: serverTimeStamp,
     );
   }
+
+// ignore: unused_element
+  ShopDto fromJson(Map<String, Object> json) {
+    return ShopDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $ShopDto = _$ShopDtoTearOff();
 
+/// @nodoc
 mixin _$ShopDto {
   @JsonKey(ignore: true)
   String get id;
@@ -66,7 +75,9 @@ mixin _$ShopDto {
   String get houseNum;
   String get street;
   num get numberOfWorkers;
-  List<bool> get openingDays;
+  List<bool>
+      get openingDays; // @required List<WorkingHoursDto> shopWorkingHours,
+//? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
 
@@ -74,6 +85,7 @@ mixin _$ShopDto {
   $ShopDtoCopyWith<ShopDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $ShopDtoCopyWith<$Res> {
   factory $ShopDtoCopyWith(ShopDto value, $Res Function(ShopDto) then) =
       _$ShopDtoCopyWithImpl<$Res>;
@@ -94,6 +106,7 @@ abstract class $ShopDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class _$ShopDtoCopyWithImpl<$Res> implements $ShopDtoCopyWith<$Res> {
   _$ShopDtoCopyWithImpl(this._value, this._then);
 
@@ -143,6 +156,7 @@ class _$ShopDtoCopyWithImpl<$Res> implements $ShopDtoCopyWith<$Res> {
   }
 }
 
+/// @nodoc
 abstract class _$ShopDtoCopyWith<$Res> implements $ShopDtoCopyWith<$Res> {
   factory _$ShopDtoCopyWith(_ShopDto value, $Res Function(_ShopDto) then) =
       __$ShopDtoCopyWithImpl<$Res>;
@@ -164,6 +178,7 @@ abstract class _$ShopDtoCopyWith<$Res> implements $ShopDtoCopyWith<$Res> {
       @ServerTimeStampConverter() FieldValue serverTimeStamp});
 }
 
+/// @nodoc
 class __$ShopDtoCopyWithImpl<$Res> extends _$ShopDtoCopyWithImpl<$Res>
     implements _$ShopDtoCopyWith<$Res> {
   __$ShopDtoCopyWithImpl(_ShopDto _value, $Res Function(_ShopDto) _then)
@@ -215,6 +230,8 @@ class __$ShopDtoCopyWithImpl<$Res> extends _$ShopDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
   const _$_ShopDto(
       {@JsonKey(ignore: true) this.id,
@@ -276,7 +293,8 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
   final num numberOfWorkers;
   @override
   final List<bool> openingDays;
-  @override
+  @override // @required List<WorkingHoursDto> shopWorkingHours,
+//? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   final FieldValue serverTimeStamp;
 
@@ -422,7 +440,8 @@ abstract class _ShopDto extends ShopDto {
   num get numberOfWorkers;
   @override
   List<bool> get openingDays;
-  @override
+  @override // @required List<WorkingHoursDto> shopWorkingHours,
+//? placeholder --> last updated time on Server
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
@@ -433,19 +452,28 @@ WorkingHoursDto _$WorkingHoursDtoFromJson(Map<String, dynamic> json) {
   return _WorkingHoursDto.fromJson(json);
 }
 
+/// @nodoc
 class _$WorkingHoursDtoTearOff {
   const _$WorkingHoursDtoTearOff();
 
+// ignore: unused_element
   _WorkingHoursDto call({@required num workingHours}) {
     return _WorkingHoursDto(
       workingHours: workingHours,
     );
   }
+
+// ignore: unused_element
+  WorkingHoursDto fromJson(Map<String, Object> json) {
+    return WorkingHoursDto.fromJson(json);
+  }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $WorkingHoursDto = _$WorkingHoursDtoTearOff();
 
+/// @nodoc
 mixin _$WorkingHoursDto {
   num get workingHours;
 
@@ -453,6 +481,7 @@ mixin _$WorkingHoursDto {
   $WorkingHoursDtoCopyWith<WorkingHoursDto> get copyWith;
 }
 
+/// @nodoc
 abstract class $WorkingHoursDtoCopyWith<$Res> {
   factory $WorkingHoursDtoCopyWith(
           WorkingHoursDto value, $Res Function(WorkingHoursDto) then) =
@@ -460,6 +489,7 @@ abstract class $WorkingHoursDtoCopyWith<$Res> {
   $Res call({num workingHours});
 }
 
+/// @nodoc
 class _$WorkingHoursDtoCopyWithImpl<$Res>
     implements $WorkingHoursDtoCopyWith<$Res> {
   _$WorkingHoursDtoCopyWithImpl(this._value, this._then);
@@ -479,6 +509,7 @@ class _$WorkingHoursDtoCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$WorkingHoursDtoCopyWith<$Res>
     implements $WorkingHoursDtoCopyWith<$Res> {
   factory _$WorkingHoursDtoCopyWith(
@@ -488,6 +519,7 @@ abstract class _$WorkingHoursDtoCopyWith<$Res>
   $Res call({num workingHours});
 }
 
+/// @nodoc
 class __$WorkingHoursDtoCopyWithImpl<$Res>
     extends _$WorkingHoursDtoCopyWithImpl<$Res>
     implements _$WorkingHoursDtoCopyWith<$Res> {
@@ -510,6 +542,8 @@ class __$WorkingHoursDtoCopyWithImpl<$Res>
 }
 
 @JsonSerializable()
+
+/// @nodoc
 class _$_WorkingHoursDto extends _WorkingHoursDto with DiagnosticableTreeMixin {
   const _$_WorkingHoursDto({@required this.workingHours})
       : assert(workingHours != null),

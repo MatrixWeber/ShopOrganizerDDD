@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'user_actor_bloc.dart';
 
@@ -9,9 +9,11 @@ part of 'user_actor_bloc.dart';
 
 T _$identity<T>(T value) => value;
 
+/// @nodoc
 class _$UserActorEventTearOff {
   const _$UserActorEventTearOff();
 
+// ignore: unused_element
   _Deleted deleted(User user) {
     return _Deleted(
       user,
@@ -19,15 +21,37 @@ class _$UserActorEventTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UserActorEvent = _$UserActorEventTearOff();
 
+/// @nodoc
 mixin _$UserActorEvent {
   User get user;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result deleted(User user),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result deleted(User user),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result deleted(_Deleted value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result deleted(_Deleted value),
+    @required Result orElse(),
+  });
 
   $UserActorEventCopyWith<UserActorEvent> get copyWith;
 }
 
+/// @nodoc
 abstract class $UserActorEventCopyWith<$Res> {
   factory $UserActorEventCopyWith(
           UserActorEvent value, $Res Function(UserActorEvent) then) =
@@ -37,6 +61,7 @@ abstract class $UserActorEventCopyWith<$Res> {
   $UserCopyWith<$Res> get user;
 }
 
+/// @nodoc
 class _$UserActorEventCopyWithImpl<$Res>
     implements $UserActorEventCopyWith<$Res> {
   _$UserActorEventCopyWithImpl(this._value, this._then);
@@ -65,6 +90,7 @@ class _$UserActorEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 abstract class _$DeletedCopyWith<$Res>
     implements $UserActorEventCopyWith<$Res> {
   factory _$DeletedCopyWith(_Deleted value, $Res Function(_Deleted) then) =
@@ -76,6 +102,7 @@ abstract class _$DeletedCopyWith<$Res>
   $UserCopyWith<$Res> get user;
 }
 
+/// @nodoc
 class __$DeletedCopyWithImpl<$Res> extends _$UserActorEventCopyWithImpl<$Res>
     implements _$DeletedCopyWith<$Res> {
   __$DeletedCopyWithImpl(_Deleted _value, $Res Function(_Deleted) _then)
@@ -94,6 +121,7 @@ class __$DeletedCopyWithImpl<$Res> extends _$UserActorEventCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_Deleted implements _Deleted {
   const _$_Deleted(this.user) : assert(user != null);
 
@@ -120,6 +148,50 @@ class _$_Deleted implements _Deleted {
   @override
   _$DeletedCopyWith<_Deleted> get copyWith =>
       __$DeletedCopyWithImpl<_Deleted>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result deleted(User user),
+  }) {
+    assert(deleted != null);
+    return deleted(user);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result deleted(User user),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleted != null) {
+      return deleted(user);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result deleted(_Deleted value),
+  }) {
+    assert(deleted != null);
+    return deleted(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result deleted(_Deleted value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (deleted != null) {
+      return deleted(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class _Deleted implements UserActorEvent {
@@ -131,21 +203,26 @@ abstract class _Deleted implements UserActorEvent {
   _$DeletedCopyWith<_Deleted> get copyWith;
 }
 
+/// @nodoc
 class _$UserActorStateTearOff {
   const _$UserActorStateTearOff();
 
+// ignore: unused_element
   _Initial initial() {
     return const _Initial();
   }
 
+// ignore: unused_element
   _ActionInProgress actionInProgress() {
     return const _ActionInProgress();
   }
 
+// ignore: unused_element
   _DeleteSuccess deleteSuccess() {
     return const _DeleteSuccess();
   }
 
+// ignore: unused_element
   _DeleteFailure deleteFailure(UserFailure userFailure) {
     return _DeleteFailure(
       userFailure,
@@ -153,9 +230,11 @@ class _$UserActorStateTearOff {
   }
 }
 
+/// @nodoc
 // ignore: unused_element
 const $UserActorState = _$UserActorStateTearOff();
 
+/// @nodoc
 mixin _$UserActorState {
   @optionalTypeArgs
   Result when<Result extends Object>({
@@ -189,12 +268,14 @@ mixin _$UserActorState {
   });
 }
 
+/// @nodoc
 abstract class $UserActorStateCopyWith<$Res> {
   factory $UserActorStateCopyWith(
           UserActorState value, $Res Function(UserActorState) then) =
       _$UserActorStateCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class _$UserActorStateCopyWithImpl<$Res>
     implements $UserActorStateCopyWith<$Res> {
   _$UserActorStateCopyWithImpl(this._value, this._then);
@@ -204,11 +285,13 @@ class _$UserActorStateCopyWithImpl<$Res>
   final $Res Function(UserActorState) _then;
 }
 
+/// @nodoc
 abstract class _$InitialCopyWith<$Res> {
   factory _$InitialCopyWith(_Initial value, $Res Function(_Initial) then) =
       __$InitialCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$InitialCopyWithImpl<$Res> extends _$UserActorStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
@@ -218,6 +301,7 @@ class __$InitialCopyWithImpl<$Res> extends _$UserActorStateCopyWithImpl<$Res>
   _Initial get _value => super._value as _Initial;
 }
 
+/// @nodoc
 class _$_Initial implements _Initial {
   const _$_Initial();
 
@@ -301,12 +385,14 @@ abstract class _Initial implements UserActorState {
   const factory _Initial() = _$_Initial;
 }
 
+/// @nodoc
 abstract class _$ActionInProgressCopyWith<$Res> {
   factory _$ActionInProgressCopyWith(
           _ActionInProgress value, $Res Function(_ActionInProgress) then) =
       __$ActionInProgressCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$ActionInProgressCopyWithImpl<$Res>
     extends _$UserActorStateCopyWithImpl<$Res>
     implements _$ActionInProgressCopyWith<$Res> {
@@ -318,6 +404,7 @@ class __$ActionInProgressCopyWithImpl<$Res>
   _ActionInProgress get _value => super._value as _ActionInProgress;
 }
 
+/// @nodoc
 class _$_ActionInProgress implements _ActionInProgress {
   const _$_ActionInProgress();
 
@@ -401,12 +488,14 @@ abstract class _ActionInProgress implements UserActorState {
   const factory _ActionInProgress() = _$_ActionInProgress;
 }
 
+/// @nodoc
 abstract class _$DeleteSuccessCopyWith<$Res> {
   factory _$DeleteSuccessCopyWith(
           _DeleteSuccess value, $Res Function(_DeleteSuccess) then) =
       __$DeleteSuccessCopyWithImpl<$Res>;
 }
 
+/// @nodoc
 class __$DeleteSuccessCopyWithImpl<$Res>
     extends _$UserActorStateCopyWithImpl<$Res>
     implements _$DeleteSuccessCopyWith<$Res> {
@@ -418,6 +507,7 @@ class __$DeleteSuccessCopyWithImpl<$Res>
   _DeleteSuccess get _value => super._value as _DeleteSuccess;
 }
 
+/// @nodoc
 class _$_DeleteSuccess implements _DeleteSuccess {
   const _$_DeleteSuccess();
 
@@ -501,6 +591,7 @@ abstract class _DeleteSuccess implements UserActorState {
   const factory _DeleteSuccess() = _$_DeleteSuccess;
 }
 
+/// @nodoc
 abstract class _$DeleteFailureCopyWith<$Res> {
   factory _$DeleteFailureCopyWith(
           _DeleteFailure value, $Res Function(_DeleteFailure) then) =
@@ -510,6 +601,7 @@ abstract class _$DeleteFailureCopyWith<$Res> {
   $UserFailureCopyWith<$Res> get userFailure;
 }
 
+/// @nodoc
 class __$DeleteFailureCopyWithImpl<$Res>
     extends _$UserActorStateCopyWithImpl<$Res>
     implements _$DeleteFailureCopyWith<$Res> {
@@ -540,6 +632,7 @@ class __$DeleteFailureCopyWithImpl<$Res>
   }
 }
 
+/// @nodoc
 class _$_DeleteFailure implements _DeleteFailure {
   const _$_DeleteFailure(this.userFailure) : assert(userFailure != null);
 
