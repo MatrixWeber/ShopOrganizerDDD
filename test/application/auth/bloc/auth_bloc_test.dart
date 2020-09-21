@@ -56,7 +56,7 @@ void main() {
       user.add(mockFirebaseUser);
       return Future.value(mockGoogleSignInAccount);
     });
-    final expected = [const Initial(), const Unauthenticated()];
+    final expected = [const Unauthenticated()];
     expectLater(bloc, emitsInOrder(expected));
     // act
     bloc.add(const SignedOut());
@@ -76,7 +76,7 @@ void main() {
         user.add(mockFirebaseUser);
         return Future.value(MockAuthResult().user);
       });
-      final expected = [const Initial(), const Unauthenticated()];
+      final expected = [const Unauthenticated()];
       expectLater(bloc, emitsInOrder(expected));
       // act
       bloc.add(const AuthCheckRequested());

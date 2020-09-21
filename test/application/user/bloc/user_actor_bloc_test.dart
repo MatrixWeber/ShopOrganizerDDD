@@ -36,11 +36,10 @@ void main() {
     //? arrange
     final user = User.empty();
     when(_userRepository.delete(user)).thenAnswer((_) async {
-      return Right(unit);
+      return const Right(unit);
     });
 
     final expected = [
-      const UserActorState.initial(),
       const UserActorState.actionInProgress(),
       const UserActorState.deleteSuccess(),
     ];
@@ -62,7 +61,6 @@ void main() {
     });
 
     final expected = [
-      const UserActorState.initial(),
       const UserActorState.actionInProgress(),
       const UserActorState.deleteFailure(userFailure),
     ];

@@ -40,7 +40,6 @@ void main() {
     });
 
     final expected = [
-      const ShopActorState.initial(),
       const ShopActorState.actionInProgress(),
       const ShopActorState.deleteSuccess(),
     ];
@@ -62,7 +61,6 @@ void main() {
     });
 
     final expected = [
-      const ShopActorState.initial(),
       const ShopActorState.actionInProgress(),
       const ShopActorState.deleteFailure(shopFailure),
     ];

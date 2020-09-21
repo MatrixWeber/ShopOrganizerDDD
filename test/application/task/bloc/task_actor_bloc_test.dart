@@ -36,11 +36,10 @@ void main() {
     //? arrange
     final taskDescription = TaskDescription.empty();
     when(_taskRepository.delete(taskDescription)).thenAnswer((_) async {
-      return Right(unit);
+      return const Right(unit);
     });
 
     final expected = [
-      const TaskActorState.initial(),
       const TaskActorState.actionInProgress(),
       const TaskActorState.deleteSuccess(),
     ];
@@ -62,7 +61,6 @@ void main() {
     });
 
     final expected = [
-      const TaskActorState.initial(),
       const TaskActorState.actionInProgress(),
       const TaskActorState.deleteFailure(taskFailure),
     ];
