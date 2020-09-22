@@ -3,7 +3,6 @@ import 'package:firebase_ddd_tutorial/domain/address/address.dart';
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/value_objects.dart';
-import 'package:firebase_ddd_tutorial/domain/shops/working_hours.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:kt_dart/collection.dart';
 

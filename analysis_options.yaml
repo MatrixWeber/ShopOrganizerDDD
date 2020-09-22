@@ -6,3 +6,6 @@ analyzer:
     missing_required_param: error
     must_be_immutable: error
     sort_unnamed_constructors_first: ignore
+    constant_identifier_names: ignore
+    non_constant_identifier_names: ignore
+    directives_ordering: ignore

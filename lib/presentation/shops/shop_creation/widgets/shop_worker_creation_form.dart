@@ -17,9 +17,7 @@ import '../../../core/image_widget.dart';
 import '../../../routes/router.gr.dart';
 
 class ShopWorkerCreationForm extends StatelessWidget {
-  static const _RADIUS = 120.0;
   static const _PADDING = 6.0;
-  static const _TF_EDGE = 12.0;
   static const _TF_SIZE = 20.0;
 
   final UniqueId parentShopId;
