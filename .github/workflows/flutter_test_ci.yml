@@ -19,10 +19,10 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.20.1'
+          flutter-version: '1.20.4'
           channel: 'stable'
       - run: flutter packages get
-      - run: flutter pub run build_runner run
+      - run: flutter pub run build_runner run --delete-conflicting-outputs
       - run: flutter build apk
         # Step to save the APK as Artifacts
       - name: Upload APK on Build Artifacts
@@ -40,8 +40,8 @@ jobs:
           java-version: '12.x'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '1.20.1'
+          flutter-version: '1.20.4'
           channel: 'stable'
       - run: flutter packages get
-      - run: flutter pub run build_runner run
+      - run: flutter pub run build_runner run --delete-conflicting-outputs
       - run: flutter test
