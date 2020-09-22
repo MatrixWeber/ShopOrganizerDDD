@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -57,7 +58,7 @@ class SignInForm extends StatelessWidget {
                     .value
                     .fold(
                         (f) => f.maybeMap(
-                              invalidEmail: (_) => 'Invalid Email',
+                              invalidEmail: (_) => INVALID_EMAIL,
                               orElse: () => null,
                             ),
                         (_) => null),
@@ -78,7 +79,7 @@ class SignInForm extends StatelessWidget {
                 validator: (_) =>
                     context.bloc<SignInFormBloc>().state.password.value.fold(
                         (f) => f.maybeMap(
-                              shortPassword: (_) => 'Short Password',
+                              shortPassword: (_) => SHORT_PASSWORD,
                               orElse: () => null,
                             ),
                         (_) => null),

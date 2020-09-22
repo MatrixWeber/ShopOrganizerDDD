@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -108,7 +109,7 @@ class ShopCreationForm extends StatelessWidget {
               validator: (_) =>
                   context.bloc<ShopFormBloc>().state.shop.email.value.fold(
                       (f) => f.maybeMap(
-                            invalidEmail: (_) => 'Invalid Email',
+                            invalidEmail: (_) => INVALID_EMAIL,
                             orElse: () => null,
                           ),
                       (_) => null),

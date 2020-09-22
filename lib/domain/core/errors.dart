@@ -1,8 +1,10 @@
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 
-class NotAuthenticatedError extends Error {
+const INVALID_EMAIL = 'Invalid Email';
+const SHORT_PASSWORD = 'Short Password';
 
-}
+class NotAuthenticatedError extends Error {}
+
 class UnexpectedValueError extends Error {
   final ValueFailure _valueFailure;
 
@@ -10,7 +12,8 @@ class UnexpectedValueError extends Error {
 
   @override
   String toString() {
-    const explanation = 'Encountered a ValueFailure at an unrecoverable point. Terminating.';
-    return Error.safeToString('$explanation Failure was: $_valueFailure');     
+    const explanation =
+        'Encountered a ValueFailure at an unrecoverable point. Terminating.';
+    return Error.safeToString('$explanation Failure was: $_valueFailure');
   }
 }

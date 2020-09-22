@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -132,7 +133,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
                     .value
                     .fold(
                         (f) => f.maybeMap(
-                              invalidEmail: (_) => 'Invalid Email',
+                              invalidEmail: (_) => INVALID_EMAIL,
                               orElse: () => null,
                             ),
                         (_) => null),
