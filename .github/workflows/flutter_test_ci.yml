@@ -25,11 +25,14 @@ jobs:
       - run: flutter pub run build_runner build --delete-conflicting-outputs
       - run: flutter build apk
         # Step to save the APK as Artifacts
-      - name: Upload APK on Build Artifacts
-        uses: actions/upload-artifact@v1
+      - uses: actions/checkout@v2
+
+      - uses: actions/download-artifact@v2
         with:
-          name: app
-          path: app/build/outputs/apk/debug/app-debug.apk 
+          name: my-artifact
+    
+      - name: Display structure of downloaded files
+        run: ls -R 
        
   test:
     runs-on: ubuntu-latest
