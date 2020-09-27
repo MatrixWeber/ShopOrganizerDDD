@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route_annotations.dart';
+import 'package:firebase_ddd_tutorial/presentation/notes/note_form/note_form_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/notes_overview_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_creation_page.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/shop_worker_creation_page.dart';
@@ -12,6 +13,7 @@ import 'package:firebase_ddd_tutorial/presentation/splash/splash_page.dart';
     MaterialRoute(page: SplashPage, initial: true),
     MaterialRoute(page: SignInPage),
     MaterialRoute(page: NotesOverviewPage),
+    MaterialRoute(page: NoteFormPage, fullscreenDialog: true),
     MaterialRoute(page: ShopsOverviewPage),
     MaterialRoute(page: ShopsCreationPage),
     MaterialRoute(page: ShopWorkerCreationPage)
