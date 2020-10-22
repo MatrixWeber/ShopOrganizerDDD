@@ -5,8 +5,8 @@
 // **************************************************************************
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -58,20 +58,25 @@ GetIt $initGetIt(
   final gh = GetItHelper(get, environment, environmentFilter);
   final firebaseInjectableModule = _$FirebaseInjectableModule();
   gh.lazySingleton<FirebaseAuth>(() => firebaseInjectableModule.firebaseAuth);
+  gh.lazySingleton<FirebaseFirestore>(() => firebaseInjectableModule.firestore);
   gh.lazySingleton<FirebaseStorage>(
       () => firebaseInjectableModule.firebaseStorage);
-  gh.lazySingleton<Firestore>(() => firebaseInjectableModule.firestore);
   gh.lazySingleton<GoogleSignIn>(() => firebaseInjectableModule.googleSignIn);
   gh.lazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(get<FirebaseAuth>(), get<GoogleSignIn>()));
   gh.lazySingleton<IImagePicker>(() => ImagePickerImplementation());
-  gh.lazySingleton<INoteRepository>(() => NoteRepository(get<Firestore>()));
-  gh.lazySingleton<IShopRepository>(() => ShopRepository(get<Firestore>()));
-  gh.lazySingleton<ITaskRepository>(() => TaskRepository(get<Firestore>()));
-  gh.lazySingleton<IUserRepository>(() => UserRepository(get<Firestore>()));
+  gh.lazySingleton<INoteRepository>(
+      () => NoteRepository(get<FirebaseFirestore>()));
+  gh.lazySingleton<IShopRepository>(
+      () => ShopRepository(get<FirebaseFirestore>()));
+  gh.lazySingleton<ITaskRepository>(
+      () => TaskRepository(get<FirebaseFirestore>()));
+  gh.lazySingleton<IUserRepository>(
+      () => UserRepository(get<FirebaseFirestore>()));
   gh.lazySingleton<IWorkerImageStoreRepository>(
       () => WorkerImageStoreRepository(get<FirebaseStorage>()));
-  gh.lazySingleton<IWorkerRepository>(() => WorkerRepository(get<Firestore>()));
+  gh.lazySingleton<IWorkerRepository>(
+      () => WorkerRepository(get<FirebaseFirestore>()));
   gh.factory<ImagePickerBloc>(() => ImagePickerBloc(get<IImagePicker>()));
   gh.factory<NoteActorBloc>(() => NoteActorBloc(get<INoteRepository>()));
   gh.factory<NoteFormBloc>(() => NoteFormBloc(get<INoteRepository>()));

@@ -12,11 +12,11 @@ import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 
 class MockFirebaseAuth extends Mock implements FirebaseAuth {}
 
-class FirebaseUserMock extends Mock implements FirebaseUser {}
+class FirebaseUserMock extends Mock implements User {}
 
 class MockGoogleSignIn extends Mock implements GoogleSignIn {}
 
-class MockAuthResult extends Mock implements AuthResult {}
+class MockAuthResult extends Mock implements UserCredential {}
 
 class MockGoogleSignInAccount extends Mock implements GoogleSignInAccount {}
 
@@ -132,7 +132,7 @@ void main() {
             Future<MockGoogleSignInAuthentication>.value(
                 googleSignInAuthentication));
 
-        final AuthCredential credential = GoogleAuthProvider.getCredential(
+        final AuthCredential credential = GoogleAuthProvider.credential(
           idToken: '12345',
           accessToken: '6789',
         );

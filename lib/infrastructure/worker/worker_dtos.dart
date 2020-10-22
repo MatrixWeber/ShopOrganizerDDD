@@ -51,7 +51,7 @@ abstract class WorkerDto implements _$WorkerDto {
   }
 
   factory WorkerDto.fromFirestore(DocumentSnapshot doc) {
-    return WorkerDto.fromJson(doc.data).copyWith(id: doc.documentID);
+    return WorkerDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 
   factory WorkerDto.fromJson(Map<String, dynamic> json) =>

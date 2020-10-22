@@ -8,7 +8,7 @@ import 'package:firebase_ddd_tutorial/infrastructure/shops/shop_repository.dart'
 import 'package:mockito/mockito.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-class MockFirestore extends Mock implements Firestore {}
+class MockFirestore extends Mock implements FirebaseFirestore {}
 
 class MockShopRepository extends Mock implements ShopRepository {
   final MockFirestore _mockFirestore;

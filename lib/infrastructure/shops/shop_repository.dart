@@ -12,7 +12,7 @@ import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: IShopRepository)
 class ShopRepository implements IShopRepository {
-  final Firestore _firestore;
+  final FirebaseFirestore _firestore;
 
   ShopRepository(this._firestore);
 
@@ -25,7 +25,7 @@ class ShopRepository implements IShopRepository {
         .snapshots()
         .map(
           (snapshot) => right<ShopFailure, KtList<Shop>>(
-            snapshot.documents
+            snapshot.docs
                 .map((doc) => ShopDto.fromFirestore(doc).toDomian())
                 .toImmutableList(),
           ),
@@ -52,9 +52,7 @@ class ShopRepository implements IShopRepository {
       final userDoc = await _firestore.userDocument();
       final shopDto = ShopDto.fromDomain(shop);
 
-      await userDoc.shopCollection
-          .document(shopDto.id)
-          .setData(shopDto.toJson());
+      await userDoc.shopCollection.doc(shopDto.id).set(shopDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -79,9 +77,7 @@ class ShopRepository implements IShopRepository {
       final userDoc = await _firestore.userDocument();
       final shopDto = ShopDto.fromDomain(shop);
 
-      await userDoc.shopCollection
-          .document(shopDto.id)
-          .updateData(shopDto.toJson());
+      await userDoc.shopCollection.doc(shopDto.id).update(shopDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -95,7 +91,7 @@ class ShopRepository implements IShopRepository {
       final userDoc = await _firestore.userDocument();
       final shopId = shop.id.getOrCrash();
 
-      await userDoc.shopCollection.document(shopId).delete();
+      await userDoc.shopCollection.doc(shopId).delete();
 
       return right(unit);
     } on PlatformException catch (e) {

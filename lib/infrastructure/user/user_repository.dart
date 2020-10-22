@@ -10,7 +10,7 @@ import 'package:firebase_ddd_tutorial/infrastructure/core/firestore_helpers.dart
 
 @LazySingleton(as: IUserRepository)
 class UserRepository implements IUserRepository {
-  final Firestore _firestore;
+  final FirebaseFirestore _firestore;
 
   UserRepository(this._firestore);
 
@@ -20,9 +20,7 @@ class UserRepository implements IUserRepository {
       final userDoc = await _firestore.userDocument();
       final userDto = UserDto.fromDomain(user);
 
-      await userDoc.userCollection
-          .document(userDto.id)
-          .setData(userDto.toJson());
+      await userDoc.userCollection.doc(userDto.id).set(userDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -47,9 +45,7 @@ class UserRepository implements IUserRepository {
       final userDoc = await _firestore.userDocument();
       final userDto = UserDto.fromDomain(user);
 
-      await userDoc.userCollection
-          .document(userDto.id)
-          .updateData(userDto.toJson());
+      await userDoc.userCollection.doc(userDto.id).update(userDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -63,7 +59,7 @@ class UserRepository implements IUserRepository {
       final userDoc = await _firestore.userDocument();
       final userId = user.id.getOrCrash();
 
-      await userDoc.userCollection.document(userId).delete();
+      await userDoc.userCollection.doc(userId).delete();
 
       return right(unit);
     } on PlatformException catch (e) {

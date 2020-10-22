@@ -84,7 +84,7 @@ abstract class ShopDto implements _$ShopDto {
   }
 
   factory ShopDto.fromFirestore(DocumentSnapshot doc) {
-    return ShopDto.fromJson(doc.data).copyWith(id: doc.documentID);
+    return ShopDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 
   factory ShopDto.fromJson(Map<String, dynamic> json) =>

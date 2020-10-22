@@ -10,7 +10,7 @@ import 'package:firebase_ddd_tutorial/infrastructure/core/firestore_helpers.dart
 
 @LazySingleton(as: ITaskRepository)
 class TaskRepository implements ITaskRepository {
-  final Firestore _firestore;
+  final FirebaseFirestore _firestore;
 
   TaskRepository(this._firestore);
 
@@ -20,9 +20,7 @@ class TaskRepository implements ITaskRepository {
       final userDoc = await _firestore.userDocument();
       final taskDto = TaskDto.fromDomain(task);
 
-      await userDoc.taskCollection
-          .document(taskDto.id)
-          .setData(taskDto.toJson());
+      await userDoc.taskCollection.doc(taskDto.id).set(taskDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -48,9 +46,7 @@ class TaskRepository implements ITaskRepository {
       final userDoc = await _firestore.userDocument();
       final taskDto = TaskDto.fromDomain(taskDescription);
 
-      await userDoc.taskCollection
-          .document(taskDto.id)
-          .updateData(taskDto.toJson());
+      await userDoc.taskCollection.doc(taskDto.id).update(taskDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -65,7 +61,7 @@ class TaskRepository implements ITaskRepository {
       final userDoc = await _firestore.userDocument();
       final taskId = taskDescription.id.getOrCrash();
 
-      await userDoc.taskCollection.document(taskId).delete();
+      await userDoc.taskCollection.doc(taskId).delete();
 
       return right(unit);
     } on PlatformException catch (e) {

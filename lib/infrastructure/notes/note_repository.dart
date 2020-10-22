@@ -4,7 +4,6 @@ import 'package:firebase_ddd_tutorial/domain/notes/i_note_repository.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/notes/note_dtos.dart';
 import 'package:firebase_ddd_tutorial/domain/notes/note_failure.dart';
 import 'package:firebase_ddd_tutorial/domain/notes/note.dart';
-import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firestore_helpers.dart';
 import 'package:kt_dart/kt.dart';
@@ -12,7 +11,7 @@ import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: INoteRepository)
 class NoteRepository implements INoteRepository {
-  final Firestore _firestore;
+  final FirebaseFirestore _firestore;
 
   NoteRepository(this._firestore);
 
@@ -25,7 +24,7 @@ class NoteRepository implements INoteRepository {
         .snapshots()
         .map(
           (snapshot) => right<NoteFailure, KtList<Note>>(
-            snapshot.documents
+            snapshot.docs
                 .map((doc) => NoteDto.fromFirestore(doc).toDomian())
                 .toImmutableList(),
           ),
@@ -44,8 +43,8 @@ class NoteRepository implements INoteRepository {
         .orderBy('serverTimeStamp', descending: true)
         .snapshots()
         .map(
-          (snapshot) => snapshot.documents
-              .map((doc) => NoteDto.fromFirestore(doc).toDomian()),
+          (snapshot) =>
+              snapshot.docs.map((doc) => NoteDto.fromFirestore(doc).toDomian()),
         )
         .map((notes) => right<NoteFailure, KtList<Note>>(
               notes
@@ -61,7 +60,7 @@ class NoteRepository implements INoteRepository {
 
   Either<NoteFailure, KtList<Note>>
       _checkIfPlatformExceptionAndHandleInsufficientPermissionAndUnexpected(e) {
-    if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+    if (e is FirebaseException && e.message.contains('PERMISSION_DENIED')) {
       return left(const NoteFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
@@ -75,19 +74,17 @@ class NoteRepository implements INoteRepository {
       final userDoc = await _firestore.userDocument();
       final noteDto = NoteDto.fromDomain(note);
 
-      await userDoc.noteCollection
-          .document(noteDto.id)
-          .setData(noteDto.toJson());
+      await userDoc.noteCollection.doc(noteDto.id).set(noteDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handleInsufficientPermissionAndUnexpectedPlatformException(e);
     }
   }
 
   Either<NoteFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
-          PlatformException e) {
+          FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const NoteFailure.insufficientPermissions());
     } else {
@@ -102,12 +99,10 @@ class NoteRepository implements INoteRepository {
       final userDoc = await _firestore.userDocument();
       final noteDto = NoteDto.fromDomain(note);
 
-      await userDoc.noteCollection
-          .document(noteDto.id)
-          .updateData(noteDto.toJson());
+      await userDoc.noteCollection.doc(noteDto.id).update(noteDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
@@ -118,15 +113,15 @@ class NoteRepository implements INoteRepository {
       final userDoc = await _firestore.userDocument();
       final noteId = note.id.getOrCrash();
 
-      await userDoc.noteCollection.document(noteId).delete();
+      await userDoc.noteCollection.doc(noteId).delete();
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
 
-  Either<NoteFailure, Unit> _handlePlatformExceptions(PlatformException e) {
+  Either<NoteFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const NoteFailure.insufficientPermissions());
     } else if (e.message.contains('NOT_FOUND')) {

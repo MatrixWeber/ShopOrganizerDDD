@@ -19,7 +19,7 @@ class MockGoogleSignInAccount extends Mock implements GoogleSignInAccount {}
 
 class MockUserInfo extends Mock implements UserInfo {}
 
-class MockFirebaseUser extends Mock implements FirebaseUser {}
+class MockFirebaseUser extends Mock implements User {}
 
 void main() {
   AuthBloc bloc;
@@ -28,7 +28,6 @@ void main() {
   IAuthFacade mockAuthFacade;
   MockFirebaseUser mockFirebaseUser;
   MockGoogleSignInAccount mockGoogleSignInAccount;
-  // MockUserInfo mockUserInfo;
   BehaviorSubject<MockFirebaseUser> user;
 
   setUp(() {
@@ -39,7 +38,7 @@ void main() {
     mockFirebaseUser = MockFirebaseUser();
     user = BehaviorSubject<MockFirebaseUser>();
     mockGoogleSignInAccount = MockGoogleSignInAccount();
-    when(mockFirebaseAuth.onAuthStateChanged).thenAnswer((_) => user);
+    when(mockFirebaseAuth.authStateChanges()).thenAnswer((_) => user);
   });
 
   test('initial state should be Initial', () {
@@ -72,17 +71,17 @@ void main() {
         'should call the getSignedInUser() when AuthCheckRequested event was added to the bloc',
         () async {
       // arrange
-      when(mockFirebaseAuth.currentUser()).thenAnswer((_) async {
+      when(mockFirebaseAuth.currentUser).thenAnswer((_) {
         user.add(mockFirebaseUser);
-        return Future.value(MockAuthResult().user);
+        return MockAuthResult().user;
       });
       final expected = [const Unauthenticated()];
       expectLater(bloc, emitsInOrder(expected));
       // act
       bloc.add(const AuthCheckRequested());
-      await untilCalled(mockFirebaseAuth.currentUser());
+      await untilCalled(mockFirebaseAuth.currentUser);
       // assert
-      verify(mockFirebaseAuth.currentUser());
+      verify(mockFirebaseAuth.currentUser);
     });
   });
 }

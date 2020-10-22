@@ -12,7 +12,7 @@ import 'package:rxdart/rxdart.dart';
 
 @LazySingleton(as: IWorkerRepository)
 class WorkerRepository implements IWorkerRepository {
-  final Firestore _firestore;
+  final FirebaseFirestore _firestore;
 
   WorkerRepository(this._firestore);
 
@@ -25,7 +25,7 @@ class WorkerRepository implements IWorkerRepository {
         .snapshots()
         .map(
           (snapshot) => right<WorkerFailure, KtList<Worker>>(
-            snapshot.documents
+            snapshot.docs
                 .map((doc) => WorkerDto.fromFirestore(doc).toDomian())
                 .toImmutableList(),
           ),
@@ -53,10 +53,10 @@ class WorkerRepository implements IWorkerRepository {
       final workerDto = WorkerDto.fromDomain(worker);
 
       await workerDoc.shopCollection
-          .document(workerDto.parentId)
+          .doc(workerDto.parentId)
           .workerCollection
-          .document(workerDto.id)
-          .setData(workerDto.toJson());
+          .doc(workerDto.id)
+          .set(workerDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -82,10 +82,10 @@ class WorkerRepository implements IWorkerRepository {
       final workerDto = WorkerDto.fromDomain(worker);
 
       await workerDoc.shopCollection
-          .document()
+          .doc()
           .workerCollection
-          .document(workerDto.id)
-          .updateData(workerDto.toJson());
+          .doc(workerDto.id)
+          .update(workerDto.toJson());
 
       return right(unit);
     } on PlatformException catch (e) {
@@ -100,9 +100,9 @@ class WorkerRepository implements IWorkerRepository {
       final workerId = worker.id.getOrCrash();
 
       await workerDoc.shopCollection
-          .document()
+          .doc()
           .workerCollection
-          .document(workerId)
+          .doc(workerId)
           .delete();
 
       return right(unit);

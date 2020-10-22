@@ -42,7 +42,7 @@ abstract class TaskDto implements _$TaskDto {
   }
 
   factory TaskDto.fromFirestore(DocumentSnapshot doc) {
-    return TaskDto.fromJson(doc.data).copyWith(id: doc.documentID);
+    return TaskDto.fromJson(doc.data()).copyWith(id: doc.id);
   }
 
   factory TaskDto.fromJson(Map<String, dynamic> json) =>
