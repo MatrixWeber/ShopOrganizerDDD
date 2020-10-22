@@ -60,7 +60,7 @@ void main() {
         expect(result, right(unit));
       });
       test(
-          'should return left(AuthFailure.invalidEmailAndPasswordCombination()) when throws PlatformException ERROR_USER_NOT_FOUND',
+          'should return left(AuthFailure.invalidEmailAndPasswordCombination()) when throws FirebaseException ERROR_USER_NOT_FOUND',
           () async {
         // arrange
         const emailStr = 'abc@freenet.de';
@@ -69,7 +69,7 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(PlatformException(code: ERROR_USER_NOT_FOUND));
+            .thenThrow(FirebaseException(code: ERROR_USER_NOT_FOUND));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -81,7 +81,7 @@ void main() {
       });
 
       test(
-          'should return left(AuthFailure.invalidEmailAndPasswordCombination()) when throws PlatformException ERROR_WRONG_PASSWORD',
+          'should return left(AuthFailure.invalidEmailAndPasswordCombination()) when throws FirebaseException ERROR_WRONG_PASSWORD',
           () async {
         // arrange
         const emailStr = 'abc@freenet.de';
@@ -90,7 +90,7 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(PlatformException(code: ERROR_WRONG_PASSWORD));
+            .thenThrow(FirebaseException(code: ERROR_WRONG_PASSWORD));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -102,7 +102,7 @@ void main() {
       });
 
       test(
-          'should return left(AuthFailure.serverError()) when throws PlatformException ERROR_EMAIL_ALREADY_IN_USE',
+          'should return left(AuthFailure.serverError()) when throws FirebaseException ERROR_EMAIL_ALREADY_IN_USE',
           () async {
         // arrange
         const emailStr = 'abc@freenet.de';
@@ -111,7 +111,7 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(PlatformException(code: ERROR_EMAIL_ALREADY_IN_USE));
+            .thenThrow(FirebaseException(code: ERROR_EMAIL_ALREADY_IN_USE));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -186,7 +186,7 @@ void main() {
     });
 
     test(
-        'should return left(const AuthFailure.emailAlreadyInUse()) when registering throws ERROR_EMAIL_ALREADY_IN_USE PlatformException',
+        'should return left(const AuthFailure.emailAlreadyInUse()) when registering throws ERROR_EMAIL_ALREADY_IN_USE FirebaseException',
         () async {
       // arrange
       const emailStr = 'abc@freenet.de';
@@ -195,7 +195,7 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(PlatformException(code: ERROR_EMAIL_ALREADY_IN_USE));
+          .thenThrow(FirebaseException(code: ERROR_EMAIL_ALREADY_IN_USE));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
@@ -204,7 +204,7 @@ void main() {
     });
 
     test(
-        'should return left(const AuthFailure.serverError()) when registering throws any PlatformException',
+        'should return left(const AuthFailure.serverError()) when registering throws any FirebaseException',
         () async {
       // arrange
       const emailStr = 'abc@freenet.de';
@@ -213,7 +213,7 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(PlatformException(code: 'any'));
+          .thenThrow(FirebaseException(code: 'any'));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);

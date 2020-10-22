@@ -23,7 +23,7 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
           await _firebaseStorage.getReferenceFromUrl(imageUrl);
       await storegeReference.delete();
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return left(_handlePlatformExceptions(e));
     }
   }
@@ -75,12 +75,12 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       //   return Future.error('');
       // });
       // streamSubscription.cancel();
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       // yield left(_handlePlatformExceptions(e));
     }
   }
 
-  WorkerFailure _handlePlatformExceptions(PlatformException e) {
+  WorkerFailure _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return const WorkerFailure.insufficientPermissions();
     } else if (e.message.contains('NOT_FOUND')) {
@@ -114,7 +114,7 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
 //       await uploadTask.onComplete;
 //       streamSubscription.cancel();
 //       return right(unit);
-//     } on PlatformException catch (e) {
+//     } on FirebaseException catch (e) {
 //       return _handlePlatformExceptions(e);
 //     }
 //   }

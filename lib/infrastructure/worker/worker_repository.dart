@@ -38,7 +38,7 @@ class WorkerRepository implements IWorkerRepository {
 
   Either<WorkerFailure, KtList<Worker>>
       _checkIfPlatformExceptionAndHandleInsufficientPermissionAndUnexpected(e) {
-    if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+    if (e is FirebaseException && e.message.contains('PERMISSION_DENIED')) {
       return left(const WorkerFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
@@ -59,14 +59,14 @@ class WorkerRepository implements IWorkerRepository {
           .set(workerDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handleInsufficientPermissionAndUnexpectedPlatformException(e);
     }
   }
 
   Either<WorkerFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
-          PlatformException e) {
+          FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const WorkerFailure.insufficientPermissions());
     } else {
@@ -88,7 +88,7 @@ class WorkerRepository implements IWorkerRepository {
           .update(workerDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
@@ -106,12 +106,12 @@ class WorkerRepository implements IWorkerRepository {
           .delete();
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
 
-  Either<WorkerFailure, Unit> _handlePlatformExceptions(PlatformException e) {
+  Either<WorkerFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const WorkerFailure.insufficientPermissions());
     } else if (e.message.contains('NOT_FOUND')) {

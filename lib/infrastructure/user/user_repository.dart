@@ -23,14 +23,14 @@ class UserRepository implements IUserRepository {
       await userDoc.userCollection.doc(userDto.id).set(userDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handleInsufficientPermissionAndUnexpectedPlatformException(e);
     }
   }
 
   Either<UserFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
-          PlatformException e) {
+          FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const UserFailure.insufficientPermissions());
     } else {
@@ -48,7 +48,7 @@ class UserRepository implements IUserRepository {
       await userDoc.userCollection.doc(userDto.id).update(userDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
@@ -62,12 +62,12 @@ class UserRepository implements IUserRepository {
       await userDoc.userCollection.doc(userId).delete();
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
 
-  Either<UserFailure, Unit> _handlePlatformExceptions(PlatformException e) {
+  Either<UserFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const UserFailure.insufficientPermissions());
     } else if (e.message.contains('NOT_FOUND')) {

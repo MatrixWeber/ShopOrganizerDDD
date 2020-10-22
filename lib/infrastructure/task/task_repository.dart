@@ -23,14 +23,14 @@ class TaskRepository implements ITaskRepository {
       await userDoc.taskCollection.doc(taskDto.id).set(taskDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handleInsufficientPermissionAndUnexpectedPlatformException(e);
     }
   }
 
   Either<TaskFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
-          PlatformException e) {
+          FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const TaskFailure.insufficientPermissions());
     } else {
@@ -49,7 +49,7 @@ class TaskRepository implements ITaskRepository {
       await userDoc.taskCollection.doc(taskDto.id).update(taskDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
@@ -64,12 +64,12 @@ class TaskRepository implements ITaskRepository {
       await userDoc.taskCollection.doc(taskId).delete();
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
 
-  Either<TaskFailure, Unit> _handlePlatformExceptions(PlatformException e) {
+  Either<TaskFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const TaskFailure.insufficientPermissions());
     } else if (e.message.contains('NOT_FOUND')) {

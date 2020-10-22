@@ -38,7 +38,7 @@ class ShopRepository implements IShopRepository {
 
   Either<ShopFailure, KtList<Shop>>
       _checkIfPlatformExceptionAndHandleInsufficientPermissionAndUnexpected(e) {
-    if (e is PlatformException && e.message.contains('PERMISSION_DENIED')) {
+    if (e is FirebaseException && e.message.contains('PERMISSION_DENIED')) {
       return left(const ShopFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
@@ -55,14 +55,14 @@ class ShopRepository implements IShopRepository {
       await userDoc.shopCollection.doc(shopDto.id).set(shopDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handleInsufficientPermissionAndUnexpectedPlatformException(e);
     }
   }
 
   Either<ShopFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
-          PlatformException e) {
+          FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const ShopFailure.insufficientPermissions());
     } else {
@@ -80,7 +80,7 @@ class ShopRepository implements IShopRepository {
       await userDoc.shopCollection.doc(shopDto.id).update(shopDto.toJson());
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
@@ -94,12 +94,12 @@ class ShopRepository implements IShopRepository {
       await userDoc.shopCollection.doc(shopId).delete();
 
       return right(unit);
-    } on PlatformException catch (e) {
+    } on FirebaseException catch (e) {
       return _handlePlatformExceptions(e);
     }
   }
 
-  Either<ShopFailure, Unit> _handlePlatformExceptions(PlatformException e) {
+  Either<ShopFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
     if (e.message.contains('PERMISSION_DENIED')) {
       return left(const ShopFailure.insufficientPermissions());
     } else if (e.message.contains('NOT_FOUND')) {
