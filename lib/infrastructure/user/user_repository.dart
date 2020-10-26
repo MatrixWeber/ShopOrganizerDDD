@@ -4,7 +4,6 @@ import 'package:firebase_ddd_tutorial/domain/user/i_user_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/user/user.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/user/user_dtos.dart';
 import 'package:firebase_ddd_tutorial/domain/user/user_failure.dart';
-import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firestore_helpers.dart';
 

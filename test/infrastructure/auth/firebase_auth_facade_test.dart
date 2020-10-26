@@ -4,7 +4,7 @@ import 'package:firebase_ddd_tutorial/domain/auth/auth_failure.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_auth_facade.dart';
-import 'package:flutter/services.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -69,7 +69,10 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(code: ERROR_USER_NOT_FOUND));
+            .thenThrow(FirebaseException(
+                code: ERROR_USER_NOT_FOUND,
+                message: 'If user not registered',
+                plugin: 'user not there'));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -90,7 +93,10 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(code: ERROR_WRONG_PASSWORD));
+            .thenThrow(FirebaseException(
+                code: ERROR_WRONG_PASSWORD,
+                message: 'If user entered wrong password',
+                plugin: 'user wrong password'));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -111,7 +117,10 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(code: ERROR_EMAIL_ALREADY_IN_USE));
+            .thenThrow(FirebaseException(
+                code: ERROR_EMAIL_ALREADY_IN_USE,
+                message: 'If email already in use',
+                plugin: 'email in use'));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -195,7 +204,10 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(FirebaseException(code: ERROR_EMAIL_ALREADY_IN_USE));
+          .thenThrow(FirebaseException(
+              code: ERROR_EMAIL_ALREADY_IN_USE,
+              message: 'If email already in use',
+              plugin: 'email in use'));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
@@ -213,7 +225,8 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(FirebaseException(code: 'any'));
+          .thenThrow(FirebaseException(
+              code: 'any', message: 'any other failure', plugin: 'other'));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
