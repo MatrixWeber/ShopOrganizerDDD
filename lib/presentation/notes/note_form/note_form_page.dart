@@ -6,6 +6,7 @@ import 'package:firebase_ddd_tutorial/injection.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/note_form/misc/todo_item_presentation_classes.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/note_form/widgets/add_todo_tile.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/note_form/widgets/body_field_widget.dart';
+import 'package:firebase_ddd_tutorial/presentation/notes/note_form/widgets/todo_list_widget.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -137,6 +138,7 @@ class NoteFormPageScaffold extends StatelessWidget {
                 children: [
                   const BodyField(),
                   const ColorField(),
+                  const TodoList(),
                   const AddTodoTile(),
                 ],
               )),

@@ -225,11 +225,15 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(FirebaseException(
+          .thenAnswer((_) => throw FirebaseException(
               code: 'any', message: 'any other failure', plugin: 'other'));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
+      // expect(
+      //     () => authFacade.registerWithEmailAndPassword(
+      //         emailAddress: email, password: password),
+      //     left(const AuthFailure.serverError()));
       // assert
       expect(result, left(const AuthFailure.serverError()));
     });

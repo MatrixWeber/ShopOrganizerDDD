@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ddd_tutorial/application/auth/sign_in_form/bloc/sign_in_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
@@ -26,7 +27,9 @@ class FirebaseAuthFacadeMock extends Mock implements FirebaseAuthFacade {
   FirebaseAuthFacadeMock(this.mockFirebaseAuth, this.mockGoogleSignIn);
 }
 
-void main() {
+Future<void> main() async {
+  TestWidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   final _firebaseAuth = MockFirebaseAuth();
   final _googleSignIn = MockGoogleSignIn();
   final IAuthFacade _authFacade =
