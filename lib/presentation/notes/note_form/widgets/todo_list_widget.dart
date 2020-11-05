@@ -5,6 +5,7 @@ import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:kt_dart/collection.dart';
 import 'package:provider/provider.dart';
 
 class TodoList extends StatelessWidget {
@@ -49,9 +50,19 @@ class TodoTile extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final todo = context.formTodos[index];
+    final todo =
+        context.formTodos.getOrElse(index, (_) => TodoItemPrimitive.empty());
     return ListTile(
-      leading: Checkbox(value: true, onChanged: (value) {}),
+      leading: Checkbox(
+          value: todo.done,
+          onChanged: (value) {
+            context.formTodos = context.formTodos.map(
+              (listTodos) =>
+                  listTodos == todo ? todo.copyWith(done: value) : listTodos,
+            );
+            context.bloc<NoteFormBloc>()
+              .add(NoteFormEvent.todosChanged(context.formTodos));
+          }),
     );
   }
 }
