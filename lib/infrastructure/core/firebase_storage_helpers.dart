@@ -5,17 +5,20 @@ import 'package:firebase_storage/firebase_storage.dart';
 import '../../injection.dart';
 
 extension FirebaseStorageX on FirebaseStorage {
-  Future<StorageReference> userDocument() async {
+  Future<Reference> userDocument() async {
     final userOption = await getIt<IAuthFacade>().getSignedInUser();
     final user = userOption.getOrElse(() => throw NotAuthenticatedError());
-    return FirebaseStorage().ref().child('user').child(user.id.getOrCrash());
+    return FirebaseStorage.instance
+        .ref()
+        .child('user')
+        .child(user.id.getOrCrash());
   }
 }
 
-extension StorageReferenceShops on StorageReference {
+extension StorageReferenceShops on Reference {
   String get shopsCollection => 'shops';
 }
 
-extension StorageReferenceWorker on StorageReference {
+extension StorageReferenceWorker on Reference {
   String get workerCollection => 'worker';
 }

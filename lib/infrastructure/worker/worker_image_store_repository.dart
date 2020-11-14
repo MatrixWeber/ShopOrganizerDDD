@@ -19,8 +19,7 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   @override
   Future<Either<WorkerFailure, Unit>> deleteImage(String imageUrl) async {
     try {
-      final storegeReference =
-          await _firebaseStorage.getReferenceFromUrl(imageUrl);
+      final storegeReference = _firebaseStorage.refFromURL(imageUrl);
       await storegeReference.delete();
       return right(unit);
     } on FirebaseException catch (e) {
@@ -57,12 +56,12 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       //   print('EVENT ${event.type}');
       // });
 // Cancel your subscription when done.
-      final uploadSnapshot = await uploadTask.onComplete;
-      final uploadError = uploadSnapshot.error;
+      final uploadSnapshot = await uploadTask;
+//      final uploadError = uploadSnapshot.error;
       final downLoadUrl = await uploadSnapshot.ref.getDownloadURL();
-      if (uploadError == null) {
-        yield right<None, ImageUrl>(ImageUrl(downLoadUrl.toString()));
-      }
+      //if (uploadError == null) {
+      yield right<None, ImageUrl>(ImageUrl(downLoadUrl.toString()));
+      //}
       // yield* uploadTask.onComplete.then((value) {
       //   if (value.error == null) {
       //     value.ref.getDownloadURL().then((downloadUrl) {
