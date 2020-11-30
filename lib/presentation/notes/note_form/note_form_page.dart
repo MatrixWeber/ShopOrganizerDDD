@@ -121,7 +121,7 @@ class NoteFormPageScaffold extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.check),
             onPressed: () {
-              context.bloc<NoteFormBloc>().add(const NoteFormEvent.saved());
+              context.read<NoteFormBloc>().add(const NoteFormEvent.saved());
             },
           )
         ],
@@ -132,7 +132,7 @@ class NoteFormPageScaffold extends StatelessWidget {
           return ChangeNotifierProvider(
             create: (_) => FormTodos(),
             child: Form(
-              autovalidate: state.showErrorMessage,
+              autovalidateMode: AutovalidateMode.onUserInteraction,
               child: SingleChildScrollView(
                   child: Column(
                 children: [

@@ -77,9 +77,9 @@ class ImageWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        final imagePickerBloc = context.bloc<ImagePickerBloc>();
+        final imagePickerBloc = context.read<ImagePickerBloc>();
         imagePickerBloc.add(const ImagePickerEvent.initialized());
-        final workerImageHandlerBloc = context.bloc<WorkerImageHandlerBloc>();
+        final workerImageHandlerBloc = context.read<WorkerImageHandlerBloc>();
         _showChoiseDialog(context, imagePickerBloc, workerImageHandlerBloc);
       },
       child: decideImageView(image, percent),
@@ -125,7 +125,7 @@ class ImageWidget extends StatelessWidget {
                   GestureDetector(
                     onTap: () => workerImageHandlerBloc.add(
                         WorkerImageHandlerEvent.imageDeleted(context
-                            .bloc<WorkerFormBloc>()
+                            .read<WorkerFormBloc>()
                             .state
                             .worker
                             .imageUrl

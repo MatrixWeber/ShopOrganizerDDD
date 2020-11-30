@@ -4,7 +4,6 @@ import 'package:test/test.dart';
 
 // import 'package:flutter_test/flutter_test.dart';
 // import 'package:flushbar/flushbar_helper.dart';
-@Timeout(Duration(seconds: 45))
 void main() {
   group('FlutterAuthSignInTestPage', () {
     final emailField = find.byValueKey('email-field');

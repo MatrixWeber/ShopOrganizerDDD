@@ -96,62 +96,62 @@ const $UserFormEvent = _$UserFormEventTearOff();
 /// @nodoc
 mixin _$UserFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   });
 }
 
@@ -235,18 +235,18 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -264,19 +264,19 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -287,18 +287,18 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -316,19 +316,19 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -403,18 +403,18 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -432,19 +432,19 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -455,18 +455,18 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -484,19 +484,19 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -573,18 +573,18 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -602,19 +602,19 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (firstNameChanged != null) {
@@ -625,18 +625,18 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -654,19 +654,19 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (firstNameChanged != null) {
@@ -741,18 +741,18 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -770,19 +770,19 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -793,18 +793,18 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -822,19 +822,19 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -910,18 +910,18 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -939,19 +939,19 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -962,18 +962,18 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -991,19 +991,19 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -1080,18 +1080,18 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1109,19 +1109,19 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1132,18 +1132,18 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1161,19 +1161,19 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1249,18 +1249,18 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1278,19 +1278,19 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (streetChanged != null) {
@@ -1301,18 +1301,18 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1330,19 +1330,19 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (streetChanged != null) {
@@ -1419,18 +1419,18 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1448,19 +1448,19 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (houseNumberChanged != null) {
@@ -1471,18 +1471,18 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1500,19 +1500,19 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (houseNumberChanged != null) {
@@ -1586,18 +1586,18 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1615,19 +1615,19 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (zipChanged != null) {
@@ -1638,18 +1638,18 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1667,19 +1667,19 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (zipChanged != null) {
@@ -1754,18 +1754,18 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1783,19 +1783,19 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cityChanged != null) {
@@ -1806,18 +1806,18 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1835,19 +1835,19 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cityChanged != null) {
@@ -1899,18 +1899,18 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<User> initialUserOption),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<User> initialUserOption),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1928,19 +1928,19 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<User> initialUserOption),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<User> initialUserOption),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -1951,18 +1951,18 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1980,19 +1980,19 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {

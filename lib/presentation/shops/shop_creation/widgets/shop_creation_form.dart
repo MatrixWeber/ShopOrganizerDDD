@@ -35,7 +35,7 @@ class ShopCreationForm extends StatelessWidget {
               }));
     }, builder: (context, state) {
       return Form(
-        autovalidate: state.showErrorMessage,
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         child: ListView(
           padding: const EdgeInsets.all(_PADDING),
           children: <Widget>[
@@ -58,10 +58,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('name-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.nameChanged(value)),
               validator: (_) =>
-                  context.bloc<ShopFormBloc>().state.shop.name.value.fold(
+                  context.read<ShopFormBloc>().state.shop.name.value.fold(
                       (f) => f.maybeMap(
                             empty: (_) => 'Name cannot be empty',
                             exceedingLength: (_) => 'Invalid Name',
@@ -81,10 +81,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('keeper-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.keeperChanged(value)),
               validator: (_) =>
-                  context.bloc<ShopFormBloc>().state.shop.keeper.value.fold(
+                  context.read<ShopFormBloc>().state.shop.keeper.value.fold(
                       (f) => f.maybeMap(
                             empty: (_) => 'Keeper Name cannot be empty',
                             exceedingLength: (_) => 'Invalid Keeper Name',
@@ -104,10 +104,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('email-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.emailChanged(value)),
               validator: (_) =>
-                  context.bloc<ShopFormBloc>().state.shop.email.value.fold(
+                  context.read<ShopFormBloc>().state.shop.email.value.fold(
                       (f) => f.maybeMap(
                             invalidEmail: (_) => INVALID_EMAIL,
                             orElse: () => null,
@@ -126,10 +126,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('phone-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.phoneNumberChanged(value)),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .phoneNumber
@@ -154,10 +154,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('city-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.cityChanged(value)),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .address
@@ -183,10 +183,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('street-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.streetChanged(value)),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .address
@@ -212,10 +212,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('zip-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.zipChanged(value)),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .address
@@ -241,10 +241,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('house-number-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.houseNumberChanged(value)),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .address
@@ -269,10 +269,10 @@ class ShopCreationForm extends StatelessWidget {
             TextFormField(
               key: const Key('number-of-worker-field'),
               onChanged: (value) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .add(ShopFormEvent.numberOfWorkersChanged(int.parse(value))),
               validator: (_) => context
-                  .bloc<ShopFormBloc>()
+                  .read<ShopFormBloc>()
                   .state
                   .shop
                   .numberOfWorkers
@@ -295,7 +295,7 @@ class ShopCreationForm extends StatelessWidget {
             ),
             RaisedButton(
               onPressed: () =>
-                  context.bloc<ShopFormBloc>().add(const ShopFormEvent.saved()),
+                  context.read<ShopFormBloc>().add(const ShopFormEvent.saved()),
               child: const Text('Add some worker',
                   style: TextStyle(fontSize: _TF_SIZE)),
             ),

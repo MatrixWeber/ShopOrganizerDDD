@@ -57,7 +57,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
       },
       builder: (BuildContext context, WorkerFormState state) {
         return Form(
-          autovalidate: context.bloc<WorkerFormBloc>().state.showErrorMessage,
+          autovalidate: context.read<WorkerFormBloc>().state.showErrorMessage,
           child: ListView(
             padding: const EdgeInsets.all(_PADDING),
             children: <Widget>[
@@ -76,7 +76,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
                     loadSuccess: (state) {
                       Navigator.of(context).pop();
                       _image = state.image;
-                      context.bloc<WorkerImageHandlerBloc>().add(
+                      context.read<WorkerImageHandlerBloc>().add(
                           WorkerImageHandlerEvent.uploadImageStarted(_image));
                     },
                     orElse: () {});
@@ -96,10 +96,10 @@ class ShopWorkerCreationForm extends StatelessWidget {
               TextFormField(
                 key: const Key('name-field'),
                 onChanged: (value) => context
-                    .bloc<WorkerFormBloc>()
+                    .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.nameChanged(value)),
                 validator: (_) =>
-                    context.bloc<WorkerFormBloc>().state.worker.name.value.fold(
+                    context.read<WorkerFormBloc>().state.worker.name.value.fold(
                         (f) => f.maybeMap(
                               empty: (_) => 'Name cannot be empty',
                               exceedingLength: (_) => 'Invalid Name Length',
@@ -121,10 +121,10 @@ class ShopWorkerCreationForm extends StatelessWidget {
               TextFormField(
                 key: const Key('email-field'),
                 onChanged: (value) => context
-                    .bloc<WorkerFormBloc>()
+                    .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.emailChanged(value)),
                 validator: (_) => context
-                    .bloc<WorkerFormBloc>()
+                    .read<WorkerFormBloc>()
                     .state
                     .worker
                     .email
@@ -148,10 +148,10 @@ class ShopWorkerCreationForm extends StatelessWidget {
               TextFormField(
                 key: const Key('phone-field'),
                 onChanged: (value) => context
-                    .bloc<WorkerFormBloc>()
+                    .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.phoneNumberChanged(value)),
                 validator: (_) => context
-                    .bloc<WorkerFormBloc>()
+                    .read<WorkerFormBloc>()
                     .state
                     .worker
                     .phoneNumber
@@ -177,7 +177,7 @@ class ShopWorkerCreationForm extends StatelessWidget {
               RaisedButton(
                 onPressed: () {
                   context
-                      .bloc<WorkerFormBloc>()
+                      .read<WorkerFormBloc>()
                       .state
                       .worker
                       .imageUrl
@@ -205,16 +205,16 @@ class ShopWorkerCreationForm extends StatelessWidget {
     BuildContext context,
   ) {
     context
-        .bloc<WorkerFormBloc>()
+        .read<WorkerFormBloc>()
         .add(WorkerFormEvent.parentIdChanged(parentShopId));
-    context.bloc<WorkerFormBloc>().add(const WorkerFormEvent.saved());
+    context.read<WorkerFormBloc>().add(const WorkerFormEvent.saved());
   }
 
   void _updateImageUrlToNone(
     BuildContext context,
   ) {
     context
-        .bloc<WorkerFormBloc>()
+        .read<WorkerFormBloc>()
         .add(const WorkerFormEvent.imageUrlChanged('None'));
     _saveData(context);
   }

@@ -4,7 +4,6 @@ import 'package:firebase_ddd_tutorial/domain/shops/i_shop_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/shops/shop_dtos.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop_failure.dart';
-import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firestore_helpers.dart';
 import 'package:kt_dart/kt.dart';

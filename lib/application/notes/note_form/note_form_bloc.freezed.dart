@@ -54,38 +54,38 @@ const $NoteFormEvent = _$NoteFormEventTearOff();
 /// @nodoc
 mixin _$NoteFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   });
 }
 
@@ -169,12 +169,12 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -186,13 +186,13 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -203,12 +203,12 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -220,13 +220,13 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -301,12 +301,12 @@ class _$_BodyChanged implements _BodyChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -318,13 +318,13 @@ class _$_BodyChanged implements _BodyChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (bodyChanged != null) {
@@ -335,12 +335,12 @@ class _$_BodyChanged implements _BodyChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -352,13 +352,13 @@ class _$_BodyChanged implements _BodyChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (bodyChanged != null) {
@@ -434,12 +434,12 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -451,13 +451,13 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (colorChanged != null) {
@@ -468,12 +468,12 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -485,13 +485,13 @@ class _$_ColorChanged implements _ColorChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (colorChanged != null) {
@@ -567,12 +567,12 @@ class _$_TodosChanged implements _TodosChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -584,13 +584,13 @@ class _$_TodosChanged implements _TodosChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (todosChanged != null) {
@@ -601,12 +601,12 @@ class _$_TodosChanged implements _TodosChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -618,13 +618,13 @@ class _$_TodosChanged implements _TodosChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (todosChanged != null) {
@@ -677,12 +677,12 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Note> initialNoteOption),
-    @required Result bodyChanged(String bodyStr),
-    @required Result colorChanged(Color color),
-    @required Result todosChanged(KtList<TodoItemPrimitive> todos),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Note> initialNoteOption),
+    @required TResult bodyChanged(String bodyStr),
+    @required TResult colorChanged(Color color),
+    @required TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -694,13 +694,13 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Note> initialNoteOption),
-    Result bodyChanged(String bodyStr),
-    Result colorChanged(Color color),
-    Result todosChanged(KtList<TodoItemPrimitive> todos),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Note> initialNoteOption),
+    TResult bodyChanged(String bodyStr),
+    TResult colorChanged(Color color),
+    TResult todosChanged(KtList<TodoItemPrimitive> todos),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -711,12 +711,12 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(_Initialized value),
-    @required Result bodyChanged(_BodyChanged value),
-    @required Result colorChanged(_ColorChanged value),
-    @required Result todosChanged(_TodosChanged value),
-    @required Result saved(_Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(_Initialized value),
+    @required TResult bodyChanged(_BodyChanged value),
+    @required TResult colorChanged(_ColorChanged value),
+    @required TResult todosChanged(_TodosChanged value),
+    @required TResult saved(_Saved value),
   }) {
     assert(initialized != null);
     assert(bodyChanged != null);
@@ -728,13 +728,13 @@ class _$_Saved implements _Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(_Initialized value),
-    Result bodyChanged(_BodyChanged value),
-    Result colorChanged(_ColorChanged value),
-    Result todosChanged(_TodosChanged value),
-    Result saved(_Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(_Initialized value),
+    TResult bodyChanged(_BodyChanged value),
+    TResult colorChanged(_ColorChanged value),
+    TResult todosChanged(_TodosChanged value),
+    TResult saved(_Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {

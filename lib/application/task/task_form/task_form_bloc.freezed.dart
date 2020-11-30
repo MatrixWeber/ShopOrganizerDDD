@@ -54,38 +54,38 @@ const $TaskFormEvent = _$TaskFormEventTearOff();
 /// @nodoc
 mixin _$TaskFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   });
 }
 
@@ -169,12 +169,12 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -186,13 +186,13 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -203,12 +203,12 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -220,13 +220,13 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -304,12 +304,12 @@ class _$TaskNameChanged implements TaskNameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -321,13 +321,13 @@ class _$TaskNameChanged implements TaskNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (taskNameChanged != null) {
@@ -338,12 +338,12 @@ class _$TaskNameChanged implements TaskNameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -355,13 +355,13 @@ class _$TaskNameChanged implements TaskNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (taskNameChanged != null) {
@@ -438,12 +438,12 @@ class _$DurationChanged implements DurationChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -455,13 +455,13 @@ class _$DurationChanged implements DurationChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (durationChanged != null) {
@@ -472,12 +472,12 @@ class _$DurationChanged implements DurationChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -489,13 +489,13 @@ class _$DurationChanged implements DurationChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (durationChanged != null) {
@@ -570,12 +570,12 @@ class _$PriceChanged implements PriceChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -587,13 +587,13 @@ class _$PriceChanged implements PriceChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (priceChanged != null) {
@@ -604,12 +604,12 @@ class _$PriceChanged implements PriceChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -621,13 +621,13 @@ class _$PriceChanged implements PriceChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (priceChanged != null) {
@@ -679,12 +679,12 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<TaskDescription> initialTaskOption),
-    @required Result taskNameChanged(String taskName),
-    @required Result durationChanged(Duration duration),
-    @required Result priceChanged(double price),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<TaskDescription> initialTaskOption),
+    @required TResult taskNameChanged(String taskName),
+    @required TResult durationChanged(Duration duration),
+    @required TResult priceChanged(double price),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -696,13 +696,13 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<TaskDescription> initialTaskOption),
-    Result taskNameChanged(String taskName),
-    Result durationChanged(Duration duration),
-    Result priceChanged(double price),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<TaskDescription> initialTaskOption),
+    TResult taskNameChanged(String taskName),
+    TResult durationChanged(Duration duration),
+    TResult priceChanged(double price),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -713,12 +713,12 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result taskNameChanged(TaskNameChanged value),
-    @required Result durationChanged(DurationChanged value),
-    @required Result priceChanged(PriceChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult taskNameChanged(TaskNameChanged value),
+    @required TResult durationChanged(DurationChanged value),
+    @required TResult priceChanged(PriceChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(taskNameChanged != null);
@@ -730,13 +730,13 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result taskNameChanged(TaskNameChanged value),
-    Result durationChanged(DurationChanged value),
-    Result priceChanged(PriceChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult taskNameChanged(TaskNameChanged value),
+    TResult durationChanged(DurationChanged value),
+    TResult priceChanged(PriceChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {

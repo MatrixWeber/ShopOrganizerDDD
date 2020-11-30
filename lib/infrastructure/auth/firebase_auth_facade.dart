@@ -7,7 +7,6 @@ import 'package:firebase_ddd_tutorial/domain/auth/auth_user.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_user_mapper.dart';
-import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';

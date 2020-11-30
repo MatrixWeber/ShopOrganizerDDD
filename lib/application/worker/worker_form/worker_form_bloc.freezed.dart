@@ -82,54 +82,54 @@ const $WorkerFormEvent = _$WorkerFormEventTearOff();
 /// @nodoc
 mixin _$WorkerFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   });
 }
 
@@ -214,16 +214,16 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -239,17 +239,17 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -260,16 +260,16 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -285,17 +285,17 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -369,16 +369,16 @@ class _$Reset implements Reset {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -394,17 +394,17 @@ class _$Reset implements Reset {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (reset != null) {
@@ -415,16 +415,16 @@ class _$Reset implements Reset {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -440,17 +440,17 @@ class _$Reset implements Reset {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (reset != null) {
@@ -526,16 +526,16 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -551,17 +551,17 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -572,16 +572,16 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -597,17 +597,17 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -684,16 +684,16 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -709,17 +709,17 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (firstNameChanged != null) {
@@ -730,16 +730,16 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -755,17 +755,17 @@ class _$FirstNameChanged implements FirstNameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (firstNameChanged != null) {
@@ -841,16 +841,16 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -866,17 +866,17 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -887,16 +887,16 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -912,17 +912,17 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -998,16 +998,16 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1023,17 +1023,17 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -1044,16 +1044,16 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1069,17 +1069,17 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -1156,16 +1156,16 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1181,17 +1181,17 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1202,16 +1202,16 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1227,17 +1227,17 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1314,16 +1314,16 @@ class _$ParentIdChanged implements ParentIdChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1339,17 +1339,17 @@ class _$ParentIdChanged implements ParentIdChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (parentIdChanged != null) {
@@ -1360,16 +1360,16 @@ class _$ParentIdChanged implements ParentIdChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1385,17 +1385,17 @@ class _$ParentIdChanged implements ParentIdChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (parentIdChanged != null) {
@@ -1447,16 +1447,16 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Worker> initialWorkerOption),
-    @required Result reset(String parentShopId),
-    @required Result nameChanged(String name),
-    @required Result firstNameChanged(String firstName),
-    @required Result emailChanged(String email),
-    @required Result phoneNumberChanged(String phone),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result parentIdChanged(UniqueId parentId),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Worker> initialWorkerOption),
+    @required TResult reset(String parentShopId),
+    @required TResult nameChanged(String name),
+    @required TResult firstNameChanged(String firstName),
+    @required TResult emailChanged(String email),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult parentIdChanged(UniqueId parentId),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1472,17 +1472,17 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Worker> initialWorkerOption),
-    Result reset(String parentShopId),
-    Result nameChanged(String name),
-    Result firstNameChanged(String firstName),
-    Result emailChanged(String email),
-    Result phoneNumberChanged(String phone),
-    Result imageUrlChanged(String imageUrl),
-    Result parentIdChanged(UniqueId parentId),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Worker> initialWorkerOption),
+    TResult reset(String parentShopId),
+    TResult nameChanged(String name),
+    TResult firstNameChanged(String firstName),
+    TResult emailChanged(String email),
+    TResult phoneNumberChanged(String phone),
+    TResult imageUrlChanged(String imageUrl),
+    TResult parentIdChanged(UniqueId parentId),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -1493,16 +1493,16 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result reset(Reset value),
-    @required Result nameChanged(NameChanged value),
-    @required Result firstNameChanged(FirstNameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result parentIdChanged(ParentIdChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult reset(Reset value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult firstNameChanged(FirstNameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult parentIdChanged(ParentIdChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(reset != null);
@@ -1518,17 +1518,17 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result reset(Reset value),
-    Result nameChanged(NameChanged value),
-    Result firstNameChanged(FirstNameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result parentIdChanged(ParentIdChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult reset(Reset value),
+    TResult nameChanged(NameChanged value),
+    TResult firstNameChanged(FirstNameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult parentIdChanged(ParentIdChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {

@@ -42,30 +42,30 @@ const $WorkerImageHandlerEvent = _$WorkerImageHandlerEventTearOff();
 /// @nodoc
 mixin _$WorkerImageHandlerEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result uploadImageStarted(File image),
-    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    @required Result imageDeleted(String imageUrl),
+  TResult when<TResult extends Object>({
+    @required TResult uploadImageStarted(File image),
+    @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    @required TResult imageDeleted(String imageUrl),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result uploadImageStarted(File image),
-    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    Result imageDeleted(String imageUrl),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult uploadImageStarted(File image),
+    TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    TResult imageDeleted(String imageUrl),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result uploadImageStarted(_UploadImageStarted value),
-    @required Result imageReceived(_ImageReceived value),
-    @required Result imageDeleted(_ImageDeleted value),
+  TResult map<TResult extends Object>({
+    @required TResult uploadImageStarted(_UploadImageStarted value),
+    @required TResult imageReceived(_ImageReceived value),
+    @required TResult imageDeleted(_ImageDeleted value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result uploadImageStarted(_UploadImageStarted value),
-    Result imageReceived(_ImageReceived value),
-    Result imageDeleted(_ImageDeleted value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult uploadImageStarted(_UploadImageStarted value),
+    TResult imageReceived(_ImageReceived value),
+    TResult imageDeleted(_ImageDeleted value),
+    @required TResult orElse(),
   });
 }
 
@@ -145,10 +145,10 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result uploadImageStarted(File image),
-    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    @required Result imageDeleted(String imageUrl),
+  TResult when<TResult extends Object>({
+    @required TResult uploadImageStarted(File image),
+    @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    @required TResult imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -158,11 +158,11 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result uploadImageStarted(File image),
-    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    Result imageDeleted(String imageUrl),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult uploadImageStarted(File image),
+    TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    TResult imageDeleted(String imageUrl),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (uploadImageStarted != null) {
@@ -173,10 +173,10 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result uploadImageStarted(_UploadImageStarted value),
-    @required Result imageReceived(_ImageReceived value),
-    @required Result imageDeleted(_ImageDeleted value),
+  TResult map<TResult extends Object>({
+    @required TResult uploadImageStarted(_UploadImageStarted value),
+    @required TResult imageReceived(_ImageReceived value),
+    @required TResult imageDeleted(_ImageDeleted value),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -186,11 +186,11 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result uploadImageStarted(_UploadImageStarted value),
-    Result imageReceived(_ImageReceived value),
-    Result imageDeleted(_ImageDeleted value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult uploadImageStarted(_UploadImageStarted value),
+    TResult imageReceived(_ImageReceived value),
+    TResult imageDeleted(_ImageDeleted value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (uploadImageStarted != null) {
@@ -271,10 +271,10 @@ class _$_ImageReceived implements _ImageReceived {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result uploadImageStarted(File image),
-    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    @required Result imageDeleted(String imageUrl),
+  TResult when<TResult extends Object>({
+    @required TResult uploadImageStarted(File image),
+    @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    @required TResult imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -284,11 +284,11 @@ class _$_ImageReceived implements _ImageReceived {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result uploadImageStarted(File image),
-    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    Result imageDeleted(String imageUrl),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult uploadImageStarted(File image),
+    TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    TResult imageDeleted(String imageUrl),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageReceived != null) {
@@ -299,10 +299,10 @@ class _$_ImageReceived implements _ImageReceived {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result uploadImageStarted(_UploadImageStarted value),
-    @required Result imageReceived(_ImageReceived value),
-    @required Result imageDeleted(_ImageDeleted value),
+  TResult map<TResult extends Object>({
+    @required TResult uploadImageStarted(_UploadImageStarted value),
+    @required TResult imageReceived(_ImageReceived value),
+    @required TResult imageDeleted(_ImageDeleted value),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -312,11 +312,11 @@ class _$_ImageReceived implements _ImageReceived {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result uploadImageStarted(_UploadImageStarted value),
-    Result imageReceived(_ImageReceived value),
-    Result imageDeleted(_ImageDeleted value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult uploadImageStarted(_UploadImageStarted value),
+    TResult imageReceived(_ImageReceived value),
+    TResult imageDeleted(_ImageDeleted value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageReceived != null) {
@@ -394,10 +394,10 @@ class _$_ImageDeleted implements _ImageDeleted {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result uploadImageStarted(File image),
-    @required Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    @required Result imageDeleted(String imageUrl),
+  TResult when<TResult extends Object>({
+    @required TResult uploadImageStarted(File image),
+    @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    @required TResult imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -407,11 +407,11 @@ class _$_ImageDeleted implements _ImageDeleted {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result uploadImageStarted(File image),
-    Result imageReceived(Either<None, ImageUrl> failureOrImageUrl),
-    Result imageDeleted(String imageUrl),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult uploadImageStarted(File image),
+    TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
+    TResult imageDeleted(String imageUrl),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageDeleted != null) {
@@ -422,10 +422,10 @@ class _$_ImageDeleted implements _ImageDeleted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result uploadImageStarted(_UploadImageStarted value),
-    @required Result imageReceived(_ImageReceived value),
-    @required Result imageDeleted(_ImageDeleted value),
+  TResult map<TResult extends Object>({
+    @required TResult uploadImageStarted(_UploadImageStarted value),
+    @required TResult imageReceived(_ImageReceived value),
+    @required TResult imageDeleted(_ImageDeleted value),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
@@ -435,11 +435,11 @@ class _$_ImageDeleted implements _ImageDeleted {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result uploadImageStarted(_UploadImageStarted value),
-    Result imageReceived(_ImageReceived value),
-    Result imageDeleted(_ImageDeleted value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult uploadImageStarted(_UploadImageStarted value),
+    TResult imageReceived(_ImageReceived value),
+    TResult imageDeleted(_ImageDeleted value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageDeleted != null) {
@@ -506,42 +506,42 @@ const $WorkerImageHandlerState = _$WorkerImageHandlerStateTearOff();
 /// @nodoc
 mixin _$WorkerImageHandlerState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   });
 }
 
@@ -598,13 +598,13 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -617,14 +617,14 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -635,13 +635,13 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -654,14 +654,14 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -734,13 +734,13 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -753,14 +753,14 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadInProgress != null) {
@@ -771,13 +771,13 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -790,14 +790,14 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadInProgress != null) {
@@ -874,13 +874,13 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -893,14 +893,14 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (uploadedSuccessful != null) {
@@ -911,13 +911,13 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -930,14 +930,14 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (uploadedSuccessful != null) {
@@ -992,13 +992,13 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1011,14 +1011,14 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (deletedSuccessful != null) {
@@ -1029,13 +1029,13 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1048,14 +1048,14 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (deletedSuccessful != null) {
@@ -1128,13 +1128,13 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1147,14 +1147,14 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadSuccess != null) {
@@ -1165,13 +1165,13 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1184,14 +1184,14 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadSuccess != null) {
@@ -1282,13 +1282,13 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(num percent),
-    @required Result uploadedSuccessful(ImageUrl imageUrl),
-    @required Result deletedSuccessful(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(WorkerFailure workerFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(num percent),
+    @required TResult uploadedSuccessful(ImageUrl imageUrl),
+    @required TResult deletedSuccessful(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(WorkerFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1301,14 +1301,14 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(num percent),
-    Result uploadedSuccessful(ImageUrl imageUrl),
-    Result deletedSuccessful(),
-    Result loadSuccess(File image),
-    Result loadFailure(WorkerFailure workerFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(num percent),
+    TResult uploadedSuccessful(ImageUrl imageUrl),
+    TResult deletedSuccessful(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadFailure != null) {
@@ -1319,13 +1319,13 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result uploadedSuccessful(_UploadedSuccessful value),
-    @required Result deletedSuccessful(_DeletedSuccessful value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult uploadedSuccessful(_UploadedSuccessful value),
+    @required TResult deletedSuccessful(_DeletedSuccessful value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1338,14 +1338,14 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result uploadedSuccessful(_UploadedSuccessful value),
-    Result deletedSuccessful(_DeletedSuccessful value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult uploadedSuccessful(_UploadedSuccessful value),
+    TResult deletedSuccessful(_DeletedSuccessful value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadFailure != null) {

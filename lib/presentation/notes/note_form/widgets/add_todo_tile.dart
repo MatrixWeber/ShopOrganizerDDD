@@ -30,7 +30,7 @@ class AddTodoTile extends StatelessWidget {
           onTap: () {
             context.formTodos =
                 context.formTodos.plusElement(TodoItemPrimitive.empty());
-            context.bloc<NoteFormBloc>().add(
+            context.read<NoteFormBloc>().add(
                   NoteFormEvent.todosChanged(
                     context.formTodos,
                   ),

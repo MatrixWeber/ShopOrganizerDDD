@@ -117,74 +117,74 @@ const $ShopFormEvent = _$ShopFormEventTearOff();
 /// @nodoc
 mixin _$ShopFormEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   });
 }
 
@@ -268,21 +268,21 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -303,22 +303,22 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -329,21 +329,21 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -364,22 +364,22 @@ class _$Initialized implements Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -455,21 +455,21 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -490,22 +490,22 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -516,21 +516,21 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -551,22 +551,22 @@ class _$NameChanged implements NameChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (nameChanged != null) {
@@ -641,21 +641,21 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -676,22 +676,22 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -702,21 +702,21 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -737,22 +737,22 @@ class _$EmailChanged implements EmailChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (emailChanged != null) {
@@ -828,21 +828,21 @@ class _$KeeperChanged implements KeeperChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -863,22 +863,22 @@ class _$KeeperChanged implements KeeperChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (keeperChanged != null) {
@@ -889,21 +889,21 @@ class _$KeeperChanged implements KeeperChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -924,22 +924,22 @@ class _$KeeperChanged implements KeeperChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (keeperChanged != null) {
@@ -1015,21 +1015,21 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1050,22 +1050,22 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -1076,21 +1076,21 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1111,22 +1111,22 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (phoneNumberChanged != null) {
@@ -1205,21 +1205,21 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1240,22 +1240,22 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (numberOfWorkersChanged != null) {
@@ -1266,21 +1266,21 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1301,22 +1301,22 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (numberOfWorkersChanged != null) {
@@ -1394,21 +1394,21 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1429,22 +1429,22 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1455,21 +1455,21 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1490,22 +1490,22 @@ class _$ImageUrlChanged implements ImageUrlChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (imageUrlChanged != null) {
@@ -1582,21 +1582,21 @@ class _$CategoryChanged implements CategoryChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1617,22 +1617,22 @@ class _$CategoryChanged implements CategoryChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (categoryChanged != null) {
@@ -1643,21 +1643,21 @@ class _$CategoryChanged implements CategoryChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1678,22 +1678,22 @@ class _$CategoryChanged implements CategoryChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (categoryChanged != null) {
@@ -1769,21 +1769,21 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1804,22 +1804,22 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (streetChanged != null) {
@@ -1830,21 +1830,21 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1865,22 +1865,22 @@ class _$StreetChanged implements StreetChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (streetChanged != null) {
@@ -1957,21 +1957,21 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -1992,22 +1992,22 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (houseNumberChanged != null) {
@@ -2018,21 +2018,21 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2053,22 +2053,22 @@ class _$HouseNumberChanged implements HouseNumberChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (houseNumberChanged != null) {
@@ -2142,21 +2142,21 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2177,22 +2177,22 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (zipChanged != null) {
@@ -2203,21 +2203,21 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2238,22 +2238,22 @@ class _$ZipChanged implements ZipChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (zipChanged != null) {
@@ -2328,21 +2328,21 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2363,22 +2363,22 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cityChanged != null) {
@@ -2389,21 +2389,21 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2424,22 +2424,22 @@ class _$CityChanged implements CityChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (cityChanged != null) {
@@ -2516,21 +2516,21 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2551,22 +2551,22 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (openingDaysChanged != null) {
@@ -2577,21 +2577,21 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2612,22 +2612,22 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (openingDaysChanged != null) {
@@ -2680,21 +2680,21 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initialized(Option<Shop> initialShopOption),
-    @required Result nameChanged(String shopName),
-    @required Result emailChanged(String email),
-    @required Result keeperChanged(String keeper),
-    @required Result phoneNumberChanged(String phone),
-    @required Result numberOfWorkersChanged(num numOfWorkers),
-    @required Result imageUrlChanged(String imageUrl),
-    @required Result categoryChanged(String category),
-    @required Result streetChanged(String street),
-    @required Result houseNumberChanged(String houseNum),
-    @required Result zipChanged(String zip),
-    @required Result cityChanged(String city),
-    @required Result openingDaysChanged(KtList<bool> openingDays),
-    @required Result saved(),
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2715,22 +2715,22 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initialized(Option<Shop> initialShopOption),
-    Result nameChanged(String shopName),
-    Result emailChanged(String email),
-    Result keeperChanged(String keeper),
-    Result phoneNumberChanged(String phone),
-    Result numberOfWorkersChanged(num numOfWorkers),
-    Result imageUrlChanged(String imageUrl),
-    Result categoryChanged(String category),
-    Result streetChanged(String street),
-    Result houseNumberChanged(String houseNum),
-    Result zipChanged(String zip),
-    Result cityChanged(String city),
-    Result openingDaysChanged(KtList<bool> openingDays),
-    Result saved(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {
@@ -2741,21 +2741,21 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initialized(Initialized value),
-    @required Result nameChanged(NameChanged value),
-    @required Result emailChanged(EmailChanged value),
-    @required Result keeperChanged(KeeperChanged value),
-    @required Result phoneNumberChanged(PhoneNumberChanged value),
-    @required Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    @required Result imageUrlChanged(ImageUrlChanged value),
-    @required Result categoryChanged(CategoryChanged value),
-    @required Result streetChanged(StreetChanged value),
-    @required Result houseNumberChanged(HouseNumberChanged value),
-    @required Result zipChanged(ZipChanged value),
-    @required Result cityChanged(CityChanged value),
-    @required Result openingDaysChanged(OpeningDaysChanged value),
-    @required Result saved(Saved value),
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
   }) {
     assert(initialized != null);
     assert(nameChanged != null);
@@ -2776,22 +2776,22 @@ class _$Saved implements Saved {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initialized(Initialized value),
-    Result nameChanged(NameChanged value),
-    Result emailChanged(EmailChanged value),
-    Result keeperChanged(KeeperChanged value),
-    Result phoneNumberChanged(PhoneNumberChanged value),
-    Result numberOfWorkersChanged(NumberOfWorkersChanged value),
-    Result imageUrlChanged(ImageUrlChanged value),
-    Result categoryChanged(CategoryChanged value),
-    Result streetChanged(StreetChanged value),
-    Result houseNumberChanged(HouseNumberChanged value),
-    Result zipChanged(ZipChanged value),
-    Result cityChanged(CityChanged value),
-    Result openingDaysChanged(OpeningDaysChanged value),
-    Result saved(Saved value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (saved != null) {

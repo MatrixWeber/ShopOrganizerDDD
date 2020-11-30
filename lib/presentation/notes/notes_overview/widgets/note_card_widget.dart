@@ -22,7 +22,7 @@ class NoteCard extends StatelessWidget {
           ExtendedNavigator.of(context).pushNoteFormPage(editedNote: note);
         },
         onLongPress: () {
-          final noteActorBloc = context.bloc<NoteActorBloc>();
+          final noteActorBloc = context.read<NoteActorBloc>();
           _showDeletionDialog(context, noteActorBloc);
         },
         child: Padding(

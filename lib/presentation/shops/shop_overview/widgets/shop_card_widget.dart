@@ -18,7 +18,7 @@ class ShopCard extends StatelessWidget {
           // TODO Implement navigation
         },
         onLongPress: () {
-          final shopActorBloc = context.bloc<ShopActorBloc>();
+          final shopActorBloc = context.read<ShopActorBloc>();
           _showDeletionDialog(context, shopActorBloc);
         },
         child: Padding(

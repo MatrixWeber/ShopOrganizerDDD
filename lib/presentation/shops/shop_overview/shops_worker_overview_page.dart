@@ -56,7 +56,7 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
               key: const Key('icon-button-sign-out'),
               icon: const Icon(Icons.exit_to_app),
               onPressed: () {
-                context.bloc<AuthBloc>().add(
+                context.read<AuthBloc>().add(
                       const AuthEvent.signedOut(),
                     );
               },

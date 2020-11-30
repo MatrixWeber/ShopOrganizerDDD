@@ -51,14 +51,14 @@ class ShopWorkerCreationPage extends StatelessWidget {
                 listener: (context, state) {
               state.maybeMap(
                 uploadedSuccessful: (state) =>
-                    context.bloc<WorkerFormBloc>().add(
+                    context.read<WorkerFormBloc>().add(
                           WorkerFormEvent.imageUrlChanged(
                             state.imageUrl.getOrCrash(),
                           ),
                         ),
                 deletedSuccessful: (_) => Navigator.of(context).pop(),
                 loadInProgress: (state) => context
-                    .bloc<WorkerWidgetBloc>()
+                    .read<WorkerWidgetBloc>()
                     .add(WorkerWidgetEvent.inProgress(state.percent)),
                 orElse: () {},
               );
@@ -71,7 +71,7 @@ class ShopWorkerCreationPage extends StatelessWidget {
                 key: const Key('icon-button-sign-out'),
                 icon: const Icon(Icons.exit_to_app),
                 onPressed: () {
-                  context.bloc<AuthBloc>().add(
+                  context.read<AuthBloc>().add(
                         const AuthEvent.signedOut(),
                       );
                 },

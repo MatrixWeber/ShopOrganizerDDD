@@ -36,33 +36,33 @@ const $ImagePickerEvent = _$ImagePickerEventTearOff();
 /// @nodoc
 mixin _$ImagePickerEvent {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result selectImageFromGalleryStarted(),
-    @required Result getImageFromCameraStarted(),
-    @required Result initialized(),
+  TResult when<TResult extends Object>({
+    @required TResult selectImageFromGalleryStarted(),
+    @required TResult getImageFromCameraStarted(),
+    @required TResult initialized(),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result selectImageFromGalleryStarted(),
-    Result getImageFromCameraStarted(),
-    Result initialized(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(),
+    TResult getImageFromCameraStarted(),
+    TResult initialized(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
+  TResult map<TResult extends Object>({
     @required
-        Result selectImageFromGalleryStarted(
+        TResult selectImageFromGalleryStarted(
             _SelectImageFromGalleryStarted value),
     @required
-        Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    @required Result initialized(_Initialized value),
+        TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required TResult initialized(_Initialized value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
-    Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    Result initialized(_Initialized value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
+    TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    TResult initialized(_Initialized value),
+    @required TResult orElse(),
   });
 }
 
@@ -125,10 +125,10 @@ class _$_SelectImageFromGalleryStarted
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result selectImageFromGalleryStarted(),
-    @required Result getImageFromCameraStarted(),
-    @required Result initialized(),
+  TResult when<TResult extends Object>({
+    @required TResult selectImageFromGalleryStarted(),
+    @required TResult getImageFromCameraStarted(),
+    @required TResult initialized(),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -138,11 +138,11 @@ class _$_SelectImageFromGalleryStarted
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result selectImageFromGalleryStarted(),
-    Result getImageFromCameraStarted(),
-    Result initialized(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(),
+    TResult getImageFromCameraStarted(),
+    TResult initialized(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (selectImageFromGalleryStarted != null) {
@@ -153,13 +153,13 @@ class _$_SelectImageFromGalleryStarted
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
+  TResult map<TResult extends Object>({
     @required
-        Result selectImageFromGalleryStarted(
+        TResult selectImageFromGalleryStarted(
             _SelectImageFromGalleryStarted value),
     @required
-        Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    @required Result initialized(_Initialized value),
+        TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required TResult initialized(_Initialized value),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -169,11 +169,11 @@ class _$_SelectImageFromGalleryStarted
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
-    Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    Result initialized(_Initialized value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
+    TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    TResult initialized(_Initialized value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (selectImageFromGalleryStarted != null) {
@@ -227,10 +227,10 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result selectImageFromGalleryStarted(),
-    @required Result getImageFromCameraStarted(),
-    @required Result initialized(),
+  TResult when<TResult extends Object>({
+    @required TResult selectImageFromGalleryStarted(),
+    @required TResult getImageFromCameraStarted(),
+    @required TResult initialized(),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -240,11 +240,11 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result selectImageFromGalleryStarted(),
-    Result getImageFromCameraStarted(),
-    Result initialized(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(),
+    TResult getImageFromCameraStarted(),
+    TResult initialized(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getImageFromCameraStarted != null) {
@@ -255,13 +255,13 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
+  TResult map<TResult extends Object>({
     @required
-        Result selectImageFromGalleryStarted(
+        TResult selectImageFromGalleryStarted(
             _SelectImageFromGalleryStarted value),
     @required
-        Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    @required Result initialized(_Initialized value),
+        TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required TResult initialized(_Initialized value),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -271,11 +271,11 @@ class _$_GetImageFromCameraStarted implements _GetImageFromCameraStarted {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
-    Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    Result initialized(_Initialized value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
+    TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    TResult initialized(_Initialized value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (getImageFromCameraStarted != null) {
@@ -327,10 +327,10 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result selectImageFromGalleryStarted(),
-    @required Result getImageFromCameraStarted(),
-    @required Result initialized(),
+  TResult when<TResult extends Object>({
+    @required TResult selectImageFromGalleryStarted(),
+    @required TResult getImageFromCameraStarted(),
+    @required TResult initialized(),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -340,11 +340,11 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result selectImageFromGalleryStarted(),
-    Result getImageFromCameraStarted(),
-    Result initialized(),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(),
+    TResult getImageFromCameraStarted(),
+    TResult initialized(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -355,13 +355,13 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
+  TResult map<TResult extends Object>({
     @required
-        Result selectImageFromGalleryStarted(
+        TResult selectImageFromGalleryStarted(
             _SelectImageFromGalleryStarted value),
     @required
-        Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    @required Result initialized(_Initialized value),
+        TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    @required TResult initialized(_Initialized value),
   }) {
     assert(selectImageFromGalleryStarted != null);
     assert(getImageFromCameraStarted != null);
@@ -371,11 +371,11 @@ class _$_Initialized implements _Initialized {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
-    Result getImageFromCameraStarted(_GetImageFromCameraStarted value),
-    Result initialized(_Initialized value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult selectImageFromGalleryStarted(_SelectImageFromGalleryStarted value),
+    TResult getImageFromCameraStarted(_GetImageFromCameraStarted value),
+    TResult initialized(_Initialized value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initialized != null) {
@@ -425,34 +425,34 @@ const $ImagePickerState = _$ImagePickerStateTearOff();
 /// @nodoc
 mixin _$ImagePickerState {
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(ValueFailure<dynamic> valueFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(ValueFailure<dynamic> valueFailure),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(File image),
-    Result loadFailure(ValueFailure<dynamic> valueFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(ValueFailure<dynamic> valueFailure),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   });
 }
 
@@ -508,11 +508,11 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(ValueFailure<dynamic> valueFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(ValueFailure<dynamic> valueFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -523,12 +523,12 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(File image),
-    Result loadFailure(ValueFailure<dynamic> valueFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(ValueFailure<dynamic> valueFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -539,11 +539,11 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -554,12 +554,12 @@ class _$_Initial implements _Initial {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -611,11 +611,11 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(ValueFailure<dynamic> valueFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(ValueFailure<dynamic> valueFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -626,12 +626,12 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(File image),
-    Result loadFailure(ValueFailure<dynamic> valueFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(ValueFailure<dynamic> valueFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadInProgress != null) {
@@ -642,11 +642,11 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -657,12 +657,12 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadInProgress != null) {
@@ -735,11 +735,11 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(ValueFailure<dynamic> valueFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(ValueFailure<dynamic> valueFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -750,12 +750,12 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(File image),
-    Result loadFailure(ValueFailure<dynamic> valueFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(ValueFailure<dynamic> valueFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadSuccess != null) {
@@ -766,11 +766,11 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -781,12 +781,12 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadSuccess != null) {
@@ -877,11 +877,11 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result initial(),
-    @required Result loadInProgress(),
-    @required Result loadSuccess(File image),
-    @required Result loadFailure(ValueFailure<dynamic> valueFailure),
+  TResult when<TResult extends Object>({
+    @required TResult initial(),
+    @required TResult loadInProgress(),
+    @required TResult loadSuccess(File image),
+    @required TResult loadFailure(ValueFailure<dynamic> valueFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -892,12 +892,12 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(),
-    Result loadInProgress(),
-    Result loadSuccess(File image),
-    Result loadFailure(ValueFailure<dynamic> valueFailure),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(),
+    TResult loadInProgress(),
+    TResult loadSuccess(File image),
+    TResult loadFailure(ValueFailure<dynamic> valueFailure),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadFailure != null) {
@@ -908,11 +908,11 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_Initial value),
-    @required Result loadInProgress(_LoadInProgress value),
-    @required Result loadSuccess(_LoadSuccess value),
-    @required Result loadFailure(_LoadFailure value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_Initial value),
+    @required TResult loadInProgress(_LoadInProgress value),
+    @required TResult loadSuccess(_LoadSuccess value),
+    @required TResult loadFailure(_LoadFailure value),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -923,12 +923,12 @@ class _$_LoadFailure implements _LoadFailure {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_Initial value),
-    Result loadInProgress(_LoadInProgress value),
-    Result loadSuccess(_LoadSuccess value),
-    Result loadFailure(_LoadFailure value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_Initial value),
+    TResult loadInProgress(_LoadInProgress value),
+    TResult loadSuccess(_LoadSuccess value),
+    TResult loadFailure(_LoadFailure value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (loadFailure != null) {

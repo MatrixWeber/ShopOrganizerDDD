@@ -23,7 +23,7 @@ class ColorField extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   context
-                      .bloc<NoteFormBloc>()
+                      .read<NoteFormBloc>()
                       .add(NoteFormEvent.colorChanged(itemColor));
                 },
                 child: Material(

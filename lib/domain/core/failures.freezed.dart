@@ -100,58 +100,58 @@ mixin _$ValueFailure<T> {
   T get failedValue;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   });
 
   $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith;
@@ -269,17 +269,17 @@ class _$ExceedingLength<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -296,18 +296,18 @@ class _$ExceedingLength<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (exceedingLength != null) {
@@ -318,17 +318,17 @@ class _$ExceedingLength<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -345,18 +345,18 @@ class _$ExceedingLength<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (exceedingLength != null) {
@@ -445,17 +445,17 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -472,18 +472,18 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (empty != null) {
@@ -494,17 +494,17 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -521,18 +521,18 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (empty != null) {
@@ -622,17 +622,17 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -649,18 +649,18 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (multiline != null) {
@@ -671,17 +671,17 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -698,18 +698,18 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (multiline != null) {
@@ -810,17 +810,17 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -837,18 +837,18 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (listTooLong != null) {
@@ -859,17 +859,17 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -886,18 +886,18 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (listTooLong != null) {
@@ -992,17 +992,17 @@ class _$InvalidEmail<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1019,18 +1019,18 @@ class _$InvalidEmail<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidEmail != null) {
@@ -1041,17 +1041,17 @@ class _$InvalidEmail<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1068,18 +1068,18 @@ class _$InvalidEmail<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (invalidEmail != null) {
@@ -1172,17 +1172,17 @@ class _$ShortPassword<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1199,18 +1199,18 @@ class _$ShortPassword<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (shortPassword != null) {
@@ -1221,17 +1221,17 @@ class _$ShortPassword<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1248,18 +1248,18 @@ class _$ShortPassword<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (shortPassword != null) {
@@ -1365,17 +1365,17 @@ class _$DurationToLong<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1392,18 +1392,18 @@ class _$DurationToLong<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (durationToLong != null) {
@@ -1414,17 +1414,17 @@ class _$DurationToLong<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1441,18 +1441,18 @@ class _$DurationToLong<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (durationToLong != null) {
@@ -1558,17 +1558,17 @@ class _$MaxTypeExceeded<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1585,18 +1585,18 @@ class _$MaxTypeExceeded<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (maxTypeExceeded != null) {
@@ -1607,17 +1607,17 @@ class _$MaxTypeExceeded<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1634,18 +1634,18 @@ class _$MaxTypeExceeded<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (maxTypeExceeded != null) {
@@ -1741,17 +1741,17 @@ class _$IsNotAPhoneNumber<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1768,18 +1768,18 @@ class _$IsNotAPhoneNumber<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (isNotAPhoneNumber != null) {
@@ -1790,17 +1790,17 @@ class _$IsNotAPhoneNumber<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1817,18 +1817,18 @@ class _$IsNotAPhoneNumber<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (isNotAPhoneNumber != null) {
@@ -1922,17 +1922,17 @@ class _$IsNotALetter<T>
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
-    @required Result exceedingLength(T failedValue, int max),
-    @required Result empty(T failedValue),
-    @required Result multiline(T failedValue),
-    @required Result listTooLong(T failedValue, int max),
-    @required Result invalidEmail(T failedValue),
-    @required Result shortPassword(T failedValue),
-    @required Result durationToLong(T failedValue, Duration maxDuration),
-    @required Result maxTypeExceeded(T failedValue, T max),
-    @required Result isNotAPhoneNumber(T failedValue),
-    @required Result isNotALetter(T failedValue),
+  TResult when<TResult extends Object>({
+    @required TResult exceedingLength(T failedValue, int max),
+    @required TResult empty(T failedValue),
+    @required TResult multiline(T failedValue),
+    @required TResult listTooLong(T failedValue, int max),
+    @required TResult invalidEmail(T failedValue),
+    @required TResult shortPassword(T failedValue),
+    @required TResult durationToLong(T failedValue, Duration maxDuration),
+    @required TResult maxTypeExceeded(T failedValue, T max),
+    @required TResult isNotAPhoneNumber(T failedValue),
+    @required TResult isNotALetter(T failedValue),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1949,18 +1949,18 @@ class _$IsNotALetter<T>
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result exceedingLength(T failedValue, int max),
-    Result empty(T failedValue),
-    Result multiline(T failedValue),
-    Result listTooLong(T failedValue, int max),
-    Result invalidEmail(T failedValue),
-    Result shortPassword(T failedValue),
-    Result durationToLong(T failedValue, Duration maxDuration),
-    Result maxTypeExceeded(T failedValue, T max),
-    Result isNotAPhoneNumber(T failedValue),
-    Result isNotALetter(T failedValue),
-    @required Result orElse(),
+  TResult maybeWhen<TResult extends Object>({
+    TResult exceedingLength(T failedValue, int max),
+    TResult empty(T failedValue),
+    TResult multiline(T failedValue),
+    TResult listTooLong(T failedValue, int max),
+    TResult invalidEmail(T failedValue),
+    TResult shortPassword(T failedValue),
+    TResult durationToLong(T failedValue, Duration maxDuration),
+    TResult maxTypeExceeded(T failedValue, T max),
+    TResult isNotAPhoneNumber(T failedValue),
+    TResult isNotALetter(T failedValue),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (isNotALetter != null) {
@@ -1971,17 +1971,17 @@ class _$IsNotALetter<T>
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result exceedingLength(ExceedingLength<T> value),
-    @required Result empty(Empty<T> value),
-    @required Result multiline(Multiline<T> value),
-    @required Result listTooLong(ListTooLong<T> value),
-    @required Result invalidEmail(InvalidEmail<T> value),
-    @required Result shortPassword(ShortPassword<T> value),
-    @required Result durationToLong(DurationToLong<T> value),
-    @required Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    @required Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    @required Result isNotALetter(IsNotALetter<T> value),
+  TResult map<TResult extends Object>({
+    @required TResult exceedingLength(ExceedingLength<T> value),
+    @required TResult empty(Empty<T> value),
+    @required TResult multiline(Multiline<T> value),
+    @required TResult listTooLong(ListTooLong<T> value),
+    @required TResult invalidEmail(InvalidEmail<T> value),
+    @required TResult shortPassword(ShortPassword<T> value),
+    @required TResult durationToLong(DurationToLong<T> value),
+    @required TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    @required TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    @required TResult isNotALetter(IsNotALetter<T> value),
   }) {
     assert(exceedingLength != null);
     assert(empty != null);
@@ -1998,18 +1998,18 @@ class _$IsNotALetter<T>
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result exceedingLength(ExceedingLength<T> value),
-    Result empty(Empty<T> value),
-    Result multiline(Multiline<T> value),
-    Result listTooLong(ListTooLong<T> value),
-    Result invalidEmail(InvalidEmail<T> value),
-    Result shortPassword(ShortPassword<T> value),
-    Result durationToLong(DurationToLong<T> value),
-    Result maxTypeExceeded(MaxTypeExceeded<T> value),
-    Result isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
-    Result isNotALetter(IsNotALetter<T> value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult exceedingLength(ExceedingLength<T> value),
+    TResult empty(Empty<T> value),
+    TResult multiline(Multiline<T> value),
+    TResult listTooLong(ListTooLong<T> value),
+    TResult invalidEmail(InvalidEmail<T> value),
+    TResult shortPassword(ShortPassword<T> value),
+    TResult durationToLong(DurationToLong<T> value),
+    TResult maxTypeExceeded(MaxTypeExceeded<T> value),
+    TResult isNotAPhoneNumber(IsNotAPhoneNumber<T> value),
+    TResult isNotALetter(IsNotALetter<T> value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (isNotALetter != null) {
