@@ -24,7 +24,7 @@ class SignInForm extends StatelessWidget {
                             'Invalid email and password combination'),
                   ).show(context);
                 }, (_) {
-                  ExtendedNavigator.of(context).pushNotesOverviewPage();
+                  ExtendedNavigator.of(context).pushShopsOverviewPage();
                   context
                       .read<AuthBloc>()
                       .add(const AuthEvent.authCheckRequested());
@@ -32,7 +32,9 @@ class SignInForm extends StatelessWidget {
       },
       builder: (context, state) {
         return Form(
-          autovalidateMode: AutovalidateMode.onUserInteraction,
+          autovalidateMode: state.showErrorMessages
+              ? AutovalidateMode.onUserInteraction
+              : AutovalidateMode.disabled,
           child: ListView(
             padding: const EdgeInsets.all(8),
             children: [

@@ -11,9 +11,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 
-const ERROR_USER_NOT_FOUND = 'ERROR_USER_NOT_FOUND';
-const ERROR_WRONG_PASSWORD = 'ERROR_WRONG_PASSWORD';
-const ERROR_EMAIL_ALREADY_IN_USE = 'ERROR_EMAIL_ALREADY_IN_USE';
+const ERROR_USER_NOT_FOUND = 'user-not-found';
+const ERROR_WRONG_PASSWORD = 'wrong-password';
+const ERROR_EMAIL_ALREADY_IN_USE = 'email-already-in-use';
 
 @LazySingleton(as: IAuthFacade)
 class FirebaseAuthFacade implements IAuthFacade {

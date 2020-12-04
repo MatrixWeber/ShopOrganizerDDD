@@ -51,13 +51,15 @@ class ShopWorkerCreationForm extends StatelessWidget {
                     ExtendedNavigator.of(context).pushShopWorkerCreationPage(
                         parentShopId: parentShopId, numOfWorkers: numOfWorkers);
                   } else {
-                    ExtendedNavigator.of(context).pushNotesOverviewPage();
+                    const Center(child: Text('No Shops found'));
                   }
                 }));
       },
       builder: (BuildContext context, WorkerFormState state) {
         return Form(
-          autovalidate: context.read<WorkerFormBloc>().state.showErrorMessage,
+          autovalidateMode: state.showErrorMessage
+              ? AutovalidateMode.onUserInteraction
+              : AutovalidateMode.disabled,
           child: ListView(
             padding: const EdgeInsets.all(_PADDING),
             children: <Widget>[
