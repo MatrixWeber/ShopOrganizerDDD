@@ -10,13 +10,13 @@ import '../../../application/worker/worker_widget/worker_widget_bloc.dart';
 import '../../../domain/core/value_objects.dart';
 import '../../../injection.dart';
 import '../../routes/router.gr.dart';
-import 'widgets/shop_worker_creation_form.dart';
+import 'widgets/worker_creation_form.dart';
 
-class ShopWorkerCreationPage extends StatelessWidget {
+class WorkerCreationPage extends StatelessWidget {
   final UniqueId parentShopId;
   final num numOfWorkers;
 
-  const ShopWorkerCreationPage({
+  const WorkerCreationPage({
     Key key,
     this.parentShopId,
     this.numOfWorkers,
@@ -66,7 +66,7 @@ class ShopWorkerCreationPage extends StatelessWidget {
           ],
           child: Scaffold(
             appBar: AppBar(
-              title: const Text('Worker Overview'),
+              title: const Text('Worker Creation'),
               leading: IconButton(
                 key: const Key('icon-button-sign-out'),
                 icon: const Icon(Icons.exit_to_app),
@@ -86,7 +86,7 @@ class ShopWorkerCreationPage extends StatelessWidget {
             //   onPressed: () {},
             //   child: const Icon(Icons.add),
             // ),
-            body: ShopWorkerCreationForm(
+            body: WorkerCreationForm(
               parentShopId: parentShopId,
               numOfWorkers: numOfWorkers,
             ),

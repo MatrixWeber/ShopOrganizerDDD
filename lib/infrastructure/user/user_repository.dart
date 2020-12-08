@@ -30,7 +30,7 @@ class UserRepository implements IUserRepository {
   Either<UserFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
           FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+    if (e.message.contains('permission-denied')) {
       return left(const UserFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
@@ -67,9 +67,9 @@ class UserRepository implements IUserRepository {
   }
 
   Either<UserFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+    if (e.message.contains('permission-denied')) {
       return left(const UserFailure.insufficientPermissions());
-    } else if (e.message.contains('NOT_FOUND')) {
+    } else if (e.message.contains('not-found')) {
       // TODO log.error(e.toString);
       return left(const UserFailure.unableToUpdate());
     } else {

@@ -16,14 +16,14 @@ import '../../../core/confirm_dialog.dart';
 import '../../../core/image_widget.dart';
 import '../../../routes/router.gr.dart';
 
-class ShopWorkerCreationForm extends StatelessWidget {
+class WorkerCreationForm extends StatelessWidget {
   static const _PADDING = 6.0;
   static const _TF_SIZE = 20.0;
 
   final UniqueId parentShopId;
   final num numOfWorkers;
 
-  const ShopWorkerCreationForm({Key key, this.parentShopId, this.numOfWorkers})
+  const WorkerCreationForm({Key key, this.parentShopId, this.numOfWorkers})
       : super(key: key);
 
   @override
@@ -33,14 +33,16 @@ class ShopWorkerCreationForm extends StatelessWidget {
     num percent;
     File _image;
     return BlocConsumer<WorkerFormBloc, WorkerFormState>(
-      listener: (context, state) {
-        state.saveFailureOrSuccessOption.fold(
+      listenWhen: (p, c) =>
+          p.saveFailureOrSuccessOption != c.saveFailureOrSuccessOption,
+      listener: (context, workerFormState) {
+        workerFormState.saveFailureOrSuccessOption.fold(
             () {},
             (either) => either.fold((failure) {
                   FlushbarHelper.createError(
                     message: failure.map(
-                        unexpected: (_) =>
-                            'Unexpected error occured while deleting, please contact support',
+                        unexpected: (functionName) =>
+                            'Unexpected error occured while $functionName, please contact support',
                         unableToUpdate: (_) => 'Impossible error',
                         insufficientPermissions: (_) =>
                             'Insufficient permissions ❌'),
@@ -48,16 +50,17 @@ class ShopWorkerCreationForm extends StatelessWidget {
                   ).show(context);
                 }, (_) {
                   if (numOfWorkers > 0) {
-                    ExtendedNavigator.of(context).pushShopWorkerCreationPage(
+                    ExtendedNavigator.of(context).pushWorkerCreationPage(
                         parentShopId: parentShopId, numOfWorkers: numOfWorkers);
                   } else {
-                    const Center(child: Text('No Shops found'));
+                    ExtendedNavigator.of(context).pushWorkerOverviewPage(
+                        parentShopId: parentShopId, numOfWorkers: numOfWorkers);
                   }
                 }));
       },
-      builder: (BuildContext context, WorkerFormState state) {
+      builder: (BuildContext context, WorkerFormState workerFormState) {
         return Form(
-          autovalidateMode: state.showErrorMessage
+          autovalidateMode: workerFormState.showErrorMessage
               ? AutovalidateMode.onUserInteraction
               : AutovalidateMode.disabled,
           child: ListView(
@@ -72,44 +75,47 @@ class ShopWorkerCreationForm extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(_PADDING),
               ),
-              BlocConsumer<ImagePickerBloc, ImagePickerState>(
-                  listener: (context, state) {
-                state.maybeMap(
-                    loadSuccess: (state) {
+              BlocConsumer<ImagePickerBloc, ImagePickerState>(listener:
+                  (context, imagePickerState) {
+                imagePickerState.maybeMap(
+                    loadSuccess: (imagePickerState) {
                       Navigator.of(context).pop();
-                      _image = state.image;
+                      _image = imagePickerState.image;
                       context.read<WorkerImageHandlerBloc>().add(
-                          WorkerImageHandlerEvent.uploadImageStarted(_image));
+                          WorkerImageHandlerEvent.uploadImageStarted(
+                              _image, parentShopId, workerFormState.worker.id));
                     },
                     orElse: () {});
-              }, builder: (BuildContext context, ImagePickerState state) {
+              }, builder:
+                  (BuildContext context, ImagePickerState imagePickerState) {
                 return BlocBuilder<WorkerWidgetBloc, WorkerWidgetState>(
-                    builder: (context, state) {
-                  return state.map(
+                    builder: (context, workerWidgetState) {
+                  return workerWidgetState.map(
                       initial: (_) =>
                           ImageWidget(percent: percent, image: _image),
-                      actionInProgress: (state) =>
-                          ImageWidget(percent: state.percent, image: _image));
+                      actionInProgress: (workerWidgetState) => ImageWidget(
+                          percent: workerWidgetState.percent, image: _image));
                 });
               }),
               const Padding(
                 padding: EdgeInsets.all(_PADDING),
               ),
               TextFormField(
+                autovalidateMode: workerFormState.showErrorMessage
+                    ? AutovalidateMode.onUserInteraction
+                    : AutovalidateMode.disabled,
                 key: const Key('name-field'),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.nameChanged(value)),
-                validator: (_) =>
-                    context.read<WorkerFormBloc>().state.worker.name.value.fold(
-                        (f) => f.maybeMap(
-                              empty: (_) => 'Name cannot be empty',
-                              exceedingLength: (_) => 'Invalid Name Length',
-                              isNotALetter: (_) =>
-                                  'Name should contain of letters',
-                              orElse: () => null,
-                            ),
-                        (_) => null),
+                validator: (_) => workerFormState.worker.name.value.fold(
+                    (f) => f.maybeMap(
+                          empty: (_) => 'Name cannot be empty',
+                          exceedingLength: (_) => 'Invalid Name Length',
+                          isNotALetter: (_) => 'Name should contain of letters',
+                          orElse: () => null,
+                        ),
+                    (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.nature),
                   labelText: 'Name',
@@ -121,22 +127,19 @@ class ShopWorkerCreationForm extends StatelessWidget {
                 padding: EdgeInsets.all(_PADDING),
               ),
               TextFormField(
+                autovalidateMode: workerFormState.showErrorMessage
+                    ? AutovalidateMode.onUserInteraction
+                    : AutovalidateMode.disabled,
                 key: const Key('email-field'),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.emailChanged(value)),
-                validator: (_) => context
-                    .read<WorkerFormBloc>()
-                    .state
-                    .worker
-                    .email
-                    .value
-                    .fold(
-                        (f) => f.maybeMap(
-                              invalidEmail: (_) => INVALID_EMAIL,
-                              orElse: () => null,
-                            ),
-                        (_) => null),
+                validator: (_) => workerFormState.worker.email.value.fold(
+                    (f) => f.maybeMap(
+                          invalidEmail: (_) => INVALID_EMAIL,
+                          orElse: () => null,
+                        ),
+                    (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
                   labelText: 'Email',
@@ -148,24 +151,21 @@ class ShopWorkerCreationForm extends StatelessWidget {
                 padding: EdgeInsets.all(_PADDING),
               ),
               TextFormField(
+                autovalidateMode: workerFormState.showErrorMessage
+                    ? AutovalidateMode.onUserInteraction
+                    : AutovalidateMode.disabled,
                 key: const Key('phone-field'),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.phoneNumberChanged(value)),
-                validator: (_) => context
-                    .read<WorkerFormBloc>()
-                    .state
-                    .worker
-                    .phoneNumber
-                    .value
-                    .fold(
-                        (f) => f.maybeMap(
-                              empty: (_) => 'Phone cannot be empty',
-                              isNotAPhoneNumber: (_) => 'invalid phone number',
-                              exceedingLength: (_) => 'Invalid Phone Length',
-                              orElse: () => null,
-                            ),
-                        (_) => null),
+                validator: (_) => workerFormState.worker.phoneNumber.value.fold(
+                    (f) => f.maybeMap(
+                          empty: (_) => 'Phone cannot be empty',
+                          isNotAPhoneNumber: (_) => 'Invalid phone number',
+                          exceedingLength: (_) => 'Invalid Phone Length',
+                          orElse: () => null,
+                        ),
+                    (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.phone_iphone),
                   labelText: 'Phone',
@@ -178,19 +178,13 @@ class ShopWorkerCreationForm extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () {
-                  context
-                      .read<WorkerFormBloc>()
-                      .state
-                      .worker
-                      .imageUrl
-                      .value
-                      .fold(
-                          (f) => f.maybeMap(
-                                empty: (_) => ConfirmDialog.showYesNo(
-                                    context, _updateImageUrlToNone),
-                                orElse: () => null,
-                              ),
-                          (_) => null);
+                  workerFormState.worker.imageUrl.value.fold(
+                      (f) => f.maybeMap(
+                            empty: (_) => ConfirmDialog.showYesNo(
+                                context, _updateImageUrlToNone),
+                            orElse: () => null,
+                          ),
+                      (_) => null);
                   _saveData(context);
                 },
                 child: const Text('Add some Tasks',

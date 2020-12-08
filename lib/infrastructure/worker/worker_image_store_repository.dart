@@ -23,19 +23,21 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       await storegeReference.delete();
       return right(unit);
     } on FirebaseException catch (e) {
-      return left(_handlePlatformExceptions(e));
+      return left(_handlePlatformExceptions(e, 'delete'));
     }
   }
 
   @override
-  Stream<Either<None, ImageUrl>> uploadImage(File image) async* {
+  Stream<Either<None, ImageUrl>> uploadImage(
+      File image, String parentId, String id) async* {
     try {
       final storageReference = await _firebaseStorage.userDocument.call();
 
       final uploadTask = storageReference
           .child(storageReference.shopsCollection)
-          // .child(parentShopId)
+          .child(parentId)
           .child(storageReference.workerCollection)
+          .child(id)
           .putFile(image);
 
       // final StreamSubscription<StorageTaskEvent> streamSubscription =
@@ -79,15 +81,16 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
     }
   }
 
-  WorkerFailure _handlePlatformExceptions(FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+  WorkerFailure _handlePlatformExceptions(
+      FirebaseException e, String functionName) {
+    if (e.message.contains('permission-denied')) {
       return const WorkerFailure.insufficientPermissions();
-    } else if (e.message.contains('NOT_FOUND')) {
+    } else if (e.message.contains('not-found')) {
       // TODO log.error(e.toString);
       return const WorkerFailure.unableToUpdate();
     } else {
       // TODO log.error(e.toString);
-      return const WorkerFailure.unexpected();
+      return WorkerFailure.unexpected(functionName);
     }
   }
 

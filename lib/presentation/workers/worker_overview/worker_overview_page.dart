@@ -2,15 +2,25 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
-import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/shop_worker_overview_form.dart';
+import 'package:firebase_ddd_tutorial/presentation/workers/worker_overview/widgets/worker_overview_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../injection.dart';
 
-class ShopWorkersWorkerOverviewPage extends StatelessWidget {
+class WorkerOverviewPage extends StatelessWidget {
+  final UniqueId parentShopId;
+  final num numOfWorkers;
+
+  const WorkerOverviewPage({
+    Key key,
+    this.parentShopId,
+    this.numOfWorkers,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
@@ -34,24 +44,25 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
           BlocListener<WorkerActorBloc, WorkerActorState>(
             listener: (context, state) {
               state.maybeMap(
-                  deleteFailure: (state) {
-                    FlushbarHelper.createError(
-                      message: state.workerFailure.map(
-                          unexpected: (_) =>
-                              'Unexpected error occured while deleting, please contact support',
-                          unableToUpdate: (_) => 'Impossible error',
-                          insufficientPermissions: (_) =>
-                              'Insufficient permissions ❌'),
-                      duration: const Duration(seconds: 5),
-                    ).show(context);
-                  },
-                  orElse: () {});
+                deleteFailure: (state) {
+                  FlushbarHelper.createError(
+                    message: state.workerFailure.map(
+                        unexpected: (_) =>
+                            'Unexpected error occured while deleting, please contact support',
+                        unableToUpdate: (_) => 'Impossible error',
+                        insufficientPermissions: (_) =>
+                            'Insufficient permissions ❌'),
+                    duration: const Duration(seconds: 5),
+                  ).show(context);
+                },
+                orElse: () {},
+              );
             },
           )
         ],
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('ShopWorkersWorker'),
+            title: const Text('ShopWorkers'),
             leading: IconButton(
               key: const Key('icon-button-sign-out'),
               icon: const Icon(Icons.exit_to_app),
@@ -63,8 +74,11 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
             ),
             actions: <Widget>[
               IconButton(
-                  icon: const Icon(Icons.indeterminate_check_box),
-                  onPressed: () {})
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  ExtendedNavigator.of(context).pop();
+                },
+              ),
             ],
           ),
           floatingActionButton: FloatingActionButton(
@@ -73,7 +87,10 @@ class ShopWorkersWorkerOverviewPage extends StatelessWidget {
             },
             child: const Icon(Icons.add),
           ),
-          body: ShopWorkerOverviewForm(),
+          body: WorkerOverviewForm(
+            parentShopId: parentShopId,
+            numOfWorkers: numOfWorkers,
+          ),
         ),
       ),
     );

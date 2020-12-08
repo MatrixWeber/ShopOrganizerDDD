@@ -14,10 +14,11 @@ import '../../domain/notes/note.dart';
 import '../notes/note_form/note_form_page.dart';
 import '../notes/notes_overview/notes_overview_page.dart';
 import '../shops/shop_creation/shop_creation_page.dart';
-import '../shops/shop_creation/shop_worker_creation_page.dart';
 import '../shops/shop_overview/shops_overview_page.dart';
 import '../sign_in/sign_in_page.dart';
 import '../splash/splash_page.dart';
+import '../workers/worker_creation/worker_creation_page.dart';
+import '../workers/worker_overview/worker_overview_page.dart';
 
 class Routes {
   static const String splashPage = '/';
@@ -26,7 +27,8 @@ class Routes {
   static const String noteFormPage = '/note-form-page';
   static const String shopsOverviewPage = '/shops-overview-page';
   static const String shopsCreationPage = '/shops-creation-page';
-  static const String shopWorkerCreationPage = '/shop-worker-creation-page';
+  static const String workerCreationPage = '/worker-creation-page';
+  static const String workerOverviewPage = '/worker-overview-page';
   static const all = <String>{
     splashPage,
     signInPage,
@@ -34,7 +36,8 @@ class Routes {
     noteFormPage,
     shopsOverviewPage,
     shopsCreationPage,
-    shopWorkerCreationPage,
+    workerCreationPage,
+    workerOverviewPage,
   };
 }
 
@@ -48,7 +51,8 @@ class Router extends RouterBase {
     RouteDef(Routes.noteFormPage, page: NoteFormPage),
     RouteDef(Routes.shopsOverviewPage, page: ShopsOverviewPage),
     RouteDef(Routes.shopsCreationPage, page: ShopsCreationPage),
-    RouteDef(Routes.shopWorkerCreationPage, page: ShopWorkerCreationPage),
+    RouteDef(Routes.workerCreationPage, page: WorkerCreationPage),
+    RouteDef(Routes.workerOverviewPage, page: WorkerOverviewPage),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -94,12 +98,25 @@ class Router extends RouterBase {
         settings: data,
       );
     },
-    ShopWorkerCreationPage: (data) {
-      final args = data.getArgs<ShopWorkerCreationPageArguments>(
-        orElse: () => ShopWorkerCreationPageArguments(),
+    WorkerCreationPage: (data) {
+      final args = data.getArgs<WorkerCreationPageArguments>(
+        orElse: () => WorkerCreationPageArguments(),
       );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => ShopWorkerCreationPage(
+        builder: (context) => WorkerCreationPage(
+          key: args.key,
+          parentShopId: args.parentShopId,
+          numOfWorkers: args.numOfWorkers,
+        ),
+        settings: data,
+      );
+    },
+    WorkerOverviewPage: (data) {
+      final args = data.getArgs<WorkerOverviewPageArguments>(
+        orElse: () => WorkerOverviewPageArguments(),
+      );
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => WorkerOverviewPage(
           key: args.key,
           parentShopId: args.parentShopId,
           numOfWorkers: args.numOfWorkers,
@@ -137,14 +154,25 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushShopsCreationPage() =>
       push<dynamic>(Routes.shopsCreationPage);
 
-  Future<dynamic> pushShopWorkerCreationPage({
+  Future<dynamic> pushWorkerCreationPage({
     Key key,
     UniqueId parentShopId,
     num numOfWorkers,
   }) =>
       push<dynamic>(
-        Routes.shopWorkerCreationPage,
-        arguments: ShopWorkerCreationPageArguments(
+        Routes.workerCreationPage,
+        arguments: WorkerCreationPageArguments(
+            key: key, parentShopId: parentShopId, numOfWorkers: numOfWorkers),
+      );
+
+  Future<dynamic> pushWorkerOverviewPage({
+    Key key,
+    UniqueId parentShopId,
+    num numOfWorkers,
+  }) =>
+      push<dynamic>(
+        Routes.workerOverviewPage,
+        arguments: WorkerOverviewPageArguments(
             key: key, parentShopId: parentShopId, numOfWorkers: numOfWorkers),
       );
 }
@@ -160,11 +188,18 @@ class NoteFormPageArguments {
   NoteFormPageArguments({this.key, @required this.editedNote});
 }
 
-/// ShopWorkerCreationPage arguments holder class
-class ShopWorkerCreationPageArguments {
+/// WorkerCreationPage arguments holder class
+class WorkerCreationPageArguments {
   final Key key;
   final UniqueId parentShopId;
   final num numOfWorkers;
-  ShopWorkerCreationPageArguments(
-      {this.key, this.parentShopId, this.numOfWorkers});
+  WorkerCreationPageArguments({this.key, this.parentShopId, this.numOfWorkers});
+}
+
+/// WorkerOverviewPage arguments holder class
+class WorkerOverviewPageArguments {
+  final Key key;
+  final UniqueId parentShopId;
+  final num numOfWorkers;
+  WorkerOverviewPageArguments({this.key, this.parentShopId, this.numOfWorkers});
 }

@@ -30,8 +30,9 @@ class WorkerImageHandlerBloc
       uploadImageStarted: (e) async* {
         yield const WorkerImageHandlerState.loadInProgress(0);
         await _workerStreamSubscription?.cancel();
-        _workerStreamSubscription =
-            _workerRepository.uploadImage(e.image).listen((failureOrImageUrl) {
+        _workerStreamSubscription = _workerRepository
+            .uploadImage(e.image, e.parentId.getOrCrash(), e.id.getOrCrash())
+            .listen((failureOrImageUrl) {
           if (failureOrImageUrl.isRight()) {
             add(WorkerImageHandlerEvent.imageReceived(failureOrImageUrl));
           }

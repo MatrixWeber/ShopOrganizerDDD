@@ -30,7 +30,7 @@ class TaskRepository implements ITaskRepository {
   Either<TaskFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
           FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+    if (e.message.contains('permission-denied')) {
       return left(const TaskFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
@@ -69,9 +69,9 @@ class TaskRepository implements ITaskRepository {
   }
 
   Either<TaskFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+    if (e.message.contains('permission-denied')) {
       return left(const TaskFailure.insufficientPermissions());
-    } else if (e.message.contains('NOT_FOUND')) {
+    } else if (e.message.contains('not-found')) {
       // TODO log.error(e.toString);
       return left(const TaskFailure.unableToUpdate());
     } else {

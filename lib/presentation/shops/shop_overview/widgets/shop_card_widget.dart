@@ -1,8 +1,10 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_actor/shop_actor_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
+import '../../../routes/router.gr.dart';
 
 class ShopCard extends StatelessWidget {
   final Shop shop;
@@ -15,7 +17,10 @@ class ShopCard extends StatelessWidget {
       color: Colors.blue[500],
       child: InkWell(
         onTap: () {
-          // TODO Implement navigation
+          ExtendedNavigator.of(context).pushWorkerOverviewPage(
+            parentShopId: shop.id,
+            numOfWorkers: shop.numberOfWorkers.getOrCrash(),
+          );
         },
         onLongPress: () {
           final shopActorBloc = context.read<ShopActorBloc>();

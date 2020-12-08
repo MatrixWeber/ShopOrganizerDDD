@@ -63,8 +63,11 @@ class ShopsOverviewPage extends StatelessWidget {
             ),
             actions: <Widget>[
               IconButton(
-                  icon: const Icon(Icons.indeterminate_check_box),
-                  onPressed: () {})
+                icon: const Icon(Icons.arrow_back),
+                onPressed: () {
+                  // ExtendedNavigator.of(context).pop();
+                },
+              ),
             ],
           ),
           floatingActionButton: FloatingActionButton(

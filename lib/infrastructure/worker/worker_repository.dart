@@ -37,11 +37,11 @@ class WorkerRepository implements IWorkerRepository {
 
   Either<WorkerFailure, KtList<Worker>>
       _checkIfPlatformExceptionAndHandleInsufficientPermissionAndUnexpected(e) {
-    if (e is FirebaseException && e.message.contains('PERMISSION_DENIED')) {
+    if (e is FirebaseException && e.message.contains('permission-denied')) {
       return left(const WorkerFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
-      return left(const WorkerFailure.unexpected());
+      return left(const WorkerFailure.unexpected('watch'));
     }
   }
 
@@ -66,11 +66,11 @@ class WorkerRepository implements IWorkerRepository {
   Either<WorkerFailure, Unit>
       _handleInsufficientPermissionAndUnexpectedPlatformException(
           FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+    if (e.message.contains('permission-denied')) {
       return left(const WorkerFailure.insufficientPermissions());
     } else {
       // TODO log.error(e.toString);
-      return left(const WorkerFailure.unexpected());
+      return left(const WorkerFailure.unexpected('create'));
     }
   }
 
@@ -88,7 +88,7 @@ class WorkerRepository implements IWorkerRepository {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      return _handlePlatformExceptions(e);
+      return _handlePlatformExceptions(e, 'update');
     }
   }
 
@@ -106,19 +106,20 @@ class WorkerRepository implements IWorkerRepository {
 
       return right(unit);
     } on FirebaseException catch (e) {
-      return _handlePlatformExceptions(e);
+      return _handlePlatformExceptions(e, 'delete');
     }
   }
 
-  Either<WorkerFailure, Unit> _handlePlatformExceptions(FirebaseException e) {
-    if (e.message.contains('PERMISSION_DENIED')) {
+  Either<WorkerFailure, Unit> _handlePlatformExceptions(
+      FirebaseException e, String functionName) {
+    if (e.message.contains('permission-denied')) {
       return left(const WorkerFailure.insufficientPermissions());
-    } else if (e.message.contains('NOT_FOUND')) {
+    } else if (e.message.contains('not-found')) {
       // TODO log.error(e.toString);
       return left(const WorkerFailure.unableToUpdate());
     } else {
       // TODO log.error(e.toString);
-      return left(const WorkerFailure.unexpected());
+      return left(WorkerFailure.unexpected(functionName));
     }
   }
 }

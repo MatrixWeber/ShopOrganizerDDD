@@ -14,9 +14,12 @@ class _$WorkerImageHandlerEventTearOff {
   const _$WorkerImageHandlerEventTearOff();
 
 // ignore: unused_element
-  _UploadImageStarted uploadImageStarted(File image) {
+  _UploadImageStarted uploadImageStarted(
+      File image, UniqueId parentId, UniqueId id) {
     return _UploadImageStarted(
       image,
+      parentId,
+      id,
     );
   }
 
@@ -43,13 +46,14 @@ const $WorkerImageHandlerEvent = _$WorkerImageHandlerEventTearOff();
 mixin _$WorkerImageHandlerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult uploadImageStarted(File image),
+    @required
+        TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required TResult imageDeleted(String imageUrl),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult uploadImageStarted(File image),
+    TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     TResult imageDeleted(String imageUrl),
     @required TResult orElse(),
@@ -91,7 +95,7 @@ abstract class _$UploadImageStartedCopyWith<$Res> {
   factory _$UploadImageStartedCopyWith(
           _UploadImageStarted value, $Res Function(_UploadImageStarted) then) =
       __$UploadImageStartedCopyWithImpl<$Res>;
-  $Res call({File image});
+  $Res call({File image, UniqueId parentId, UniqueId id});
 }
 
 /// @nodoc
@@ -108,23 +112,34 @@ class __$UploadImageStartedCopyWithImpl<$Res>
   @override
   $Res call({
     Object image = freezed,
+    Object parentId = freezed,
+    Object id = freezed,
   }) {
     return _then(_UploadImageStarted(
       image == freezed ? _value.image : image as File,
+      parentId == freezed ? _value.parentId : parentId as UniqueId,
+      id == freezed ? _value.id : id as UniqueId,
     ));
   }
 }
 
 /// @nodoc
 class _$_UploadImageStarted implements _UploadImageStarted {
-  const _$_UploadImageStarted(this.image) : assert(image != null);
+  const _$_UploadImageStarted(this.image, this.parentId, this.id)
+      : assert(image != null),
+        assert(parentId != null),
+        assert(id != null);
 
   @override
   final File image;
+  @override
+  final UniqueId parentId;
+  @override
+  final UniqueId id;
 
   @override
   String toString() {
-    return 'WorkerImageHandlerEvent.uploadImageStarted(image: $image)';
+    return 'WorkerImageHandlerEvent.uploadImageStarted(image: $image, parentId: $parentId, id: $id)';
   }
 
   @override
@@ -132,12 +147,20 @@ class _$_UploadImageStarted implements _UploadImageStarted {
     return identical(this, other) ||
         (other is _UploadImageStarted &&
             (identical(other.image, image) ||
-                const DeepCollectionEquality().equals(other.image, image)));
+                const DeepCollectionEquality().equals(other.image, image)) &&
+            (identical(other.parentId, parentId) ||
+                const DeepCollectionEquality()
+                    .equals(other.parentId, parentId)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(image);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(image) ^
+      const DeepCollectionEquality().hash(parentId) ^
+      const DeepCollectionEquality().hash(id);
 
   @override
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith =>
@@ -146,27 +169,28 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult uploadImageStarted(File image),
+    @required
+        TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required TResult imageDeleted(String imageUrl),
   }) {
     assert(uploadImageStarted != null);
     assert(imageReceived != null);
     assert(imageDeleted != null);
-    return uploadImageStarted(image);
+    return uploadImageStarted(image, parentId, id);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult uploadImageStarted(File image),
+    TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     TResult imageDeleted(String imageUrl),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (uploadImageStarted != null) {
-      return uploadImageStarted(image);
+      return uploadImageStarted(image, parentId, id);
     }
     return orElse();
   }
@@ -201,9 +225,12 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 }
 
 abstract class _UploadImageStarted implements WorkerImageHandlerEvent {
-  const factory _UploadImageStarted(File image) = _$_UploadImageStarted;
+  const factory _UploadImageStarted(
+      File image, UniqueId parentId, UniqueId id) = _$_UploadImageStarted;
 
   File get image;
+  UniqueId get parentId;
+  UniqueId get id;
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith;
 }
 
@@ -272,7 +299,8 @@ class _$_ImageReceived implements _ImageReceived {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult uploadImageStarted(File image),
+    @required
+        TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required TResult imageDeleted(String imageUrl),
   }) {
@@ -285,7 +313,7 @@ class _$_ImageReceived implements _ImageReceived {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult uploadImageStarted(File image),
+    TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     TResult imageDeleted(String imageUrl),
     @required TResult orElse(),
@@ -395,7 +423,8 @@ class _$_ImageDeleted implements _ImageDeleted {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult uploadImageStarted(File image),
+    @required
+        TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     @required TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     @required TResult imageDeleted(String imageUrl),
   }) {
@@ -408,7 +437,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult uploadImageStarted(File image),
+    TResult uploadImageStarted(File image, UniqueId parentId, UniqueId id),
     TResult imageReceived(Either<None, ImageUrl> failureOrImageUrl),
     TResult imageDeleted(String imageUrl),
     @required TResult orElse(),
