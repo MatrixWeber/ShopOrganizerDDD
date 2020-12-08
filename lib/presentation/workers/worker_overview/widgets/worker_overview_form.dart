@@ -1,5 +1,4 @@
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
-import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -13,7 +12,10 @@ class WorkerOverviewForm extends StatelessWidget {
     return BlocBuilder<WorkerWatcherBloc, WorkerWatcherState>(
       builder: (context, state) {
         return state.map(
-          initial: (_) => Container(),
+          initial: (_) => Container(
+            color: Colors.blue,
+            child: const Text('No Worker found'),
+          ),
           loadInProgress: (_) => const Center(
             child: CircularProgressIndicator(),
           ),

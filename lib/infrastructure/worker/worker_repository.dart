@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/worker/worker_dtos.dart';
@@ -19,7 +20,9 @@ class WorkerRepository implements IWorkerRepository {
   Stream<Either<WorkerFailure, KtList<Worker>>> watchAll() async* {
     // ? user/{user ID}/shops/{shop ID}/worker/{shop ID}
     final userDoc = await _firestore.userDocument();
-    yield* userDoc.workerCollection
+    final shopDoc = userDoc.shopCollection
+      ..doc('f1c816b0-fc40-11ea-9a28-a91ef8c1bb8d');
+    yield* shopDoc
         .orderBy('serverTimeStamp', descending: true)
         .snapshots()
         .map(
