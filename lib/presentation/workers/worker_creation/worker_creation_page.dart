@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,20 +8,14 @@ import '../../../application/core/image_picker/image_picker_bloc.dart';
 import '../../../application/worker/worker_form/worker_form_bloc.dart';
 import '../../../application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import '../../../application/worker/worker_widget/worker_widget_bloc.dart';
-import '../../../domain/core/value_objects.dart';
 import '../../../injection.dart';
 import '../../routes/router.gr.dart';
 import 'widgets/worker_creation_form.dart';
 
 class WorkerCreationPage extends StatelessWidget {
-  final UniqueId parentShopId;
-  final num numOfWorkers;
+  final Shop shop;
 
-  const WorkerCreationPage({
-    Key key,
-    this.parentShopId,
-    this.numOfWorkers,
-  }) : super(key: key);
+  const WorkerCreationPage({Key key, @required this.shop}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,8 +82,7 @@ class WorkerCreationPage extends StatelessWidget {
             //   child: const Icon(Icons.add),
             // ),
             body: WorkerCreationForm(
-              parentShopId: parentShopId,
-              numOfWorkers: numOfWorkers,
+              shop: shop,
             ),
           ),
         ));

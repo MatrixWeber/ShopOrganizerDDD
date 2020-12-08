@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,15 +21,13 @@ class WorkerCreationForm extends StatelessWidget {
   static const _PADDING = 6.0;
   static const _TF_SIZE = 20.0;
 
-  final UniqueId parentShopId;
-  final num numOfWorkers;
+  final Shop shop;
 
-  const WorkerCreationForm({Key key, this.parentShopId, this.numOfWorkers})
-      : super(key: key);
+  const WorkerCreationForm({Key key, @required this.shop}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    num numOfWorkers = this.numOfWorkers;
+    num numOfWorkers = shop.numberOfWorkers.getOrCrash();
     numOfWorkers--;
     num percent;
     File _image;
@@ -50,11 +49,11 @@ class WorkerCreationForm extends StatelessWidget {
                   ).show(context);
                 }, (_) {
                   if (numOfWorkers > 0) {
-                    ExtendedNavigator.of(context).pushWorkerCreationPage(
-                        parentShopId: parentShopId, numOfWorkers: numOfWorkers);
+                    ExtendedNavigator.of(context)
+                        .pushWorkerCreationPage(shop: shop);
                   } else {
-                    ExtendedNavigator.of(context).pushWorkerOverviewPage(
-                        parentShopId: parentShopId, numOfWorkers: numOfWorkers);
+                    ExtendedNavigator.of(context)
+                        .pushWorkerOverviewPage(shop: shop);
                   }
                 }));
       },
@@ -83,7 +82,7 @@ class WorkerCreationForm extends StatelessWidget {
                       _image = imagePickerState.image;
                       context.read<WorkerImageHandlerBloc>().add(
                           WorkerImageHandlerEvent.uploadImageStarted(
-                              _image, parentShopId, workerFormState.worker.id));
+                              _image, shop.id, workerFormState.worker.id));
                     },
                     orElse: () {});
               }, builder:
@@ -202,7 +201,7 @@ class WorkerCreationForm extends StatelessWidget {
   ) {
     context
         .read<WorkerFormBloc>()
-        .add(WorkerFormEvent.parentIdChanged(parentShopId));
+        .add(WorkerFormEvent.parentIdChanged(shop.id));
     context.read<WorkerFormBloc>().add(const WorkerFormEvent.saved());
   }
 

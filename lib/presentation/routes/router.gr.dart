@@ -9,8 +9,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
-import '../../domain/core/value_objects.dart';
 import '../../domain/notes/note.dart';
+import '../../domain/shops/shop.dart';
 import '../notes/note_form/note_form_page.dart';
 import '../notes/notes_overview/notes_overview_page.dart';
 import '../shops/shop_creation/shop_creation_page.dart';
@@ -99,27 +99,21 @@ class Router extends RouterBase {
       );
     },
     WorkerCreationPage: (data) {
-      final args = data.getArgs<WorkerCreationPageArguments>(
-        orElse: () => WorkerCreationPageArguments(),
-      );
+      final args = data.getArgs<WorkerCreationPageArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
         builder: (context) => WorkerCreationPage(
           key: args.key,
-          parentShopId: args.parentShopId,
-          numOfWorkers: args.numOfWorkers,
+          shop: args.shop,
         ),
         settings: data,
       );
     },
     WorkerOverviewPage: (data) {
-      final args = data.getArgs<WorkerOverviewPageArguments>(
-        orElse: () => WorkerOverviewPageArguments(),
-      );
+      final args = data.getArgs<WorkerOverviewPageArguments>(nullOk: false);
       return MaterialPageRoute<dynamic>(
         builder: (context) => WorkerOverviewPage(
           key: args.key,
-          parentShopId: args.parentShopId,
-          numOfWorkers: args.numOfWorkers,
+          shop: args.shop,
         ),
         settings: data,
       );
@@ -156,24 +150,20 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushWorkerCreationPage({
     Key key,
-    UniqueId parentShopId,
-    num numOfWorkers,
+    @required Shop shop,
   }) =>
       push<dynamic>(
         Routes.workerCreationPage,
-        arguments: WorkerCreationPageArguments(
-            key: key, parentShopId: parentShopId, numOfWorkers: numOfWorkers),
+        arguments: WorkerCreationPageArguments(key: key, shop: shop),
       );
 
   Future<dynamic> pushWorkerOverviewPage({
     Key key,
-    UniqueId parentShopId,
-    num numOfWorkers,
+    @required Shop shop,
   }) =>
       push<dynamic>(
         Routes.workerOverviewPage,
-        arguments: WorkerOverviewPageArguments(
-            key: key, parentShopId: parentShopId, numOfWorkers: numOfWorkers),
+        arguments: WorkerOverviewPageArguments(key: key, shop: shop),
       );
 }
 
@@ -191,15 +181,13 @@ class NoteFormPageArguments {
 /// WorkerCreationPage arguments holder class
 class WorkerCreationPageArguments {
   final Key key;
-  final UniqueId parentShopId;
-  final num numOfWorkers;
-  WorkerCreationPageArguments({this.key, this.parentShopId, this.numOfWorkers});
+  final Shop shop;
+  WorkerCreationPageArguments({this.key, @required this.shop});
 }
 
 /// WorkerOverviewPage arguments holder class
 class WorkerOverviewPageArguments {
   final Key key;
-  final UniqueId parentShopId;
-  final num numOfWorkers;
-  WorkerOverviewPageArguments({this.key, this.parentShopId, this.numOfWorkers});
+  final Shop shop;
+  WorkerOverviewPageArguments({this.key, @required this.shop});
 }

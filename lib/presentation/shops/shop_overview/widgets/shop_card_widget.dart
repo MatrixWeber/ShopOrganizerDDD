@@ -17,10 +17,7 @@ class ShopCard extends StatelessWidget {
       color: Colors.blue[500],
       child: InkWell(
         onTap: () {
-          ExtendedNavigator.of(context).pushWorkerOverviewPage(
-            parentShopId: shop.id,
-            numOfWorkers: shop.numberOfWorkers.getOrCrash(),
-          );
+          ExtendedNavigator.of(context).pushWorkerOverviewPage(shop: shop);
         },
         onLongPress: () {
           final shopActorBloc = context.read<ShopActorBloc>();

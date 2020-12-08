@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/workers/worker_overview/widgets/worker_overview_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -12,13 +14,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../injection.dart';
 
 class WorkerOverviewPage extends StatelessWidget {
-  final UniqueId parentShopId;
-  final num numOfWorkers;
+  final Shop shop;
 
   const WorkerOverviewPage({
     Key key,
-    this.parentShopId,
-    this.numOfWorkers,
+    @required this.shop,
   }) : super(key: key);
 
   @override
@@ -62,7 +62,7 @@ class WorkerOverviewPage extends StatelessWidget {
         ],
         child: Scaffold(
           appBar: AppBar(
-            title: const Text('ShopWorkers'),
+            title: Text('Worker of ${shop.name.getOrCrash()}'),
             leading: IconButton(
               key: const Key('icon-button-sign-out'),
               icon: const Icon(Icons.exit_to_app),
@@ -87,10 +87,7 @@ class WorkerOverviewPage extends StatelessWidget {
             },
             child: const Icon(Icons.add),
           ),
-          body: WorkerOverviewForm(
-            parentShopId: parentShopId,
-            numOfWorkers: numOfWorkers,
-          ),
+          body: WorkerOverviewForm(shop: shop),
         ),
       ),
     );

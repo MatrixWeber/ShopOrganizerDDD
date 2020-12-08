@@ -32,9 +32,8 @@ class ShopCreationForm extends StatelessWidget {
                       duration: const Duration(seconds: 5),
                     ).show(context);
                   }, (_) {
-                    ExtendedNavigator.of(context).pushWorkerCreationPage(
-                        parentShopId: state.shop.id,
-                        numOfWorkers: state.shop.numberOfWorkers.getOrCrash());
+                    ExtendedNavigator.of(context)
+                        .pushWorkerCreationPage(shop: state.shop);
                   }));
         },
         builder: (context, state) {

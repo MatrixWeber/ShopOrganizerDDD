@@ -1,14 +1,13 @@
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class WorkerOverviewForm extends StatelessWidget {
-  final UniqueId parentShopId;
-  final num numOfWorkers;
+  final Shop shop;
 
-  const WorkerOverviewForm({Key key, this.parentShopId, this.numOfWorkers})
-      : super(key: key);
+  const WorkerOverviewForm({Key key, @required this.shop}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<WorkerWatcherBloc, WorkerWatcherState>(
