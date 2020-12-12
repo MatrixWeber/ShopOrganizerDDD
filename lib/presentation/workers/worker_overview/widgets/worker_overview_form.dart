@@ -1,5 +1,6 @@
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
+import 'package:firebase_ddd_tutorial/presentation/workers/worker_overview/widgets/worker_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -30,11 +31,7 @@ class WorkerOverviewForm extends StatelessWidget {
                     height: 100,
                   );
                 } else {
-                  return Container(
-                    color: Colors.green,
-                    width: 100,
-                    height: 100,
-                  );
+                  return WorkerCard(worker: worker);
                 }
               },
               itemCount: state.worker.size,

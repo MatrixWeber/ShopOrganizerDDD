@@ -9,8 +9,8 @@ abstract class WorkerImageHandlerState with _$WorkerImageHandlerState {
       _UploadedSuccessful;
   const factory WorkerImageHandlerState.deletedSuccessful() =
       _DeletedSuccessful;
-  // const factory WorkerImageHandlerState.downloadedSuccessful(File image) =
-  //     _LoadSuccess;
+  // const factory WorkerImageHandlerState.downloadedSuccessful(Image image) =
+  //     _DownloadedSuccessful;
   const factory WorkerImageHandlerState.loadSuccess(File image) = _LoadSuccess;
   const factory WorkerImageHandlerState.loadFailure(
       WorkerFailure workerFailure) = _LoadFailure;

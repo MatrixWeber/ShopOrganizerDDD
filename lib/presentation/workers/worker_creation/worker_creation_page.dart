@@ -14,8 +14,10 @@ import 'widgets/worker_creation_form.dart';
 
 class WorkerCreationPage extends StatelessWidget {
   final Shop shop;
+  final num numOfWorkers;
 
-  const WorkerCreationPage({Key key, @required this.shop}) : super(key: key);
+  const WorkerCreationPage({Key key, @required this.shop, this.numOfWorkers})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -83,6 +85,7 @@ class WorkerCreationPage extends StatelessWidget {
             // ),
             body: WorkerCreationForm(
               shop: shop,
+              numOfWorkers: numOfWorkers ?? shop.numberOfWorkers.getOrCrash(),
             ),
           ),
         ));

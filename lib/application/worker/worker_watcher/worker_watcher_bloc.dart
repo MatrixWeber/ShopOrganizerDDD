@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
@@ -29,7 +30,7 @@ class WorkerWatcherBloc extends Bloc<WorkerWatcherEvent, WorkerWatcherState> {
     yield* event.map(watchAllStarted: (e) async* {
       yield const WorkerWatcherState.loadInProgress();
       await _workerStreamSubscription?.cancel();
-      _workerStreamSubscription = _workerRepository.watchAll().listen(
+      _workerStreamSubscription = _workerRepository.watchAll(e.shop).listen(
           (failureOrWorkers) =>
               add(WorkerWatcherEvent.workerReceived(failureOrWorkers)));
     }, workerReceived: (e) async* {

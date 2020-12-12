@@ -25,7 +25,7 @@ class WorkerOverviewPage extends StatelessWidget {
       providers: [
         BlocProvider<WorkerWatcherBloc>(
           create: (context) => getIt<WorkerWatcherBloc>()
-            ..add(const WorkerWatcherEvent.watchAllStarted()),
+            ..add(WorkerWatcherEvent.watchAllStarted(shop)),
         ),
         BlocProvider<WorkerActorBloc>(
           create: (context) => getIt<WorkerActorBloc>(),
@@ -81,7 +81,8 @@ class WorkerOverviewPage extends StatelessWidget {
           ),
           floatingActionButton: FloatingActionButton(
             onPressed: () {
-              // ExtendedNavigator.of(context).pushShopWorkerCreationPage();
+              ExtendedNavigator.of(context)
+                  .pushWorkerCreationPage(shop: shop, numOfWorkers: 1);
             },
             child: const Icon(Icons.add),
           ),

@@ -1,44 +1,17 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:path_provider/path_provider.dart';
 
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
 
-const _myAvatar = 'my_great_logo.png';
-
-Future<File> getImageFileFromAssets(String path) async {
-  final byteData = await rootBundle.load('assets/$path');
-
-  final file = File('${(await getTemporaryDirectory()).path}/$path');
-  await file.writeAsBytes(byteData.buffer
-      .asUint8List(byteData.offsetInBytes, byteData.lengthInBytes));
-
-  return file;
-}
+const _myAvatar = 'images/placeholder-portrait.jpg';
 
 Widget _ifImageNotSet([num percent]) {
-  return Stack(
-    children: <Widget>[
-      const Center(
-        child: CircleAvatar(
-          radius: 120.0,
-          backgroundColor: Color(0xFF778899),
-        ),
-      ),
-      Center(
-        child: Image.asset(
-          'assets/$_myAvatar',
-          scale: 0.35,
-        ),
-      ),
-    ],
-  );
+  return createImageContainer(imagePath: 'assets/$_myAvatar');
 }
 
 Widget _ifImageWasSet(File image, [num percent]) {
@@ -47,13 +20,11 @@ Widget _ifImageWasSet(File image, [num percent]) {
     height: 240.0,
     width: 240.0,
     decoration: BoxDecoration(
-      color: const Color(0xff7c94b6),
       image: DecorationImage(
         image: ExactAssetImage(image.path),
-        fit: BoxFit.cover,
       ),
+      borderRadius: BorderRadius.circular(200),
       border: Border.all(color: color, width: 5.0),
-      borderRadius: const BorderRadius.all(Radius.circular(120.0)),
     ),
   );
 }
@@ -62,6 +33,26 @@ Widget decideImageView(File image, [num percent]) {
   return image == null
       ? _ifImageNotSet(percent)
       : _ifImageWasSet(image, percent);
+}
+
+Widget createImageContainer(
+    {@required String imagePath, String imageUrl, double diameter = 200}) {
+  return Container(
+    width: diameter,
+    height: diameter,
+    decoration: BoxDecoration(
+        // image: DecorationImage(
+        //     image: ExactAssetImage(imagePath), fit: BoxFit.cover),
+        borderRadius: BorderRadius.circular(diameter / 2)),
+    child: imageUrl == null
+        ? Image(
+            image: ExactAssetImage(imagePath),
+          )
+        : FadeInImage.assetNetwork(
+            placeholder: imagePath,
+            image: imageUrl,
+          ),
+  );
 }
 
 class ImageWidget extends StatelessWidget {

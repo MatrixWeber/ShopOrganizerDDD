@@ -7,6 +7,7 @@ import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_reposit
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firebase_storage_helpers.dart';
 
@@ -80,6 +81,16 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       // yield left(_handlePlatformExceptions(e));
     }
   }
+
+  // @override
+  // Future<Either<WorkerFailure, Image>> downloadImage(String imageUrl) async {
+  //   try {
+  //     final downloadData = Image.network(imageUrl);
+  //     return right(downloadData);
+  //   } on FirebaseException catch (e) {
+  //     return left(_handlePlatformExceptions(e, 'download image'));
+  //   }
+  // }
 
   WorkerFailure _handlePlatformExceptions(
       FirebaseException e, String functionName) {

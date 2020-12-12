@@ -90,6 +90,15 @@ class ShopRepository implements IShopRepository {
       final userDoc = await _firestore.userDocument();
       final shopId = shop.id.getOrCrash();
 
+      await userDoc.shopCollection
+          .doc(shopId)
+          .workerCollection
+          .get()
+          .then((snapshot) {
+        for (final ds in snapshot.docs) {
+          ds.reference.delete();
+        }
+      });
       await userDoc.shopCollection.doc(shopId).delete();
 
       return right(unit);

@@ -10,5 +10,5 @@ abstract class IWorkerImageStoreRepository {
   Stream<Either<None, ImageUrl>> uploadImage(
       File image, String parentId, String id);
   Future<Either<WorkerFailure, Unit>> deleteImage(String imageUrl);
-  // Future<Either<WorkerFailure, File>> downloadImage(ImageUrl imageUrl);
+  // Future<Either<WorkerFailure, Image>> downloadImage(String imageUrl);
 }

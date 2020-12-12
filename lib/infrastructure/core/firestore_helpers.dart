@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 
 import '../../injection.dart';
 
@@ -13,10 +14,10 @@ extension FirestoreX on FirebaseFirestore {
         .doc(user.id.getOrCrash());
   }
 
-  // Future<DocumentReference> shopDocument() async {
-  //   final userOption = await getIt<IShopRepository>().;
-  //   return userDocument().whenComplete(() => collection('shops').doc());
-  // }
+  Future<DocumentReference> shopDocument(Shop shop) async {
+    return userDocument()
+        .whenComplete(() => collection('shops').doc(shop.id.getOrCrash()));
+  }
 }
 
 extension DocumentReferenceNote on DocumentReference {

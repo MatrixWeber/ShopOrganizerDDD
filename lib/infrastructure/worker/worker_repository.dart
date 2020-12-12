@@ -17,12 +17,12 @@ class WorkerRepository implements IWorkerRepository {
   WorkerRepository(this._firestore);
 
   @override
-  Stream<Either<WorkerFailure, KtList<Worker>>> watchAll() async* {
+  Stream<Either<WorkerFailure, KtList<Worker>>> watchAll(Shop shop) async* {
     // ? user/{user ID}/shops/{shop ID}/worker/{shop ID}
     final userDoc = await _firestore.userDocument();
-    final shopDoc = userDoc.shopCollection
-      ..doc('f1c816b0-fc40-11ea-9a28-a91ef8c1bb8d');
-    yield* shopDoc
+    final shopDoc = userDoc.collection('shops').doc(shop.id.getOrCrash());
+    final workerCollection = shopDoc.workerCollection;
+    yield* workerCollection
         .orderBy('serverTimeStamp', descending: true)
         .snapshots()
         .map(
@@ -51,10 +51,10 @@ class WorkerRepository implements IWorkerRepository {
   @override
   Future<Either<WorkerFailure, Unit>> create(Worker worker) async {
     try {
-      final workerDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.userDocument();
       final workerDto = WorkerDto.fromDomain(worker);
 
-      await workerDoc.shopCollection
+      await userDoc.shopCollection
           .doc(workerDto.parentId)
           .workerCollection
           .doc(workerDto.id)
@@ -80,10 +80,10 @@ class WorkerRepository implements IWorkerRepository {
   @override
   Future<Either<WorkerFailure, Unit>> update(Worker worker) async {
     try {
-      final workerDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.userDocument();
       final workerDto = WorkerDto.fromDomain(worker);
 
-      await workerDoc.shopCollection
+      await userDoc.shopCollection
           .doc()
           .workerCollection
           .doc(workerDto.id)
@@ -98,11 +98,11 @@ class WorkerRepository implements IWorkerRepository {
   @override
   Future<Either<WorkerFailure, Unit>> delete(Worker worker) async {
     try {
-      final workerDoc = await _firestore.userDocument();
+      final userDoc = await _firestore.userDocument();
       final workerId = worker.id.getOrCrash();
 
-      await workerDoc.shopCollection
-          .doc()
+      await userDoc.shopCollection
+          .doc(worker.parentId.getOrCrash())
           .workerCollection
           .doc(workerId)
           .delete();

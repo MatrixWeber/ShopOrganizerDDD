@@ -6,6 +6,7 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 
@@ -38,6 +39,17 @@ class WorkerImageHandlerBloc
           }
         });
       },
+      // downloadImageStarted: (e) async* {
+      //   yield const WorkerImageHandlerState.loadInProgress(0);
+      //   await _workerStreamSubscription?.cancel();
+      //   // // _workerStreamSubscription = _workerRepository
+      //   // //     .downloadImage(e.imageUml.getOrCrash())
+      //   // //     .listen((failureOrImage) {
+      //   // //   if (failureOrImage.isRight()) {
+      //   // //     add(WorkerImageHandlerEvent.imageDownloaded(failureOrImage));
+      //   // //   }
+      //   // });
+      // },
       imageDeleted: (e) async* {
         yield const WorkerImageHandlerState.loadInProgress(0);
         final failureOrSuccess =
@@ -53,6 +65,13 @@ class WorkerImageHandlerBloc
                 WorkerFailure.insufficientPermissions()),
             (imageUrl) => WorkerImageHandlerState.uploadedSuccessful(imageUrl));
       },
+      // imageDownloaded: (e) async* {
+      //   yield const WorkerImageHandlerState.loadInProgress(100);
+      //   yield e.failureOrImage.fold(
+      //       (_) => const WorkerImageHandlerState.loadFailure(
+      //           WorkerFailure.insufficientPermissions()),
+      //       (image) => WorkerImageHandlerState.downloadedSuccessful(image));
+      // },
     );
   }
 

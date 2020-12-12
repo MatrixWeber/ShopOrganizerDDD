@@ -14,8 +14,10 @@ class _$WorkerWatcherEventTearOff {
   const _$WorkerWatcherEventTearOff();
 
 // ignore: unused_element
-  _WatchAllStarted watchAllStarted() {
-    return const _WatchAllStarted();
+  _WatchAllStarted watchAllStarted(Shop shop) {
+    return _WatchAllStarted(
+      shop,
+    );
   }
 
 // ignore: unused_element
@@ -35,14 +37,14 @@ const $WorkerWatcherEvent = _$WorkerWatcherEventTearOff();
 mixin _$WorkerWatcherEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult watchAllStarted(),
+    @required TResult watchAllStarted(Shop shop),
     @required
         TResult workerReceived(
             Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult watchAllStarted(),
+    TResult watchAllStarted(Shop shop),
     TResult workerReceived(
         Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
     @required TResult orElse(),
@@ -82,6 +84,9 @@ abstract class _$WatchAllStartedCopyWith<$Res> {
   factory _$WatchAllStartedCopyWith(
           _WatchAllStarted value, $Res Function(_WatchAllStarted) then) =
       __$WatchAllStartedCopyWithImpl<$Res>;
+  $Res call({Shop shop});
+
+  $ShopCopyWith<$Res> get shop;
 }
 
 /// @nodoc
@@ -94,49 +99,79 @@ class __$WatchAllStartedCopyWithImpl<$Res>
 
   @override
   _WatchAllStarted get _value => super._value as _WatchAllStarted;
+
+  @override
+  $Res call({
+    Object shop = freezed,
+  }) {
+    return _then(_WatchAllStarted(
+      shop == freezed ? _value.shop : shop as Shop,
+    ));
+  }
+
+  @override
+  $ShopCopyWith<$Res> get shop {
+    if (_value.shop == null) {
+      return null;
+    }
+    return $ShopCopyWith<$Res>(_value.shop, (value) {
+      return _then(_value.copyWith(shop: value));
+    });
+  }
 }
 
 /// @nodoc
 class _$_WatchAllStarted implements _WatchAllStarted {
-  const _$_WatchAllStarted();
+  const _$_WatchAllStarted(this.shop) : assert(shop != null);
+
+  @override
+  final Shop shop;
 
   @override
   String toString() {
-    return 'WorkerWatcherEvent.watchAllStarted()';
+    return 'WorkerWatcherEvent.watchAllStarted(shop: $shop)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _WatchAllStarted);
+    return identical(this, other) ||
+        (other is _WatchAllStarted &&
+            (identical(other.shop, shop) ||
+                const DeepCollectionEquality().equals(other.shop, shop)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(shop);
+
+  @override
+  _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith =>
+      __$WatchAllStartedCopyWithImpl<_WatchAllStarted>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult watchAllStarted(),
+    @required TResult watchAllStarted(Shop shop),
     @required
         TResult workerReceived(
             Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
   }) {
     assert(watchAllStarted != null);
     assert(workerReceived != null);
-    return watchAllStarted();
+    return watchAllStarted(shop);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult watchAllStarted(),
+    TResult watchAllStarted(Shop shop),
     TResult workerReceived(
         Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (watchAllStarted != null) {
-      return watchAllStarted();
+      return watchAllStarted(shop);
     }
     return orElse();
   }
@@ -168,7 +203,10 @@ class _$_WatchAllStarted implements _WatchAllStarted {
 }
 
 abstract class _WatchAllStarted implements WorkerWatcherEvent {
-  const factory _WatchAllStarted() = _$_WatchAllStarted;
+  const factory _WatchAllStarted(Shop shop) = _$_WatchAllStarted;
+
+  Shop get shop;
+  _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith;
 }
 
 /// @nodoc
@@ -236,7 +274,7 @@ class _$_WorkersReceived implements _WorkersReceived {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object>({
-    @required TResult watchAllStarted(),
+    @required TResult watchAllStarted(Shop shop),
     @required
         TResult workerReceived(
             Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
@@ -249,7 +287,7 @@ class _$_WorkersReceived implements _WorkersReceived {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
-    TResult watchAllStarted(),
+    TResult watchAllStarted(Shop shop),
     TResult workerReceived(
         Either<WorkerFailure, KtList<Worker>> failureOrWorkers),
     @required TResult orElse(),

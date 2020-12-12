@@ -104,6 +104,7 @@ class Router extends RouterBase {
         builder: (context) => WorkerCreationPage(
           key: args.key,
           shop: args.shop,
+          numOfWorkers: args.numOfWorkers,
         ),
         settings: data,
       );
@@ -151,10 +152,12 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushWorkerCreationPage({
     Key key,
     @required Shop shop,
+    num numOfWorkers,
   }) =>
       push<dynamic>(
         Routes.workerCreationPage,
-        arguments: WorkerCreationPageArguments(key: key, shop: shop),
+        arguments: WorkerCreationPageArguments(
+            key: key, shop: shop, numOfWorkers: numOfWorkers),
       );
 
   Future<dynamic> pushWorkerOverviewPage({
@@ -182,7 +185,9 @@ class NoteFormPageArguments {
 class WorkerCreationPageArguments {
   final Key key;
   final Shop shop;
-  WorkerCreationPageArguments({this.key, @required this.shop});
+  final num numOfWorkers;
+  WorkerCreationPageArguments(
+      {this.key, @required this.shop, this.numOfWorkers});
 }
 
 /// WorkerOverviewPage arguments holder class

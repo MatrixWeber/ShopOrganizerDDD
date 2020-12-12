@@ -12,23 +12,26 @@ import '../../../../application/worker/worker_form/worker_form_bloc.dart';
 import '../../../../application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import '../../../../application/worker/worker_widget/worker_widget_bloc.dart';
 import '../../../../domain/core/helper_functions.dart';
-import '../../../../domain/core/value_objects.dart';
 import '../../../core/confirm_dialog.dart';
 import '../../../core/image_widget.dart';
 import '../../../routes/router.gr.dart';
 
+// ignore: must_be_immutable
 class WorkerCreationForm extends StatelessWidget {
   static const _PADDING = 6.0;
   static const _TF_SIZE = 20.0;
 
   final Shop shop;
+  final num numOfWorkers;
 
-  const WorkerCreationForm({Key key, @required this.shop}) : super(key: key);
+  const WorkerCreationForm(
+      {Key key, @required this.shop, @required this.numOfWorkers})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    num numOfWorkers = shop.numberOfWorkers.getOrCrash();
-    numOfWorkers--;
+    num numOfRemainingWorkers = numOfWorkers;
+    numOfRemainingWorkers--;
     num percent;
     File _image;
     return BlocConsumer<WorkerFormBloc, WorkerFormState>(
@@ -48,9 +51,9 @@ class WorkerCreationForm extends StatelessWidget {
                     duration: const Duration(seconds: 5),
                   ).show(context);
                 }, (_) {
-                  if (numOfWorkers > 0) {
-                    ExtendedNavigator.of(context)
-                        .pushWorkerCreationPage(shop: shop);
+                  if (numOfRemainingWorkers > 0) {
+                    ExtendedNavigator.of(context).pushWorkerCreationPage(
+                        shop: shop, numOfWorkers: numOfRemainingWorkers);
                   } else {
                     ExtendedNavigator.of(context)
                         .pushWorkerOverviewPage(shop: shop);
