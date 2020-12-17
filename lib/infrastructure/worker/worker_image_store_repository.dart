@@ -7,7 +7,6 @@ import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_reposit
 import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firebase_storage_helpers.dart';
 
@@ -32,14 +31,17 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   Stream<Either<None, ImageUrl>> uploadImage(
       File image, String parentId, String id) async* {
     try {
-      final storageReference = await _firebaseStorage.userDocument.call();
+      final userStorageReference = await _firebaseStorage.userDocument.call();
+      final shopStorageReference = userStorageReference
+          .child(userStorageReference.shopsCollection)
+          .child(parentId);
+      final workerStorageReference = shopStorageReference
+          .child(userStorageReference.workerCollection)
+          .child(id);
 
-      final uploadTask = storageReference
-          .child(storageReference.shopsCollection)
-          .child(parentId)
-          .child(storageReference.workerCollection)
-          .child(id)
-          .putFile(image);
+      final uploadTask = id.isEmpty
+          ? shopStorageReference.putFile(image)
+          : workerStorageReference.putFile(image);
 
       // final StreamSubscription<StorageTaskEvent> streamSubscription =
       // yield* uploadTask.events.map((event) {

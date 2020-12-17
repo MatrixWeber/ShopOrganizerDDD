@@ -1,6 +1,8 @@
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';
+import 'package:firebase_ddd_tutorial/presentation/core/deletion_dialog.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
@@ -13,6 +15,19 @@ class WorkerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void delete() {
+      final workerActorBloc = context.read<WorkerActorBloc>();
+      workerActorBloc.add(
+        WorkerActorEvent.deleted(worker),
+      );
+      final workerImageHandlerBloc = context.read<WorkerImageHandlerBloc>();
+      workerImageHandlerBloc.add(
+        WorkerImageHandlerEvent.imageDeleted(
+          worker.imageUrl.getOrCrash(),
+        ),
+      );
+    }
+
     return Slidable(
       actionPane: const SlidableDrawerActionPane(),
       actionExtentRatio: 0.15,
@@ -22,8 +37,11 @@ class WorkerCard extends StatelessWidget {
           icon: Icons.delete,
           color: Colors.red,
           onTap: () {
-            final workerActorBloc = context.read<WorkerActorBloc>();
-            _showDeletionDialog(context, workerActorBloc);
+            DeletionDialog.show(
+                context: context,
+                title: 'worker',
+                content: worker.name.getOrCrash(),
+                onDelete: delete);
           },
         ),
       ],
@@ -64,51 +82,6 @@ class WorkerCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  void _showDeletionDialog(
-      BuildContext context, WorkerActorBloc workerActorBloc) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          title: const Text(
-            'Delete worker:',
-            style: TextStyle(
-              color: Colors.red,
-            ),
-          ),
-          content: Text(
-            worker.name.getOrCrash(),
-            maxLines: 3,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Colors.red,
-            ),
-          ),
-          actions: [
-            FlatButton(
-              onPressed: () => Navigator.pop(context),
-              child: const Text('CANCEL'),
-            ),
-            FlatButton(
-              onPressed: () {
-                workerActorBloc.add(
-                  WorkerActorEvent.deleted(worker),
-                );
-                Navigator.pop(context);
-              },
-              child: const Text(
-                'DELETE',
-                style: TextStyle(
-                  color: Colors.red,
-                ),
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 }

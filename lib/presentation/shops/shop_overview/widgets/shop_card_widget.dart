@@ -44,18 +44,23 @@ class ShopCard extends StatelessWidget {
               children: [
                 createImageContainer(
                     imagePath: "assets/images/shop-placeholder.jpg"),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Name: ${shop.name.getOrCrash()}',
-                      style: const TextStyle(fontSize: 20.0),
-                    ),
-                    Text(
-                      'Phone: ${shop.phoneNumber.getOrCrash()}',
-                      style: const TextStyle(fontSize: 20.0),
-                    )
-                  ],
+                Container(
+                  constraints:
+                      const BoxConstraints.expand(height: 200, width: 200),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Name: ${shop.name.getOrCrash()}',
+                        style: const TextStyle(fontSize: 16.0),
+                      ),
+                      Text(
+                        'Phone: ${shop.phoneNumber.getOrCrash()}',
+                        style: const TextStyle(fontSize: 16.0),
+                      )
+                    ],
+                  ),
                 ),
               ],
             ),

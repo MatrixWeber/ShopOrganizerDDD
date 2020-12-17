@@ -13,6 +13,7 @@ import '../../domain/notes/note.dart';
 import '../../domain/shops/shop.dart';
 import '../notes/note_form/note_form_page.dart';
 import '../notes/notes_overview/notes_overview_page.dart';
+import '../shops/shop_creation/shop_address_creation_page.dart';
 import '../shops/shop_creation/shop_creation_page.dart';
 import '../shops/shop_overview/shops_overview_page.dart';
 import '../sign_in/sign_in_page.dart';
@@ -27,6 +28,7 @@ class Routes {
   static const String noteFormPage = '/note-form-page';
   static const String shopsOverviewPage = '/shops-overview-page';
   static const String shopsCreationPage = '/shops-creation-page';
+  static const String shopAddressCreationPage = '/shop-address-creation-page';
   static const String workerCreationPage = '/worker-creation-page';
   static const String workerOverviewPage = '/worker-overview-page';
   static const all = <String>{
@@ -36,6 +38,7 @@ class Routes {
     noteFormPage,
     shopsOverviewPage,
     shopsCreationPage,
+    shopAddressCreationPage,
     workerCreationPage,
     workerOverviewPage,
   };
@@ -51,6 +54,7 @@ class Router extends RouterBase {
     RouteDef(Routes.noteFormPage, page: NoteFormPage),
     RouteDef(Routes.shopsOverviewPage, page: ShopsOverviewPage),
     RouteDef(Routes.shopsCreationPage, page: ShopsCreationPage),
+    RouteDef(Routes.shopAddressCreationPage, page: ShopAddressCreationPage),
     RouteDef(Routes.workerCreationPage, page: WorkerCreationPage),
     RouteDef(Routes.workerOverviewPage, page: WorkerOverviewPage),
   ];
@@ -95,6 +99,12 @@ class Router extends RouterBase {
     ShopsCreationPage: (data) {
       return MaterialPageRoute<dynamic>(
         builder: (context) => ShopsCreationPage(),
+        settings: data,
+      );
+    },
+    ShopAddressCreationPage: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => ShopAddressCreationPage(),
         settings: data,
       );
     },
@@ -148,6 +158,9 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
 
   Future<dynamic> pushShopsCreationPage() =>
       push<dynamic>(Routes.shopsCreationPage);
+
+  Future<dynamic> pushShopAddressCreationPage() =>
+      push<dynamic>(Routes.shopAddressCreationPage);
 
   Future<dynamic> pushWorkerCreationPage({
     Key key,

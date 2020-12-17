@@ -32,6 +32,7 @@ import 'application/shops/shop_actor/shop_actor_bloc.dart';
 import 'application/shops/shop_form/shop_form_bloc.dart';
 import 'infrastructure/shops/shop_repository.dart';
 import 'application/shops/shop_watcher/shop_watcher_bloc.dart';
+import 'application/shops/shop_widget/shop_widget_bloc.dart';
 import 'application/auth/sign_in_form/bloc/sign_in_form_bloc.dart';
 import 'application/task/task_actor/task_actor_bloc.dart';
 import 'application/task/task_form/task_form_bloc.dart';
@@ -84,6 +85,7 @@ GetIt $initGetIt(
   gh.factory<ShopActorBloc>(() => ShopActorBloc(get<IShopRepository>()));
   gh.factory<ShopFormBloc>(() => ShopFormBloc(get<IShopRepository>()));
   gh.factory<ShopWatcherBloc>(() => ShopWatcherBloc(get<IShopRepository>()));
+  gh.factory<ShopWidgetBloc>(() => ShopWidgetBloc());
   gh.factory<SignInFormBloc>(() => SignInFormBloc(get<IAuthFacade>()));
   gh.factory<TaskActorBloc>(() => TaskActorBloc(get<ITaskRepository>()));
   gh.factory<TaskFormBloc>(() => TaskFormBloc(get<ITaskRepository>()));

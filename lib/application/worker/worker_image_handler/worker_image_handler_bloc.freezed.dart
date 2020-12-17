@@ -14,8 +14,8 @@ class _$WorkerImageHandlerEventTearOff {
   const _$WorkerImageHandlerEventTearOff();
 
 // ignore: unused_element
-  _UploadImageStarted uploadImageStarted(
-      File image, UniqueId parentId, UniqueId id) {
+  _UploadImageStarted uploadImageStarted(File image, UniqueId parentId,
+      [UniqueId id]) {
     return _UploadImageStarted(
       image,
       parentId,
@@ -125,10 +125,9 @@ class __$UploadImageStartedCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_UploadImageStarted implements _UploadImageStarted {
-  const _$_UploadImageStarted(this.image, this.parentId, this.id)
+  const _$_UploadImageStarted(this.image, this.parentId, [this.id])
       : assert(image != null),
-        assert(parentId != null),
-        assert(id != null);
+        assert(parentId != null);
 
   @override
   final File image;
@@ -225,8 +224,8 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 }
 
 abstract class _UploadImageStarted implements WorkerImageHandlerEvent {
-  const factory _UploadImageStarted(
-      File image, UniqueId parentId, UniqueId id) = _$_UploadImageStarted;
+  const factory _UploadImageStarted(File image, UniqueId parentId,
+      [UniqueId id]) = _$_UploadImageStarted;
 
   File get image;
   UniqueId get parentId;

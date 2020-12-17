@@ -189,7 +189,7 @@ class WorkerCreationForm extends StatelessWidget {
                       (_) => null);
                   _saveData(context);
                 },
-                child: const Text('Add some Tasks',
+                child: const Text('Save Worker',
                     style: TextStyle(fontSize: _TF_SIZE)),
               ),
             ],

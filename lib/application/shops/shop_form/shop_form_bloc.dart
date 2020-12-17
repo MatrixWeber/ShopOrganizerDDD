@@ -63,7 +63,6 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
         );
 
         if (state.shop.failureOption.isNone()) {
-          print('shop save');
           failureOrSuccess = state.isEditing
               ? await _shopRepository.update(state.shop)
               : await _shopRepository.create(state.shop);
