@@ -134,6 +134,12 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
+      shopChanged: (e) async* {
+        yield state.copyWith(
+          shop: e.shop,
+          saveFailureOrSuccessOption: none(),
+        );
+      },
       // workingHoursChanged: (e) async* {
       //   yield state.copyWith(
       //     shop: state.shop.copyWith(

@@ -46,7 +46,7 @@ abstract class Shop implements _$Shop {
         email: EmailAddress('cab@bla.de'),
         phoneNumber: PhoneNumber('+496754678675'),
         numberOfWorkers: NumberOfWorkers(2),
-        imageUrl: ImageUrl('e'),
+        imageUrl: ImageUrl(''),
         category: ShopCategory('f'),
         address: Address.test(),
         openingDays: WeekList<bool>(emptyList()),

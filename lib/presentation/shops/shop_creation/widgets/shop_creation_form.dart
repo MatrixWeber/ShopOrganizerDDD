@@ -8,6 +8,7 @@ import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/wo
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
+import 'package:firebase_ddd_tutorial/presentation/core/confirm_dialog.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/image_widget.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flutter/material.dart';
@@ -175,8 +176,17 @@ class ShopCreationForm extends StatelessWidget {
             ),
             RaisedButton(
               color: primaryColor,
-              onPressed: () =>
-                  ExtendedNavigator.of(context).pushShopAddressCreationPage(),
+              onPressed: () {
+                shopFormState.shop.imageUrl.value.fold(
+                    (f) => f.maybeMap(
+                          empty: (_) => ConfirmDialog.showYesNo(
+                              context, _updateImageUrlToNone),
+                          orElse: () => null,
+                        ),
+                    (_) => null);
+                ExtendedNavigator.of(context)
+                    .pushShopAddressCreationPage(shop: shopFormState.shop);
+              },
               child: const Text('Add some worker',
                   style: TextStyle(fontSize: _TF_SIZE)),
             ),
@@ -184,5 +194,14 @@ class ShopCreationForm extends StatelessWidget {
         ),
       );
     });
+  }
+
+  void _updateImageUrlToNone(
+    BuildContext context,
+  ) {
+    context
+        .read<ShopFormBloc>()
+        .add(const ShopFormEvent.imageUrlChanged('None'));
+    ExtendedNavigator.of(context).pushShopAddressCreationPage();
   }
 }

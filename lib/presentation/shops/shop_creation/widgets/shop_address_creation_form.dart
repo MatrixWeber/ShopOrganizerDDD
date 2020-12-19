@@ -1,16 +1,19 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
+import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../domain/core/helper_functions.dart';
-import '../../../core/confirm_dialog.dart';
 import '../../../routes/router.gr.dart';
 
 // ignore: must_be_immutable
 class ShopAddressCreationForm extends StatelessWidget {
+  final Shop shop;
+
+  const ShopAddressCreationForm({Key key, this.shop}) : super(key: key);
   static const _PADDING = 6.0;
   static const _TF_SIZE = 20.0;
 
@@ -191,14 +194,10 @@ class ShopAddressCreationForm extends StatelessWidget {
               ),
               RaisedButton(
                 onPressed: () {
-                  shopFormState.shop.imageUrl.value.fold(
-                      (f) => f.maybeMap(
-                            empty: (_) => ConfirmDialog.showYesNo(
-                                context, _updateImageUrlToNone),
-                            orElse: () => null,
-                          ),
-                      (_) => null);
-                  _saveData(context);
+                  context
+                      .read<ShopFormBloc>()
+                      .add(ShopFormEvent.shopChanged(shop));
+                  context.read<ShopFormBloc>().add(const ShopFormEvent.saved());
                 },
                 child: const Text('Create some worker',
                     style: TextStyle(fontSize: _TF_SIZE)),
@@ -208,20 +207,5 @@ class ShopAddressCreationForm extends StatelessWidget {
         );
       },
     );
-  }
-
-  void _saveData(
-    BuildContext context,
-  ) {
-    context.read<ShopFormBloc>().add(const ShopFormEvent.saved());
-  }
-
-  void _updateImageUrlToNone(
-    BuildContext context,
-  ) {
-    context
-        .read<ShopFormBloc>()
-        .add(const ShopFormEvent.imageUrlChanged('None'));
-    _saveData(context);
   }
 }

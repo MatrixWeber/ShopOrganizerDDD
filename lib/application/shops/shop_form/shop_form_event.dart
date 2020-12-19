@@ -25,4 +25,5 @@ abstract class ShopFormEvent with _$ShopFormEvent {
   // const factory ShopFormEvent.workingHoursChanged(
   //     KtList<ShopWorkingHoursPrimitive> workingHours) = WorkingHoursChanged;
   const factory ShopFormEvent.saved() = Saved;
+  const factory ShopFormEvent.shopChanged(Shop shop) = ShopChanged;
 }

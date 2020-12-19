@@ -103,8 +103,14 @@ class Router extends RouterBase {
       );
     },
     ShopAddressCreationPage: (data) {
+      final args = data.getArgs<ShopAddressCreationPageArguments>(
+        orElse: () => ShopAddressCreationPageArguments(),
+      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => ShopAddressCreationPage(),
+        builder: (context) => ShopAddressCreationPage(
+          key: args.key,
+          shop: args.shop,
+        ),
         settings: data,
       );
     },
@@ -159,8 +165,14 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
   Future<dynamic> pushShopsCreationPage() =>
       push<dynamic>(Routes.shopsCreationPage);
 
-  Future<dynamic> pushShopAddressCreationPage() =>
-      push<dynamic>(Routes.shopAddressCreationPage);
+  Future<dynamic> pushShopAddressCreationPage({
+    Key key,
+    Shop shop,
+  }) =>
+      push<dynamic>(
+        Routes.shopAddressCreationPage,
+        arguments: ShopAddressCreationPageArguments(key: key, shop: shop),
+      );
 
   Future<dynamic> pushWorkerCreationPage({
     Key key,
@@ -192,6 +204,13 @@ class NoteFormPageArguments {
   final Key key;
   final Note editedNote;
   NoteFormPageArguments({this.key, @required this.editedNote});
+}
+
+/// ShopAddressCreationPage arguments holder class
+class ShopAddressCreationPageArguments {
+  final Key key;
+  final Shop shop;
+  ShopAddressCreationPageArguments({this.key, this.shop});
 }
 
 /// WorkerCreationPage arguments holder class
