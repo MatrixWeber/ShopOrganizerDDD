@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';

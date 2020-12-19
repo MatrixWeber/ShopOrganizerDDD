@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'worker_widget_bloc.dart';
+part of 'widget_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'worker_widget_bloc.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$WorkerWidgetEventTearOff {
-  const _$WorkerWidgetEventTearOff();
+class _$WidgetEventTearOff {
+  const _$WidgetEventTearOff();
 
 // ignore: unused_element
   _Initialized initialized() {
@@ -28,10 +28,10 @@ class _$WorkerWidgetEventTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $WorkerWidgetEvent = _$WorkerWidgetEventTearOff();
+const $WidgetEvent = _$WidgetEventTearOff();
 
 /// @nodoc
-mixin _$WorkerWidgetEvent {
+mixin _$WidgetEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initialized(),
@@ -57,20 +57,19 @@ mixin _$WorkerWidgetEvent {
 }
 
 /// @nodoc
-abstract class $WorkerWidgetEventCopyWith<$Res> {
-  factory $WorkerWidgetEventCopyWith(
-          WorkerWidgetEvent value, $Res Function(WorkerWidgetEvent) then) =
-      _$WorkerWidgetEventCopyWithImpl<$Res>;
+abstract class $WidgetEventCopyWith<$Res> {
+  factory $WidgetEventCopyWith(
+          WidgetEvent value, $Res Function(WidgetEvent) then) =
+      _$WidgetEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkerWidgetEventCopyWithImpl<$Res>
-    implements $WorkerWidgetEventCopyWith<$Res> {
-  _$WorkerWidgetEventCopyWithImpl(this._value, this._then);
+class _$WidgetEventCopyWithImpl<$Res> implements $WidgetEventCopyWith<$Res> {
+  _$WidgetEventCopyWithImpl(this._value, this._then);
 
-  final WorkerWidgetEvent _value;
+  final WidgetEvent _value;
   // ignore: unused_field
-  final $Res Function(WorkerWidgetEvent) _then;
+  final $Res Function(WidgetEvent) _then;
 }
 
 /// @nodoc
@@ -81,8 +80,7 @@ abstract class _$InitializedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InitializedCopyWithImpl<$Res>
-    extends _$WorkerWidgetEventCopyWithImpl<$Res>
+class __$InitializedCopyWithImpl<$Res> extends _$WidgetEventCopyWithImpl<$Res>
     implements _$InitializedCopyWith<$Res> {
   __$InitializedCopyWithImpl(
       _Initialized _value, $Res Function(_Initialized) _then)
@@ -98,7 +96,7 @@ class _$_Initialized implements _Initialized {
 
   @override
   String toString() {
-    return 'WorkerWidgetEvent.initialized()';
+    return 'WidgetEvent.initialized()';
   }
 
   @override
@@ -160,7 +158,7 @@ class _$_Initialized implements _Initialized {
   }
 }
 
-abstract class _Initialized implements WorkerWidgetEvent {
+abstract class _Initialized implements WidgetEvent {
   const factory _Initialized() = _$_Initialized;
 }
 
@@ -173,8 +171,7 @@ abstract class _$InProgressCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InProgressCopyWithImpl<$Res>
-    extends _$WorkerWidgetEventCopyWithImpl<$Res>
+class __$InProgressCopyWithImpl<$Res> extends _$WidgetEventCopyWithImpl<$Res>
     implements _$InProgressCopyWith<$Res> {
   __$InProgressCopyWithImpl(
       _InProgress _value, $Res Function(_InProgress) _then)
@@ -202,7 +199,7 @@ class _$_InProgress implements _InProgress {
 
   @override
   String toString() {
-    return 'WorkerWidgetEvent.inProgress(percent: $percent)';
+    return 'WidgetEvent.inProgress(percent: $percent)';
   }
 
   @override
@@ -272,7 +269,7 @@ class _$_InProgress implements _InProgress {
   }
 }
 
-abstract class _InProgress implements WorkerWidgetEvent {
+abstract class _InProgress implements WidgetEvent {
   const factory _InProgress(num percent) = _$_InProgress;
 
   num get percent;
@@ -280,8 +277,8 @@ abstract class _InProgress implements WorkerWidgetEvent {
 }
 
 /// @nodoc
-class _$WorkerWidgetStateTearOff {
-  const _$WorkerWidgetStateTearOff();
+class _$WidgetStateTearOff {
+  const _$WidgetStateTearOff();
 
 // ignore: unused_element
   _Initial initial() {
@@ -298,10 +295,10 @@ class _$WorkerWidgetStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $WorkerWidgetState = _$WorkerWidgetStateTearOff();
+const $WidgetState = _$WidgetStateTearOff();
 
 /// @nodoc
-mixin _$WorkerWidgetState {
+mixin _$WidgetState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
@@ -327,20 +324,19 @@ mixin _$WorkerWidgetState {
 }
 
 /// @nodoc
-abstract class $WorkerWidgetStateCopyWith<$Res> {
-  factory $WorkerWidgetStateCopyWith(
-          WorkerWidgetState value, $Res Function(WorkerWidgetState) then) =
-      _$WorkerWidgetStateCopyWithImpl<$Res>;
+abstract class $WidgetStateCopyWith<$Res> {
+  factory $WidgetStateCopyWith(
+          WidgetState value, $Res Function(WidgetState) then) =
+      _$WidgetStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkerWidgetStateCopyWithImpl<$Res>
-    implements $WorkerWidgetStateCopyWith<$Res> {
-  _$WorkerWidgetStateCopyWithImpl(this._value, this._then);
+class _$WidgetStateCopyWithImpl<$Res> implements $WidgetStateCopyWith<$Res> {
+  _$WidgetStateCopyWithImpl(this._value, this._then);
 
-  final WorkerWidgetState _value;
+  final WidgetState _value;
   // ignore: unused_field
-  final $Res Function(WorkerWidgetState) _then;
+  final $Res Function(WidgetState) _then;
 }
 
 /// @nodoc
@@ -350,7 +346,7 @@ abstract class _$InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res> extends _$WorkerWidgetStateCopyWithImpl<$Res>
+class __$InitialCopyWithImpl<$Res> extends _$WidgetStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
       : super(_value, (v) => _then(v as _Initial));
@@ -365,7 +361,7 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'WorkerWidgetState.initial()';
+    return 'WidgetState.initial()';
   }
 
   @override
@@ -427,7 +423,7 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements WorkerWidgetState {
+abstract class _Initial implements WidgetState {
   const factory _Initial() = _$_Initial;
 }
 
@@ -441,7 +437,7 @@ abstract class _$ActionInProgressCopyWith<$Res> {
 
 /// @nodoc
 class __$ActionInProgressCopyWithImpl<$Res>
-    extends _$WorkerWidgetStateCopyWithImpl<$Res>
+    extends _$WidgetStateCopyWithImpl<$Res>
     implements _$ActionInProgressCopyWith<$Res> {
   __$ActionInProgressCopyWithImpl(
       _ActionInProgress _value, $Res Function(_ActionInProgress) _then)
@@ -469,7 +465,7 @@ class _$_ActionInProgress implements _ActionInProgress {
 
   @override
   String toString() {
-    return 'WorkerWidgetState.actionInProgress(percent: $percent)';
+    return 'WidgetState.actionInProgress(percent: $percent)';
   }
 
   @override
@@ -539,7 +535,7 @@ class _$_ActionInProgress implements _ActionInProgress {
   }
 }
 
-abstract class _ActionInProgress implements WorkerWidgetState {
+abstract class _ActionInProgress implements WidgetState {
   const factory _ActionInProgress(num percent) = _$_ActionInProgress;
 
   num get percent;

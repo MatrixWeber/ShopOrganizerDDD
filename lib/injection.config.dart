@@ -22,8 +22,8 @@ import 'domain/shops/i_shop_repository.dart';
 import 'domain/tasks/i_task_repository.dart';
 import 'domain/user/i_user_repository.dart';
 import 'domain/worker/i_worker_repository.dart';
-import 'application/core/image_handler/image_handler_bloc.dart';
-import 'application/core/image_picker/image_picker_bloc.dart';
+import 'application/core/image/image_handler/image_handler_bloc.dart';
+import 'application/core/image/image_picker/image_picker_bloc.dart';
 import 'infrastructure/image/image_picker/image_picker_implementation.dart';
 import 'infrastructure/image/image_store/image_store_repository.dart';
 import 'application/notes/note_actor/note_actor_bloc.dart';
@@ -34,7 +34,6 @@ import 'application/shops/shop_actor/shop_actor_bloc.dart';
 import 'application/shops/shop_form/shop_form_bloc.dart';
 import 'infrastructure/shops/shop_repository.dart';
 import 'application/shops/shop_watcher/shop_watcher_bloc.dart';
-import 'application/shops/shop_widget/shop_widget_bloc.dart';
 import 'application/auth/sign_in_form/bloc/sign_in_form_bloc.dart';
 import 'application/task/task_actor/task_actor_bloc.dart';
 import 'application/task/task_form/task_form_bloc.dart';
@@ -42,11 +41,11 @@ import 'infrastructure/task/task_repository.dart';
 import 'application/user/user_actor/user_actor_bloc.dart';
 import 'application/user/user_form/user_form_bloc.dart';
 import 'infrastructure/user/user_repository.dart';
+import 'application/core/widget/widget_bloc.dart';
 import 'application/worker/worker_actor/worker_actor_bloc.dart';
 import 'application/worker/worker_form/worker_form_bloc.dart';
 import 'infrastructure/worker/worker_repository.dart';
 import 'application/worker/worker_watcher/worker_watcher_bloc.dart';
-import 'application/worker/worker_widget/worker_widget_bloc.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance
@@ -87,17 +86,16 @@ GetIt $initGetIt(
   gh.factory<ShopActorBloc>(() => ShopActorBloc(get<IShopRepository>()));
   gh.factory<ShopFormBloc>(() => ShopFormBloc(get<IShopRepository>()));
   gh.factory<ShopWatcherBloc>(() => ShopWatcherBloc(get<IShopRepository>()));
-  gh.factory<ShopWidgetBloc>(() => ShopWidgetBloc());
   gh.factory<SignInFormBloc>(() => SignInFormBloc(get<IAuthFacade>()));
   gh.factory<TaskActorBloc>(() => TaskActorBloc(get<ITaskRepository>()));
   gh.factory<TaskFormBloc>(() => TaskFormBloc(get<ITaskRepository>()));
   gh.factory<UserActorBloc>(() => UserActorBloc(get<IUserRepository>()));
   gh.factory<UserFormBloc>(() => UserFormBloc(get<IUserRepository>()));
+  gh.factory<WidgetBloc>(() => WidgetBloc());
   gh.factory<WorkerActorBloc>(() => WorkerActorBloc(get<IWorkerRepository>()));
   gh.factory<WorkerFormBloc>(() => WorkerFormBloc(get<IWorkerRepository>()));
   gh.factory<WorkerWatcherBloc>(
       () => WorkerWatcherBloc(get<IWorkerRepository>()));
-  gh.factory<WorkerWidgetBloc>(() => WorkerWidgetBloc());
   gh.factory<AuthBloc>(() => AuthBloc(get<IAuthFacade>()));
   return get;
 }

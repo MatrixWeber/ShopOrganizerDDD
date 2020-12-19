@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_widget/worker_widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../application/auth/auth_bloc.dart';
-import '../../../application/core/image_picker/image_picker_bloc.dart';
-import '../../../application/core/image_handler/image_handler_bloc.dart';
+import '../../../application/core/image/image_picker/image_picker_bloc.dart';
+import '../../../application/core/image/image_handler/image_handler_bloc.dart';
 import '../../../injection.dart';
 import '../../routes/router.gr.dart';
 import 'widgets/worker_creation_form.dart';
@@ -32,8 +32,8 @@ class WorkerCreationPage extends StatelessWidget {
           BlocProvider<ImagePickerBloc>(
             create: (context) => getIt<ImagePickerBloc>(),
           ),
-          BlocProvider<WorkerWidgetBloc>(
-            create: (context) => getIt<WorkerWidgetBloc>(),
+          BlocProvider<WidgetBloc>(
+            create: (context) => getIt<WidgetBloc>(),
           )
         ],
         child: MultiBlocListener(
@@ -55,8 +55,8 @@ class WorkerCreationPage extends StatelessWidget {
                         ),
                 deletedSuccessful: (_) => Navigator.of(context).pop(),
                 loadInProgress: (state) => context
-                    .read<WorkerWidgetBloc>()
-                    .add(WorkerWidgetEvent.inProgress(state.percent)),
+                    .read<WidgetBloc>()
+                    .add(WidgetEvent.inProgress(state.percent)),
                 orElse: () {},
               );
             }),

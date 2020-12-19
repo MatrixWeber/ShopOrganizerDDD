@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_widget/worker_widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../application/core/image_picker/image_picker_bloc.dart';
-import '../../../../application/core/image_handler/image_handler_bloc.dart';
+import '../../../../application/core/image/image_picker/image_picker_bloc.dart';
+import '../../../../application/core/image/image_handler/image_handler_bloc.dart';
 import '../../../../domain/core/helper_functions.dart';
 import '../../../core/confirm_dialog.dart';
 import '../../../core/image_widget.dart';
@@ -90,13 +90,13 @@ class WorkerCreationForm extends StatelessWidget {
                     orElse: () {});
               }, builder:
                   (BuildContext context, ImagePickerState imagePickerState) {
-                return BlocBuilder<WorkerWidgetBloc, WorkerWidgetState>(
-                    builder: (context, workerWidgetState) {
-                  return workerWidgetState.map(
+                return BlocBuilder<WidgetBloc, WidgetState>(
+                    builder: (context, widgetState) {
+                  return widgetState.map(
                       initial: (_) =>
                           ImageWidget(percent: percent, image: _image),
-                      actionInProgress: (workerWidgetState) => ImageWidget(
-                          percent: workerWidgetState.percent, image: _image));
+                      actionInProgress: (widgetState) => ImageWidget(
+                          percent: widgetState.percent, image: _image));
                 });
               }),
               const Padding(

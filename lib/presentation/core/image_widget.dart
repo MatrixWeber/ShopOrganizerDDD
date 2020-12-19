@@ -1,11 +1,10 @@
 import 'dart:io';
 
-import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
 
 const _myAvatar = 'images/placeholder-portrait.jpg';

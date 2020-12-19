@@ -1,4 +1,4 @@
-import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';

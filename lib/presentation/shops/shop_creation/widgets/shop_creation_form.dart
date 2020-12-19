@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
-import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_picker/image_picker_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/shops/shop_widget/shop_widget_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
@@ -54,13 +54,13 @@ class ShopCreationForm extends StatelessWidget {
                   orElse: () {});
             }, builder:
                     (BuildContext context, ImagePickerState imagePickerState) {
-              return BlocBuilder<ShopWidgetBloc, ShopWidgetState>(
-                  builder: (context, shopWidgetState) {
-                return shopWidgetState.map(
+              return BlocBuilder<WidgetBloc, WidgetState>(
+                  builder: (context, widgetState) {
+                return widgetState.map(
                     initial: (_) =>
                         ImageWidget(percent: percent, image: _image),
-                    actionInProgress: (shopWidgetState) => ImageWidget(
-                        percent: shopWidgetState.percent, image: _image));
+                    actionInProgress: (widgetState) => ImageWidget(
+                        percent: widgetState.percent, image: _image));
               });
             }),
             const Padding(
