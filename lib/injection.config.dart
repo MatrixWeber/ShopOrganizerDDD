@@ -15,15 +15,17 @@ import 'application/auth/auth_bloc.dart';
 import 'infrastructure/auth/firebase_auth_facade.dart';
 import 'infrastructure/core/firebase_injectable_module.dart';
 import 'domain/auth/i_auth_facade.dart';
-import 'domain/image_picker/i_image_picker.dart';
+import 'domain/image/image_picker/i_image_picker.dart';
+import 'domain/image/image_store/i_image_store_repository.dart';
 import 'domain/notes/i_note_repository.dart';
 import 'domain/shops/i_shop_repository.dart';
 import 'domain/tasks/i_task_repository.dart';
 import 'domain/user/i_user_repository.dart';
-import 'domain/worker/i_worker_image_store_repository.dart';
 import 'domain/worker/i_worker_repository.dart';
+import 'application/core/image_handler/image_handler_bloc.dart';
 import 'application/core/image_picker/image_picker_bloc.dart';
-import 'infrastructure/image_picker/image_picker_implementation.dart';
+import 'infrastructure/image/image_picker/image_picker_implementation.dart';
+import 'infrastructure/image/image_store/image_store_repository.dart';
 import 'application/notes/note_actor/note_actor_bloc.dart';
 import 'application/notes/note_form/note_form_bloc.dart';
 import 'infrastructure/notes/note_repository.dart';
@@ -42,8 +44,6 @@ import 'application/user/user_form/user_form_bloc.dart';
 import 'infrastructure/user/user_repository.dart';
 import 'application/worker/worker_actor/worker_actor_bloc.dart';
 import 'application/worker/worker_form/worker_form_bloc.dart';
-import 'application/worker/worker_image_handler/worker_image_handler_bloc.dart';
-import 'infrastructure/worker/worker_image_store_repository.dart';
 import 'infrastructure/worker/worker_repository.dart';
 import 'application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'application/worker/worker_widget/worker_widget_bloc.dart';
@@ -66,6 +66,8 @@ GetIt $initGetIt(
   gh.lazySingleton<IAuthFacade>(
       () => FirebaseAuthFacade(get<FirebaseAuth>(), get<GoogleSignIn>()));
   gh.lazySingleton<IImagePicker>(() => ImagePickerImplementation());
+  gh.lazySingleton<IImageStoreRepository>(
+      () => ImageStoreRepository(get<FirebaseStorage>()));
   gh.lazySingleton<INoteRepository>(
       () => NoteRepository(get<FirebaseFirestore>()));
   gh.lazySingleton<IShopRepository>(
@@ -74,10 +76,10 @@ GetIt $initGetIt(
       () => TaskRepository(get<FirebaseFirestore>()));
   gh.lazySingleton<IUserRepository>(
       () => UserRepository(get<FirebaseFirestore>()));
-  gh.lazySingleton<IWorkerImageStoreRepository>(
-      () => WorkerImageStoreRepository(get<FirebaseStorage>()));
   gh.lazySingleton<IWorkerRepository>(
       () => WorkerRepository(get<FirebaseFirestore>()));
+  gh.factory<ImageHandlerBloc>(
+      () => ImageHandlerBloc(get<IImageStoreRepository>()));
   gh.factory<ImagePickerBloc>(() => ImagePickerBloc(get<IImagePicker>()));
   gh.factory<NoteActorBloc>(() => NoteActorBloc(get<INoteRepository>()));
   gh.factory<NoteFormBloc>(() => NoteFormBloc(get<INoteRepository>()));
@@ -93,8 +95,6 @@ GetIt $initGetIt(
   gh.factory<UserFormBloc>(() => UserFormBloc(get<IUserRepository>()));
   gh.factory<WorkerActorBloc>(() => WorkerActorBloc(get<IWorkerRepository>()));
   gh.factory<WorkerFormBloc>(() => WorkerFormBloc(get<IWorkerRepository>()));
-  gh.factory<WorkerImageHandlerBloc>(
-      () => WorkerImageHandlerBloc(get<IWorkerImageStoreRepository>()));
   gh.factory<WorkerWatcherBloc>(
       () => WorkerWatcherBloc(get<IWorkerRepository>()));
   gh.factory<WorkerWidgetBloc>(() => WorkerWidgetBloc());

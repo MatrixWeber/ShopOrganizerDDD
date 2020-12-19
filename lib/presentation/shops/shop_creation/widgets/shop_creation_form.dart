@@ -4,7 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_widget/shop_widget_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
@@ -47,8 +47,8 @@ class ShopCreationForm extends StatelessWidget {
                   loadSuccess: (imagePickerState) {
                     Navigator.of(context).pop();
                     _image = imagePickerState.image;
-                    context.read<WorkerImageHandlerBloc>().add(
-                        WorkerImageHandlerEvent.uploadImageStarted(
+                    context.read<ImageHandlerBloc>().add(
+                        ImageHandlerEvent.uploadImageStarted(
                             _image, shopFormState.shop.id));
                   },
                   orElse: () {});

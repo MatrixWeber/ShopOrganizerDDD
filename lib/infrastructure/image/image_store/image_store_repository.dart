@@ -2,22 +2,22 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
+import 'package:firebase_ddd_tutorial/domain/core/image_failure.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
-import 'package:firebase_ddd_tutorial/domain/worker/i_worker_image_store_repository.dart';
-import 'package:firebase_ddd_tutorial/domain/worker/worker_failure.dart';
+import 'package:firebase_ddd_tutorial/domain/image/image_store/i_image_store_repository.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:injectable/injectable.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/core/firebase_storage_helpers.dart';
 
-@LazySingleton(as: IWorkerImageStoreRepository)
-class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
+@LazySingleton(as: IImageStoreRepository)
+class ImageStoreRepository implements IImageStoreRepository {
   final FirebaseStorage _firebaseStorage;
 
-  WorkerImageStoreRepository(this._firebaseStorage);
+  ImageStoreRepository(this._firebaseStorage);
 
   @override
-  Future<Either<WorkerFailure, Unit>> deleteImage(String imageUrl) async {
+  Future<Either<ImageFailure, Unit>> deleteImage(String imageUrl) async {
     try {
       final storegeReference = _firebaseStorage.refFromURL(imageUrl);
       await storegeReference.delete();
@@ -70,7 +70,7 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
       // yield* uploadTask.onComplete.then((value) {
       //   if (value.error == null) {
       //     value.ref.getDownloadURL().then((downloadUrl) {
-      //       return right<WorkerFailure, ImageUrl>(
+      //       return right<ImageFailure, ImageUrl>(
       //           ImageUrl(downloadUrl.toString()));
       //     });
       //   } else {
@@ -85,7 +85,7 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   }
 
   // @override
-  // Future<Either<WorkerFailure, Image>> downloadImage(String imageUrl) async {
+  // Future<Either<ImageFailure, Image>> downloadImage(String imageUrl) async {
   //   try {
   //     final downloadData = Image.network(imageUrl);
   //     return right(downloadData);
@@ -94,21 +94,21 @@ class WorkerImageStoreRepository implements IWorkerImageStoreRepository {
   //   }
   // }
 
-  WorkerFailure _handlePlatformExceptions(
+  ImageFailure _handlePlatformExceptions(
       FirebaseException e, String functionName) {
     if (e.message.contains('permission-denied')) {
-      return const WorkerFailure.insufficientPermissions();
+      return const ImageFailure.insufficientPermissions();
     } else if (e.message.contains('not-found')) {
       // TODO log.error(e.toString);
-      return const WorkerFailure.unableToUpdate();
+      return const ImageFailure.unableToUpdate();
     } else {
       // TODO log.error(e.toString);
-      return WorkerFailure.unexpected(functionName);
+      return ImageFailure.unexpected(functionName);
     }
   }
 
 //   @override
-//   Future<Either<WorkerFailure, File>> downloadImage(ImageUrl imageUrl) async {
+//   Future<Either<ImageFailure, File>> downloadImage(ImageUrl imageUrl) async {
 //     try {
 //       final storageReference = await _firebaseStorage.userDocument.call();
 // _firebaseStorage.ref().

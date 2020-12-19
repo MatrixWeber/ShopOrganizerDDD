@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
+import 'package:firebase_ddd_tutorial/domain/image/image_picker/i_image_picker.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:injectable/injectable.dart';
 

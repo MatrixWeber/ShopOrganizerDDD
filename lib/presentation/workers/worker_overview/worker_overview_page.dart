@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
@@ -31,8 +31,8 @@ class WorkerOverviewPage extends StatelessWidget {
         BlocProvider<WorkerActorBloc>(
           create: (context) => getIt<WorkerActorBloc>(),
         ),
-        BlocProvider<WorkerImageHandlerBloc>(
-          create: (context) => getIt<WorkerImageHandlerBloc>(),
+        BlocProvider<ImageHandlerBloc>(
+          create: (context) => getIt<ImageHandlerBloc>(),
         )
       ],
       child: MultiBlocListener(

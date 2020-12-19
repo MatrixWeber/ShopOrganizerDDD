@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_actor/shop_actor_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/deletion_dialog.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/image_widget.dart';
@@ -23,9 +23,9 @@ class ShopCard extends StatelessWidget {
       shopActorBloc.add(
         ShopActorEvent.deleted(shop),
       );
-      final imageHandlerBloc = context.read<WorkerImageHandlerBloc>();
+      final imageHandlerBloc = context.read<ImageHandlerBloc>();
       imageHandlerBloc.add(
-        WorkerImageHandlerEvent.imageDeleted(
+        ImageHandlerEvent.imageDeleted(
           shop.imageUrl.getOrCrash(),
         ),
       );

@@ -1,11 +1,11 @@
 import 'dart:io';
 
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
 
 const _myAvatar = 'images/placeholder-portrait.jpg';
@@ -70,7 +70,7 @@ class ImageWidget extends StatelessWidget {
       onTap: () {
         final imagePickerBloc = context.read<ImagePickerBloc>();
         imagePickerBloc.add(const ImagePickerEvent.initialized());
-        final workerImageHandlerBloc = context.read<WorkerImageHandlerBloc>();
+        final workerImageHandlerBloc = context.read<ImageHandlerBloc>();
         _showChoiseDialog(context, imagePickerBloc, workerImageHandlerBloc);
       },
       child: decideImageView(image, percent),
@@ -80,7 +80,7 @@ class ImageWidget extends StatelessWidget {
   Future<void> _showChoiseDialog(
       BuildContext context,
       ImagePickerBloc imagePickerBloc,
-      WorkerImageHandlerBloc workerImageHandlerBloc) {
+      ImageHandlerBloc workerImageHandlerBloc) {
     return showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -115,7 +115,7 @@ class ImageWidget extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () => workerImageHandlerBloc.add(
-                        WorkerImageHandlerEvent.imageDeleted(context
+                        ImageHandlerEvent.imageDeleted(context
                             .read<WorkerFormBloc>()
                             .state
                             .worker

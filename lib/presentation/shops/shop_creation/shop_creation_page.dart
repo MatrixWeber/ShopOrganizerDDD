@@ -3,7 +3,7 @@ import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/core/image_picker/image_picker_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_widget/shop_widget_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_creation_form.dart';
 import 'package:flutter/material.dart';
@@ -23,8 +23,8 @@ class ShopsCreationPage extends StatelessWidget {
           BlocProvider<ShopWidgetBloc>(
             create: (context) => getIt<ShopWidgetBloc>(),
           ),
-          BlocProvider<WorkerImageHandlerBloc>(
-            create: (context) => getIt<WorkerImageHandlerBloc>(),
+          BlocProvider<ImageHandlerBloc>(
+            create: (context) => getIt<ImageHandlerBloc>(),
           ),
           BlocProvider<ImagePickerBloc>(
             create: (context) => getIt<ImagePickerBloc>(),
@@ -38,7 +38,7 @@ class ShopsCreationPage extends StatelessWidget {
                       ExtendedNavigator.of(context).pushSignInPage(),
                   orElse: () {});
             }),
-            BlocListener<WorkerImageHandlerBloc, WorkerImageHandlerState>(
+            BlocListener<ImageHandlerBloc, ImageHandlerState>(
                 listener: (context, state) {
               state.maybeMap(
                 uploadedSuccessful: (state) => context.read<ShopFormBloc>().add(

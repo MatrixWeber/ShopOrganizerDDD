@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/application/worker/worker_widget/worker_widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -8,9 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../application/core/image_picker/image_picker_bloc.dart';
-import '../../../../application/worker/worker_form/worker_form_bloc.dart';
-import '../../../../application/worker/worker_image_handler/worker_image_handler_bloc.dart';
-import '../../../../application/worker/worker_widget/worker_widget_bloc.dart';
+import '../../../../application/core/image_handler/image_handler_bloc.dart';
 import '../../../../domain/core/helper_functions.dart';
 import '../../../core/confirm_dialog.dart';
 import '../../../core/image_widget.dart';
@@ -83,8 +83,8 @@ class WorkerCreationForm extends StatelessWidget {
                     loadSuccess: (imagePickerState) {
                       Navigator.of(context).pop();
                       _image = imagePickerState.image;
-                      context.read<WorkerImageHandlerBloc>().add(
-                          WorkerImageHandlerEvent.uploadImageStarted(
+                      context.read<ImageHandlerBloc>().add(
+                          ImageHandlerEvent.uploadImageStarted(
                               _image, shop.id, workerFormState.worker.id));
                     },
                     orElse: () {});

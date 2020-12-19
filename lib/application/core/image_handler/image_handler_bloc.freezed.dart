@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'worker_image_handler_bloc.dart';
+part of 'image_handler_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -10,8 +10,8 @@ part of 'worker_image_handler_bloc.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$WorkerImageHandlerEventTearOff {
-  const _$WorkerImageHandlerEventTearOff();
+class _$ImageHandlerEventTearOff {
+  const _$ImageHandlerEventTearOff();
 
 // ignore: unused_element
   _UploadImageStarted uploadImageStarted(File image, UniqueId parentId,
@@ -40,10 +40,10 @@ class _$WorkerImageHandlerEventTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $WorkerImageHandlerEvent = _$WorkerImageHandlerEventTearOff();
+const $ImageHandlerEvent = _$ImageHandlerEventTearOff();
 
 /// @nodoc
-mixin _$WorkerImageHandlerEvent {
+mixin _$ImageHandlerEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required
@@ -74,20 +74,20 @@ mixin _$WorkerImageHandlerEvent {
 }
 
 /// @nodoc
-abstract class $WorkerImageHandlerEventCopyWith<$Res> {
-  factory $WorkerImageHandlerEventCopyWith(WorkerImageHandlerEvent value,
-          $Res Function(WorkerImageHandlerEvent) then) =
-      _$WorkerImageHandlerEventCopyWithImpl<$Res>;
+abstract class $ImageHandlerEventCopyWith<$Res> {
+  factory $ImageHandlerEventCopyWith(
+          ImageHandlerEvent value, $Res Function(ImageHandlerEvent) then) =
+      _$ImageHandlerEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkerImageHandlerEventCopyWithImpl<$Res>
-    implements $WorkerImageHandlerEventCopyWith<$Res> {
-  _$WorkerImageHandlerEventCopyWithImpl(this._value, this._then);
+class _$ImageHandlerEventCopyWithImpl<$Res>
+    implements $ImageHandlerEventCopyWith<$Res> {
+  _$ImageHandlerEventCopyWithImpl(this._value, this._then);
 
-  final WorkerImageHandlerEvent _value;
+  final ImageHandlerEvent _value;
   // ignore: unused_field
-  final $Res Function(WorkerImageHandlerEvent) _then;
+  final $Res Function(ImageHandlerEvent) _then;
 }
 
 /// @nodoc
@@ -100,7 +100,7 @@ abstract class _$UploadImageStartedCopyWith<$Res> {
 
 /// @nodoc
 class __$UploadImageStartedCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
+    extends _$ImageHandlerEventCopyWithImpl<$Res>
     implements _$UploadImageStartedCopyWith<$Res> {
   __$UploadImageStartedCopyWithImpl(
       _UploadImageStarted _value, $Res Function(_UploadImageStarted) _then)
@@ -138,7 +138,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerEvent.uploadImageStarted(image: $image, parentId: $parentId, id: $id)';
+    return 'ImageHandlerEvent.uploadImageStarted(image: $image, parentId: $parentId, id: $id)';
   }
 
   @override
@@ -223,7 +223,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
   }
 }
 
-abstract class _UploadImageStarted implements WorkerImageHandlerEvent {
+abstract class _UploadImageStarted implements ImageHandlerEvent {
   const factory _UploadImageStarted(File image, UniqueId parentId,
       [UniqueId id]) = _$_UploadImageStarted;
 
@@ -243,7 +243,7 @@ abstract class _$ImageReceivedCopyWith<$Res> {
 
 /// @nodoc
 class __$ImageReceivedCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
+    extends _$ImageHandlerEventCopyWithImpl<$Res>
     implements _$ImageReceivedCopyWith<$Res> {
   __$ImageReceivedCopyWithImpl(
       _ImageReceived _value, $Res Function(_ImageReceived) _then)
@@ -274,7 +274,7 @@ class _$_ImageReceived implements _ImageReceived {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerEvent.imageReceived(failureOrImageUrl: $failureOrImageUrl)';
+    return 'ImageHandlerEvent.imageReceived(failureOrImageUrl: $failureOrImageUrl)';
   }
 
   @override
@@ -353,7 +353,7 @@ class _$_ImageReceived implements _ImageReceived {
   }
 }
 
-abstract class _ImageReceived implements WorkerImageHandlerEvent {
+abstract class _ImageReceived implements ImageHandlerEvent {
   const factory _ImageReceived(Either<None, ImageUrl> failureOrImageUrl) =
       _$_ImageReceived;
 
@@ -371,7 +371,7 @@ abstract class _$ImageDeletedCopyWith<$Res> {
 
 /// @nodoc
 class __$ImageDeletedCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerEventCopyWithImpl<$Res>
+    extends _$ImageHandlerEventCopyWithImpl<$Res>
     implements _$ImageDeletedCopyWith<$Res> {
   __$ImageDeletedCopyWithImpl(
       _ImageDeleted _value, $Res Function(_ImageDeleted) _then)
@@ -399,7 +399,7 @@ class _$_ImageDeleted implements _ImageDeleted {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerEvent.imageDeleted(imageUrl: $imageUrl)';
+    return 'ImageHandlerEvent.imageDeleted(imageUrl: $imageUrl)';
   }
 
   @override
@@ -477,7 +477,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   }
 }
 
-abstract class _ImageDeleted implements WorkerImageHandlerEvent {
+abstract class _ImageDeleted implements ImageHandlerEvent {
   const factory _ImageDeleted(String imageUrl) = _$_ImageDeleted;
 
   String get imageUrl;
@@ -485,8 +485,8 @@ abstract class _ImageDeleted implements WorkerImageHandlerEvent {
 }
 
 /// @nodoc
-class _$WorkerImageHandlerStateTearOff {
-  const _$WorkerImageHandlerStateTearOff();
+class _$ImageHandlerStateTearOff {
+  const _$ImageHandlerStateTearOff();
 
 // ignore: unused_element
   _Initial initial() {
@@ -520,7 +520,7 @@ class _$WorkerImageHandlerStateTearOff {
   }
 
 // ignore: unused_element
-  _LoadFailure loadFailure(WorkerFailure workerFailure) {
+  _LoadFailure loadFailure(ImageFailure workerFailure) {
     return _LoadFailure(
       workerFailure,
     );
@@ -529,10 +529,10 @@ class _$WorkerImageHandlerStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $WorkerImageHandlerState = _$WorkerImageHandlerStateTearOff();
+const $ImageHandlerState = _$ImageHandlerStateTearOff();
 
 /// @nodoc
-mixin _$WorkerImageHandlerState {
+mixin _$ImageHandlerState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
@@ -540,7 +540,7 @@ mixin _$WorkerImageHandlerState {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
@@ -549,7 +549,7 @@ mixin _$WorkerImageHandlerState {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   });
   @optionalTypeArgs
@@ -574,20 +574,20 @@ mixin _$WorkerImageHandlerState {
 }
 
 /// @nodoc
-abstract class $WorkerImageHandlerStateCopyWith<$Res> {
-  factory $WorkerImageHandlerStateCopyWith(WorkerImageHandlerState value,
-          $Res Function(WorkerImageHandlerState) then) =
-      _$WorkerImageHandlerStateCopyWithImpl<$Res>;
+abstract class $ImageHandlerStateCopyWith<$Res> {
+  factory $ImageHandlerStateCopyWith(
+          ImageHandlerState value, $Res Function(ImageHandlerState) then) =
+      _$ImageHandlerStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class _$WorkerImageHandlerStateCopyWithImpl<$Res>
-    implements $WorkerImageHandlerStateCopyWith<$Res> {
-  _$WorkerImageHandlerStateCopyWithImpl(this._value, this._then);
+class _$ImageHandlerStateCopyWithImpl<$Res>
+    implements $ImageHandlerStateCopyWith<$Res> {
+  _$ImageHandlerStateCopyWithImpl(this._value, this._then);
 
-  final WorkerImageHandlerState _value;
+  final ImageHandlerState _value;
   // ignore: unused_field
-  final $Res Function(WorkerImageHandlerState) _then;
+  final $Res Function(ImageHandlerState) _then;
 }
 
 /// @nodoc
@@ -597,8 +597,7 @@ abstract class _$InitialCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$InitialCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+class __$InitialCopyWithImpl<$Res> extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$InitialCopyWith<$Res> {
   __$InitialCopyWithImpl(_Initial _value, $Res Function(_Initial) _then)
       : super(_value, (v) => _then(v as _Initial));
@@ -613,7 +612,7 @@ class _$_Initial implements _Initial {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.initial()';
+    return 'ImageHandlerState.initial()';
   }
 
   @override
@@ -632,7 +631,7 @@ class _$_Initial implements _Initial {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -651,7 +650,7 @@ class _$_Initial implements _Initial {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -699,7 +698,7 @@ class _$_Initial implements _Initial {
   }
 }
 
-abstract class _Initial implements WorkerImageHandlerState {
+abstract class _Initial implements ImageHandlerState {
   const factory _Initial() = _$_Initial;
 }
 
@@ -713,7 +712,7 @@ abstract class _$LoadInProgressCopyWith<$Res> {
 
 /// @nodoc
 class __$LoadInProgressCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+    extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadInProgressCopyWith<$Res> {
   __$LoadInProgressCopyWithImpl(
       _LoadInProgress _value, $Res Function(_LoadInProgress) _then)
@@ -741,7 +740,7 @@ class _$_LoadInProgress implements _LoadInProgress {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.loadInProgress(percent: $percent)';
+    return 'ImageHandlerState.loadInProgress(percent: $percent)';
   }
 
   @override
@@ -768,7 +767,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -787,7 +786,7 @@ class _$_LoadInProgress implements _LoadInProgress {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -835,7 +834,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   }
 }
 
-abstract class _LoadInProgress implements WorkerImageHandlerState {
+abstract class _LoadInProgress implements ImageHandlerState {
   const factory _LoadInProgress(num percent) = _$_LoadInProgress;
 
   num get percent;
@@ -852,7 +851,7 @@ abstract class _$UploadedSuccessfulCopyWith<$Res> {
 
 /// @nodoc
 class __$UploadedSuccessfulCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+    extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$UploadedSuccessfulCopyWith<$Res> {
   __$UploadedSuccessfulCopyWithImpl(
       _UploadedSuccessful _value, $Res Function(_UploadedSuccessful) _then)
@@ -880,7 +879,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.uploadedSuccessful(imageUrl: $imageUrl)';
+    return 'ImageHandlerState.uploadedSuccessful(imageUrl: $imageUrl)';
   }
 
   @override
@@ -908,7 +907,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -927,7 +926,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -975,7 +974,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
   }
 }
 
-abstract class _UploadedSuccessful implements WorkerImageHandlerState {
+abstract class _UploadedSuccessful implements ImageHandlerState {
   const factory _UploadedSuccessful(ImageUrl imageUrl) = _$_UploadedSuccessful;
 
   ImageUrl get imageUrl;
@@ -991,7 +990,7 @@ abstract class _$DeletedSuccessfulCopyWith<$Res> {
 
 /// @nodoc
 class __$DeletedSuccessfulCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+    extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$DeletedSuccessfulCopyWith<$Res> {
   __$DeletedSuccessfulCopyWithImpl(
       _DeletedSuccessful _value, $Res Function(_DeletedSuccessful) _then)
@@ -1007,7 +1006,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.deletedSuccessful()';
+    return 'ImageHandlerState.deletedSuccessful()';
   }
 
   @override
@@ -1026,7 +1025,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1045,7 +1044,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1093,7 +1092,7 @@ class _$_DeletedSuccessful implements _DeletedSuccessful {
   }
 }
 
-abstract class _DeletedSuccessful implements WorkerImageHandlerState {
+abstract class _DeletedSuccessful implements ImageHandlerState {
   const factory _DeletedSuccessful() = _$_DeletedSuccessful;
 }
 
@@ -1107,7 +1106,7 @@ abstract class _$LoadSuccessCopyWith<$Res> {
 
 /// @nodoc
 class __$LoadSuccessCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+    extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadSuccessCopyWith<$Res> {
   __$LoadSuccessCopyWithImpl(
       _LoadSuccess _value, $Res Function(_LoadSuccess) _then)
@@ -1135,7 +1134,7 @@ class _$_LoadSuccess implements _LoadSuccess {
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.loadSuccess(image: $image)';
+    return 'ImageHandlerState.loadSuccess(image: $image)';
   }
 
   @override
@@ -1162,7 +1161,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1181,7 +1180,7 @@ class _$_LoadSuccess implements _LoadSuccess {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1229,7 +1228,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   }
 }
 
-abstract class _LoadSuccess implements WorkerImageHandlerState {
+abstract class _LoadSuccess implements ImageHandlerState {
   const factory _LoadSuccess(File image) = _$_LoadSuccess;
 
   File get image;
@@ -1241,14 +1240,14 @@ abstract class _$LoadFailureCopyWith<$Res> {
   factory _$LoadFailureCopyWith(
           _LoadFailure value, $Res Function(_LoadFailure) then) =
       __$LoadFailureCopyWithImpl<$Res>;
-  $Res call({WorkerFailure workerFailure});
+  $Res call({ImageFailure workerFailure});
 
-  $WorkerFailureCopyWith<$Res> get workerFailure;
+  $ImageFailureCopyWith<$Res> get workerFailure;
 }
 
 /// @nodoc
 class __$LoadFailureCopyWithImpl<$Res>
-    extends _$WorkerImageHandlerStateCopyWithImpl<$Res>
+    extends _$ImageHandlerStateCopyWithImpl<$Res>
     implements _$LoadFailureCopyWith<$Res> {
   __$LoadFailureCopyWithImpl(
       _LoadFailure _value, $Res Function(_LoadFailure) _then)
@@ -1264,16 +1263,16 @@ class __$LoadFailureCopyWithImpl<$Res>
     return _then(_LoadFailure(
       workerFailure == freezed
           ? _value.workerFailure
-          : workerFailure as WorkerFailure,
+          : workerFailure as ImageFailure,
     ));
   }
 
   @override
-  $WorkerFailureCopyWith<$Res> get workerFailure {
+  $ImageFailureCopyWith<$Res> get workerFailure {
     if (_value.workerFailure == null) {
       return null;
     }
-    return $WorkerFailureCopyWith<$Res>(_value.workerFailure, (value) {
+    return $ImageFailureCopyWith<$Res>(_value.workerFailure, (value) {
       return _then(_value.copyWith(workerFailure: value));
     });
   }
@@ -1284,11 +1283,11 @@ class _$_LoadFailure implements _LoadFailure {
   const _$_LoadFailure(this.workerFailure) : assert(workerFailure != null);
 
   @override
-  final WorkerFailure workerFailure;
+  final ImageFailure workerFailure;
 
   @override
   String toString() {
-    return 'WorkerImageHandlerState.loadFailure(workerFailure: $workerFailure)';
+    return 'ImageHandlerState.loadFailure(workerFailure: $workerFailure)';
   }
 
   @override
@@ -1316,7 +1315,7 @@ class _$_LoadFailure implements _LoadFailure {
     @required TResult uploadedSuccessful(ImageUrl imageUrl),
     @required TResult deletedSuccessful(),
     @required TResult loadSuccess(File image),
-    @required TResult loadFailure(WorkerFailure workerFailure),
+    @required TResult loadFailure(ImageFailure workerFailure),
   }) {
     assert(initial != null);
     assert(loadInProgress != null);
@@ -1335,7 +1334,7 @@ class _$_LoadFailure implements _LoadFailure {
     TResult uploadedSuccessful(ImageUrl imageUrl),
     TResult deletedSuccessful(),
     TResult loadSuccess(File image),
-    TResult loadFailure(WorkerFailure workerFailure),
+    TResult loadFailure(ImageFailure workerFailure),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -1383,9 +1382,9 @@ class _$_LoadFailure implements _LoadFailure {
   }
 }
 
-abstract class _LoadFailure implements WorkerImageHandlerState {
-  const factory _LoadFailure(WorkerFailure workerFailure) = _$_LoadFailure;
+abstract class _LoadFailure implements ImageHandlerState {
+  const factory _LoadFailure(ImageFailure workerFailure) = _$_LoadFailure;
 
-  WorkerFailure get workerFailure;
+  ImageFailure get workerFailure;
   _$LoadFailureCopyWith<_LoadFailure> get copyWith;
 }

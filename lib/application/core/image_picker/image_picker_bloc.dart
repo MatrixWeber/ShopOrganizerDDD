@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
-import 'package:firebase_ddd_tutorial/domain/image_picker/i_image_picker.dart';
+import 'package:firebase_ddd_tutorial/domain/image/image_picker/i_image_picker.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 

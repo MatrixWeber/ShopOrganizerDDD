@@ -1,5 +1,5 @@
+import 'package:firebase_ddd_tutorial/application/core/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
-import 'package:firebase_ddd_tutorial/application/worker/worker_image_handler/worker_image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/worker/worker.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/deletion_dialog.dart';
@@ -20,9 +20,9 @@ class WorkerCard extends StatelessWidget {
       workerActorBloc.add(
         WorkerActorEvent.deleted(worker),
       );
-      final workerImageHandlerBloc = context.read<WorkerImageHandlerBloc>();
+      final workerImageHandlerBloc = context.read<ImageHandlerBloc>();
       workerImageHandlerBloc.add(
-        WorkerImageHandlerEvent.imageDeleted(
+        ImageHandlerEvent.imageDeleted(
           worker.imageUrl.getOrCrash(),
         ),
       );
