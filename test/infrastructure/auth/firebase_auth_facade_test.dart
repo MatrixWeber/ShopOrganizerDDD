@@ -4,37 +4,39 @@ import 'package:firebase_ddd_tutorial/domain/auth/auth_failure.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_auth_facade.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mockito/mockito.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:mockito/mockito.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 
 class MockFirebaseAuth extends Mock implements FirebaseAuth {}
 
-class FirebaseUserMock extends Mock implements User {}
-
 class MockGoogleSignIn extends Mock implements GoogleSignIn {}
 
-class MockAuthResult extends Mock implements UserCredential {}
-
 class MockGoogleSignInAccount extends Mock implements GoogleSignInAccount {}
-
-class MockAuthCredential extends Mock implements AuthCredential {}
 
 class MockGoogleSignInAuthentication extends Mock
     implements GoogleSignInAuthentication {}
 
-void main() {
+class MockFirebaseUser extends Mock implements User {}
+
+class MockAuthCredential extends Mock implements AuthCredential {}
+
+class MockGoogleAuthProvider extends Mock implements GoogleAuthProvider {}
+
+class MockAuthResult extends Mock implements UserCredential {}
+
+Future<void> main() async {
   IAuthFacade authFacade;
-  MockFirebaseAuth mockFirebaseAuth;
   MockGoogleSignIn mockGoogleSignIn;
+  // Sign in.
+  MockFirebaseAuth mockFirebaseAuth;
   EmailAddress email;
   Password password;
 
   setUp(() {
-    mockFirebaseAuth = MockFirebaseAuth();
     mockGoogleSignIn = MockGoogleSignIn();
+    mockFirebaseAuth = MockFirebaseAuth();
     authFacade = FirebaseAuthFacade(mockFirebaseAuth, mockGoogleSignIn);
   });
 
@@ -46,11 +48,7 @@ void main() {
         email = EmailAddress(emailStr);
         const passwordStr = '123456';
         password = Password(passwordStr);
-        when(mockFirebaseAuth.signInWithEmailAndPassword(
-                email: emailStr, password: passwordStr))
-            .thenAnswer((_) async {
-          return MockAuthResult();
-        });
+
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -69,10 +67,8 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(
-                code: ERROR_USER_NOT_FOUND,
-                message: 'If user not registered',
-                plugin: 'user not there'));
+            .thenThrow(FirebaseAuthException(
+                code: ERROR_USER_NOT_FOUND, message: 'If user not registered'));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -93,10 +89,10 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(
-                code: ERROR_WRONG_PASSWORD,
-                message: 'If user entered wrong password',
-                plugin: 'user wrong password'));
+            .thenThrow(FirebaseAuthException(
+          code: ERROR_WRONG_PASSWORD,
+          message: 'If user entered wrong password',
+        ));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -117,10 +113,10 @@ void main() {
         password = Password(passwordStr);
         when(mockFirebaseAuth.signInWithEmailAndPassword(
                 email: emailStr, password: passwordStr))
-            .thenThrow(FirebaseException(
-                code: ERROR_EMAIL_ALREADY_IN_USE,
-                message: 'If email already in use',
-                plugin: 'email in use'));
+            .thenThrow(FirebaseAuthException(
+          code: ERROR_EMAIL_ALREADY_IN_USE,
+          message: 'If email already in use',
+        ));
         // act
         final result = await authFacade.signInWithEmailAndPassword(
             emailAddress: email, password: password);
@@ -130,32 +126,32 @@ void main() {
     });
 
     group('firebaseAuthSignInWithGoogle', () {
-      final mockGoogleSignInAccount = MockGoogleSignInAccount();
-      final googleSignInAuthentication = MockGoogleSignInAuthentication();
-      test('should return unit when google sign in successful', () async {
-        // arrange
-        when(mockGoogleSignIn.signIn()).thenAnswer((_) =>
-            Future<MockGoogleSignInAccount>.value(mockGoogleSignInAccount));
+      // final mockGoogleSignInAccount = MockGoogleSignInAccount();
+      // final googleSignInAuthentication = MockGoogleSignInAuthentication();
+      // test('should return unit when google sign in successful', () async {
+      //   // arrange
+      //   when(mockGoogleSignIn.signIn()).thenAnswer((_) =>
+      //       Future<MockGoogleSignInAccount>.value(mockGoogleSignInAccount));
 
-        when(mockGoogleSignInAccount.authentication).thenAnswer((_) =>
-            Future<MockGoogleSignInAuthentication>.value(
-                googleSignInAuthentication));
+      //   when(mockGoogleSignInAccount.authentication).thenAnswer((_) =>
+      //       Future<MockGoogleSignInAuthentication>.value(
+      //           googleSignInAuthentication));
 
-        final AuthCredential credential = GoogleAuthProvider.credential(
-          idToken: '12345',
-          accessToken: '6789',
-        );
+      //   final AuthCredential credential = GoogleAuthProvider.credential(
+      //     idToken: '12345',
+      //     accessToken: '6789',
+      //   );
 
-        when(mockFirebaseAuth.signInWithCredential(credential))
-            .thenAnswer((_) async {
-          return MockAuthResult();
-        });
-        // act
-        final result = await authFacade.signInWithGoogle();
-        // assert
-        verify(mockGoogleSignIn.signIn());
-        expect(result, equals(const Right(unit)));
-      });
+      //   when(mockFirebaseAuth.signInWithCredential(credential))
+      //       .thenAnswer((_) async {
+      //     return MockAuthResult();
+      //   });
+      //   // act
+      //   final result = await authFacade.signInWithGoogle();
+      //   // assert
+      //   verify(mockGoogleSignIn.signIn());
+      //   expect(result, equals(const Right(unit)));
+      // });
       test(
           'should return left(const AuthFailure.cancelledByUser()) when user is null',
           () async {
@@ -183,7 +179,7 @@ void main() {
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
           .thenAnswer((_) async {
-        return MockAuthResult();
+        return Future<MockAuthResult>.value(MockAuthResult());
       });
       // act
       final result = await authFacade.registerWithEmailAndPassword(
@@ -204,10 +200,10 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenThrow(FirebaseException(
-              code: ERROR_EMAIL_ALREADY_IN_USE,
-              message: 'If email already in use',
-              plugin: 'email in use'));
+          .thenThrow(FirebaseAuthException(
+        code: ERROR_EMAIL_ALREADY_IN_USE,
+        message: 'If email already in use',
+      ));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
@@ -225,15 +221,11 @@ void main() {
       password = Password(passwordStr);
       when(mockFirebaseAuth.createUserWithEmailAndPassword(
               email: emailStr, password: passwordStr))
-          .thenAnswer((_) => throw FirebaseException(
-              code: 'any', message: 'any other failure', plugin: 'other'));
+          .thenAnswer((_) => throw FirebaseAuthException(
+              code: 'any', message: 'any other failure'));
       // act
       final result = await authFacade.registerWithEmailAndPassword(
           emailAddress: email, password: password);
-      // expect(
-      //     () => authFacade.registerWithEmailAndPassword(
-      //         emailAddress: email, password: password),
-      //     left(const AuthFailure.serverError()));
       // assert
       expect(result, left(const AuthFailure.serverError()));
     });
