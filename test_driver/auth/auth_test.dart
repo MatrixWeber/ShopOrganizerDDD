@@ -91,7 +91,7 @@ void main() {
       await driver.waitUntilNoTransientCallbacks();
       final floatingActionButton = find.byValueKey('icon-button-sign-out');
       assert(floatingActionButton != null);
-      expect(await driver.getText(find.text('Notes')), 'Notes');
+      expect(await driver.getText(find.text('Shops')), 'Shops');
       await driver.tap(floatingActionButton);
       await driver.waitFor(find.text('Sign in'));
     });
