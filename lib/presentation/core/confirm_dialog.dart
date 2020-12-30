@@ -1,3 +1,4 @@
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmDialog {
@@ -5,6 +6,7 @@ class ConfirmDialog {
       BuildContext context, void Function(BuildContext) yesPressed) {
     // set up the buttons
     final Widget yesButton = FlatButton(
+      key: const Key(Keys.yes),
       onPressed: () {
         Navigator.of(context).pop();
         yesPressed(context);
@@ -12,6 +14,7 @@ class ConfirmDialog {
       child: const Text("Yes"),
     );
     final Widget noButton = FlatButton(
+      key: const Key(Keys.no),
       onPressed: () {
         Navigator.of(context).pop();
       },

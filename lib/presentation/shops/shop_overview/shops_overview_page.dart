@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_actor/shop_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_watcher/shop_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/shop_overview_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -53,7 +54,7 @@ class ShopsOverviewPage extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Shops'),
             leading: IconButton(
-              key: const Key('icon-button-sign-out'),
+              key: const Key('Keys.logout'),
               icon: const Icon(Icons.exit_to_app),
               onPressed: () {
                 context.read<AuthBloc>().add(
@@ -71,6 +72,7 @@ class ShopsOverviewPage extends StatelessWidget {
             ],
           ),
           floatingActionButton: FloatingActionButton(
+            key: const Key(Keys.buttonChangePage),
             onPressed: () {
               ExtendedNavigator.of(context).pushShopsCreationPage();
             },

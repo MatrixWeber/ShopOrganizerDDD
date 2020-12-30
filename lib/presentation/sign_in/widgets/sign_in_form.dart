@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +50,7 @@ class SignInForm extends StatelessWidget {
                 height: 8,
               ),
               TextFormField(
-                key: const Key('email-field'),
+                key: const Key(Keys.emailField),
                 onChanged: (value) => context
                     .read<SignInFormBloc>()
                     .add(SignInFormEvent.emailChanged(value)),

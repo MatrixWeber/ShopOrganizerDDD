@@ -4,6 +4,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -106,7 +107,7 @@ class WorkerCreationForm extends StatelessWidget {
                 autovalidateMode: workerFormState.showErrorMessage
                     ? AutovalidateMode.onUserInteraction
                     : AutovalidateMode.disabled,
-                key: const Key('name-field'),
+                key: const Key(Keys.nameField),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.nameChanged(value)),
@@ -132,7 +133,7 @@ class WorkerCreationForm extends StatelessWidget {
                 autovalidateMode: workerFormState.showErrorMessage
                     ? AutovalidateMode.onUserInteraction
                     : AutovalidateMode.disabled,
-                key: const Key('email-field'),
+                key: const Key(Keys.emailField),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.emailChanged(value)),
@@ -156,7 +157,7 @@ class WorkerCreationForm extends StatelessWidget {
                 autovalidateMode: workerFormState.showErrorMessage
                     ? AutovalidateMode.onUserInteraction
                     : AutovalidateMode.disabled,
-                key: const Key('phone-field'),
+                key: const Key(Keys.phoneField),
                 onChanged: (value) => context
                     .read<WorkerFormBloc>()
                     .add(WorkerFormEvent.phoneNumberChanged(value)),

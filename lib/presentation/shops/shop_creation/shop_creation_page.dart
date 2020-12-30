@@ -5,6 +5,7 @@ import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_creation/widgets/shop_creation_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -57,9 +58,9 @@ class ShopsCreationPage extends StatelessWidget {
           child: Scaffold(
             backgroundColor: primaryColor,
             appBar: AppBar(
-              title: const Text('Shops'),
+              title: const Text("Shop's Profile"),
               leading: IconButton(
-                key: const Key('icon-button-sign-out'),
+                key: const Key('Keys.logout'),
                 icon: const Icon(Icons.exit_to_app),
                 onPressed: () {
                   context.read<AuthBloc>().add(
@@ -69,6 +70,7 @@ class ShopsCreationPage extends StatelessWidget {
               ),
               actions: <Widget>[
                 IconButton(
+                  key: const Key(Keys.back),
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () {
                     ExtendedNavigator.of(context).pop();

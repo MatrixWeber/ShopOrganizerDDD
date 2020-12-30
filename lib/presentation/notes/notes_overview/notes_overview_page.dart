@@ -54,7 +54,7 @@ class NotesOverviewPage extends StatelessWidget {
           appBar: AppBar(
             title: const Text('Notes'),
             leading: IconButton(
-              key: const Key('icon-button-sign-out'),
+              key: const Key('Keys.logout'),
               icon: const Icon(Icons.exit_to_app),
               onPressed: () {
                 context.read<AuthBloc>().add(

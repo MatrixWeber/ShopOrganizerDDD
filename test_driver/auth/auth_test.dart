@@ -1,12 +1,11 @@
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
-// import 'package:flutter_test/flutter_test.dart';
-// import 'package:flushbar/flushbar_helper.dart';
 void main() {
   group('FlutterAuthSignInTestPage', () {
-    final emailField = find.byValueKey('email-field');
+    final emailField = find.byValueKey(Keys.emailField);
     final passwordField = find.byValueKey('password-field');
     final signInButton = find.text('SIGN IN');
     const shortPassword = SHORT_PASSWORD;
@@ -89,11 +88,11 @@ void main() {
       await driver.tap(signInButton);
       // await driver.waitFor(extendedNavigator);
       await driver.waitUntilNoTransientCallbacks();
-      final floatingActionButton = find.byValueKey('icon-button-sign-out');
-      assert(floatingActionButton != null);
+      // final floatingActionButton = find.byValueKey('Keys.logout');
+      // assert(floatingActionButton != null);
       expect(await driver.getText(find.text('Shops')), 'Shops');
-      await driver.tap(floatingActionButton);
-      await driver.waitFor(find.text('Sign in'));
+      // await driver.tap(floatingActionButton);
+      // await driver.waitFor(find.text('Sign in'));
     });
   });
 }

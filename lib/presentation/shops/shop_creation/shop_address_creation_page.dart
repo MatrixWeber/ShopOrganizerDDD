@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +32,7 @@ class ShopAddressCreationPage extends StatelessWidget {
             appBar: AppBar(
               title: const Text('Shop Address Creation'),
               leading: IconButton(
-                key: const Key('icon-button-sign-out'),
+                key: const Key('Keys.logout'),
                 icon: const Icon(Icons.exit_to_app),
                 onPressed: () {
                   context.read<AuthBloc>().add(
@@ -41,6 +42,7 @@ class ShopAddressCreationPage extends StatelessWidget {
               ),
               actions: <Widget>[
                 IconButton(
+                  key: const Key(Keys.back),
                   icon: const Icon(Icons.arrow_back),
                   onPressed: () {
                     ExtendedNavigator.of(context).pop();

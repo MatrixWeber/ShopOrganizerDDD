@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_ddd_tutorial/application/auth/sign_in_form/bloc/sign_in_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/injection.dart';
@@ -84,7 +85,7 @@ Future<void> main() async {
     );
   }
 
-  final emailField = find.byKey(const Key('email-field'));
+  final emailField = find.byKey(const Key(Keys.emailField));
   final passwordField = find.byKey(const Key('password-field'));
   final signInButton = find.text('SIGN IN');
 

@@ -8,6 +8,7 @@ import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
 import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/helper_functions.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/confirm_dialog.dart';
 import 'package:firebase_ddd_tutorial/presentation/core/image_widget.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
@@ -67,7 +68,7 @@ class ShopCreationForm extends StatelessWidget {
               padding: EdgeInsets.all(_PADDING),
             ),
             TextFormField(
-              key: const Key('name-field'),
+              key: const Key(Keys.nameField),
               onChanged: (value) => context
                   .read<ShopFormBloc>()
                   .add(ShopFormEvent.nameChanged(value)),
@@ -89,7 +90,7 @@ class ShopCreationForm extends StatelessWidget {
               padding: EdgeInsets.all(_PADDING),
             ),
             TextFormField(
-              key: const Key('keeper-field'),
+              key: const Key(Keys.keeperField),
               onChanged: (value) => context
                   .read<ShopFormBloc>()
                   .add(ShopFormEvent.keeperChanged(value)),
@@ -111,7 +112,7 @@ class ShopCreationForm extends StatelessWidget {
               padding: EdgeInsets.all(_PADDING),
             ),
             TextFormField(
-              key: const Key('email-field'),
+              key: const Key(Keys.emailField),
               onChanged: (value) => context
                   .read<ShopFormBloc>()
                   .add(ShopFormEvent.emailChanged(value)),
@@ -132,7 +133,7 @@ class ShopCreationForm extends StatelessWidget {
               padding: EdgeInsets.all(_PADDING),
             ),
             TextFormField(
-              key: const Key('phone-field'),
+              key: const Key(Keys.phoneField),
               onChanged: (value) => context
                   .read<ShopFormBloc>()
                   .add(ShopFormEvent.phoneNumberChanged(value)),
@@ -154,7 +155,7 @@ class ShopCreationForm extends StatelessWidget {
               padding: EdgeInsets.all(_PADDING),
             ),
             TextFormField(
-              key: const Key('number-of-worker-field'),
+              key: const Key(Keys.numOfWorkesField),
               onChanged: (value) => context
                   .read<ShopFormBloc>()
                   .add(ShopFormEvent.numberOfWorkersChanged(int.parse(value))),
@@ -184,8 +185,8 @@ class ShopCreationForm extends StatelessWidget {
                           orElse: () => null,
                         ),
                     (_) => null);
-                ExtendedNavigator.of(context)
-                    .pushShopAddressCreationPage(shop: shopFormState.shop);
+                // ExtendedNavigator.of(context)
+                //     .pushShopAddressCreationPage(shop: shopFormState.shop);
               },
               child: const Text('Add some worker',
                   style: TextStyle(fontSize: _TF_SIZE)),
@@ -202,6 +203,8 @@ class ShopCreationForm extends StatelessWidget {
     context
         .read<ShopFormBloc>()
         .add(const ShopFormEvent.imageUrlChanged('None'));
-    ExtendedNavigator.of(context).pushShopAddressCreationPage();
+    ExtendedNavigator.of(context).pushShopAddressCreationPage(
+      shop: context.read<ShopFormBloc>().state.shop,
+    );
   }
 }
