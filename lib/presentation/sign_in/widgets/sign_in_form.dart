@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
-import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +18,11 @@ class SignInForm extends StatelessWidget {
             (either) => either.fold((failure) {
                   FlushbarHelper.createError(
                     message: failure.map(
-                        cancelledByUser: (_) => 'Cancelled',
-                        serverError: (_) => 'Server Error',
-                        emailAlreadyInUse: (_) => 'Email already in use',
+                        cancelledByUser: (_) => Strings.cancelled,
+                        serverError: (_) => Strings.serverError,
+                        emailAlreadyInUse: (_) => Strings.emailAlreadyInUse,
                         invalidEmailAndPasswordCombination: (_) =>
-                            'Invalid email and password combination'),
+                            Strings.invalidEmailAndPasswordCombination),
                   ).show(context);
                 }, (_) {
                   ExtendedNavigator.of(context).pushShopsOverviewPage();
@@ -61,13 +61,13 @@ class SignInForm extends StatelessWidget {
                     .value
                     .fold(
                         (f) => f.maybeMap(
-                              invalidEmail: (_) => INVALID_EMAIL,
+                              invalidEmail: (_) => Strings.invalidEmail,
                               orElse: () => null,
                             ),
                         (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
-                  labelText: 'Email',
+                  labelText: Strings.email,
                 ),
                 autocorrect: false,
               ),
@@ -75,20 +75,20 @@ class SignInForm extends StatelessWidget {
                 height: 8,
               ),
               TextFormField(
-                key: const Key('password-field'),
+                key: const Key(Keys.passwordField),
                 onChanged: (value) => context
                     .read<SignInFormBloc>()
                     .add(SignInFormEvent.passwordChanged(value)),
                 validator: (_) =>
                     context.read<SignInFormBloc>().state.password.value.fold(
                         (f) => f.maybeMap(
-                              shortPassword: (_) => SHORT_PASSWORD,
+                              shortPassword: (_) => Strings.shortPassword,
                               orElse: () => null,
                             ),
                         (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.lock),
-                  labelText: 'Password',
+                  labelText: Strings.password,
                 ),
                 autocorrect: false,
                 obscureText: true,
@@ -106,7 +106,7 @@ class SignInForm extends StatelessWidget {
                                   .signInWithEmailAndPasswordPressed(),
                             );
                       },
-                      child: const Text('SIGN IN'),
+                      child: const Text(Strings.signIn),
                     ),
                   ),
                   Expanded(
@@ -117,7 +117,7 @@ class SignInForm extends StatelessWidget {
                                   .registerWithEmailAndPasswordPressed(),
                             );
                       },
-                      child: const Text('REGISTER'),
+                      child: const Text(Strings.register),
                     ),
                   ),
                 ],
@@ -133,7 +133,7 @@ class SignInForm extends StatelessWidget {
                 },
                 color: Colors.lightBlue,
                 child: const Text(
-                  'SIGN IN WITH GOOGLE',
+                  Strings.signInWithGoogle,
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,

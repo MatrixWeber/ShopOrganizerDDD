@@ -3,8 +3,8 @@ import 'dart:io';
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/core/widget/widget_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_form/worker_form_bloc.dart';
-import 'package:firebase_ddd_tutorial/domain/core/errors.dart';
 import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -45,10 +45,10 @@ class WorkerCreationForm extends StatelessWidget {
                   FlushbarHelper.createError(
                     message: failure.map(
                         unexpected: (functionName) =>
-                            'Unexpected error occured while $functionName, please contact support',
-                        unableToUpdate: (_) => 'Impossible error',
+                            '${Strings.unexpectedErrorOccured} while $functionName, ${Strings.pleaseContactSupport}',
+                        unableToUpdate: (_) => Strings.inpossibleError,
                         insufficientPermissions: (_) =>
-                            'Insufficient permissions ❌'),
+                            Strings.insufficientPermissions),
                     duration: const Duration(seconds: 5),
                   ).show(context);
                 }, (_) {
@@ -113,15 +113,15 @@ class WorkerCreationForm extends StatelessWidget {
                     .add(WorkerFormEvent.nameChanged(value)),
                 validator: (_) => workerFormState.worker.name.value.fold(
                     (f) => f.maybeMap(
-                          empty: (_) => 'Name cannot be empty',
-                          exceedingLength: (_) => 'Invalid Name Length',
-                          isNotALetter: (_) => 'Name should contain of letters',
+                          empty: (_) => Strings.cannotBeEmpty,
+                          exceedingLength: (_) => Strings.tooLong,
+                          isNotALetter: (_) => Strings.shouldContainLetters,
                           orElse: () => null,
                         ),
                     (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.nature),
-                  labelText: 'Name',
+                  labelText: Strings.name,
                 ),
                 autocorrect: false,
                 keyboardType: TextInputType.text,
@@ -139,13 +139,13 @@ class WorkerCreationForm extends StatelessWidget {
                     .add(WorkerFormEvent.emailChanged(value)),
                 validator: (_) => workerFormState.worker.email.value.fold(
                     (f) => f.maybeMap(
-                          invalidEmail: (_) => INVALID_EMAIL,
+                          invalidEmail: (_) => Strings.invalidEmail,
                           orElse: () => null,
                         ),
                     (_) => null),
                 decoration: const InputDecoration(
                   prefixIcon: Icon(Icons.email),
-                  labelText: 'Email',
+                  labelText: Strings.email,
                 ),
                 autocorrect: false,
                 keyboardType: TextInputType.emailAddress,
@@ -163,9 +163,9 @@ class WorkerCreationForm extends StatelessWidget {
                     .add(WorkerFormEvent.phoneNumberChanged(value)),
                 validator: (_) => workerFormState.worker.phoneNumber.value.fold(
                     (f) => f.maybeMap(
-                          empty: (_) => 'Phone cannot be empty',
-                          isNotAPhoneNumber: (_) => 'Invalid phone number',
-                          exceedingLength: (_) => 'Invalid Phone Length',
+                          empty: (_) => Strings.cannotBeEmpty,
+                          isNotAPhoneNumber: (_) => Strings.invalidPhoneNumber,
+                          exceedingLength: (_) => Strings.tooLong,
                           orElse: () => null,
                         ),
                     (_) => null),
@@ -214,7 +214,7 @@ class WorkerCreationForm extends StatelessWidget {
   ) {
     context
         .read<WorkerFormBloc>()
-        .add(const WorkerFormEvent.imageUrlChanged('None'));
+        .add(const WorkerFormEvent.imageUrlChanged(Strings.none));
     _saveData(context);
   }
 }

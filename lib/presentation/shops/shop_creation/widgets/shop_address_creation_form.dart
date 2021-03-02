@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_form/shop_form_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/decoration.dart';
+import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:flushbar/flushbar_helper.dart';
 import 'package:flutter/material.dart';
@@ -29,10 +31,10 @@ class ShopAddressCreationForm extends StatelessWidget {
                   FlushbarHelper.createError(
                     message: failure.map(
                         unexpected: (functionName) =>
-                            'Unexpected error occured while $functionName, please contact support',
-                        unableToUpdate: (_) => 'Impossible error',
+                            '${Strings.unexpectedErrorOccured} while $functionName, ${Strings.pleaseContactSupport}',
+                        unableToUpdate: (_) => Strings.inpossibleError,
                         insufficientPermissions: (_) =>
-                            'Insufficient permissions ❌'),
+                            Strings.insufficientPermissions),
                     duration: const Duration(seconds: 5),
                   ).show(context);
                 }, (_) {
@@ -78,17 +80,11 @@ class ShopAddressCreationForm extends StatelessWidget {
                       onChanged: (value) => context
                           .read<ShopFormBloc>()
                           .add(ShopFormEvent.cityChanged(value)),
-                      validator: (_) => context
-                          .read<ShopFormBloc>()
-                          .state
-                          .shop
-                          .address
-                          .city
-                          .value
-                          .fold(
+                      validator: (_) =>
+                          shopFormState.shop.address.city.value.fold(
                               (f) => f.maybeMap(
-                                    empty: (_) => 'City cannot be empty',
-                                    exceedingLength: (_) => 'Invalid city',
+                                    empty: (_) => Strings.cannotBeEmpty,
+                                    exceedingLength: (_) => Strings.tooLong,
                                     orElse: () => null,
                                   ),
                               (_) => null),
@@ -107,17 +103,11 @@ class ShopAddressCreationForm extends StatelessWidget {
                       onChanged: (value) => context
                           .read<ShopFormBloc>()
                           .add(ShopFormEvent.streetChanged(value)),
-                      validator: (_) => context
-                          .read<ShopFormBloc>()
-                          .state
-                          .shop
-                          .address
-                          .street
-                          .value
-                          .fold(
+                      validator: (_) =>
+                          shopFormState.shop.address.street.value.fold(
                               (f) => f.maybeMap(
-                                    empty: (_) => 'Street cannot be empty',
-                                    exceedingLength: (_) => 'Invalid street',
+                                    empty: (_) => Strings.cannotBeEmpty,
+                                    exceedingLength: (_) => Strings.tooLong,
                                     orElse: () => null,
                                   ),
                               (_) => null),
@@ -136,17 +126,11 @@ class ShopAddressCreationForm extends StatelessWidget {
                       onChanged: (value) => context
                           .read<ShopFormBloc>()
                           .add(ShopFormEvent.zipChanged(value)),
-                      validator: (_) => context
-                          .read<ShopFormBloc>()
-                          .state
-                          .shop
-                          .address
-                          .zip
-                          .value
-                          .fold(
+                      validator: (_) =>
+                          shopFormState.shop.address.zip.value.fold(
                               (f) => f.maybeMap(
-                                    empty: (_) => 'Zip cannot be empty',
-                                    exceedingLength: (_) => 'Invalid zip',
+                                    empty: (_) => Strings.cannotBeEmpty,
+                                    exceedingLength: (_) => Strings.tooLong,
                                     orElse: () => null,
                                   ),
                               (_) => null),
@@ -161,21 +145,15 @@ class ShopAddressCreationForm extends StatelessWidget {
                       padding: EdgeInsets.all(_PADDING),
                     ),
                     TextFormField(
-                      key: const Key('house-number-field'),
+                      key: const Key(Keys.houseNumberField),
                       onChanged: (value) => context
                           .read<ShopFormBloc>()
                           .add(ShopFormEvent.houseNumberChanged(value)),
-                      validator: (_) => context
-                          .read<ShopFormBloc>()
-                          .state
-                          .shop
-                          .address
-                          .houseNumber
-                          .value
-                          .fold(
+                      validator: (_) =>
+                          shopFormState.shop.address.houseNumber.value.fold(
                               (f) => f.maybeMap(
                                     maxTypeExceeded: (_) =>
-                                        'Invalid house number',
+                                        Strings.numberTooBig,
                                     orElse: () => null,
                                   ),
                               (_) => null),

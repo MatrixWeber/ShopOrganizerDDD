@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_actor/note_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/notes/note_watcher/note_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/widgets/notes_overview_body_widget.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/notes_overview/widgets/uncompleted_switch.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
@@ -39,10 +40,10 @@ class NotesOverviewPage extends StatelessWidget {
                     FlushbarHelper.createError(
                       message: state.noteFailure.map(
                           unexpected: (_) =>
-                              'Unexpected error occured while deleting, please contact support',
-                          unableToUpdate: (_) => 'Impossible error',
+                              '${Strings.unexpectedErrorOccured} while deleting, ${Strings.pleaseContactSupport}',
+                          unableToUpdate: (_) => Strings.inpossibleError,
                           insufficientPermissions: (_) =>
-                              'Insufficient permissions ❌'),
+                              Strings.insufficientPermissions),
                       duration: const Duration(seconds: 5),
                     ).show(context);
                   },

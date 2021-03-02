@@ -1,8 +1,5 @@
 import 'package:firebase_ddd_tutorial/domain/core/failures.dart';
 
-const INVALID_EMAIL = 'Invalid Email';
-const SHORT_PASSWORD = 'Short Password';
-
 class NotAuthenticatedError extends Error {}
 
 class UnexpectedValueError extends Error {

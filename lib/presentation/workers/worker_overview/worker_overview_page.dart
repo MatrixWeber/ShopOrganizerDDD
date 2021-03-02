@@ -3,6 +3,7 @@ import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/core/image/image_handler/image_handler_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_actor/worker_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/worker/worker_watcher/worker_watcher_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/workers/worker_overview/widgets/worker_overview_form.dart';
@@ -50,10 +51,10 @@ class WorkerOverviewPage extends StatelessWidget {
                   FlushbarHelper.createError(
                     message: state.workerFailure.map(
                         unexpected: (_) =>
-                            'Unexpected error occured while deleting, please contact support',
-                        unableToUpdate: (_) => 'Impossible error',
+                            '${Strings.unexpectedErrorOccured} while deleting, ${Strings.pleaseContactSupport}',
+                        unableToUpdate: (_) => Strings.inpossibleError,
                         insufficientPermissions: (_) =>
-                            'Insufficient permissions ❌'),
+                            Strings.insufficientPermissions),
                     duration: const Duration(seconds: 5),
                   ).show(context);
                 },

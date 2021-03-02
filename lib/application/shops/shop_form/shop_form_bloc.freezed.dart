@@ -110,6 +110,11 @@ class _$ShopFormEventTearOff {
   }
 
 // ignore: unused_element
+  ValidateForm validateForm() {
+    return const ValidateForm();
+  }
+
+// ignore: unused_element
   ShopChanged shopChanged(Shop shop) {
     return ShopChanged(
       shop,
@@ -139,6 +144,7 @@ mixin _$ShopFormEvent {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   });
   @optionalTypeArgs
@@ -157,6 +163,7 @@ mixin _$ShopFormEvent {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   });
@@ -176,6 +183,7 @@ mixin _$ShopFormEvent {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   });
   @optionalTypeArgs
@@ -194,6 +202,7 @@ mixin _$ShopFormEvent {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   });
@@ -294,6 +303,7 @@ class _$Initialized implements Initialized {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -310,6 +320,7 @@ class _$Initialized implements Initialized {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return initialized(initialShopOption);
   }
@@ -331,6 +342,7 @@ class _$Initialized implements Initialized {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -358,6 +370,7 @@ class _$Initialized implements Initialized {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -374,6 +387,7 @@ class _$Initialized implements Initialized {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return initialized(this);
   }
@@ -395,6 +409,7 @@ class _$Initialized implements Initialized {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -487,6 +502,7 @@ class _$NameChanged implements NameChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -503,6 +519,7 @@ class _$NameChanged implements NameChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return nameChanged(shopName);
   }
@@ -524,6 +541,7 @@ class _$NameChanged implements NameChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -551,6 +569,7 @@ class _$NameChanged implements NameChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -567,6 +586,7 @@ class _$NameChanged implements NameChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return nameChanged(this);
   }
@@ -588,6 +608,7 @@ class _$NameChanged implements NameChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -679,6 +700,7 @@ class _$EmailChanged implements EmailChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -695,6 +717,7 @@ class _$EmailChanged implements EmailChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return emailChanged(email);
   }
@@ -716,6 +739,7 @@ class _$EmailChanged implements EmailChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -743,6 +767,7 @@ class _$EmailChanged implements EmailChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -759,6 +784,7 @@ class _$EmailChanged implements EmailChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return emailChanged(this);
   }
@@ -780,6 +806,7 @@ class _$EmailChanged implements EmailChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -872,6 +899,7 @@ class _$KeeperChanged implements KeeperChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -888,6 +916,7 @@ class _$KeeperChanged implements KeeperChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return keeperChanged(keeper);
   }
@@ -909,6 +938,7 @@ class _$KeeperChanged implements KeeperChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -936,6 +966,7 @@ class _$KeeperChanged implements KeeperChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -952,6 +983,7 @@ class _$KeeperChanged implements KeeperChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return keeperChanged(this);
   }
@@ -973,6 +1005,7 @@ class _$KeeperChanged implements KeeperChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -1065,6 +1098,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -1081,6 +1115,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return phoneNumberChanged(phone);
   }
@@ -1102,6 +1137,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -1129,6 +1165,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -1145,6 +1182,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return phoneNumberChanged(this);
   }
@@ -1166,6 +1204,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -1261,6 +1300,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -1277,6 +1317,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return numberOfWorkersChanged(numOfWorkers);
   }
@@ -1298,6 +1339,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -1325,6 +1367,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -1341,6 +1384,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return numberOfWorkersChanged(this);
   }
@@ -1362,6 +1406,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -1456,6 +1501,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -1472,6 +1518,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return imageUrlChanged(imageUrl);
   }
@@ -1493,6 +1540,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -1520,6 +1568,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -1536,6 +1585,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return imageUrlChanged(this);
   }
@@ -1557,6 +1607,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -1650,6 +1701,7 @@ class _$CategoryChanged implements CategoryChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -1666,6 +1718,7 @@ class _$CategoryChanged implements CategoryChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return categoryChanged(category);
   }
@@ -1687,6 +1740,7 @@ class _$CategoryChanged implements CategoryChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -1714,6 +1768,7 @@ class _$CategoryChanged implements CategoryChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -1730,6 +1785,7 @@ class _$CategoryChanged implements CategoryChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return categoryChanged(this);
   }
@@ -1751,6 +1807,7 @@ class _$CategoryChanged implements CategoryChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -1843,6 +1900,7 @@ class _$StreetChanged implements StreetChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -1859,6 +1917,7 @@ class _$StreetChanged implements StreetChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return streetChanged(street);
   }
@@ -1880,6 +1939,7 @@ class _$StreetChanged implements StreetChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -1907,6 +1967,7 @@ class _$StreetChanged implements StreetChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -1923,6 +1984,7 @@ class _$StreetChanged implements StreetChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return streetChanged(this);
   }
@@ -1944,6 +2006,7 @@ class _$StreetChanged implements StreetChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2037,6 +2100,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -2053,6 +2117,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return houseNumberChanged(houseNum);
   }
@@ -2074,6 +2139,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -2101,6 +2167,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -2117,6 +2184,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return houseNumberChanged(this);
   }
@@ -2138,6 +2206,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2228,6 +2297,7 @@ class _$ZipChanged implements ZipChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -2244,6 +2314,7 @@ class _$ZipChanged implements ZipChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return zipChanged(zip);
   }
@@ -2265,6 +2336,7 @@ class _$ZipChanged implements ZipChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -2292,6 +2364,7 @@ class _$ZipChanged implements ZipChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -2308,6 +2381,7 @@ class _$ZipChanged implements ZipChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return zipChanged(this);
   }
@@ -2329,6 +2403,7 @@ class _$ZipChanged implements ZipChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2420,6 +2495,7 @@ class _$CityChanged implements CityChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -2436,6 +2512,7 @@ class _$CityChanged implements CityChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return cityChanged(city);
   }
@@ -2457,6 +2534,7 @@ class _$CityChanged implements CityChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -2484,6 +2562,7 @@ class _$CityChanged implements CityChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -2500,6 +2579,7 @@ class _$CityChanged implements CityChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return cityChanged(this);
   }
@@ -2521,6 +2601,7 @@ class _$CityChanged implements CityChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2614,6 +2695,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -2630,6 +2712,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return openingDaysChanged(openingDays);
   }
@@ -2651,6 +2734,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -2678,6 +2762,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -2694,6 +2779,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return openingDaysChanged(this);
   }
@@ -2715,6 +2801,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2784,6 +2871,7 @@ class _$Saved implements Saved {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -2800,6 +2888,7 @@ class _$Saved implements Saved {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return saved();
   }
@@ -2821,6 +2910,7 @@ class _$Saved implements Saved {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -2848,6 +2938,7 @@ class _$Saved implements Saved {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -2864,6 +2955,7 @@ class _$Saved implements Saved {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return saved(this);
   }
@@ -2885,6 +2977,7 @@ class _$Saved implements Saved {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {
@@ -2898,6 +2991,180 @@ class _$Saved implements Saved {
 
 abstract class Saved implements ShopFormEvent {
   const factory Saved() = _$Saved;
+}
+
+/// @nodoc
+abstract class $ValidateFormCopyWith<$Res> {
+  factory $ValidateFormCopyWith(
+          ValidateForm value, $Res Function(ValidateForm) then) =
+      _$ValidateFormCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$ValidateFormCopyWithImpl<$Res> extends _$ShopFormEventCopyWithImpl<$Res>
+    implements $ValidateFormCopyWith<$Res> {
+  _$ValidateFormCopyWithImpl(
+      ValidateForm _value, $Res Function(ValidateForm) _then)
+      : super(_value, (v) => _then(v as ValidateForm));
+
+  @override
+  ValidateForm get _value => super._value as ValidateForm;
+}
+
+/// @nodoc
+class _$ValidateForm implements ValidateForm {
+  const _$ValidateForm();
+
+  @override
+  String toString() {
+    return 'ShopFormEvent.validateForm()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is ValidateForm);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object>({
+    @required TResult initialized(Option<Shop> initialShopOption),
+    @required TResult nameChanged(String shopName),
+    @required TResult emailChanged(String email),
+    @required TResult keeperChanged(String keeper),
+    @required TResult phoneNumberChanged(String phone),
+    @required TResult numberOfWorkersChanged(num numOfWorkers),
+    @required TResult imageUrlChanged(String imageUrl),
+    @required TResult categoryChanged(String category),
+    @required TResult streetChanged(String street),
+    @required TResult houseNumberChanged(String houseNum),
+    @required TResult zipChanged(String zip),
+    @required TResult cityChanged(String city),
+    @required TResult openingDaysChanged(KtList<bool> openingDays),
+    @required TResult saved(),
+    @required TResult validateForm(),
+    @required TResult shopChanged(Shop shop),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(keeperChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(numberOfWorkersChanged != null);
+    assert(imageUrlChanged != null);
+    assert(categoryChanged != null);
+    assert(streetChanged != null);
+    assert(houseNumberChanged != null);
+    assert(zipChanged != null);
+    assert(cityChanged != null);
+    assert(openingDaysChanged != null);
+    assert(saved != null);
+    assert(validateForm != null);
+    assert(shopChanged != null);
+    return validateForm();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object>({
+    TResult initialized(Option<Shop> initialShopOption),
+    TResult nameChanged(String shopName),
+    TResult emailChanged(String email),
+    TResult keeperChanged(String keeper),
+    TResult phoneNumberChanged(String phone),
+    TResult numberOfWorkersChanged(num numOfWorkers),
+    TResult imageUrlChanged(String imageUrl),
+    TResult categoryChanged(String category),
+    TResult streetChanged(String street),
+    TResult houseNumberChanged(String houseNum),
+    TResult zipChanged(String zip),
+    TResult cityChanged(String city),
+    TResult openingDaysChanged(KtList<bool> openingDays),
+    TResult saved(),
+    TResult validateForm(),
+    TResult shopChanged(Shop shop),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (validateForm != null) {
+      return validateForm();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object>({
+    @required TResult initialized(Initialized value),
+    @required TResult nameChanged(NameChanged value),
+    @required TResult emailChanged(EmailChanged value),
+    @required TResult keeperChanged(KeeperChanged value),
+    @required TResult phoneNumberChanged(PhoneNumberChanged value),
+    @required TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    @required TResult imageUrlChanged(ImageUrlChanged value),
+    @required TResult categoryChanged(CategoryChanged value),
+    @required TResult streetChanged(StreetChanged value),
+    @required TResult houseNumberChanged(HouseNumberChanged value),
+    @required TResult zipChanged(ZipChanged value),
+    @required TResult cityChanged(CityChanged value),
+    @required TResult openingDaysChanged(OpeningDaysChanged value),
+    @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
+    @required TResult shopChanged(ShopChanged value),
+  }) {
+    assert(initialized != null);
+    assert(nameChanged != null);
+    assert(emailChanged != null);
+    assert(keeperChanged != null);
+    assert(phoneNumberChanged != null);
+    assert(numberOfWorkersChanged != null);
+    assert(imageUrlChanged != null);
+    assert(categoryChanged != null);
+    assert(streetChanged != null);
+    assert(houseNumberChanged != null);
+    assert(zipChanged != null);
+    assert(cityChanged != null);
+    assert(openingDaysChanged != null);
+    assert(saved != null);
+    assert(validateForm != null);
+    assert(shopChanged != null);
+    return validateForm(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object>({
+    TResult initialized(Initialized value),
+    TResult nameChanged(NameChanged value),
+    TResult emailChanged(EmailChanged value),
+    TResult keeperChanged(KeeperChanged value),
+    TResult phoneNumberChanged(PhoneNumberChanged value),
+    TResult numberOfWorkersChanged(NumberOfWorkersChanged value),
+    TResult imageUrlChanged(ImageUrlChanged value),
+    TResult categoryChanged(CategoryChanged value),
+    TResult streetChanged(StreetChanged value),
+    TResult houseNumberChanged(HouseNumberChanged value),
+    TResult zipChanged(ZipChanged value),
+    TResult cityChanged(CityChanged value),
+    TResult openingDaysChanged(OpeningDaysChanged value),
+    TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
+    TResult shopChanged(ShopChanged value),
+    @required TResult orElse(),
+  }) {
+    assert(orElse != null);
+    if (validateForm != null) {
+      return validateForm(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class ValidateForm implements ShopFormEvent {
+  const factory ValidateForm() = _$ValidateForm;
 }
 
 /// @nodoc
@@ -2985,6 +3252,7 @@ class _$ShopChanged implements ShopChanged {
     @required TResult cityChanged(String city),
     @required TResult openingDaysChanged(KtList<bool> openingDays),
     @required TResult saved(),
+    @required TResult validateForm(),
     @required TResult shopChanged(Shop shop),
   }) {
     assert(initialized != null);
@@ -3001,6 +3269,7 @@ class _$ShopChanged implements ShopChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return shopChanged(shop);
   }
@@ -3022,6 +3291,7 @@ class _$ShopChanged implements ShopChanged {
     TResult cityChanged(String city),
     TResult openingDaysChanged(KtList<bool> openingDays),
     TResult saved(),
+    TResult validateForm(),
     TResult shopChanged(Shop shop),
     @required TResult orElse(),
   }) {
@@ -3049,6 +3319,7 @@ class _$ShopChanged implements ShopChanged {
     @required TResult cityChanged(CityChanged value),
     @required TResult openingDaysChanged(OpeningDaysChanged value),
     @required TResult saved(Saved value),
+    @required TResult validateForm(ValidateForm value),
     @required TResult shopChanged(ShopChanged value),
   }) {
     assert(initialized != null);
@@ -3065,6 +3336,7 @@ class _$ShopChanged implements ShopChanged {
     assert(cityChanged != null);
     assert(openingDaysChanged != null);
     assert(saved != null);
+    assert(validateForm != null);
     assert(shopChanged != null);
     return shopChanged(this);
   }
@@ -3086,6 +3358,7 @@ class _$ShopChanged implements ShopChanged {
     TResult cityChanged(CityChanged value),
     TResult openingDaysChanged(OpeningDaysChanged value),
     TResult saved(Saved value),
+    TResult validateForm(ValidateForm value),
     TResult shopChanged(ShopChanged value),
     @required TResult orElse(),
   }) {

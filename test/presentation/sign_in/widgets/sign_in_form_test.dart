@@ -4,6 +4,7 @@ import 'package:firebase_ddd_tutorial/application/auth/sign_in_form/bloc/sign_in
 import 'package:firebase_ddd_tutorial/domain/auth/i_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/domain/auth/value_objects.dart';
 import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/domain/core/value_objects.dart';
 import 'package:firebase_ddd_tutorial/infrastructure/auth/firebase_auth_facade.dart';
 import 'package:firebase_ddd_tutorial/injection.dart';
@@ -86,8 +87,8 @@ Future<void> main() async {
   }
 
   final emailField = find.byKey(const Key(Keys.emailField));
-  final passwordField = find.byKey(const Key('password-field'));
-  final signInButton = find.text('SIGN IN');
+  final passwordField = find.byKey(const Key(Keys.passwordField));
+  final signInButton = find.text(Strings.signIn);
 
   group('signInFormTest', () {
     const email = "named@euter.de";
@@ -116,7 +117,7 @@ Future<void> main() async {
           emailAddress: EmailAddress(''), password: Password('')));
       verifyZeroInteractions(_firebaseAuth);
       // expect(
-      //     find.text('Invalid email and password combination'), findsOneWidget);
+      //     find.text(Strings.invalidEmailAndPasswordCombination), findsOneWidget);
       unregisterInjection();
     });
     testWidgets(
@@ -139,7 +140,7 @@ Future<void> main() async {
       // ).called(1);
       verifyZeroInteractions(_authFacade);
       // expect(
-      //     find.text('Invalid email and password combination'), findsOneWidget);
+      //     find.text(Strings.invalidEmailAndPasswordCombination), findsOneWidget);
       unregisterInjection();
     });
   });

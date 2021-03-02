@@ -1,3 +1,4 @@
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_ddd_tutorial/domain/notes/note.dart';
@@ -19,7 +20,7 @@ class ErrorNoteCard extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Invalid note, please contact support',
+              'Invalid note, ${Strings.pleaseContactSupport}',
               style: Theme.of(context)
                   .primaryTextTheme
                   .bodyText2

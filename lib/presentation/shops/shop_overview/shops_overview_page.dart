@@ -3,6 +3,7 @@ import 'package:firebase_ddd_tutorial/application/auth/auth_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_actor/shop_actor_bloc.dart';
 import 'package:firebase_ddd_tutorial/application/shops/shop_watcher/shop_watcher_bloc.dart';
 import 'package:firebase_ddd_tutorial/domain/core/keys/keys.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/presentation/routes/router.gr.dart';
 import 'package:firebase_ddd_tutorial/presentation/shops/shop_overview/widgets/shop_overview_form.dart';
 import 'package:flushbar/flushbar_helper.dart';
@@ -39,10 +40,10 @@ class ShopsOverviewPage extends StatelessWidget {
                     FlushbarHelper.createError(
                       message: state.shopFailure.map(
                           unexpected: (_) =>
-                              'Unexpected error occured while deleting, please contact support',
-                          unableToUpdate: (_) => 'Impossible error',
+                              '${Strings.unexpectedErrorOccured} while deleting, ${Strings.pleaseContactSupport}',
+                          unableToUpdate: (_) => Strings.inpossibleError,
                           insufficientPermissions: (_) =>
-                              'Insufficient permissions ❌'),
+                              Strings.insufficientPermissions),
                       duration: const Duration(seconds: 5),
                     ).show(context);
                   },

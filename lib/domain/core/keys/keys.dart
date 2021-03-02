@@ -9,4 +9,6 @@ class Keys {
   static const nameField = 'name-field';
   static const keeperField = 'keeper-field';
   static const phoneField = 'phone-field';
+  static const houseNumberField = 'house-number-field';
+  static const passwordField = 'password-field';
 }

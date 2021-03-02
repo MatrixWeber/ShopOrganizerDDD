@@ -1,4 +1,5 @@
 import 'package:firebase_ddd_tutorial/application/notes/note_form/note_form_bloc.dart';
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:firebase_ddd_tutorial/domain/notes/value_objects.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/note_form/misc/todo_item_presentation_classes.dart';
 import 'package:firebase_ddd_tutorial/presentation/notes/note_form/misc/build_context_x.dart';
@@ -152,9 +153,9 @@ class TodoTile extends HookWidget {
                         (f) => null,
                         (todoList) => todoList[index].name.value.fold(
                             (f) => f.maybeMap(
-                                empty: (_) => 'Cannot be empty',
-                                exceedingLength: (_) => 'Too long',
-                                multiline: (_) => 'Has to be on a single line',
+                                empty: (_) => Strings.cannotBeEmpty,
+                                exceedingLength: (_) => Strings.tooLong,
+                                multiline: (_) => Strings.hasToBeOnASingleLine,
                                 orElse: () => null),
                             (_) => null),
                       );

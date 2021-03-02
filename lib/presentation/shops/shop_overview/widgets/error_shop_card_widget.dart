@@ -1,3 +1,4 @@
+import 'package:firebase_ddd_tutorial/domain/core/strings/strings.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_ddd_tutorial/domain/shops/shop.dart';
@@ -19,7 +20,7 @@ class ErrorShopCard extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Invalid shop, please contact support',
+              'Invalid shop, ${Strings.pleaseContactSupport}',
               style: Theme.of(context)
                   .primaryTextTheme
                   .bodyText2

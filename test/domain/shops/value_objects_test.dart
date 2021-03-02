@@ -16,7 +16,7 @@ void main() {
         expect(shopNameName.getOrCrash(), shopNameNameStr);
       });
       test(
-          'should throw UnexpectedValueError() when ShopName name has a length over 100',
+          'should throw UnexpectedValueError() when ShopName name has a length over 200',
           () {
         // arrange
         const shopNameNameStr =

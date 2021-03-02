@@ -80,6 +80,11 @@ class ShopFormBloc extends Bloc<ShopFormEvent, ShopFormState> {
           saveFailureOrSuccessOption: none(),
         );
       },
+      validateForm: (e) async* {
+        yield state.copyWith(
+          showErrorMessage: true,
+        );
+      },
       cityChanged: (e) async* {
         yield state.copyWith(
           shop: state.shop.copyWith(
