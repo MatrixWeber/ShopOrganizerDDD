@@ -229,6 +229,7 @@ class _$Initialized implements Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialUserOption);
 
+  @JsonKey(ignore: true)
   @override
   $InitializedCopyWith<Initialized> get copyWith =>
       _$InitializedCopyWithImpl<Initialized>(this, _$identity);
@@ -342,6 +343,7 @@ abstract class Initialized implements UserFormEvent {
   const factory Initialized(Option<User> initialUserOption) = _$Initialized;
 
   Option<User> get initialUserOption;
+  @JsonKey(ignore: true)
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
@@ -397,6 +399,7 @@ class _$NameChanged implements NameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   $NameChangedCopyWith<NameChanged> get copyWith =>
       _$NameChangedCopyWithImpl<NameChanged>(this, _$identity);
@@ -510,6 +513,7 @@ abstract class NameChanged implements UserFormEvent {
   const factory NameChanged(String name) = _$NameChanged;
 
   String get name;
+  @JsonKey(ignore: true)
   $NameChangedCopyWith<NameChanged> get copyWith;
 }
 
@@ -567,6 +571,7 @@ class _$FirstNameChanged implements FirstNameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(firstName);
 
+  @JsonKey(ignore: true)
   @override
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith =>
       _$FirstNameChangedCopyWithImpl<FirstNameChanged>(this, _$identity);
@@ -680,6 +685,7 @@ abstract class FirstNameChanged implements UserFormEvent {
   const factory FirstNameChanged(String firstName) = _$FirstNameChanged;
 
   String get firstName;
+  @JsonKey(ignore: true)
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith;
 }
 
@@ -735,6 +741,7 @@ class _$EmailChanged implements EmailChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
@@ -848,6 +855,7 @@ abstract class EmailChanged implements UserFormEvent {
   const factory EmailChanged(String email) = _$EmailChanged;
 
   String get email;
+  @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
@@ -904,6 +912,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(phone);
 
+  @JsonKey(ignore: true)
   @override
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith =>
       _$PhoneNumberChangedCopyWithImpl<PhoneNumberChanged>(this, _$identity);
@@ -1017,6 +1026,7 @@ abstract class PhoneNumberChanged implements UserFormEvent {
   const factory PhoneNumberChanged(String phone) = _$PhoneNumberChanged;
 
   String get phone;
+  @JsonKey(ignore: true)
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith;
 }
 
@@ -1074,6 +1084,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith =>
       _$ImageUrlChangedCopyWithImpl<ImageUrlChanged>(this, _$identity);
@@ -1187,6 +1198,7 @@ abstract class ImageUrlChanged implements UserFormEvent {
   const factory ImageUrlChanged(String imageUrl) = _$ImageUrlChanged;
 
   String get imageUrl;
+  @JsonKey(ignore: true)
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
 }
 
@@ -1243,6 +1255,7 @@ class _$StreetChanged implements StreetChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(street);
 
+  @JsonKey(ignore: true)
   @override
   $StreetChangedCopyWith<StreetChanged> get copyWith =>
       _$StreetChangedCopyWithImpl<StreetChanged>(this, _$identity);
@@ -1356,6 +1369,7 @@ abstract class StreetChanged implements UserFormEvent {
   const factory StreetChanged(String street) = _$StreetChanged;
 
   String get street;
+  @JsonKey(ignore: true)
   $StreetChangedCopyWith<StreetChanged> get copyWith;
 }
 
@@ -1413,6 +1427,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(houseNum);
 
+  @JsonKey(ignore: true)
   @override
   $HouseNumberChangedCopyWith<HouseNumberChanged> get copyWith =>
       _$HouseNumberChangedCopyWithImpl<HouseNumberChanged>(this, _$identity);
@@ -1526,6 +1541,7 @@ abstract class HouseNumberChanged implements UserFormEvent {
   const factory HouseNumberChanged(String houseNum) = _$HouseNumberChanged;
 
   String get houseNum;
+  @JsonKey(ignore: true)
   $HouseNumberChangedCopyWith<HouseNumberChanged> get copyWith;
 }
 
@@ -1580,6 +1596,7 @@ class _$ZipChanged implements ZipChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(zip);
 
+  @JsonKey(ignore: true)
   @override
   $ZipChangedCopyWith<ZipChanged> get copyWith =>
       _$ZipChangedCopyWithImpl<ZipChanged>(this, _$identity);
@@ -1693,6 +1710,7 @@ abstract class ZipChanged implements UserFormEvent {
   const factory ZipChanged(String zip) = _$ZipChanged;
 
   String get zip;
+  @JsonKey(ignore: true)
   $ZipChangedCopyWith<ZipChanged> get copyWith;
 }
 
@@ -1748,6 +1766,7 @@ class _$CityChanged implements CityChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(city);
 
+  @JsonKey(ignore: true)
   @override
   $CityChangedCopyWith<CityChanged> get copyWith =>
       _$CityChangedCopyWithImpl<CityChanged>(this, _$identity);
@@ -1861,6 +1880,7 @@ abstract class CityChanged implements UserFormEvent {
   const factory CityChanged(String city) = _$CityChanged;
 
   String get city;
+  @JsonKey(ignore: true)
   $CityChangedCopyWith<CityChanged> get copyWith;
 }
 
@@ -2039,6 +2059,7 @@ mixin _$UserFormState {
   bool get isSaving;
   Option<Either<UserFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $UserFormStateCopyWith<UserFormState> get copyWith;
 }
 
@@ -2210,6 +2231,7 @@ class _$_UserFormState implements _UserFormState {
       const DeepCollectionEquality().hash(isSaving) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$UserFormStateCopyWith<_UserFormState> get copyWith =>
       __$UserFormStateCopyWithImpl<_UserFormState>(this, _$identity);
@@ -2240,5 +2262,6 @@ abstract class _UserFormState implements UserFormState {
   @override
   Option<Either<UserFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$UserFormStateCopyWith<_UserFormState> get copyWith;
 }

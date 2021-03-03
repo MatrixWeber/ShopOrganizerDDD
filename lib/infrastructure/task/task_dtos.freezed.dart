@@ -53,6 +53,7 @@ mixin _$TaskDto {
   FieldValue get serverTimeStamp;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TaskDtoCopyWith<TaskDto> get copyWith;
 }
 
@@ -214,6 +215,7 @@ class _$_TaskDto extends _TaskDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(price) ^
       const DeepCollectionEquality().hash(serverTimeStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskDtoCopyWith<_TaskDto> get copyWith =>
       __$TaskDtoCopyWithImpl<_TaskDto>(this, _$identity);
@@ -249,5 +251,6 @@ abstract class _TaskDto extends TaskDto {
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
+  @JsonKey(ignore: true)
   _$TaskDtoCopyWith<_TaskDto> get copyWith;
 }

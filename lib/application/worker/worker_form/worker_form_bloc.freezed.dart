@@ -208,6 +208,7 @@ class _$Initialized implements Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialWorkerOption);
 
+  @JsonKey(ignore: true)
   @override
   $InitializedCopyWith<Initialized> get copyWith =>
       _$InitializedCopyWithImpl<Initialized>(this, _$identity);
@@ -309,6 +310,7 @@ abstract class Initialized implements WorkerFormEvent {
   const factory Initialized(Option<Worker> initialWorkerOption) = _$Initialized;
 
   Option<Worker> get initialWorkerOption;
+  @JsonKey(ignore: true)
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
@@ -363,6 +365,7 @@ class _$Reset implements Reset {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(parentShopId);
 
+  @JsonKey(ignore: true)
   @override
   $ResetCopyWith<Reset> get copyWith =>
       _$ResetCopyWithImpl<Reset>(this, _$identity);
@@ -464,6 +467,7 @@ abstract class Reset implements WorkerFormEvent {
   const factory Reset(String parentShopId) = _$Reset;
 
   String get parentShopId;
+  @JsonKey(ignore: true)
   $ResetCopyWith<Reset> get copyWith;
 }
 
@@ -520,6 +524,7 @@ class _$NameChanged implements NameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(name);
 
+  @JsonKey(ignore: true)
   @override
   $NameChangedCopyWith<NameChanged> get copyWith =>
       _$NameChangedCopyWithImpl<NameChanged>(this, _$identity);
@@ -621,6 +626,7 @@ abstract class NameChanged implements WorkerFormEvent {
   const factory NameChanged(String name) = _$NameChanged;
 
   String get name;
+  @JsonKey(ignore: true)
   $NameChangedCopyWith<NameChanged> get copyWith;
 }
 
@@ -678,6 +684,7 @@ class _$FirstNameChanged implements FirstNameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(firstName);
 
+  @JsonKey(ignore: true)
   @override
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith =>
       _$FirstNameChangedCopyWithImpl<FirstNameChanged>(this, _$identity);
@@ -779,6 +786,7 @@ abstract class FirstNameChanged implements WorkerFormEvent {
   const factory FirstNameChanged(String firstName) = _$FirstNameChanged;
 
   String get firstName;
+  @JsonKey(ignore: true)
   $FirstNameChangedCopyWith<FirstNameChanged> get copyWith;
 }
 
@@ -835,6 +843,7 @@ class _$EmailChanged implements EmailChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
@@ -936,6 +945,7 @@ abstract class EmailChanged implements WorkerFormEvent {
   const factory EmailChanged(String email) = _$EmailChanged;
 
   String get email;
+  @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
@@ -992,6 +1002,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(phone);
 
+  @JsonKey(ignore: true)
   @override
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith =>
       _$PhoneNumberChangedCopyWithImpl<PhoneNumberChanged>(this, _$identity);
@@ -1093,6 +1104,7 @@ abstract class PhoneNumberChanged implements WorkerFormEvent {
   const factory PhoneNumberChanged(String phone) = _$PhoneNumberChanged;
 
   String get phone;
+  @JsonKey(ignore: true)
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith;
 }
 
@@ -1150,6 +1162,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith =>
       _$ImageUrlChangedCopyWithImpl<ImageUrlChanged>(this, _$identity);
@@ -1251,6 +1264,7 @@ abstract class ImageUrlChanged implements WorkerFormEvent {
   const factory ImageUrlChanged(String imageUrl) = _$ImageUrlChanged;
 
   String get imageUrl;
+  @JsonKey(ignore: true)
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
 }
 
@@ -1308,6 +1322,7 @@ class _$ParentIdChanged implements ParentIdChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(parentId);
 
+  @JsonKey(ignore: true)
   @override
   $ParentIdChangedCopyWith<ParentIdChanged> get copyWith =>
       _$ParentIdChangedCopyWithImpl<ParentIdChanged>(this, _$identity);
@@ -1409,6 +1424,7 @@ abstract class ParentIdChanged implements WorkerFormEvent {
   const factory ParentIdChanged(UniqueId parentId) = _$ParentIdChanged;
 
   UniqueId get parentId;
+  @JsonKey(ignore: true)
   $ParentIdChangedCopyWith<ParentIdChanged> get copyWith;
 }
 
@@ -1580,6 +1596,7 @@ mixin _$WorkerFormState {
   bool get isSaving;
   Option<Either<WorkerFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $WorkerFormStateCopyWith<WorkerFormState> get copyWith;
 }
 
@@ -1751,6 +1768,7 @@ class _$_WorkerFormState implements _WorkerFormState {
       const DeepCollectionEquality().hash(isSaving) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$WorkerFormStateCopyWith<_WorkerFormState> get copyWith =>
       __$WorkerFormStateCopyWithImpl<_WorkerFormState>(this, _$identity);
@@ -1781,5 +1799,6 @@ abstract class _WorkerFormState implements WorkerFormState {
   @override
   Option<Either<WorkerFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$WorkerFormStateCopyWith<_WorkerFormState> get copyWith;
 }

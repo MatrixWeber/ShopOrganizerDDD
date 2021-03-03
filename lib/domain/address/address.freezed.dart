@@ -39,6 +39,7 @@ mixin _$Address {
   Zip get zip;
   City get city;
 
+  @JsonKey(ignore: true)
   $AddressCopyWith<Address> get copyWith;
 }
 
@@ -160,6 +161,7 @@ class _$_Address extends _Address {
       const DeepCollectionEquality().hash(zip) ^
       const DeepCollectionEquality().hash(city);
 
+  @JsonKey(ignore: true)
   @override
   _$AddressCopyWith<_Address> get copyWith =>
       __$AddressCopyWithImpl<_Address>(this, _$identity);
@@ -182,5 +184,6 @@ abstract class _Address extends Address {
   @override
   City get city;
   @override
+  @JsonKey(ignore: true)
   _$AddressCopyWith<_Address> get copyWith;
 }

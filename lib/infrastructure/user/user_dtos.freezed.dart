@@ -71,6 +71,7 @@ mixin _$UserDto {
   FieldValue get serverTimeStamp;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $UserDtoCopyWith<UserDto> get copyWith;
 }
 
@@ -318,6 +319,7 @@ class _$_UserDto extends _UserDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(street) ^
       const DeepCollectionEquality().hash(serverTimeStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$UserDtoCopyWith<_UserDto> get copyWith =>
       __$UserDtoCopyWithImpl<_UserDto>(this, _$identity);
@@ -371,5 +373,6 @@ abstract class _UserDto extends UserDto {
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
+  @JsonKey(ignore: true)
   _$UserDtoCopyWith<_UserDto> get copyWith;
 }

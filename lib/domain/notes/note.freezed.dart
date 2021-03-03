@@ -39,6 +39,7 @@ mixin _$Note {
   NoteColor get color;
   List3<TodoItem> get todos;
 
+  @JsonKey(ignore: true)
   $NoteCopyWith<Note> get copyWith;
 }
 
@@ -168,6 +169,7 @@ class _$_Note extends _Note with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(color) ^
       const DeepCollectionEquality().hash(todos);
 
+  @JsonKey(ignore: true)
   @override
   _$NoteCopyWith<_Note> get copyWith =>
       __$NoteCopyWithImpl<_Note>(this, _$identity);
@@ -190,5 +192,6 @@ abstract class _Note extends Note {
   @override
   List3<TodoItem> get todos;
   @override
+  @JsonKey(ignore: true)
   _$NoteCopyWith<_Note> get copyWith;
 }

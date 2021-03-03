@@ -134,6 +134,7 @@ class _$_Unexpected implements _Unexpected {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(funcionName);
 
+  @JsonKey(ignore: true)
   @override
   _$UnexpectedCopyWith<_Unexpected> get copyWith =>
       __$UnexpectedCopyWithImpl<_Unexpected>(this, _$identity);
@@ -199,6 +200,7 @@ abstract class _Unexpected implements ImageFailure {
   const factory _Unexpected(String funcionName) = _$_Unexpected;
 
   String get funcionName;
+  @JsonKey(ignore: true)
   _$UnexpectedCopyWith<_Unexpected> get copyWith;
 }
 

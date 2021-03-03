@@ -224,6 +224,7 @@ class _$_ShopsReceived implements _ShopsReceived {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(failureOrShops);
 
+  @JsonKey(ignore: true)
   @override
   _$ShopsReceivedCopyWith<_ShopsReceived> get copyWith =>
       __$ShopsReceivedCopyWithImpl<_ShopsReceived>(this, _$identity);
@@ -285,6 +286,7 @@ abstract class _ShopsReceived implements ShopWatcherEvent {
       Either<ShopFailure, KtList<Shop>> failureOrShops) = _$_ShopsReceived;
 
   Either<ShopFailure, KtList<Shop>> get failureOrShops;
+  @JsonKey(ignore: true)
   _$ShopsReceivedCopyWith<_ShopsReceived> get copyWith;
 }
 
@@ -628,6 +630,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shops);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
@@ -699,6 +702,7 @@ abstract class _LoadSuccess implements ShopWatcherState {
   const factory _LoadSuccess(KtList<Shop> shops) = _$_LoadSuccess;
 
   KtList<Shop> get shops;
+  @JsonKey(ignore: true)
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
@@ -768,6 +772,7 @@ class _$_LoadFailure implements _LoadFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shopFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
       __$LoadFailureCopyWithImpl<_LoadFailure>(this, _$identity);
@@ -839,5 +844,6 @@ abstract class _LoadFailure implements ShopWatcherState {
   const factory _LoadFailure(ShopFailure shopFailure) = _$_LoadFailure;
 
   ShopFailure get shopFailure;
+  @JsonKey(ignore: true)
   _$LoadFailureCopyWith<_LoadFailure> get copyWith;
 }

@@ -82,6 +82,7 @@ mixin _$ShopDto {
   FieldValue get serverTimeStamp;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $ShopDtoCopyWith<ShopDto> get copyWith;
 }
 
@@ -382,6 +383,7 @@ class _$_ShopDto extends _ShopDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(openingDays) ^
       const DeepCollectionEquality().hash(serverTimeStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$ShopDtoCopyWith<_ShopDto> get copyWith =>
       __$ShopDtoCopyWithImpl<_ShopDto>(this, _$identity);
@@ -445,6 +447,7 @@ abstract class _ShopDto extends ShopDto {
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
+  @JsonKey(ignore: true)
   _$ShopDtoCopyWith<_ShopDto> get copyWith;
 }
 
@@ -478,6 +481,7 @@ mixin _$WorkingHoursDto {
   num get workingHours;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $WorkingHoursDtoCopyWith<WorkingHoursDto> get copyWith;
 }
 
@@ -581,6 +585,7 @@ class _$_WorkingHoursDto extends _WorkingHoursDto with DiagnosticableTreeMixin {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(workingHours);
 
+  @JsonKey(ignore: true)
   @override
   _$WorkingHoursDtoCopyWith<_WorkingHoursDto> get copyWith =>
       __$WorkingHoursDtoCopyWithImpl<_WorkingHoursDto>(this, _$identity);
@@ -602,5 +607,6 @@ abstract class _WorkingHoursDto extends WorkingHoursDto {
   @override
   num get workingHours;
   @override
+  @JsonKey(ignore: true)
   _$WorkingHoursDtoCopyWith<_WorkingHoursDto> get copyWith;
 }

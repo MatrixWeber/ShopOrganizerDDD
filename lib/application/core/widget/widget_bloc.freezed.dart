@@ -214,6 +214,7 @@ class _$_InProgress implements _InProgress {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(percent);
 
+  @JsonKey(ignore: true)
   @override
   _$InProgressCopyWith<_InProgress> get copyWith =>
       __$InProgressCopyWithImpl<_InProgress>(this, _$identity);
@@ -273,6 +274,7 @@ abstract class _InProgress implements WidgetEvent {
   const factory _InProgress(num percent) = _$_InProgress;
 
   num get percent;
+  @JsonKey(ignore: true)
   _$InProgressCopyWith<_InProgress> get copyWith;
 }
 
@@ -480,6 +482,7 @@ class _$_ActionInProgress implements _ActionInProgress {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(percent);
 
+  @JsonKey(ignore: true)
   @override
   _$ActionInProgressCopyWith<_ActionInProgress> get copyWith =>
       __$ActionInProgressCopyWithImpl<_ActionInProgress>(this, _$identity);
@@ -539,5 +542,6 @@ abstract class _ActionInProgress implements WidgetState {
   const factory _ActionInProgress(num percent) = _$_ActionInProgress;
 
   num get percent;
+  @JsonKey(ignore: true)
   _$ActionInProgressCopyWith<_ActionInProgress> get copyWith;
 }

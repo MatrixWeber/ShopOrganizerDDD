@@ -144,6 +144,7 @@ class _$_WatchAllStarted implements _WatchAllStarted {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shop);
 
+  @JsonKey(ignore: true)
   @override
   _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith =>
       __$WatchAllStartedCopyWithImpl<_WatchAllStarted>(this, _$identity);
@@ -206,6 +207,7 @@ abstract class _WatchAllStarted implements WorkerWatcherEvent {
   const factory _WatchAllStarted(Shop shop) = _$_WatchAllStarted;
 
   Shop get shop;
+  @JsonKey(ignore: true)
   _$WatchAllStartedCopyWith<_WatchAllStarted> get copyWith;
 }
 
@@ -267,6 +269,7 @@ class _$_WorkersReceived implements _WorkersReceived {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(failureOrWorkers);
 
+  @JsonKey(ignore: true)
   @override
   _$WorkersReceivedCopyWith<_WorkersReceived> get copyWith =>
       __$WorkersReceivedCopyWithImpl<_WorkersReceived>(this, _$identity);
@@ -331,6 +334,7 @@ abstract class _WorkersReceived implements WorkerWatcherEvent {
       _$_WorkersReceived;
 
   Either<WorkerFailure, KtList<Worker>> get failureOrWorkers;
+  @JsonKey(ignore: true)
   _$WorkersReceivedCopyWith<_WorkersReceived> get copyWith;
 }
 
@@ -675,6 +679,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(worker);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
@@ -746,6 +751,7 @@ abstract class _LoadSuccess implements WorkerWatcherState {
   const factory _LoadSuccess(KtList<Worker> worker) = _$_LoadSuccess;
 
   KtList<Worker> get worker;
+  @JsonKey(ignore: true)
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
@@ -817,6 +823,7 @@ class _$_LoadFailure implements _LoadFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(workerFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
       __$LoadFailureCopyWithImpl<_LoadFailure>(this, _$identity);
@@ -888,5 +895,6 @@ abstract class _LoadFailure implements WorkerWatcherState {
   const factory _LoadFailure(WorkerFailure workerFailure) = _$_LoadFailure;
 
   WorkerFailure get workerFailure;
+  @JsonKey(ignore: true)
   _$LoadFailureCopyWith<_LoadFailure> get copyWith;
 }

@@ -161,6 +161,7 @@ class _$_UploadImageStarted implements _UploadImageStarted {
       const DeepCollectionEquality().hash(parentId) ^
       const DeepCollectionEquality().hash(id);
 
+  @JsonKey(ignore: true)
   @override
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith =>
       __$UploadImageStartedCopyWithImpl<_UploadImageStarted>(this, _$identity);
@@ -230,6 +231,7 @@ abstract class _UploadImageStarted implements ImageHandlerEvent {
   File get image;
   UniqueId get parentId;
   UniqueId get id;
+  @JsonKey(ignore: true)
   _$UploadImageStartedCopyWith<_UploadImageStarted> get copyWith;
 }
 
@@ -291,6 +293,7 @@ class _$_ImageReceived implements _ImageReceived {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(failureOrImageUrl);
 
+  @JsonKey(ignore: true)
   @override
   _$ImageReceivedCopyWith<_ImageReceived> get copyWith =>
       __$ImageReceivedCopyWithImpl<_ImageReceived>(this, _$identity);
@@ -358,6 +361,7 @@ abstract class _ImageReceived implements ImageHandlerEvent {
       _$_ImageReceived;
 
   Either<None, ImageUrl> get failureOrImageUrl;
+  @JsonKey(ignore: true)
   _$ImageReceivedCopyWith<_ImageReceived> get copyWith;
 }
 
@@ -415,6 +419,7 @@ class _$_ImageDeleted implements _ImageDeleted {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   _$ImageDeletedCopyWith<_ImageDeleted> get copyWith =>
       __$ImageDeletedCopyWithImpl<_ImageDeleted>(this, _$identity);
@@ -481,6 +486,7 @@ abstract class _ImageDeleted implements ImageHandlerEvent {
   const factory _ImageDeleted(String imageUrl) = _$_ImageDeleted;
 
   String get imageUrl;
+  @JsonKey(ignore: true)
   _$ImageDeletedCopyWith<_ImageDeleted> get copyWith;
 }
 
@@ -755,6 +761,7 @@ class _$_LoadInProgress implements _LoadInProgress {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(percent);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadInProgressCopyWith<_LoadInProgress> get copyWith =>
       __$LoadInProgressCopyWithImpl<_LoadInProgress>(this, _$identity);
@@ -838,6 +845,7 @@ abstract class _LoadInProgress implements ImageHandlerState {
   const factory _LoadInProgress(num percent) = _$_LoadInProgress;
 
   num get percent;
+  @JsonKey(ignore: true)
   _$LoadInProgressCopyWith<_LoadInProgress> get copyWith;
 }
 
@@ -895,6 +903,7 @@ class _$_UploadedSuccessful implements _UploadedSuccessful {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   _$UploadedSuccessfulCopyWith<_UploadedSuccessful> get copyWith =>
       __$UploadedSuccessfulCopyWithImpl<_UploadedSuccessful>(this, _$identity);
@@ -978,6 +987,7 @@ abstract class _UploadedSuccessful implements ImageHandlerState {
   const factory _UploadedSuccessful(ImageUrl imageUrl) = _$_UploadedSuccessful;
 
   ImageUrl get imageUrl;
+  @JsonKey(ignore: true)
   _$UploadedSuccessfulCopyWith<_UploadedSuccessful> get copyWith;
 }
 
@@ -1149,6 +1159,7 @@ class _$_LoadSuccess implements _LoadSuccess {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(image);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith =>
       __$LoadSuccessCopyWithImpl<_LoadSuccess>(this, _$identity);
@@ -1232,6 +1243,7 @@ abstract class _LoadSuccess implements ImageHandlerState {
   const factory _LoadSuccess(File image) = _$_LoadSuccess;
 
   File get image;
+  @JsonKey(ignore: true)
   _$LoadSuccessCopyWith<_LoadSuccess> get copyWith;
 }
 
@@ -1303,6 +1315,7 @@ class _$_LoadFailure implements _LoadFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(workerFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$LoadFailureCopyWith<_LoadFailure> get copyWith =>
       __$LoadFailureCopyWithImpl<_LoadFailure>(this, _$identity);
@@ -1386,5 +1399,6 @@ abstract class _LoadFailure implements ImageHandlerState {
   const factory _LoadFailure(ImageFailure workerFailure) = _$_LoadFailure;
 
   ImageFailure get workerFailure;
+  @JsonKey(ignore: true)
   _$LoadFailureCopyWith<_LoadFailure> get copyWith;
 }

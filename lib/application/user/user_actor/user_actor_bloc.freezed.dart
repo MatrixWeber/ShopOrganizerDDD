@@ -48,6 +48,7 @@ mixin _$UserActorEvent {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $UserActorEventCopyWith<UserActorEvent> get copyWith;
 }
 
@@ -145,6 +146,7 @@ class _$_Deleted implements _Deleted {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
 
+  @JsonKey(ignore: true)
   @override
   _$DeletedCopyWith<_Deleted> get copyWith =>
       __$DeletedCopyWithImpl<_Deleted>(this, _$identity);
@@ -200,6 +202,7 @@ abstract class _Deleted implements UserActorEvent {
   @override
   User get user;
   @override
+  @JsonKey(ignore: true)
   _$DeletedCopyWith<_Deleted> get copyWith;
 }
 
@@ -657,6 +660,7 @@ class _$_DeleteFailure implements _DeleteFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(userFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith =>
       __$DeleteFailureCopyWithImpl<_DeleteFailure>(this, _$identity);
@@ -728,5 +732,6 @@ abstract class _DeleteFailure implements UserActorState {
   const factory _DeleteFailure(UserFailure userFailure) = _$_DeleteFailure;
 
   UserFailure get userFailure;
+  @JsonKey(ignore: true)
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith;
 }

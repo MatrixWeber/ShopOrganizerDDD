@@ -163,6 +163,7 @@ class _$Initialized implements Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialTaskOption);
 
+  @JsonKey(ignore: true)
   @override
   $InitializedCopyWith<Initialized> get copyWith =>
       _$InitializedCopyWithImpl<Initialized>(this, _$identity);
@@ -241,6 +242,7 @@ abstract class Initialized implements TaskFormEvent {
       _$Initialized;
 
   Option<TaskDescription> get initialTaskOption;
+  @JsonKey(ignore: true)
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
@@ -298,6 +300,7 @@ class _$TaskNameChanged implements TaskNameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(taskName);
 
+  @JsonKey(ignore: true)
   @override
   $TaskNameChangedCopyWith<TaskNameChanged> get copyWith =>
       _$TaskNameChangedCopyWithImpl<TaskNameChanged>(this, _$identity);
@@ -375,6 +378,7 @@ abstract class TaskNameChanged implements TaskFormEvent {
   const factory TaskNameChanged(String taskName) = _$TaskNameChanged;
 
   String get taskName;
+  @JsonKey(ignore: true)
   $TaskNameChangedCopyWith<TaskNameChanged> get copyWith;
 }
 
@@ -432,6 +436,7 @@ class _$DurationChanged implements DurationChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(duration);
 
+  @JsonKey(ignore: true)
   @override
   $DurationChangedCopyWith<DurationChanged> get copyWith =>
       _$DurationChangedCopyWithImpl<DurationChanged>(this, _$identity);
@@ -509,6 +514,7 @@ abstract class DurationChanged implements TaskFormEvent {
   const factory DurationChanged(Duration duration) = _$DurationChanged;
 
   Duration get duration;
+  @JsonKey(ignore: true)
   $DurationChangedCopyWith<DurationChanged> get copyWith;
 }
 
@@ -564,6 +570,7 @@ class _$PriceChanged implements PriceChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(price);
 
+  @JsonKey(ignore: true)
   @override
   $PriceChangedCopyWith<PriceChanged> get copyWith =>
       _$PriceChangedCopyWithImpl<PriceChanged>(this, _$identity);
@@ -641,6 +648,7 @@ abstract class PriceChanged implements TaskFormEvent {
   const factory PriceChanged(double price) = _$PriceChanged;
 
   double get price;
+  @JsonKey(ignore: true)
   $PriceChangedCopyWith<PriceChanged> get copyWith;
 }
 
@@ -783,6 +791,7 @@ mixin _$TaskFormState {
   bool get isSaving;
   Option<Either<TaskFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $TaskFormStateCopyWith<TaskFormState> get copyWith;
 }
 
@@ -954,6 +963,7 @@ class _$_TaskFormState implements _TaskFormState {
       const DeepCollectionEquality().hash(isSaving) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskFormStateCopyWith<_TaskFormState> get copyWith =>
       __$TaskFormStateCopyWithImpl<_TaskFormState>(this, _$identity);
@@ -984,5 +994,6 @@ abstract class _TaskFormState implements TaskFormState {
   @override
   Option<Either<TaskFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$TaskFormStateCopyWith<_TaskFormState> get copyWith;
 }

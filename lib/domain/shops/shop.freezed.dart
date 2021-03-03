@@ -57,6 +57,7 @@ mixin _$Shop {
   Address get address;
   WeekList<bool> get openingDays;
 
+  @JsonKey(ignore: true)
   $ShopCopyWith<Shop> get copyWith;
 }
 
@@ -294,6 +295,7 @@ class _$_Shop extends _Shop {
       const DeepCollectionEquality().hash(address) ^
       const DeepCollectionEquality().hash(openingDays);
 
+  @JsonKey(ignore: true)
   @override
   _$ShopCopyWith<_Shop> get copyWith =>
       __$ShopCopyWithImpl<_Shop>(this, _$identity);
@@ -334,5 +336,6 @@ abstract class _Shop extends Shop {
   @override
   WeekList<bool> get openingDays;
   @override
+  @JsonKey(ignore: true)
   _$ShopCopyWith<_Shop> get copyWith;
 }

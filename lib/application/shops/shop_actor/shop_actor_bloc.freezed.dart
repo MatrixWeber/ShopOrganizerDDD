@@ -48,6 +48,7 @@ mixin _$ShopActorEvent {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $ShopActorEventCopyWith<ShopActorEvent> get copyWith;
 }
 
@@ -145,6 +146,7 @@ class _$_Deleted implements _Deleted {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shop);
 
+  @JsonKey(ignore: true)
   @override
   _$DeletedCopyWith<_Deleted> get copyWith =>
       __$DeletedCopyWithImpl<_Deleted>(this, _$identity);
@@ -200,6 +202,7 @@ abstract class _Deleted implements ShopActorEvent {
   @override
   Shop get shop;
   @override
+  @JsonKey(ignore: true)
   _$DeletedCopyWith<_Deleted> get copyWith;
 }
 
@@ -657,6 +660,7 @@ class _$_DeleteFailure implements _DeleteFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shopFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith =>
       __$DeleteFailureCopyWithImpl<_DeleteFailure>(this, _$identity);
@@ -728,5 +732,6 @@ abstract class _DeleteFailure implements ShopActorState {
   const factory _DeleteFailure(ShopFailure shopFailure) = _$_DeleteFailure;
 
   ShopFailure get shopFailure;
+  @JsonKey(ignore: true)
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith;
 }

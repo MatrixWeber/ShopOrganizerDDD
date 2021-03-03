@@ -53,6 +53,7 @@ mixin _$NoteDto {
   FieldValue get serverTimeStamp;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $NoteDtoCopyWith<NoteDto> get copyWith;
 }
 
@@ -213,6 +214,7 @@ class _$_NoteDto extends _NoteDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(todos) ^
       const DeepCollectionEquality().hash(serverTimeStamp);
 
+  @JsonKey(ignore: true)
   @override
   _$NoteDtoCopyWith<_NoteDto> get copyWith =>
       __$NoteDtoCopyWithImpl<_NoteDto>(this, _$identity);
@@ -248,6 +250,7 @@ abstract class _NoteDto extends NoteDto {
   @ServerTimeStampConverter()
   FieldValue get serverTimeStamp;
   @override
+  @JsonKey(ignore: true)
   _$NoteDtoCopyWith<_NoteDto> get copyWith;
 }
 
@@ -286,6 +289,7 @@ mixin _$TodoItemDto {
   bool get done;
 
   Map<String, dynamic> toJson();
+  @JsonKey(ignore: true)
   $TodoItemDtoCopyWith<TodoItemDto> get copyWith;
 }
 
@@ -408,6 +412,7 @@ class _$_TodoItemDto extends _TodoItemDto with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(done);
 
+  @JsonKey(ignore: true)
   @override
   _$TodoItemDtoCopyWith<_TodoItemDto> get copyWith =>
       __$TodoItemDtoCopyWithImpl<_TodoItemDto>(this, _$identity);
@@ -435,5 +440,6 @@ abstract class _TodoItemDto extends TodoItemDto {
   @override
   bool get done;
   @override
+  @JsonKey(ignore: true)
   _$TodoItemDtoCopyWith<_TodoItemDto> get copyWith;
 }

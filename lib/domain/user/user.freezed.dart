@@ -48,6 +48,7 @@ mixin _$User {
   ImageUrl get imageUrl;
   Address get address;
 
+  @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith;
 }
 
@@ -235,6 +236,7 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(imageUrl) ^
       const DeepCollectionEquality().hash(address);
 
+  @JsonKey(ignore: true)
   @override
   _$UserCopyWith<_User> get copyWith =>
       __$UserCopyWithImpl<_User>(this, _$identity);
@@ -266,5 +268,6 @@ abstract class _User extends User {
   @override
   Address get address;
   @override
+  @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith;
 }

@@ -154,6 +154,7 @@ mixin _$ValueFailure<T> {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $ValueFailureCopyWith<T, ValueFailure<T>> get copyWith;
 }
 
@@ -263,6 +264,7 @@ class _$ExceedingLength<T>
       const DeepCollectionEquality().hash(failedValue) ^
       const DeepCollectionEquality().hash(max);
 
+  @JsonKey(ignore: true)
   @override
   $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith =>
       _$ExceedingLengthCopyWithImpl<T, ExceedingLength<T>>(this, _$identity);
@@ -374,6 +376,7 @@ abstract class ExceedingLength<T> implements ValueFailure<T> {
   T get failedValue;
   int get max;
   @override
+  @JsonKey(ignore: true)
   $ExceedingLengthCopyWith<T, ExceedingLength<T>> get copyWith;
 }
 
@@ -439,6 +442,7 @@ class _$Empty<T> with DiagnosticableTreeMixin implements Empty<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $EmptyCopyWith<T, Empty<T>> get copyWith =>
       _$EmptyCopyWithImpl<T, Empty<T>>(this, _$identity);
@@ -548,6 +552,7 @@ abstract class Empty<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $EmptyCopyWith<T, Empty<T>> get copyWith;
 }
 
@@ -616,6 +621,7 @@ class _$Multiline<T> with DiagnosticableTreeMixin implements Multiline<T> {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $MultilineCopyWith<T, Multiline<T>> get copyWith =>
       _$MultilineCopyWithImpl<T, Multiline<T>>(this, _$identity);
@@ -725,6 +731,7 @@ abstract class Multiline<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $MultilineCopyWith<T, Multiline<T>> get copyWith;
 }
 
@@ -804,6 +811,7 @@ class _$ListTooLong<T> with DiagnosticableTreeMixin implements ListTooLong<T> {
       const DeepCollectionEquality().hash(failedValue) ^
       const DeepCollectionEquality().hash(max);
 
+  @JsonKey(ignore: true)
   @override
   $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith =>
       _$ListTooLongCopyWithImpl<T, ListTooLong<T>>(this, _$identity);
@@ -915,6 +923,7 @@ abstract class ListTooLong<T> implements ValueFailure<T> {
   T get failedValue;
   int get max;
   @override
+  @JsonKey(ignore: true)
   $ListTooLongCopyWith<T, ListTooLong<T>> get copyWith;
 }
 
@@ -986,6 +995,7 @@ class _$InvalidEmail<T>
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith =>
       _$InvalidEmailCopyWithImpl<T, InvalidEmail<T>>(this, _$identity);
@@ -1095,6 +1105,7 @@ abstract class InvalidEmail<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $InvalidEmailCopyWith<T, InvalidEmail<T>> get copyWith;
 }
 
@@ -1166,6 +1177,7 @@ class _$ShortPassword<T>
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith =>
       _$ShortPasswordCopyWithImpl<T, ShortPassword<T>>(this, _$identity);
@@ -1275,6 +1287,7 @@ abstract class ShortPassword<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $ShortPasswordCopyWith<T, ShortPassword<T>> get copyWith;
 }
 
@@ -1359,6 +1372,7 @@ class _$DurationToLong<T>
       const DeepCollectionEquality().hash(failedValue) ^
       const DeepCollectionEquality().hash(maxDuration);
 
+  @JsonKey(ignore: true)
   @override
   $DurationToLongCopyWith<T, DurationToLong<T>> get copyWith =>
       _$DurationToLongCopyWithImpl<T, DurationToLong<T>>(this, _$identity);
@@ -1471,6 +1485,7 @@ abstract class DurationToLong<T> implements ValueFailure<T> {
   T get failedValue;
   Duration get maxDuration;
   @override
+  @JsonKey(ignore: true)
   $DurationToLongCopyWith<T, DurationToLong<T>> get copyWith;
 }
 
@@ -1552,6 +1567,7 @@ class _$MaxTypeExceeded<T>
       const DeepCollectionEquality().hash(failedValue) ^
       const DeepCollectionEquality().hash(max);
 
+  @JsonKey(ignore: true)
   @override
   $MaxTypeExceededCopyWith<T, MaxTypeExceeded<T>> get copyWith =>
       _$MaxTypeExceededCopyWithImpl<T, MaxTypeExceeded<T>>(this, _$identity);
@@ -1663,6 +1679,7 @@ abstract class MaxTypeExceeded<T> implements ValueFailure<T> {
   T get failedValue;
   T get max;
   @override
+  @JsonKey(ignore: true)
   $MaxTypeExceededCopyWith<T, MaxTypeExceeded<T>> get copyWith;
 }
 
@@ -1734,6 +1751,7 @@ class _$IsNotAPhoneNumber<T>
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $IsNotAPhoneNumberCopyWith<T, IsNotAPhoneNumber<T>> get copyWith =>
       _$IsNotAPhoneNumberCopyWithImpl<T, IsNotAPhoneNumber<T>>(
@@ -1845,6 +1863,7 @@ abstract class IsNotAPhoneNumber<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $IsNotAPhoneNumberCopyWith<T, IsNotAPhoneNumber<T>> get copyWith;
 }
 
@@ -1916,6 +1935,7 @@ class _$IsNotALetter<T>
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(failedValue);
 
+  @JsonKey(ignore: true)
   @override
   $IsNotALetterCopyWith<T, IsNotALetter<T>> get copyWith =>
       _$IsNotALetterCopyWithImpl<T, IsNotALetter<T>>(this, _$identity);
@@ -2025,5 +2045,6 @@ abstract class IsNotALetter<T> implements ValueFailure<T> {
   @override
   T get failedValue;
   @override
+  @JsonKey(ignore: true)
   $IsNotALetterCopyWith<T, IsNotALetter<T>> get copyWith;
 }

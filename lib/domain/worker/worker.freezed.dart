@@ -48,6 +48,7 @@ mixin _$Worker {
   PhoneNumber get phoneNumber;
   ImageUrl get imageUrl;
 
+  @JsonKey(ignore: true)
   $WorkerCopyWith<Worker> get copyWith;
 }
 
@@ -221,6 +222,7 @@ class _$_Worker extends _Worker {
       const DeepCollectionEquality().hash(phoneNumber) ^
       const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   _$WorkerCopyWith<_Worker> get copyWith =>
       __$WorkerCopyWithImpl<_Worker>(this, _$identity);
@@ -252,5 +254,6 @@ abstract class _Worker extends Worker {
   @override
   ImageUrl get imageUrl;
   @override
+  @JsonKey(ignore: true)
   _$WorkerCopyWith<_Worker> get copyWith;
 }

@@ -39,6 +39,7 @@ mixin _$TaskDescription {
   TaskDuration get duration;
   Price get price;
 
+  @JsonKey(ignore: true)
   $TaskDescriptionCopyWith<TaskDescription> get copyWith;
 }
 
@@ -164,6 +165,7 @@ class _$_TaskDescription extends _TaskDescription {
       const DeepCollectionEquality().hash(duration) ^
       const DeepCollectionEquality().hash(price);
 
+  @JsonKey(ignore: true)
   @override
   _$TaskDescriptionCopyWith<_TaskDescription> get copyWith =>
       __$TaskDescriptionCopyWithImpl<_TaskDescription>(this, _$identity);
@@ -186,5 +188,6 @@ abstract class _TaskDescription extends TaskDescription {
   @override
   Price get price;
   @override
+  @JsonKey(ignore: true)
   _$TaskDescriptionCopyWith<_TaskDescription> get copyWith;
 }

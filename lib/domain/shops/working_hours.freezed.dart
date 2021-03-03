@@ -29,6 +29,7 @@ const $ShopWorkingHours = _$ShopWorkingHoursTearOff();
 mixin _$ShopWorkingHours {
   WorkingHours get workingHours;
 
+  @JsonKey(ignore: true)
   $ShopWorkingHoursCopyWith<ShopWorkingHours> get copyWith;
 }
 
@@ -121,6 +122,7 @@ class _$_ShopWorkingHours extends _ShopWorkingHours {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(workingHours);
 
+  @JsonKey(ignore: true)
   @override
   _$ShopWorkingHoursCopyWith<_ShopWorkingHours> get copyWith =>
       __$ShopWorkingHoursCopyWithImpl<_ShopWorkingHours>(this, _$identity);
@@ -134,5 +136,6 @@ abstract class _ShopWorkingHours extends ShopWorkingHours {
   @override
   WorkingHours get workingHours;
   @override
+  @JsonKey(ignore: true)
   _$ShopWorkingHoursCopyWith<_ShopWorkingHours> get copyWith;
 }

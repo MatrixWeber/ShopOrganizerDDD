@@ -282,6 +282,7 @@ class _$Initialized implements Initialized {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(initialShopOption);
 
+  @JsonKey(ignore: true)
   @override
   $InitializedCopyWith<Initialized> get copyWith =>
       _$InitializedCopyWithImpl<Initialized>(this, _$identity);
@@ -425,6 +426,7 @@ abstract class Initialized implements ShopFormEvent {
   const factory Initialized(Option<Shop> initialShopOption) = _$Initialized;
 
   Option<Shop> get initialShopOption;
+  @JsonKey(ignore: true)
   $InitializedCopyWith<Initialized> get copyWith;
 }
 
@@ -481,6 +483,7 @@ class _$NameChanged implements NameChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shopName);
 
+  @JsonKey(ignore: true)
   @override
   $NameChangedCopyWith<NameChanged> get copyWith =>
       _$NameChangedCopyWithImpl<NameChanged>(this, _$identity);
@@ -624,6 +627,7 @@ abstract class NameChanged implements ShopFormEvent {
   const factory NameChanged(String shopName) = _$NameChanged;
 
   String get shopName;
+  @JsonKey(ignore: true)
   $NameChangedCopyWith<NameChanged> get copyWith;
 }
 
@@ -679,6 +683,7 @@ class _$EmailChanged implements EmailChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(email);
 
+  @JsonKey(ignore: true)
   @override
   $EmailChangedCopyWith<EmailChanged> get copyWith =>
       _$EmailChangedCopyWithImpl<EmailChanged>(this, _$identity);
@@ -822,6 +827,7 @@ abstract class EmailChanged implements ShopFormEvent {
   const factory EmailChanged(String email) = _$EmailChanged;
 
   String get email;
+  @JsonKey(ignore: true)
   $EmailChangedCopyWith<EmailChanged> get copyWith;
 }
 
@@ -878,6 +884,7 @@ class _$KeeperChanged implements KeeperChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(keeper);
 
+  @JsonKey(ignore: true)
   @override
   $KeeperChangedCopyWith<KeeperChanged> get copyWith =>
       _$KeeperChangedCopyWithImpl<KeeperChanged>(this, _$identity);
@@ -1021,6 +1028,7 @@ abstract class KeeperChanged implements ShopFormEvent {
   const factory KeeperChanged(String keeper) = _$KeeperChanged;
 
   String get keeper;
+  @JsonKey(ignore: true)
   $KeeperChangedCopyWith<KeeperChanged> get copyWith;
 }
 
@@ -1077,6 +1085,7 @@ class _$PhoneNumberChanged implements PhoneNumberChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(phone);
 
+  @JsonKey(ignore: true)
   @override
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith =>
       _$PhoneNumberChangedCopyWithImpl<PhoneNumberChanged>(this, _$identity);
@@ -1220,6 +1229,7 @@ abstract class PhoneNumberChanged implements ShopFormEvent {
   const factory PhoneNumberChanged(String phone) = _$PhoneNumberChanged;
 
   String get phone;
+  @JsonKey(ignore: true)
   $PhoneNumberChangedCopyWith<PhoneNumberChanged> get copyWith;
 }
 
@@ -1278,6 +1288,7 @@ class _$NumberOfWorkersChanged implements NumberOfWorkersChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(numOfWorkers);
 
+  @JsonKey(ignore: true)
   @override
   $NumberOfWorkersChangedCopyWith<NumberOfWorkersChanged> get copyWith =>
       _$NumberOfWorkersChangedCopyWithImpl<NumberOfWorkersChanged>(
@@ -1423,6 +1434,7 @@ abstract class NumberOfWorkersChanged implements ShopFormEvent {
       _$NumberOfWorkersChanged;
 
   num get numOfWorkers;
+  @JsonKey(ignore: true)
   $NumberOfWorkersChangedCopyWith<NumberOfWorkersChanged> get copyWith;
 }
 
@@ -1480,6 +1492,7 @@ class _$ImageUrlChanged implements ImageUrlChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(imageUrl);
 
+  @JsonKey(ignore: true)
   @override
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith =>
       _$ImageUrlChangedCopyWithImpl<ImageUrlChanged>(this, _$identity);
@@ -1623,6 +1636,7 @@ abstract class ImageUrlChanged implements ShopFormEvent {
   const factory ImageUrlChanged(String imageUrl) = _$ImageUrlChanged;
 
   String get imageUrl;
+  @JsonKey(ignore: true)
   $ImageUrlChangedCopyWith<ImageUrlChanged> get copyWith;
 }
 
@@ -1680,6 +1694,7 @@ class _$CategoryChanged implements CategoryChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(category);
 
+  @JsonKey(ignore: true)
   @override
   $CategoryChangedCopyWith<CategoryChanged> get copyWith =>
       _$CategoryChangedCopyWithImpl<CategoryChanged>(this, _$identity);
@@ -1823,6 +1838,7 @@ abstract class CategoryChanged implements ShopFormEvent {
   const factory CategoryChanged(String category) = _$CategoryChanged;
 
   String get category;
+  @JsonKey(ignore: true)
   $CategoryChangedCopyWith<CategoryChanged> get copyWith;
 }
 
@@ -1879,6 +1895,7 @@ class _$StreetChanged implements StreetChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(street);
 
+  @JsonKey(ignore: true)
   @override
   $StreetChangedCopyWith<StreetChanged> get copyWith =>
       _$StreetChangedCopyWithImpl<StreetChanged>(this, _$identity);
@@ -2022,6 +2039,7 @@ abstract class StreetChanged implements ShopFormEvent {
   const factory StreetChanged(String street) = _$StreetChanged;
 
   String get street;
+  @JsonKey(ignore: true)
   $StreetChangedCopyWith<StreetChanged> get copyWith;
 }
 
@@ -2079,6 +2097,7 @@ class _$HouseNumberChanged implements HouseNumberChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(houseNum);
 
+  @JsonKey(ignore: true)
   @override
   $HouseNumberChangedCopyWith<HouseNumberChanged> get copyWith =>
       _$HouseNumberChangedCopyWithImpl<HouseNumberChanged>(this, _$identity);
@@ -2222,6 +2241,7 @@ abstract class HouseNumberChanged implements ShopFormEvent {
   const factory HouseNumberChanged(String houseNum) = _$HouseNumberChanged;
 
   String get houseNum;
+  @JsonKey(ignore: true)
   $HouseNumberChangedCopyWith<HouseNumberChanged> get copyWith;
 }
 
@@ -2276,6 +2296,7 @@ class _$ZipChanged implements ZipChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(zip);
 
+  @JsonKey(ignore: true)
   @override
   $ZipChangedCopyWith<ZipChanged> get copyWith =>
       _$ZipChangedCopyWithImpl<ZipChanged>(this, _$identity);
@@ -2419,6 +2440,7 @@ abstract class ZipChanged implements ShopFormEvent {
   const factory ZipChanged(String zip) = _$ZipChanged;
 
   String get zip;
+  @JsonKey(ignore: true)
   $ZipChangedCopyWith<ZipChanged> get copyWith;
 }
 
@@ -2474,6 +2496,7 @@ class _$CityChanged implements CityChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(city);
 
+  @JsonKey(ignore: true)
   @override
   $CityChangedCopyWith<CityChanged> get copyWith =>
       _$CityChangedCopyWithImpl<CityChanged>(this, _$identity);
@@ -2617,6 +2640,7 @@ abstract class CityChanged implements ShopFormEvent {
   const factory CityChanged(String city) = _$CityChanged;
 
   String get city;
+  @JsonKey(ignore: true)
   $CityChangedCopyWith<CityChanged> get copyWith;
 }
 
@@ -2674,6 +2698,7 @@ class _$OpeningDaysChanged implements OpeningDaysChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(openingDays);
 
+  @JsonKey(ignore: true)
   @override
   $OpeningDaysChangedCopyWith<OpeningDaysChanged> get copyWith =>
       _$OpeningDaysChangedCopyWithImpl<OpeningDaysChanged>(this, _$identity);
@@ -2818,6 +2843,7 @@ abstract class OpeningDaysChanged implements ShopFormEvent {
       _$OpeningDaysChanged;
 
   KtList<bool> get openingDays;
+  @JsonKey(ignore: true)
   $OpeningDaysChangedCopyWith<OpeningDaysChanged> get copyWith;
 }
 
@@ -3231,6 +3257,7 @@ class _$ShopChanged implements ShopChanged {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(shop);
 
+  @JsonKey(ignore: true)
   @override
   $ShopChangedCopyWith<ShopChanged> get copyWith =>
       _$ShopChangedCopyWithImpl<ShopChanged>(this, _$identity);
@@ -3374,6 +3401,7 @@ abstract class ShopChanged implements ShopFormEvent {
   const factory ShopChanged(Shop shop) = _$ShopChanged;
 
   Shop get shop;
+  @JsonKey(ignore: true)
   $ShopChangedCopyWith<ShopChanged> get copyWith;
 }
 
@@ -3410,6 +3438,7 @@ mixin _$ShopFormState {
   bool get isSaving;
   Option<Either<ShopFailure, Unit>> get saveFailureOrSuccessOption;
 
+  @JsonKey(ignore: true)
   $ShopFormStateCopyWith<ShopFormState> get copyWith;
 }
 
@@ -3581,6 +3610,7 @@ class _$_ShopFormState implements _ShopFormState {
       const DeepCollectionEquality().hash(isSaving) ^
       const DeepCollectionEquality().hash(saveFailureOrSuccessOption);
 
+  @JsonKey(ignore: true)
   @override
   _$ShopFormStateCopyWith<_ShopFormState> get copyWith =>
       __$ShopFormStateCopyWithImpl<_ShopFormState>(this, _$identity);
@@ -3611,5 +3641,6 @@ abstract class _ShopFormState implements ShopFormState {
   @override
   Option<Either<ShopFailure, Unit>> get saveFailureOrSuccessOption;
   @override
+  @JsonKey(ignore: true)
   _$ShopFormStateCopyWith<_ShopFormState> get copyWith;
 }

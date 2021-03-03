@@ -48,6 +48,7 @@ mixin _$WorkerActorEvent {
     @required TResult orElse(),
   });
 
+  @JsonKey(ignore: true)
   $WorkerActorEventCopyWith<WorkerActorEvent> get copyWith;
 }
 
@@ -145,6 +146,7 @@ class _$_Deleted implements _Deleted {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(worker);
 
+  @JsonKey(ignore: true)
   @override
   _$DeletedCopyWith<_Deleted> get copyWith =>
       __$DeletedCopyWithImpl<_Deleted>(this, _$identity);
@@ -200,6 +202,7 @@ abstract class _Deleted implements WorkerActorEvent {
   @override
   Worker get worker;
   @override
+  @JsonKey(ignore: true)
   _$DeletedCopyWith<_Deleted> get copyWith;
 }
 
@@ -659,6 +662,7 @@ class _$_DeleteFailure implements _DeleteFailure {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(workerFailure);
 
+  @JsonKey(ignore: true)
   @override
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith =>
       __$DeleteFailureCopyWithImpl<_DeleteFailure>(this, _$identity);
@@ -730,5 +734,6 @@ abstract class _DeleteFailure implements WorkerActorState {
   const factory _DeleteFailure(WorkerFailure workerFailure) = _$_DeleteFailure;
 
   WorkerFailure get workerFailure;
+  @JsonKey(ignore: true)
   _$DeleteFailureCopyWith<_DeleteFailure> get copyWith;
 }
