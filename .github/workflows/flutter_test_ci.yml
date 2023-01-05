@@ -20,7 +20,7 @@ jobs:
           channel: 'stable'
       - run: flutter packages get
       - run: flutter pub run build_runner build --delete-conflicting-outputs
-      - run: flutter build apk
+      - run: flutter build apk --target-platform android-arm,android-arm64,android-x64 --split-per-abi -v 
         # Step to save the APK as Artifacts
       - name: Upload APK on Build Artifacts
         uses: actions/upload-artifact@v1
