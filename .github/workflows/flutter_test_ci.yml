@@ -14,6 +14,12 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
+      - name: Android NDK toolchain Setup
+        uses: ravinderjangra/android-ndk-toolchain-setup@0.1
+        with: 
+          api: '21'
+          arch: 'arm'
+          install-location: 'toolchains'
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '1.22.2'
@@ -21,7 +27,7 @@ jobs:
       - run: echo $ANDROID_NDK_HOME
       - run: flutter packages get
       - run: flutter pub run build_runner build --delete-conflicting-outputs
-      - run: flutter build apk --target-platform android-arm,android-arm64,android-x64
+      - run: flutter build appbundle --target-platform android-arm,android-arm64,android-x64
         # Step to save the APK as Artifacts
       - name: Upload APK on Build Artifacts
         uses: actions/upload-artifact@v1
