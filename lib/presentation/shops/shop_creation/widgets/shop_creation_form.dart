@@ -200,8 +200,10 @@ class ShopCreationForm extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(_PADDING),
                 ),
-                RaisedButton(
-                  color: primaryColor,
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: primaryColor,
+                  ),
                   onPressed: () {
                     shopFormState.shop.imageUrl.value.fold(
                         (f) => f.maybeMap(

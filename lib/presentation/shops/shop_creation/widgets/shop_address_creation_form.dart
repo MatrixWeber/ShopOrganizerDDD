@@ -170,7 +170,7 @@ class ShopAddressCreationForm extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(_PADDING),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   context
                       .read<ShopFormBloc>()

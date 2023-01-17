@@ -25,11 +25,11 @@ class DeletionDialog {
             ),
           ),
           actions: [
-            FlatButton(
+            ElevatedButton(
               onPressed: () => Navigator.pop(context),
               child: const Text('CANCEL'),
             ),
-            FlatButton(
+            ElevatedButton(
               onPressed: () {
                 onDelete();
                 Navigator.pop(context);

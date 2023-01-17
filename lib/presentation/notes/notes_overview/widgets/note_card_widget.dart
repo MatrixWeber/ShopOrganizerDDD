@@ -71,11 +71,11 @@ class NoteCard extends StatelessWidget {
               overflow: TextOverflow.ellipsis,
             ),
             actions: [
-              FlatButton(
+              ElevatedButton(
                 onPressed: () => Navigator.pop(context),
                 child: const Text('CANCEL'),
               ),
-              FlatButton(
+              ElevatedButton(
                 onPressed: () {
                   noteActorBloc.add(
                     NoteActorEvent.deleted(note),

@@ -5,7 +5,7 @@ class ConfirmDialog {
   static void showYesNo(
       BuildContext context, void Function(BuildContext) yesPressed) {
     // set up the buttons
-    final Widget yesButton = FlatButton(
+    final Widget yesButton = ElevatedButton(
       key: const Key(Keys.yes),
       onPressed: () {
         Navigator.of(context).pop();
@@ -13,7 +13,7 @@ class ConfirmDialog {
       },
       child: const Text("Yes"),
     );
-    final Widget noButton = FlatButton(
+    final Widget noButton = ElevatedButton(
       key: const Key(Keys.no),
       onPressed: () {
         Navigator.of(context).pop();

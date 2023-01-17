@@ -99,7 +99,7 @@ class SignInForm extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: FlatButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
                               const SignInFormEvent
@@ -110,7 +110,7 @@ class SignInForm extends StatelessWidget {
                     ),
                   ),
                   Expanded(
-                    child: FlatButton(
+                    child: ElevatedButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
                               const SignInFormEvent
@@ -125,13 +125,15 @@ class SignInForm extends StatelessWidget {
               const SizedBox(
                 height: 8,
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   context.read<SignInFormBloc>().add(
                         const SignInFormEvent.signInWithGooglePressed(),
                       );
                 },
-                color: Colors.lightBlue,
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.lightBlue,
+                ),
                 child: const Text(
                   Strings.signInWithGoogle,
                   style: TextStyle(

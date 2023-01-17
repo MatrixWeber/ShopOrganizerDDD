@@ -179,7 +179,7 @@ class WorkerCreationForm extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.all(_PADDING),
               ),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: () {
                   workerFormState.worker.imageUrl.value.fold(
                       (f) => f.maybeMap(

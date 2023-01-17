@@ -23,7 +23,7 @@ class TodoList extends StatelessWidget {
         if (state.note.todos.isFull) {
           FlushbarHelper.createAction(
             message: 'Want longer lists? Activate premium 😍',
-            button: FlatButton(
+            button: ElevatedButton(
               onPressed: () {},
               child: const Text(
                 'BUY NOW',
@@ -113,7 +113,7 @@ class TodoTile extends HookWidget {
                 onChanged: (value) {
                   context.formTodos = context.formTodos.map(
                     (listTodos) => listTodos == todo
-                        ? todo.copyWith(done: value)
+                        ? todo.copyWith(done: value != 0)
                         : listTodos,
                   );
                   context

@@ -34,9 +34,9 @@ void main() {
   }
 
   Future tapDialogButton(String key) async {
-    final flatButtonNoText = find.byValueKey(key);
-    assert(flatButtonNoText != null);
-    await driver.tap(flatButtonNoText);
+    final elevatedButtonNoText = find.byValueKey(key);
+    assert(elevatedButtonNoText != null);
+    await driver.tap(elevatedButtonNoText);
   }
 
   Future setupBackPage() async {

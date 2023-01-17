@@ -34,9 +34,6 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    lintOptions {
-        disable 'InvalidPackage'
-    }
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
@@ -56,6 +53,10 @@ android {
         }
     }
     ndkVersion "23.2.8568313"
+    lint {
+        disable 'InvalidPackage'
+    }
+    namespace 'com.example.firebase_ddd_tutorial'
 }
 
 flutter {
