@@ -48,20 +48,20 @@ dependencies:
   provider: ^6.0.5
   rxdart: ^0.27.7
   uuid: ^3.0.7
-  test_api: ^0.4.18
+  test_api: 
 
 dev_dependencies:
   flutter_driver:
     sdk: flutter
-  flutter_test:
-    sdk: flutter
+  # flutter_test:
+  #   sdk: flutter
   auto_route_generator: ^5.0.3
   build_runner: ^2.3.3
   freezed: ^2.3.2
   injectable_generator: ^2.1.3
   lint: ^2.0.1
   mockito: ^5.3.2
-  test: ^1.22.2
+  # test: 
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
