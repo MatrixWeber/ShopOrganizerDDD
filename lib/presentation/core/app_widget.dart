@@ -23,7 +23,6 @@ class AppWidget extends StatelessWidget {
         title: 'Notes',
         theme: ThemeData.light().copyWith(
           primaryColor: Colors.green[800],
-          accentColor: Colors.blueAccent,
           floatingActionButtonTheme: FloatingActionButtonThemeData(
             backgroundColor: Colors.blue[900],
           ),
@@ -32,6 +31,8 @@ class AppWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
             ),
           ),
+          colorScheme:
+              ColorScheme.fromSwatch().copyWith(secondary: Colors.blueAccent),
         ),
         debugShowCheckedModeBanner: false,
         builder: ExtendedNavigator.builder(
